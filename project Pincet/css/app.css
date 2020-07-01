@@ -12,6 +12,18 @@ a {
   text-decoration: none;
   color: #000; }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0; }
+
+p {
+  margin: 0; }
+
 input {
   outline: none; }
 
@@ -32,6 +44,33 @@ img {
   background-repeat: no-repeat;
   background-size: cover;
   overflow-x: hidden; }
+
+h2 {
+  font: 700 2.5vw "MuseoSansCyrl"; }
+
+h3 {
+  font: 700 1.563vw "MuseoSansCyrl"; }
+
+p {
+  font: 300 1.25vw "MuseoSansCyrl"; }
+
+.bold {
+  font-weight: 700; }
+
+.light {
+  font-weight: 300; }
+
+.borderDashed {
+  padding-bottom: 5px;
+  border-bottom: 1px dashed #ff6078; }
+
+.linkColorRoze {
+  color: #ff6078; }
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
 
 .container {
   padding: 0 10.156vw;
@@ -528,8 +567,18 @@ img {
     top: 0;
     right: 0;
     width: 4.896vw; }
-  .relocation__title h2 {
-    font: 700 2.5vw "MuseoSansCyrl"; }
+  .relocation__women-descr {
+    position: absolute;
+    bottom: 1vw;
+    right: -3vw;
+    width: 8.802vw; }
+    .relocation__women-descr p {
+      color: #ff6078; }
+  .relocation__women-line {
+    position: absolute;
+    right: -3vw;
+    bottom: 5vw;
+    width: 1.875vw; }
   .relocation__mapBtn {
     margin-top: 3.125vw;
     margin-left: 2.083vw; }
@@ -562,10 +611,8 @@ img {
       top: 10px; }
   .relocation__descr {
     margin-top: 3.125vw; }
-    .relocation__descr p {
-      font: 300 1.25vw "MuseoSansCyrl"; }
-      .relocation__descr p span {
-        font: 700 1.25vw "MuseoSansCyrl"; }
+    .relocation__descr p span {
+      font: 700 1.25vw "MuseoSansCyrl"; }
   .relocation__sign {
     margin-top: 3.125vw;
     display: -webkit-box;
@@ -811,6 +858,7 @@ img {
           -ms-flex-align: center;
               align-items: center; }
       .services__other-descr p {
+        text-align: left;
         font: 300 1.25vw "MuseoSansCyrl"; }
         .services__other-descr p span {
           font: 700 1.25vw "MuseoSansCyrl"; }
@@ -836,7 +884,10 @@ img {
     width: 15.625vw; }
   .services__wawe {
     margin-top: 5.99vw;
-    position: relative; }
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
     .services__wawe-svg {
       padding: 7px;
       border-radius: 50%;
@@ -885,6 +936,11 @@ img {
       -webkit-transform: translate(-50%, -50%);
               transform: translate(-50%, -50%);
       z-index: 2; }
+  .services__leaves {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    z-index: -1; }
 
 @-webkit-keyframes jump {
   0% {
@@ -921,6 +977,192 @@ img {
     -webkit-transform: scale(1.2);
             transform: scale(1.2);
     opacity: 0; } }
+
+.work {
+  overflow-x: hidden;
+  padding: 2.865vw 0; }
+  .work__title {
+    text-align: center;
+    margin-bottom: 4.427vw; }
+    .work__title h2 {
+      font: 700 2.5vw "MuseoSansCyrl"; }
+  .work--flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+    .work--flex div {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+  .work__img {
+    position: relative; }
+    .work__img:hover {
+      z-index: 5; }
+    .work__img:hover .work--wraper {
+      -webkit-transform: scale(1.2);
+              transform: scale(1.2); }
+    .work__img:hover .work--wraper img {
+      border-radius: 5px; }
+    .work__img:hover .work__background {
+      opacity: 0.4;
+      border-radius: 5px; }
+    .work__img:hover .work__zoom {
+      opacity: 1; }
+  .work--wraper {
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
+  .work__background {
+    position: absolute;
+    background-image: -webkit-gradient(linear, left bottom, left top, from(#ee858c), to(#fabcbc)), -webkit-gradient(linear, left top, left bottom, from(#90d436), to(#90d436));
+    background-image: linear-gradient(to top, #ee858c, #fabcbc), linear-gradient(to bottom, #90d436, #90d436);
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
+  .work__zoom {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    opacity: 0;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    cursor: pointer; }
+  .work__more {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 4.271vw; }
+    .work__more-btn {
+      width: 13.802vw;
+      height: 4.479vw;
+      border-radius: 42.5px;
+      border-style: solid;
+      border: 1px solid #ff6078;
+      background-color: #fff;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+      .work__more-btn a {
+        font: 700 0.729vw "MuseoSansCyrl";
+        margin-right: 15px; }
+      .work__more-btn img {
+        -webkit-animation: loader 2s linear infinite;
+                animation: loader 2s linear infinite; }
+
+.col-20 {
+  width: 20%; }
+
+@-webkit-keyframes loader {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  25% {
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg); }
+  50% {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg); }
+  75% {
+    -webkit-transform: rotate(-270deg);
+            transform: rotate(-270deg); }
+  100% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg); } }
+
+@keyframes loader {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  25% {
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg); }
+  50% {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg); }
+  75% {
+    -webkit-transform: rotate(-270deg);
+            transform: rotate(-270deg); }
+  100% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg); } }
+
+.qualification__title {
+  text-align: center; }
+
+.qualification__workers {
+  margin-top: 3.125vw;
+  position: relative; }
+  .qualification__workers-item {
+    margin-right: 100px; }
+  .qualification__workers-card {
+    position: relative; }
+  .qualification__workers-img {
+    width: 17.708vw; }
+  .qualification__workers-name {
+    position: absolute;
+    bottom: 3vw;
+    right: 7vw;
+    padding: 0.938vw 1.719vw;
+    background-color: #fff;
+    border-radius: 10px;
+    -webkit-transform: skew(-11deg);
+            transform: skew(-11deg);
+    -webkit-box-shadow: 0px 9px 90px 0 rgba(122, 122, 122, 0.3);
+            box-shadow: 0px 9px 90px 0 rgba(122, 122, 122, 0.3);
+    z-index: 5; }
+    .qualification__workers-name p {
+      -webkit-transform: skew(10deg);
+              transform: skew(10deg);
+      font-weight: 700; }
+  .qualification__workers-master {
+    position: absolute;
+    bottom: 1vw;
+    right: 10vw;
+    padding: 1.042vw 0.885vw;
+    border-radius: 10px;
+    background-color: #fdfdfd; }
+    .qualification__workers-master p {
+      font: 500 0.573vw "MuseoSansCyrl"; }
+  .qualification__workers ul {
+    margin-top: 2.083vw; }
+    .qualification__workers ul li {
+      font: 300 0.938vw "MuseoSansCyrl"; }
+      .qualification__workers ul li::before {
+        content: url(../img/qualification/check.png);
+        position: absolute;
+        left: -35px; }
+  .qualification__workers-link {
+    display: inline-block;
+    margin-top: 1.563vw; }
+
+.arrowLeft {
+  position: absolute;
+  top: 50%;
+  left: -7vw; }
+
+.arrowRight {
+  position: absolute;
+  top: 50%;
+  right: -7vw; }
+
+.purple {
+  color: #9770b6; }
 
 .main__popup {
   padding: 3.906vw 5.469vw 4.063vw 5.469vw;
@@ -1123,6 +1365,45 @@ img {
   left: -10vw;
   max-width: 15.625vw;
   z-index: -1; }
+
+.fade_in {
+  opacity: 1;
+  -webkit-animation-delay: 0ms;
+  animation-delay: 0ms;
+  -webkit-animation-duration: 1500ms;
+  animation-duration: 1500ms;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: slide-up-in;
+  animation-name: slide-up-in; }
+
+@-webkit-keyframes slide-up-in {
+  0% {
+    -webkit-transform: translate(0px, 100%) rotate(1deg);
+    transform: translate(0px, 100%) rotate(1deg);
+    opacity: 0;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0; }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0px, 0px) rotate(0deg);
+    transform: translate(0px, 0px) rotate(0deg);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0; } }
+
+@keyframes slide-up-in {
+  0% {
+    -webkit-transform: translate(0px, 100%) rotate(1deg);
+    transform: translate(0px, 100%) rotate(1deg);
+    opacity: 0;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0; }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0px, 0px) rotate(0deg);
+    transform: translate(0px, 0px) rotate(0deg);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0; } }
 
 @media (max-width: 575px) and (min-width: 320px) {
 
@@ -1386,7 +1667,16 @@ img {
     width: 16.666666666666668%; }
 
   .col-sm-1 {
-    width: 8.333333333333334%; } }
+    width: 8.333333333333334%; }
+
+  h2 {
+    font-size: 2.2rem; }
+
+  h3 {
+    font-size: 1.8rem; }
+
+  p {
+    font-size: 1.4rem; } }
 
 @media (max-width: 575px) and (min-width: 375px) {
 
@@ -1455,7 +1745,16 @@ img {
     width: 16.666666666666668%; }
 
   .col-md-1 {
-    width: 8.333333333333334%; } }
+    width: 8.333333333333334%; }
+
+  h2 {
+    font-size: 2.4rem; }
+
+  h3 {
+    font-size: 2rem; }
+
+  p {
+    font-size: 1.6rem; } }
 
 @media (min-width: 576px) and (max-width: 767px) {
 
@@ -1937,7 +2236,16 @@ img {
     width: 16.666666666666668%; }
 
   .col-lg-1 {
-    width: 8.333333333333334%; } }
+    width: 8.333333333333334%; }
+
+  h2 {
+    font-size: 2.6rem; }
+
+  h2 {
+    font-size: 2.2rem; }
+
+  p {
+    font-size: 2rem; } }
 
 @media (min-width: 901px) {
 
@@ -1999,6 +2307,12 @@ img {
   .relocation__women-leave {
     width: 5rem; }
 
+  .relocation__women-descr p {
+    font-size: 10px; }
+
+  .relocation__women-line {
+    width: 2rem; }
+
   .relocation__leaveRight {
     width: 5rem;
     top: 10rem;
@@ -2011,14 +2325,8 @@ img {
   .relocation__title {
     margin-top: 2rem; }
 
-  .relocation__title h2 {
-    font-size: 2.6rem; }
-
   .relocation__descr {
     margin-top: 2.5rem; }
-
-  .relocation__descr p {
-    font-size: 2rem; }
 
   .relocation__descr p span {
     font-size: 2rem; }
@@ -2192,7 +2500,32 @@ img {
   .services__blurLeft {
     width: 25rem;
     z-index: -1;
-    left: -2rem; } }
+    left: -2rem; }
+
+  .work {
+    padding: 3rem; }
+
+  .work__title {
+    margin-bottom: 2rem; }
+
+  .work__title h2 {
+    font-size: 2.6rem; }
+
+  .work--flex {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around; }
+
+  .work__more {
+    margin-top: 2.5rem; }
+
+  .work__more-btn {
+    width: 25rem;
+    height: 8rem; }
+
+  .work__more-btn a {
+    font-size: 1.6rem; } }
 
 @media (max-width: 767px) {
 
@@ -2230,6 +2563,12 @@ img {
     left: -1rem;
     top: 2rem; }
 
+  .relocation__women-descr {
+    display: none; }
+
+  .relocation__women-line {
+    display: none; }
+
   .relocation__leaveRight {
     width: 11rem;
     right: 2rem;
@@ -2245,15 +2584,9 @@ img {
     width: 43rem;
     margin: 1rem auto 0; }
 
-  .relocation__title h2 {
-    font-size: 2.4rem; }
-
   .relocation__descr {
     text-align: left;
     margin-top: 2rem; }
-
-  .relocation__descr p {
-    font-size: 1.6rem; }
 
   .relocation__descr p span {
     font-size: 1.6rem; }
@@ -2420,7 +2753,32 @@ img {
   .services__blurLeft {
     width: 20rem;
     z-index: -1;
-    left: -2rem; } }
+    left: -2rem; }
+
+  .work {
+    padding: 3rem; }
+
+  .work__title {
+    margin-bottom: 1.5rem; }
+
+  .work__title h2 {
+    font-size: 2.4rem; }
+
+  .work--flex {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around; }
+
+  .work__more {
+    margin-top: 2rem; }
+
+  .work__more-btn {
+    width: 22rem;
+    height: 8rem; }
+
+  .work__more-btn a {
+    font-size: 1.6rem; } }
 
 @media (max-width: 567px) {
 
@@ -2458,6 +2816,12 @@ img {
     left: -1rem;
     top: 2rem; }
 
+  .relocation__women-descr {
+    display: none; }
+
+  .relocation__women-line {
+    display: none; }
+
   .relocation__leaveRight {
     width: 8rem;
     right: 2rem;
@@ -2472,15 +2836,9 @@ img {
     margin-top: 1rem;
     width: auto; }
 
-  .relocation__title h2 {
-    font-size: 2.2rem; }
-
   .relocation__descr {
     text-align: left;
     margin-top: 1rem; }
-
-  .relocation__descr p {
-    font-size: 1.4rem; }
 
   .relocation__descr p span {
     font-size: 1.4rem; }
@@ -2573,8 +2931,8 @@ img {
     padding: 1.5rem 2.5rem; }
 
   .services__card-btn-img {
-    width: 11rem;
-    right: -6rem;
+    width: 10rem;
+    right: -5rem;
     top: 2rem; }
 
   .services__card-sign {
@@ -2646,4 +3004,29 @@ img {
   .services__blurLeft {
     width: 12rem;
     z-index: -1;
-    left: -2rem; } }
+    left: -2rem; }
+
+  .work {
+    padding: 2rem 0; }
+
+  .work__title {
+    margin-bottom: 1rem; }
+
+  .work__title h2 {
+    font-size: 2.2rem; }
+
+  .work--flex {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around; }
+
+  .work__more {
+    margin-top: 1.5rem; }
+
+  .work__more-btn {
+    width: 20rem;
+    height: 6rem; }
+
+  .work__more-btn a {
+    font-size: 1.4rem; } }
