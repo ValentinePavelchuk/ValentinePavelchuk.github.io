@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="ru">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" href="../img/favicon.png">
+    <title>Pincet</title>
+
+<link href="./css/app.css" rel="stylesheet"></head>
+
+<body>
+    <div class="wrapper_background">
+        <header class="header" id="header">
+            <div class="container">
+                <div class="row">
+                    <div class="header_flex">
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="header__logo">
+                                <a href="#">
+                                    <img src="img/header/logo.png" alt="PINCET студия депиляции">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="header__burger">
+                                <div class="header__burger-img">
+                                    <svg height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1"
+                                        viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <path
+                                            d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z" />
+                                    </svg>
+                                </div>
+                                <div class="header__burger-menu">
+                                    <div class="header__burger-close">
+                                        <span>X</span>
+                                    </div>
+                                    <div class="header__burger-menu--wraper">
+                                        <div class="header__burger-logo">
+                                            <a href="/"><img src="img/header/logo.png" alt="Pincet"></a>
+                                        </div>
+                                        <a href="/">Главная</a>
+                                        <a href="depilation.html">Шугаринг и депиляция воском</a>
+                                        <a href="#">Антицеллюлитный массаж</a>
+                                        <a href="#">Классический массаж</a>
+                                        <a href="#">Обучение</a>
+                                        <a href="catalog.html">Косметика для мастеров</a>
+                                        <a href="papers.html">Статьи</a>
+                                        <a href="about.html">О студии</a>
+                                        <a href="contacts.html">Контакты</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                            <div class="header__descr">
+                                <p>
+                                    Студия депиляции и
+                                    массажный кабинет
+                                    в Бресте
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                            <div class="header__map">
+                                <div class="header__map-icon">
+                                    <img src="img/header/map.png" alt="карта">
+                                </div>
+                                <div class="header__map-descr">
+                                    <p class="header__map-descr_bold">Мы находимся в центре:</p>
+                                    <p class="header__map-descr_normal">г. Брест, ул. Гоголя, д.65</p>
+                                    <div class="header_flex">
+                                        <p class="header__map-descr_hover">Смотреть на карте</p>
+                                    </div>
+                                </div>
+                                <div class="header__map-iframe">
+                                    <iframe src="https://yandex.by/map-widget/v1/-/CCQheJcX2D" width="100%" height="100%"
+                                        frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                            <div class="header__contact">
+                                <div class="header__contact-phone">
+                                    <div class="header__contact-icon">
+                                        <a href="tel:+375333822499">
+                                            <img src="img/header/phone.png" alt="+375333822499">
+                                        </a>
+                                    </div>
+                                    <div class="header__contact-tel">
+                                        <div class="header__contact-tel_wraper">
+                                            <span></span>
+                                            <p>Звоните, мы сейчас работаем</p>
+                                        </div>
+                                        <a href="tel:+375333822499">+375 33 382 24 99</a>
+                                    </div>
+                                </div>
+                                <div class="header__contact-days">
+                                    <div class="header__contact-icon">
+                                        <img src="img/header/time.png" alt="время">
+                                    </div>
+                                    <p>Пн-Вс <span>9:00-21:00</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-2">
+                            <div class="header__rec">
+                                <img src="img/header/calendar.png" alt="календарь">
+                                <span>Записаться онлайн</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="header__menu">
+                        <a href="/">Главная</a>
+                        <a href="depilation.html">Шугаринг и депиляция воском</a>
+                        <a href="#">Антицеллюлитный массаж</a>
+                        <a href="#">Классический массаж</a>
+                        <a href="#">Обучение</a>
+                        <a href="catalog.html">Косметика для мастеров</a>
+                        <a href="papers.html">Статьи</a>
+                        <a href="about.html">О студии</a>
+                        <a href="contacts.html">Контакты</a>
+                    </div>
+                    <div class="header_boxShadow"></div>
+                </div>
+            </div>
+            <div class="header_blurRight blur">
+                <img src="img/main/rightBlur1.png" alt="">
+            </div>
+        </header>        <div class="aboutDescr">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12">
+                        <div class="aboutDescr__title">
+                            <h2>О студии</h2>
+                        </div>
+                        <div class="aboutDescr__descr">
+                            <div class="aboutDescr__descr-title">
+                                <h3>Студия депиляции и массажный
+                                    кабинет в Бресте</h3>
+                            </div>
+                            <div class="aboutDescr__descr-text">
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus cumque vero necessitatibus
+                                    impedit ullam totam quas commodi ex quasi aperiam veniam pariatur voluptatum at nostrum, aut
+                                    illo unde vitae temporibus! Eos, perferendis alias! Totam tempora distinctio, nihil at
+                                    voluptate itaque quos quis voluptates reprehenderit veritatis deserunt iste minus!
+                                    Blanditiis, inventore.</p>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus ipsam delectus nesciunt
+                                    impedit sed tempore enim aut? Omnis rem, possimus mollitia architecto consectetur iusto
+                                    illum. Ipsum, commodi corrupti consequatur odit fugiat eum accusantium debitis dignissimos
+                                    soluta qui praesentium. Eligendi, commodi quod! Cupiditate facilis repellat cum tenetur
+                                    autem exercitationem libero fugiat.</p>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor perspiciatis nostrum nam
+                                    minus cumque corporis maxime eum unde beatae fuga.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12">
+                        <img src="img/about/aboutDescr/womens.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="aboutDescr__leaves">
+                <img src="img/about/aboutDescr/leaves.png" alt="">
+            </div>
+        </div>    </div>
+    <div class="qualification" id="qualification">
+        <div class="container">
+            <div class="qualification__title">
+                <h2><span class="light">Наша</span> команда</h2>
+            </div>
+            <div class="qualification__workers">
+                <div class="arrowLeft">
+                    <img src="img/qualification/arrowLeft.png" alt="назад">
+                </div>
+                <div class="qualification__workers-slider">
+                    <div class="qualification__workers-item">
+                        <div class="qualification__workers-card">
+                            <div class="qualification__workers-img">
+                                <img src="img/qualification/women1.png" alt="женщина">
+                                <div class="qualification__workers-name">
+                                    <p>ИРИНА</p>
+                                </div>
+                                <div class="qualification__workers-master">
+                                    <p>Сертифицированный мастер</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="qualification__workers-descr">
+                            <div class="qualification__workers-ul">
+                                <ul>
+                                    <li>Косметик 4-го разряда</li>
+                                    <li><span class="bold">Женская и мужская</span> депиляция</li>
+                                    <li><span class="bold">Мастер-универсал</span> (шугаринг/воск)</li>
+                                </ul>
+                            </div>
+                            <div class="qualification__workers-link borderDashed">
+                                <a class="linkColorRoze" href="/">ЗАПИСАТЬСЯ К МАСТЕРУ ИРИНЕ</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="qualification__workers-item">
+                        <div class="qualification__workers-card">
+                            <div class="qualification__workers-img">
+                                <img src="img/qualification/women2.png" alt="женщина">
+                                <div class="qualification__workers-name">
+                                    <p>ВИКТОРИЯ</p>
+                                </div>
+                                <div class="qualification__workers-master">
+                                    <p>Сертифицированный мастер</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="qualification__workers-descr">
+                            <div class="qualification__workers-ul">
+                                <ul>
+                                    <li>Косметик 4-го разряда</li>
+                                    <li><span class="bold">Женская и мужская</span> депиляция</li>
+                                    <li><span class="bold">Мастер-универсал</span> (шугаринг/воск)</li>
+                                </ul>
+                            </div>
+                            <div class="qualification__workers-link borderDashed">
+                                <a class="linkColorRoze" href="/">ЗАПИСАТЬСЯ К МАСТЕРУ ВИКТОРИИ</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="qualification__workers-item">
+                        <div class="qualification__workers-card">
+                            <div class="qualification__workers-img">
+                                <img src="img/qualification/women3.png" alt="женщина">
+                                <div class="qualification__workers-name">
+                                    <p class="purple">ЕКАТЕРИНА</p>
+                                </div>
+                                <div class="qualification__workers-master">
+                                    <p>Сертифицированный мастер</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="qualification__workers-descr">
+                            <div class="qualification__workers-ul">
+                                <ul>
+                                    <li>Косметик 4-го разряда</li>
+                                    <li><span class="bold">Женская и мужская</span> депиляция</li>
+                                    <li><span class="bold">Мастер-универсал</span> (шугаринг/воск)</li>
+                                </ul>
+                            </div>
+                            <div class="qualification__workers-link borderDashed">
+                                <a class="linkColorRoze" href="/">ЗАПИСАТЬСЯ К МАСТЕРУ ЕКАТЕРИНЕ</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="qualification__workers-item">
+                        <div class="qualification__workers-card">
+                            <div class="qualification__workers-img">
+                                <img src="img/qualification/women1.png" alt="женщина">
+                                <div class="qualification__workers-name">
+                                    <p>ИРИНА</p>
+                                </div>
+                                <div class="qualification__workers-master">
+                                    <p>Сертифицированный мастер</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="qualification__workers-descr">
+                            <div class="qualification__workers-ul">
+                                <ul>
+                                    <li>Косметик 4-го разряда</li>
+                                    <li><span class="bold">Женская и мужская</span> депиляция</li>
+                                    <li><span class="bold">Мастер-универсал</span> (шугаринг/воск)</li>
+                                </ul>
+                            </div>
+                            <div class="qualification__workers-link borderDashed">
+                                <a class="linkColorRoze" href="/">ЗАПИСАТЬСЯ К МАСТЕРУ ИРИНЕ</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="qualification__workers-item">
+                        <div class="qualification__workers-card">
+                            <div class="qualification__workers-img">
+                                <img src="img/qualification/women2.png" alt="женщина">
+                                <div class="qualification__workers-name">
+                                    <p>ИРИНА</p>
+                                </div>
+                                <div class="qualification__workers-master">
+                                    <p>Сертифицированный мастер</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="qualification__workers-descr">
+                            <div class="qualification__workers-ul">
+                                <ul>
+                                    <li>Косметик 4-го разряда</li>
+                                    <li><span class="bold">Женская и мужская</span> депиляция</li>
+                                    <li><span class="bold">Мастер-универсал</span> (шугаринг/воск)</li>
+                                </ul>
+                            </div>
+                            <div class="qualification__workers-link borderDashed">
+                                <a class="linkColorRoze" href="/">ЗАПИСАТЬСЯ К МАСТЕРУ ИРИНЕ</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="qualification__workers-item">
+                        <div class="qualification__workers-card">
+                            <div class="qualification__workers-img">
+                                <img src="img/qualification/women3.png" alt="женщина">
+                                <div class="qualification__workers-name">
+                                    <p>ИРИНА</p>
+                                </div>
+                                <div class="qualification__workers-master">
+                                    <p>Сертифицированный мастер</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="qualification__workers-descr">
+                            <div class="qualification__workers-ul">
+                                <ul>
+                                    <li>Косметик 4-го разряда</li>
+                                    <li><span class="bold">Женская и мужская</span> депиляция</li>
+                                    <li><span class="bold">Мастер-универсал</span> (шугаринг/воск)</li>
+                                </ul>
+                            </div>
+                            <div class="qualification__workers-link borderDashed">
+                                <a class="linkColorRoze" href="/">ЗАПИСАТЬСЯ К МАСТЕРУ ИРИНЕ</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="arrowRight">
+                    <img src="img/qualification/arrowRight.png" alt="назад">
+                </div>
+            </div>
+        </div>
+        <div class="qualification__certificate">
+            <div class="qualification__certificate-descr">
+                <h3>Сертификаты и дипломы <span class="light">наших мастеров</span></h3>
+                <div class="qualification__certificate-link borderDashed">
+                    <a class="linkColorRoze" href="/">Смотреть все сертификаты</a>
+                </div>
+            </div>
+            <div class="qualification__certificate-items">
+                <div class="arrowLeftBot">
+                    <img src="img/qualification/arrowLeft.png" alt="назад">
+                </div>
+                <div class="qualification__certificate-wraper">
+                    <div class="qualification__certificate-img">
+                        <img src="img/qualification/flower.png" alt="цветок">
+                    </div>
+                    <div class="qualification__certificate-slider">
+                        <div class="qualification__certificate-item">
+                            <div class="qualification__certificate-background"></div>
+                            <img src="img/qualification/diplom.png" alt="сертификат">
+                            <div class="qualification__certificate-zoom">
+                                <a href="img/qualification/diplom.png" data-fancybox="gallery">
+                                    <img src="img/work/zoom.png" alt="увеличить">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="qualification__certificate-item">
+                            <div class="qualification__certificate-background"></div>
+                            <img src="img/qualification/diplom.png" alt="сертификат">
+                            <div class="qualification__certificate-zoom">
+                                <a href="img/qualification/diplom.png" data-fancybox="gallery">
+                                    <img src="img/work/zoom.png" alt="увеличить">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="qualification__certificate-item">
+                            <div class="qualification__certificate-background"></div>
+                            <img src="img/qualification/diplom.png" alt="сертификат">
+                            <div class="qualification__certificate-zoom">
+                                <a href="img/qualification/diplom.png" data-fancybox="gallery">
+                                    <img src="img/work/zoom.png" alt="увеличить">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="qualification__certificate-item">
+                            <div class="qualification__certificate-background"></div>
+                            <img src="img/qualification/diplom.png" alt="сертификат">
+                            <div class="qualification__certificate-zoom">
+                                <a href="img/qualification/diplom.png" data-fancybox="gallery">
+                                    <img src="img/work/zoom.png" alt="увеличить">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="qualification__certificate-item">
+                            <div class="qualification__certificate-background"></div>
+                            <img src="img/qualification/diplom.png" alt="сертификат">
+                            <div class="qualification__certificate-zoom">
+                                <a href="img/qualification/diplom.png" data-fancybox="gallery">
+                                    <img src="img/work/zoom.png" alt="увеличить">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="qualification__certificate-item">
+                            <div class="qualification__certificate-background"></div>
+                            <img src="img/qualification/diplom.png" alt="сертификат">
+                            <div class="qualification__certificate-zoom">
+                                <a href="img/qualification/diplom.png" data-fancybox="gallery">
+                                    <img src="img/work/zoom.png" alt="увеличить">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="arrowRightBot">
+                    <img src="img/qualification/arrowRight.png" alt="назад">
+                </div>
+            </div>
+        </div>
+        <div class="qualification__leaveLeft blur">
+            <img src="img/qualification/leaveLeft.png" alt="листик">
+        </div>
+        <div class="qualification__leaveRight2">
+            <img src="img/qualification/leavesRight2.png" alt="листик">
+        </div>
+        <div class="qualification__leaveRight blur">
+            <img src="img/qualification/leavesRight.png" alt="листик">
+        </div>
+        <div class="qualification__leaveCenter blur">
+            <img src="img/qualification/leavesCenter.png" alt="листик">
+        </div>
+        <div class="qualification__number">
+            <p>+ ещё <span>12</span></p>
+            <div class="qualification__blurRight">
+                <img src="img/qualification/blurRight.png" alt="листик">
+            </div>
+        </div>
+    </div>    <div class="work" id="work">
+        <div class="work__title">
+            <h2>Фото нашей студии</h2>
+        </div>
+        <div class="row">
+            <div class="work--flex">
+                <div class="col-20 col-lg-6 col-md-4 col-sm-4">
+                    <div class="work__img">
+                        <div class="work--wraper">
+                            <img src="img/work/1.png" alt="фотография">
+                            <div class="work__background"></div>
+                            <div class="work__zoom">
+                                <a href="img/work/1.png" data-fancybox="gallery">
+                                    <img src="img/work/zoom.png" alt="увеличить">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-20 col-lg-6 col-md-4 col-sm-4">
+                    <div class="work__img">
+                        <div class="work--wraper">
+                            <img src="img/work/2.png" alt="фотография">
+                            <div class="work__background"></div>
+                            <div class="work__zoom">
+                                <a href="img/work/2.png" data-fancybox="gallery">
+                                    <img class="minimized" src="img/work/zoom.png" alt="увеличить">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-20 col-lg-6  col-md-4 col-sm-4">
+                    <div class="work__img">
+                        <div class="work--wraper">
+                            <img src="img/work/3.png" alt="фотография">
+                            <div class="work__background"></div>
+                            <div class="work__zoom">
+                                <a href="img/work/3.png" data-fancybox="gallery">
+                                    <img class="minimized" src="img/work/zoom.png" alt="увеличить">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-20 col-lg-6  col-md-4 col-sm-4">
+                    <div class="work__img">
+                        <div class="work--wraper">
+                            <img src="img/work/4.png" alt="фотография">
+                            <div class="work__background"></div>
+                            <div class="work__zoom">
+                                <a href="img/work/4.png" data-fancybox="gallery">
+                                    <img class="minimized" src="img/work/zoom.png" alt="увеличить">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-20 col-lg-6  col-md-4 col-sm-4">
+                    <div class="work__img">
+                        <div class="work--wraper">
+                            <img src="img/work/5.png" alt="фотография">
+                            <div class="work__background"></div>
+                            <div class="work__zoom">
+                                <a href="img/work/5.png" data-fancybox="gallery">
+                                    <img class="minimized" src="img/work/zoom.png" alt="увеличить">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-20 col-lg-6  col-md-4 col-sm-4">
+                    <div class="work__img">
+                        <div class="work--wraper">
+                            <img src="img/work/6.png" alt="фотография">
+                            <div class="work__background"></div>
+                            <div class="work__zoom">
+                                <a href="img/work/6.png" data-fancybox="gallery">
+                                    <img class="minimized" src="img/work/zoom.png" alt="увеличить">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-20 col-lg-6  col-md-4 col-sm-4">
+                    <div class="work__img">
+                        <div class="work--wraper">
+                            <img src="img/work/7.png" alt="фотография">
+                            <div class="work__background"></div>
+                            <div class="work__zoom">
+                                <a href="img/work/7.png" data-fancybox="gallery">
+                                    <img class="minimized" src="img/work/zoom.png" alt="увеличить">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-20 col-lg-6  col-md-4 col-sm-4">
+                    <div class="work__img">
+                        <div class="work--wraper">
+                            <img src="img/work/8.png" alt="фотография">
+                            <div class="work__background"></div>
+                            <div class="work__zoom">
+                                <a href="img/work/8.png" data-fancybox="gallery">
+                                    <img class="minimized" src="img/work/zoom.png" alt="увеличить">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-20 col-lg-6  col-md-4 col-sm-4">
+                    <div class="work__img">
+                        <div class="work--wraper">
+                            <img src="img/work/9.png" alt="фотография">
+                            <div class="work__background"></div>
+                            <div class="work__zoom">
+                                <a href="img/work/9.png" data-fancybox="gallery">
+                                    <img class="minimized" src="img/work/zoom.png" alt="увеличить">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-20 col-lg-6 col-md-4 col-sm-4">
+                    <div class="work__img">
+                        <div class="work--wraper">
+                            <img src="img/work/10.png" alt="фотография">
+                            <div class="work__background"></div>
+                            <div class="work__zoom">
+                                <a href="img/work/10.png" data-fancybox="gallery">
+                                    <img class="minimized" src="img/work/zoom.png" alt="увеличить">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="work__more">
+            <div class="work__more-btn">
+                <a>Показать ещё
+                </a>
+                <img src="img/work/loader.png" alt="загрузка">
+            </div>
+        </div>
+    </div>    <div class="services" id="services">
+        <div class="container">
+            <div class="services__title">
+                <h2 class="">Оказываем профессионально следующие услуги</h2>
+            </div>
+            <div class="row">
+                <div class="services--flex">
+                    <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12">
+                        <div class="services__card">
+                            <div class="services__card-img">
+                                <img src="img/services/card_1.png" alt="карточка">
+                            </div>
+                            <div class="services__card-descr">
+                                <h3 class="">Депиляция воском
+                                    и шугаринг
+                                </h3>
+                                <p>
+                                    (для девушек и мужчин)</p>
+                            </div>
+                            <div class="services__card-btn--wraper">
+                                <div class="services__card-btn services__card-btn--margin">
+                                    <a href="/">ПЕРЕЙТИ НА СТРАНИЦУ</a>
+                                </div>
+                                <div class="services__card-btn-img services__card-btn--position">
+                                    <img src="img/services/plant.png" alt="растение">
+                                </div>
+                                <div class="services__card-sign">
+                                    <a href="/">ЗАПИСАТЬСЯ ОНЛАЙН</a>
+                                </div>
+                            </div>
+                            <div class="services__card-leave blur">
+                                <img src="img/services/leave.png" alt="листик">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12">
+                        <div class="services__card">
+                            <div class="services__card-img">
+                                <img src="img/services/card_2.png" alt="карточка">
+                            </div>
+                            <div class="services__card-descr">
+                                <h3 class="">Антицеллюлитный
+                                    массаж
+                                </h3>
+    
+                            </div>
+                            <div class="services__card-btn--wraper">
+                                <div class="services__card-btn">
+                                    <a href="/">ПЕРЕЙТИ НА СТРАНИЦУ</a>
+                                </div>
+                                <div class="services__card-btn-img">
+                                    <img src="img/services/plant.png" alt="растение">
+                                </div>
+                                <div class="services__card-sign">
+                                    <a href="/">ЗАПИСАТЬСЯ ОНЛАЙН</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12">
+                        <div class="services__card">
+                            <div class="services__card-img">
+                                <img src="img/services/card_3.png" alt="карточка">
+                            </div>
+                            <div class="services__card-descr">
+                                <h3 class="">Классический
+                                    массаж
+                                </h3>
+    
+                            </div>
+                            <div class="services__card-btn--wraper">
+                                <div class="services__card-btn">
+                                    <a href="/">ПЕРЕЙТИ НА СТРАНИЦУ</a>
+                                </div>
+                                <div class="services__card-btn-img">
+                                    <img src="img/services/plant.png" alt="растение">
+                                </div>
+                                <div class="services__card-sign">
+                                    <a href="/">ЗАПИСАТЬСЯ ОНЛАЙН</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="services__more">
+                <h2 class="">А также</h2>
+            </div>
+            <div class="row">
+                <div class="services--flex">
+                    <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12">
+                        <div class="services__other--wraper">
+                            <div class="services__other">
+                                <div class="services__other-img">
+                                    <img src="img/services/bottomCard_1.png" alt="косметика">
+                                </div>
+                                <div class="services__other-descr">
+                                    <p>Продажа <span>уходовой косметики</span></p>
+                                    <div class="services__other-btn">
+                                        <a href="/">Перейти на страницу</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12">
+                        <div class="services__other--wraper">
+                            <div class="services__other services__other--padding">
+                                <div class="services__other-img">
+                                    <img src="img/services/bottomCard_2.png" alt="косметика">
+                                </div>
+                                <div class="services__other-descr">
+                                    <p><span>Обучение</span></p>
+                                    <div class="services__other-btn">
+                                        <a href="/">Перейти на страницу</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12">
+                        <div class="services__other--wraper">
+                            <div class="services__other">
+                                <div class="services__other-img">
+                                    <img src="img/services/bottomCard_3.png" alt="косметика">
+                                </div>
+                                <div class="services__other-descr">
+                                    <p>Косметика <span>для мастеров</span></p>
+                                    <div class="services__other-btn">
+                                        <a href="/">Перейти на страницу</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="services__blurLeft blur">
+            <img src="img/services/leftBlur.png" alt="пятно">
+        </div>
+        <div class="services__wawe">
+            <img src="img/services/wawe.png" alt="волна">
+            <div class="services__wawe-scroll">
+                <a href="#work" class="services__wawe-svg">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="11" height="7"
+                        viewBox="0 0 11 7">
+                        <image id="Стрелка" width="11" height="7"
+                            xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAHCAYAAADebrddAAAAj0lEQVQYlXXKsarBcRzG4edwI2cw+ltcgElSFkyms7gBk+tRZJFk4exnsrkCNnXYlME5Rd/6kdT/s7zD+3xkWTbGAjP59dAu4IQJajm0jhH2gQeYY4nKG6ymb4ph4Bu+sMEanwmWsMIP+uECR1d0cMA3yml36OIv0ANHZzRRxBb/aOHyAK84+kUj4djj88Ed/kAeVaDDcdwAAAAASUVORK5CYII=" />
+                    </svg>
+                </a>
+                <div class="services__wawe-img">
+                    <img src="img/services/scrollDown.png" alt="скролл">
+                </div>
+            </div>
+        </div>
+        <div class="services__leaves">
+            <img src="img/services/leaves.png" alt="лепестки">
+        </div>
+    </div>    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer--flex">
+                    <div class="col-xl-3 col-lg-6 col-md-12 col-sm-12 footer--order-2">
+                        <div class="footer__insta">
+                            <img src="img/footer/insta.png" alt="@pincet_brest">
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-12 col-sm-12 footer--order-1">
+                        <div class="footer__descr">
+                            <div class="footer__descr-title">
+                                <h2><span class="light">Мы находимся</span> в центре</h2>
+                            </div>
+                            <div class="footer__descr-phones">
+                                <div class="footer__descr-phones--icon">
+                                    <a class="smallIcon" href="tel:+375333822499">
+                                        <img src="img/footer/phone.png" alt="+375333822499">
+                                    </a>
+                                </div>
+                                <div class="footer__descr-phones--text">
+                                    <p>Телефоны:</p>
+                                    <p><a href="tel:+375333822499">+375 33 382 24 99 <span>(для записей)</span></a></p>
+                                    <p><a href="tel:+375292249503">+375 29 224 95 03 <span>(руководитель)</span></a></p>
+                                </div>
+                            </div>
+                            <div class="footer__descr-time">
+                                <div class="footer__descr-time--icon">
+                                    <div class="smallIcon"><img src="img/footer/time.png" alt="пн-вс 9-21"></div>
+                                </div>
+                                <div class="footer__descr-time--text">
+                                    <p>Режим работы:</p>
+                                    <p>Пн-Вс 9:00-21:00</p>
+    
+                                </div>
+                            </div>
+                            <div class="footer__descr-line"></div>
+                            <div class="footer__descr-mesanger">
+                                <div class="footer__descr-mesanger--text">
+                                    <p>Задай вопрос в удобный месенджер:</p>
+                                </div>
+                                <div class="footer__descr-mesanger--icons">
+                                    <a class="bigIcon" href=""><img src="img/footer/viber.png" alt="viber"></a>
+                                    <a class="bigIcon" href=""><img src="img/footer/telega.png" alt="telegram"></a>
+                                    <a class="bigIcon" href=""><img src="img/footer/whatsapp.png" alt="whatsapp"></a>
+    
+                                </div>
+                            </div>
+                            <div class="footer__descr-social">
+                                <div class="footer__descr-social--text">
+                                    <p>Мы в социальных сетях:</p>
+                                </div>
+                                <div class="footer__descr-social--icons">
+                                    <a class="bigIcon" href=""><img src="img/footer/instaIcon.png" alt="instagram"></a>
+                                    <a class="bigIcon" href=""><img src="img/footer/vk.png" alt="vk"></a>
+                                    <a class="bigIcon" href=""><img src="img/footer/ok.png" alt="ok"></a>
+                                    <a class="bigIcon" href=""><img src="img/footer/fb.png" alt="facebook"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="col-xl-5 col-lg-12 col-md-12 col-sm-12 footer__map--flex footer--order-3">
+                        <div class="footer__map">
+                            <div class="footer__map-illustration">
+                                <div class="footer__map-illustration--left">
+                                    <div class="footer__map-title">Здание Delta</div>
+                                    <a href="img/footer/illustration1.png" data-fancybox="gallery"><img
+                                            src="img/footer/illustration1.png" alt="здание"></a>
+                                    <a href="img/footer/illustration2.png" data-fancybox="gallery"><img
+                                            src="img/footer/illustration2.png" alt="здание"></a>
+                                    <a href="img/footer/illustration3.png" data-fancybox="gallery"><img
+                                            src="img/footer/illustration3.png" alt="здание"></a>
+                                </div>
+                                <div class="footer__map-illustration--right">
+                                    <div class="footer__map-title">Наш кабинет</div>
+                                    <a href="img/footer/illustration4.png" data-fancybox="gallery"><img
+                                            src="img/footer/illustration4.png" alt="кабинет"></a>
+                                    <a href="img/footer/illustration5.png" data-fancybox="gallery"><img
+                                            src="img/footer/illustration5.png" alt="кабинет"></a>
+                                    <a href="img/footer/illustration6.png" data-fancybox="gallery"><img
+                                            src="img/footer/illustration6.png" alt="кабинет"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer__map-img">
+                            <img src="img/footer/map.png" alt="карта">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__privacy">
+                <div class="footer__privacy-rights">
+                    <p>© Все права защищены.</p>
+                    <p> Копирование материалов сайта преследуется по закону</p>
+                </div>
+                <div class="footer__privacy-unp">
+                    <p>УНП 25481616
+                        Брест 2020</p>
+                </div>
+                <div class="footer__privacy-paradigma">
+                    <p>Сделано с любовью
+                        в <a href="https://paradigma.website/" class="linkColorRoze"> paradigma.website</a></p>
+                </div>
+            </div>
+        </div>
+    </div><script type="text/javascript" src="./js/app.js"></script></body>
+
+</html>
