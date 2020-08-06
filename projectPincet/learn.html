@@ -24,6 +24,7 @@
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6">
                             <div class="header__burger">
+                                <p>МЕНЮ</p>
                                 <div class="header__burger-img">
                                     <svg height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1"
                                         viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
@@ -71,7 +72,10 @@
                                     <p class="header__map-descr_bold">Мы находимся в центре:</p>
                                     <p class="header__map-descr_normal">г. Брест, ул. Гоголя, д.65</p>
                                     <div class="header_flex">
-                                        <p class="header__map-descr_hover">Смотреть на карте</p>
+                                        <p class="header__map-descr_hover header__map--none">Смотреть на карте</p>
+                                        <a class="header__map-descr_hover header__map-link"
+                                            href="https://yandex.ua/maps/153/brest/house/ZkoYcA5oSEMPQFtofXx4cn9gZw==/?from=mapframe&ll=23.698168%2C52.093333&sll=23.698168%2C52.093333&sspn=0.361176%2C0.127318&z=16">Смотреть
+                                            на карте</a>
                                     </div>
                                 </div>
                                 <div class="header__map-iframe">
@@ -133,10 +137,10 @@
         </header>        <div class="main learn-main">
             <div class="container">
                 <div class="row">
-                    <div class="col-xl-7 col-lg-12 col-md-12 col-sm-12">
+                    <div class="col-xl-8 col-lg-12 col-md-12 col-sm-12">
                         <div class="main__descr">
                             <div class="main__descr-title">
-                                <h1>Получи востребованную профессию
+                                <h1>Получи востребованную <br> профессию
                                     <span class="light">
                                         мастера шугаринга и депиляции воском
                                     </span>
@@ -173,7 +177,7 @@
             <div class="main__wawe">
                 <img src="img/main/wawe.png" alt="волна">
                 <div class="main__wawe-scroll">
-                    <a href="#relocation" class="main__wawe-svg">
+                    <a href="#who" class="main__wawe-svg">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="11" height="7"
                             viewBox="0 0 11 7">
                             <image id="Стрелка" width="11" height="7"
@@ -184,6 +188,12 @@
                         <img src="img/main/scrollDown.png" alt="скролл">
                     </div>
                 </div>
+            </div>
+            <div class="learn-main__blur blur">
+                <img src="img/learn/main/blur.png" alt="">
+            </div>
+            <div class="learn-main__leave blur">
+                <img src="img/learn/main/leave.png" alt="">
             </div>
         </div>    </div>
     <div class="who">
@@ -218,7 +228,7 @@
                         <div class="col-xl-6 col-md-12 col-lg-12 col-sm-12">
                             <div class="who__img">
                                 <img src="img/learn/who/womens.png" alt="">
-                                <a href="/" class="who__img--btn">
+                                <a data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" class="who__img--btn">
                                     <span>
                                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                             width="36" height="36" viewBox="0 0 36 36">
@@ -262,7 +272,7 @@
             <div class="waweBot">
                 <img src="img/main/wawe.png" alt="волна">
                 <div class="waweBot__scroll">
-                    <a href="#" class="main__wawe-svg">
+                    <a href="#programm" class="main__wawe-svg">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="11"
                             height="7" viewBox="0 0 11 7">
                             <image id="Стрелка" width="11" height="7"
@@ -284,7 +294,7 @@
         <div class="who__blur blur">
             <img src="img/learn/who/blur.png" alt="">
         </div>
-    </div>    <div class="programm">
+    </div>    <div class="programm" id="programm">
         <div class="container">
             <div class="programm__title">
                 <h2>Выберите<span class="light"> 1 из 4 программ обучения</span></h2>
@@ -1025,7 +1035,8 @@
                                     <img src="img/learn/graduate/rew1.png" alt="отзыв">
                                 </div>
                                 <div class="graduate__clients-btn">
-                                    <a href="/" class="graduate__clients-videoBtn">
+                                    <a data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk"
+                                        class="graduate__clients-videoBtn">
                                         <span>
                                             <svg xmlns="http://www.w3.org/2000/svg"
                                                 xmlns:xlink="http://www.w3.org/1999/xlink" width="36" height="36"
@@ -1043,7 +1054,8 @@
                                     <img src="img/learn/graduate/rew2.png" alt="отзыв">
                                 </div>
                                 <div class="graduate__clients-btn">
-                                    <a href="/" class="graduate__clients-videoBtn">
+                                    <a data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk"
+                                        class="graduate__clients-videoBtn">
                                         <span>
                                             <svg xmlns="http://www.w3.org/2000/svg"
                                                 xmlns:xlink="http://www.w3.org/1999/xlink" width="36" height="36"
@@ -1062,7 +1074,8 @@
                                         <img src="img/learn/graduate/rew1.png" alt="отзыв">
                                     </div>
                                     <div class="graduate__clients-btn">
-                                        <a href="/" class="graduate__clients-videoBtn">
+                                        <a data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk"
+                                            class="graduate__clients-videoBtn">
                                             <span>
                                                 <svg xmlns="http://www.w3.org/2000/svg"
                                                     xmlns:xlink="http://www.w3.org/1999/xlink" width="36" height="36"
@@ -1080,7 +1093,8 @@
                                         <img src="img/learn/graduate/rew2.png" alt="отзыв">
                                     </div>
                                     <div class="graduate__clients-btn">
-                                        <a href="/" class="graduate__clients-videoBtn">
+                                        <a data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk"
+                                            class="graduate__clients-videoBtn">
                                             <span>
                                                 <svg xmlns="http://www.w3.org/2000/svg"
                                                     xmlns:xlink="http://www.w3.org/1999/xlink" width="36" height="36"
@@ -1117,7 +1131,6 @@
                     <img src="img/services/scrollDown.png" alt="скролл">
                 </div>
             </div>
-            <img src="img/learn/joy/wawe.png" alt="волна">
         </div>
         <div class="joy--wraper" id="joy--wraper">
             <div class="container">
@@ -1216,7 +1229,7 @@
             </div>
             <div class="joy__wawe joy__wawe--margin">
                 <div class="joy__wawe-scroll">
-                    <a href="#request" class="joy__wawe-svg">
+                    <a href="#learnRequest2" class="joy__wawe-svg">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="11"
                             height="7" viewBox="0 0 11 7">
                             <image id="Стрелка" width="11" height="7"
@@ -1236,15 +1249,15 @@
         <div class="joy__blur blur">
             <img src="img/learn/joy/blur.png" alt="пятно">
         </div>
-    </div>    <div class="request request-learn" id="learnRequest">
+    </div>    <div class="request request-learn" id="learnRequest2">
         <div class="container">
-            <div class="request__form">
+            <div class="request__form request--overflow">
                 <div class="request__form-title">
                     <h3>Узнайте свободную дату обучения, <span class="light">оставьте заявку</span></h3>
                     <p>Заполните форму и мы перезвоним Вам и проконсультируем по обучение</p>
                 </div>
                 <div class="request__form--wraper flexWrap">
-                    <div class="request__form-img">
+                    <div class="request__form-img request-learn__phoneImg">
                         <img src="img/learn/request/phone.png" alt="ipad">
                     </div>
                     <div class="request__form-inputs">
@@ -1287,15 +1300,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="request__form-rightImg blur">
-                    <img src="img/request/branch.png" alt="лепестки">
-                </div>
+            </div>
+            <div class="request__form-rightImg request__form-rightImg--pos blur">
+                <img src="img/request/branch.png" alt="лепестки">
             </div>
         </div>
         <div class="request__form-leave">
             <img src="img/learn/request/leave.png" alt="">
         </div>
-    </div>    <div class="footer">
+    </div>    <div class="footer" id="footer">
         <div class="container">
             <div class="row">
                 <div class="footer--flex">
@@ -1340,9 +1353,12 @@
                                     <p>Задай вопрос в удобный месенджер:</p>
                                 </div>
                                 <div class="footer__descr-mesanger--icons">
-                                    <a class="bigIcon" href=""><img src="img/footer/viber.png" alt="viber"></a>
-                                    <a class="bigIcon" href=""><img src="img/footer/telega.png" alt="telegram"></a>
-                                    <a class="bigIcon" href=""><img src="img/footer/whatsapp.png" alt="whatsapp"></a>
+                                    <a class="bigIcon" href="" target="_blank"><img src="img/footer/viber.png"
+                                            alt="viber"></a>
+                                    <a class="bigIcon" href="" target="_blank"><img src="img/footer/telega.png"
+                                            alt="telegram"></a>
+                                    <a class="bigIcon" href="" target="_blank"><img src="img/footer/whatsapp.png"
+                                            alt="whatsapp"></a>
     
                                 </div>
                             </div>
@@ -1351,10 +1367,12 @@
                                     <p>Мы в социальных сетях:</p>
                                 </div>
                                 <div class="footer__descr-social--icons">
-                                    <a class="bigIcon" href=""><img src="img/footer/instaIcon.png" alt="instagram"></a>
-                                    <a class="bigIcon" href=""><img src="img/footer/vk.png" alt="vk"></a>
-                                    <a class="bigIcon" href=""><img src="img/footer/ok.png" alt="ok"></a>
-                                    <a class="bigIcon" href=""><img src="img/footer/fb.png" alt="facebook"></a>
+                                    <a class="bigIcon" href="" target="_blank"><img src="img/footer/instaIcon.png"
+                                            alt="instagram"></a>
+                                    <a class="bigIcon" href="" target="_blank"><img src="img/footer/vk.png" alt="vk"></a>
+                                    <a class="bigIcon" href="" target="_blank"><img src="img/footer/ok.png" alt="ok"></a>
+                                    <a class="bigIcon" href="" target="_blank"><img src="img/footer/fb.png"
+                                            alt="facebook"></a>
                                 </div>
                             </div>
                         </div>
@@ -1400,7 +1418,8 @@
                 </div>
                 <div class="footer__privacy-paradigma">
                     <p>Сделано с любовью
-                        в <a href="https://paradigma.website/" class="linkColorRoze"> paradigma.website</a></p>
+                        в <a href="https://paradigma.website/" target="_blank" class="linkColorRoze"> paradigma.website</a>
+                    </p>
                 </div>
             </div>
         </div>

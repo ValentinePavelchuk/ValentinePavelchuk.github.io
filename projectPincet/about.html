@@ -24,6 +24,7 @@
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6">
                             <div class="header__burger">
+                                <p>МЕНЮ</p>
                                 <div class="header__burger-img">
                                     <svg height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1"
                                         viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
@@ -71,7 +72,10 @@
                                     <p class="header__map-descr_bold">Мы находимся в центре:</p>
                                     <p class="header__map-descr_normal">г. Брест, ул. Гоголя, д.65</p>
                                     <div class="header_flex">
-                                        <p class="header__map-descr_hover">Смотреть на карте</p>
+                                        <p class="header__map-descr_hover header__map--none">Смотреть на карте</p>
+                                        <a class="header__map-descr_hover header__map-link"
+                                            href="https://yandex.ua/maps/153/brest/house/ZkoYcA5oSEMPQFtofXx4cn9gZw==/?from=mapframe&ll=23.698168%2C52.093333&sll=23.698168%2C52.093333&sspn=0.361176%2C0.127318&z=16">Смотреть
+                                            на карте</a>
                                     </div>
                                 </div>
                                 <div class="header__map-iframe">
@@ -266,6 +270,12 @@
                     </div>
                 </div>
             </div>
+            <div class="screenshots__leavesR">
+                <img src="img/about/screenshots/leaveR.png" alt="">
+            </div>
+            <div class="screenshots__leavesL">
+                <img src="img/about/screenshots/leaveL.png" alt="">
+            </div>
         </div>        <div class="video">
             <div class="container">
                 <div class="video__title">
@@ -391,11 +401,14 @@
             <div class="video__leaves">
                 <img src="img/about/video/leaves.png" alt="">
             </div>
+            <div class="video__leave">
+                <img src="img/about/video/leave.png" alt="">
+            </div>
         </div>    </div>
     <div class="team">
         <div class=" waweTop">
             <div class="waweTop__scroll">
-                <a href="#complex__title" class="waweTop-svg">
+                <a href="#team__title" class="waweTop-svg">
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="11" height="7"
                         viewBox="0 0 11 7">
                         <image id="Стрелка" width="11" height="7"
@@ -406,11 +419,10 @@
                     <img src="img/services/scrollDown.png" alt="скролл">
                 </div>
             </div>
-            <img src="img/about/team/wawe.png" alt="волна">
         </div>
         <div class="team--wraper">
             <div class="container">
-                <div class="team__title">
+                <div class="team__title" id="team__title">
                     <h2><span class="light">Наша</span> команда</h2>
                 </div>
                 <div class="team__workers">
@@ -763,6 +775,13 @@
                                     est quae distinctio dignissimos eius?
                                 </div>
                                 <div class="request__form-inputs">
+                                    <div class="request__form-select">
+                                        <select name="" id="" placeholder="повышение квалификации">
+                                            <option value="1">Повышение квалификации</option>
+                                            <option value="2">Повышение квалификации</option>
+                                            <option value="3">Повышение квалификации</option>
+                                        </select>
+                                    </div>
                                     <div class="request__form-name">
                                         <input type="text" id="name" placeholder="Ваше имя">
                                     </div>
@@ -810,7 +829,7 @@
                             </div>
                             <div class="services__card-btn--wraper">
                                 <div class="services__card-btn services__card-btn--margin">
-                                    <a href="/">ПЕРЕЙТИ НА СТРАНИЦУ</a>
+                                    <a href="depilation.html">ПЕРЕЙТИ НА СТРАНИЦУ</a>
                                 </div>
                                 <div class="services__card-btn-img services__card-btn--position">
                                     <img src="img/services/plant.png" alt="растение">
@@ -837,7 +856,7 @@
                             </div>
                             <div class="services__card-btn--wraper">
                                 <div class="services__card-btn">
-                                    <a href="/">ПЕРЕЙТИ НА СТРАНИЦУ</a>
+                                    <a href="masage.html">ПЕРЕЙТИ НА СТРАНИЦУ</a>
                                 </div>
                                 <div class="services__card-btn-img">
                                     <img src="img/services/plant.png" alt="растение">
@@ -861,7 +880,7 @@
                             </div>
                             <div class="services__card-btn--wraper">
                                 <div class="services__card-btn">
-                                    <a href="/">ПЕРЕЙТИ НА СТРАНИЦУ</a>
+                                    <a href="masage.html">ПЕРЕЙТИ НА СТРАНИЦУ</a>
                                 </div>
                                 <div class="services__card-btn-img">
                                     <img src="img/services/plant.png" alt="растение">
@@ -888,7 +907,7 @@
                                 <div class="services__other-descr">
                                     <p>Продажа <span>уходовой косметики</span></p>
                                     <div class="services__other-btn">
-                                        <a href="/">Перейти на страницу</a>
+                                        <a href="catalog.html">Перейти на страницу</a>
                                     </div>
                                 </div>
                             </div>
@@ -903,7 +922,7 @@
                                 <div class="services__other-descr">
                                     <p><span>Обучение</span></p>
                                     <div class="services__other-btn">
-                                        <a href="/">Перейти на страницу</a>
+                                        <a href="learn.html">Перейти на страницу</a>
                                     </div>
                                 </div>
                             </div>
@@ -918,7 +937,7 @@
                                 <div class="services__other-descr">
                                     <p>Косметика <span>для мастеров</span></p>
                                     <div class="services__other-btn">
-                                        <a href="/">Перейти на страницу</a>
+                                        <a href="catalog.html">Перейти на страницу</a>
                                     </div>
                                 </div>
                             </div>
@@ -933,7 +952,7 @@
         <div class="services__wawe">
             <img src="img/services/wawe.png" alt="волна">
             <div class="services__wawe-scroll">
-                <a href="#work" class="services__wawe-svg">
+                <a href="#footer" class="services__wawe-svg">
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="11" height="7"
                         viewBox="0 0 11 7">
                         <image id="Стрелка" width="11" height="7"
@@ -948,7 +967,7 @@
         <div class="services__leaves">
             <img src="img/services/leaves.png" alt="лепестки">
         </div>
-    </div>    <div class="footer">
+    </div>    <div class="footer" id="footer">
         <div class="container">
             <div class="row">
                 <div class="footer--flex">
@@ -993,9 +1012,12 @@
                                     <p>Задай вопрос в удобный месенджер:</p>
                                 </div>
                                 <div class="footer__descr-mesanger--icons">
-                                    <a class="bigIcon" href=""><img src="img/footer/viber.png" alt="viber"></a>
-                                    <a class="bigIcon" href=""><img src="img/footer/telega.png" alt="telegram"></a>
-                                    <a class="bigIcon" href=""><img src="img/footer/whatsapp.png" alt="whatsapp"></a>
+                                    <a class="bigIcon" href="" target="_blank"><img src="img/footer/viber.png"
+                                            alt="viber"></a>
+                                    <a class="bigIcon" href="" target="_blank"><img src="img/footer/telega.png"
+                                            alt="telegram"></a>
+                                    <a class="bigIcon" href="" target="_blank"><img src="img/footer/whatsapp.png"
+                                            alt="whatsapp"></a>
     
                                 </div>
                             </div>
@@ -1004,10 +1026,12 @@
                                     <p>Мы в социальных сетях:</p>
                                 </div>
                                 <div class="footer__descr-social--icons">
-                                    <a class="bigIcon" href=""><img src="img/footer/instaIcon.png" alt="instagram"></a>
-                                    <a class="bigIcon" href=""><img src="img/footer/vk.png" alt="vk"></a>
-                                    <a class="bigIcon" href=""><img src="img/footer/ok.png" alt="ok"></a>
-                                    <a class="bigIcon" href=""><img src="img/footer/fb.png" alt="facebook"></a>
+                                    <a class="bigIcon" href="" target="_blank"><img src="img/footer/instaIcon.png"
+                                            alt="instagram"></a>
+                                    <a class="bigIcon" href="" target="_blank"><img src="img/footer/vk.png" alt="vk"></a>
+                                    <a class="bigIcon" href="" target="_blank"><img src="img/footer/ok.png" alt="ok"></a>
+                                    <a class="bigIcon" href="" target="_blank"><img src="img/footer/fb.png"
+                                            alt="facebook"></a>
                                 </div>
                             </div>
                         </div>
@@ -1053,7 +1077,8 @@
                 </div>
                 <div class="footer__privacy-paradigma">
                     <p>Сделано с любовью
-                        в <a href="https://paradigma.website/" class="linkColorRoze"> paradigma.website</a></p>
+                        в <a href="https://paradigma.website/" target="_blank" class="linkColorRoze"> paradigma.website</a>
+                    </p>
                 </div>
             </div>
         </div>

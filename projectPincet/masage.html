@@ -24,6 +24,7 @@
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6">
                             <div class="header__burger">
+                                <p>МЕНЮ</p>
                                 <div class="header__burger-img">
                                     <svg height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1"
                                         viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
@@ -71,7 +72,10 @@
                                     <p class="header__map-descr_bold">Мы находимся в центре:</p>
                                     <p class="header__map-descr_normal">г. Брест, ул. Гоголя, д.65</p>
                                     <div class="header_flex">
-                                        <p class="header__map-descr_hover">Смотреть на карте</p>
+                                        <p class="header__map-descr_hover header__map--none">Смотреть на карте</p>
+                                        <a class="header__map-descr_hover header__map-link"
+                                            href="https://yandex.ua/maps/153/brest/house/ZkoYcA5oSEMPQFtofXx4cn9gZw==/?from=mapframe&ll=23.698168%2C52.093333&sll=23.698168%2C52.093333&sspn=0.361176%2C0.127318&z=16">Смотреть
+                                            на карте</a>
                                     </div>
                                 </div>
                                 <div class="header__map-iframe">
@@ -136,19 +140,21 @@
                     <div class="col-xl-7 col-lg-12 col-md-12 col-sm-12">
                         <div class="main__descr">
                             <div class="main__descr-title">
-                                <h1>Получи востребованную профессию
+                                <h1>Антицеллюлитный массаж
+                                    <br>
                                     <span class="light">
-                                        мастера шугаринга и депиляции воском
+                                        в Бресте - эффективный способ
+                                        борьбы с “апельсиновой коркой”
                                     </span>
-                                    за 2 дня
+        
                                     <br>
                                     <span class="light roze tlism">
-                                        Профессиональное обучение шугарингу и депиляции воском </span></h1>
+                                        Работаем и с женщинами, и с мужчинами </span></h1>
                             </div>
                             <div class="main__descr-list">
                                 <ul>
-                                    <li>начни зарабатывать до 2000 руб уже через 3 месяца;</li>
-                                    <li>доступные цены;</li>
+                                    <li>профессиональный мастер в сутдии, а не на дому;</li>
+                                    <li>доступные цены;;</li>
                                     <li>результаты уже после 1-ой процедуры;</li>
                                     <li>програма лояльности.</li>
                                 </ul>
@@ -173,7 +179,7 @@
             <div class="main__wawe">
                 <img src="img/main/wawe.png" alt="волна">
                 <div class="main__wawe-scroll">
-                    <a href="#relocation" class="main__wawe-svg">
+                    <a href="#indications" class="main__wawe-svg">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="11" height="7"
                             viewBox="0 0 11 7">
                             <image id="Стрелка" width="11" height="7"
@@ -198,7 +204,7 @@
                 <img src="img/masage/main/leaveL.png" alt="">
             </div>
         </div>    </div>
-    <div class="indications">
+    <div class="indications" id="indications">
         <div class="container">
             <div class="indications__masage">
                 <div class="indications__masage--wraper flexWrap">
@@ -350,10 +356,10 @@
         <div class="benefit__leaveL blur">
             <img src="img/masage/benefit/leaveL.png" alt="">
         </div>
-    </div>    <div class="effect">
+    </div>    <div class="effect" id="effect">
         <div class=" waweTop">
             <div class="waweTop__scroll">
-                <a href="#complex__title" class="waweTop-svg">
+                <a href="#effect__title" class="waweTop-svg">
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="11" height="7"
                         viewBox="0 0 11 7">
                         <image id="Стрелка" width="11" height="7"
@@ -364,11 +370,10 @@
                     <img src="img/services/scrollDown.png" alt="скролл">
                 </div>
             </div>
-            <img src="img/masage/effect/wawe.png" alt="волна">
         </div>
         <div class="effect-wraper">
             <div class="container">
-                <div class="effect__title">
+                <div class="effect__title" id="effect__title">
                     <h2>Для достижения максимально эффекта <span class="light">мы комбинируем антицеллюлитный массаж тремя
                             способами</span>
                     </h2>
@@ -457,7 +462,7 @@
             <div class="waweBot">
                 <img src="img/main/wawe.png" alt="волна">
                 <div class="waweBot__scroll">
-                    <a href="#" class="main__wawe-svg">
+                    <a href="#result" class="main__wawe-svg">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="11"
                             height="7" viewBox="0 0 11 7">
                             <image id="Стрелка" width="11" height="7"
@@ -477,7 +482,7 @@
             <img src="img/masage/effect/leave.png" alt="">
         </div>
     </div>    <div class="masage__result-wraper">
-        <div class="result">
+        <div class="result" id="result">
             <div class="container">
                 <div class="result__title">
                     <h2>Первые результаты будут видны <span class="light">уже после 5-7 сеансов</span></h2>
@@ -527,7 +532,7 @@
                             <div class="watch__macbook">
                                 <img src="img/masage/watch/macbook.png" alt="">
                                 <div class="watch__macbook-btn">
-                                    <a href=""><span>
+                                    <a data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk"><span>
                                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                                 width="30" height="30" viewBox="0 0 30 30">
                                                 <image id="Векторный_смарт-объект" data-name="Векторный смарт-объект" width="30"
@@ -774,6 +779,9 @@
                     <br>*бонусы по абонементам сохраняются по факту записи
                 </div>
             </div>
+            <div class="costMas__blur blur">
+                <img src="img/masage/costMas/blur.png" alt="">
+            </div>
         </div>        <div class="request request-dep" id="requestDep">
             <div class="container">
                 <div class="request__form">
@@ -845,7 +853,7 @@
     </div>    <div class="master">
         <div class=" waweTop">
             <div class="waweTop__scroll">
-                <a href="#complex__title" class="waweTop-svg">
+                <a href="#master__title" class="waweTop-svg">
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="11" height="7"
                         viewBox="0 0 11 7">
                         <image id="Стрелка" width="11" height="7"
@@ -856,12 +864,11 @@
                     <img src="img/services/scrollDown.png" alt="скролл">
                 </div>
             </div>
-            <img src="img/masage/master/wawe.png" alt="волна">
         </div>
         <div class="master--wraper">
             <div class="container">
-                <div class="master__title">
-                    <h2>Массаж делает только опытный и профессиональный мастер</h2>
+                <div class="master__title" id="master__title">
+                    <h2><span class="light">Массаж делает только</span> опытный и профессиональный мастер</h2>
                 </div>
                 <div class="row">
                     <div class="master--flex flexWrap">
@@ -965,7 +972,7 @@
             <div class="waweBot">
                 <img src="img/main/wawe.png" alt="волна">
                 <div class="waweBot__scroll">
-                    <a href="#" class="main__wawe-svg">
+                    <a href="#reviews" class="main__wawe-svg">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="11"
                             height="7" viewBox="0 0 11 7">
                             <image id="Стрелка" width="11" height="7"
@@ -977,6 +984,12 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="master__blur">
+            <img src="img/masage/master/blur.png" alt="">
+        </div>
+        <div class="master__leave">
+            <img src="img/masage/master/leave.png" alt="">
         </div>
     </div>    <div class="reviews" id="reviews">
         <div class="reviews__clients">
@@ -994,7 +1007,8 @@
                         <img src="img/reviews/client1.png" alt="отзыв">
                     </div>
                     <div class="reviews__clients-btn">
-                        <a href="/" class="reviews__clients-videoBtn">
+                        <a data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk"
+                            class="reviews__clients-videoBtn">
                             <span>
                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                     width="36" height="36" viewBox="0 0 36 36">
@@ -1011,7 +1025,8 @@
                         <img src="img/reviews/client1.png" alt="отзыв">
                     </div>
                     <div class="reviews__clients-btn">
-                        <a href="/" class="reviews__clients-videoBtn">
+                        <a data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk"
+                            class="reviews__clients-videoBtn">
                             <span>
                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                     width="36" height="36" viewBox="0 0 36 36">
@@ -1029,7 +1044,8 @@
                             <img src="img/reviews/client1.png" alt="отзыв">
                         </div>
                         <div class="reviews__clients-btn">
-                            <a href="/" class="reviews__clients-videoBtn">
+                            <a data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk"
+                                class="reviews__clients-videoBtn">
                                 <span>
                                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                         width="36" height="36" viewBox="0 0 36 36">
@@ -1046,7 +1062,8 @@
                             <img src="img/reviews/client1.png" alt="отзыв">
                         </div>
                         <div class="reviews__clients-btn">
-                            <a href="/" class="reviews__clients-videoBtn">
+                            <a data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk"
+                                class="reviews__clients-videoBtn">
                                 <span>
                                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                         width="36" height="36" viewBox="0 0 36 36">
@@ -1138,6 +1155,12 @@
                 </div>
             </div>
         </div>
+        <div class="reviews__blur blur">
+            <img src="img/reviews/blur.png" alt="">
+        </div>
+        <div class="reviews__leave blur">
+            <img src="img/reviews/leave.png" alt="">
+        </div>
     </div>    <div class="wait" id="wait">
         <div class="wait__title">
             <h2>Прийдя к нам процедуру <span class="light">Вас будеть ждать</span> </h2>
@@ -1155,7 +1178,6 @@
                     <img src="img/services/scrollDown.png" alt="скролл">
                 </div>
             </div>
-            <img src="img/wait/wawe.png" alt="волна">
         </div>
         <div class="wait--wraper" id="wait--wraper">
             <div class="container">
@@ -1256,7 +1278,7 @@
             </div>
             <div class="wait__wawe wait__wawe--margin">
                 <div class="wait__wawe-scroll">
-                    <a href="#request" class="wait__wawe-svg">
+                    <a href="#qa" class="wait__wawe-svg">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="11"
                             height="7" viewBox="0 0 11 7">
                             <image id="Стрелка" width="11" height="7"
@@ -1276,7 +1298,7 @@
         <div class="wait__blur blur">
             <img src="img/wait/blur.png" alt="пятно">
         </div>
-    </div>    <div class="qa">
+    </div>    <div class="qa" id="qa">
         <div class="container">
             <div class="qa__title">
                 <h2>
@@ -1408,8 +1430,16 @@
                 </div>
             </div>
         </div>
-    </div>
-    </div>    <div class="online">
+        <div class="qa__blur">
+            <img src="img/dep/qa/blur.png" alt="">
+        </div>
+        <div class="qa__flower">
+            <img src="img/dep/qa/flower.png" alt="">
+        </div>
+        <div class="qa__leaves">
+            <img src="img/dep/qa/leaves.png" alt="">
+        </div>
+    </div>    <div class="online online-mas">
         <div class="container">
             <div class="online__title">
                 <h2><span class="light">
@@ -1490,7 +1520,7 @@
         <div class="online__leaves blur">
             <img src="img/dep/online/leaves.png" alt="">
         </div>
-    </div>    <div class="footer">
+    </div>    <div class="footer" id="footer">
         <div class="container">
             <div class="row">
                 <div class="footer--flex">
@@ -1535,9 +1565,12 @@
                                     <p>Задай вопрос в удобный месенджер:</p>
                                 </div>
                                 <div class="footer__descr-mesanger--icons">
-                                    <a class="bigIcon" href=""><img src="img/footer/viber.png" alt="viber"></a>
-                                    <a class="bigIcon" href=""><img src="img/footer/telega.png" alt="telegram"></a>
-                                    <a class="bigIcon" href=""><img src="img/footer/whatsapp.png" alt="whatsapp"></a>
+                                    <a class="bigIcon" href="" target="_blank"><img src="img/footer/viber.png"
+                                            alt="viber"></a>
+                                    <a class="bigIcon" href="" target="_blank"><img src="img/footer/telega.png"
+                                            alt="telegram"></a>
+                                    <a class="bigIcon" href="" target="_blank"><img src="img/footer/whatsapp.png"
+                                            alt="whatsapp"></a>
     
                                 </div>
                             </div>
@@ -1546,10 +1579,12 @@
                                     <p>Мы в социальных сетях:</p>
                                 </div>
                                 <div class="footer__descr-social--icons">
-                                    <a class="bigIcon" href=""><img src="img/footer/instaIcon.png" alt="instagram"></a>
-                                    <a class="bigIcon" href=""><img src="img/footer/vk.png" alt="vk"></a>
-                                    <a class="bigIcon" href=""><img src="img/footer/ok.png" alt="ok"></a>
-                                    <a class="bigIcon" href=""><img src="img/footer/fb.png" alt="facebook"></a>
+                                    <a class="bigIcon" href="" target="_blank"><img src="img/footer/instaIcon.png"
+                                            alt="instagram"></a>
+                                    <a class="bigIcon" href="" target="_blank"><img src="img/footer/vk.png" alt="vk"></a>
+                                    <a class="bigIcon" href="" target="_blank"><img src="img/footer/ok.png" alt="ok"></a>
+                                    <a class="bigIcon" href="" target="_blank"><img src="img/footer/fb.png"
+                                            alt="facebook"></a>
                                 </div>
                             </div>
                         </div>
@@ -1595,7 +1630,8 @@
                 </div>
                 <div class="footer__privacy-paradigma">
                     <p>Сделано с любовью
-                        в <a href="https://paradigma.website/" class="linkColorRoze"> paradigma.website</a></p>
+                        в <a href="https://paradigma.website/" target="_blank" class="linkColorRoze"> paradigma.website</a>
+                    </p>
                 </div>
             </div>
         </div>
