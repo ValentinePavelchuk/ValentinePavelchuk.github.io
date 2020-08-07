@@ -17,7 +17,7 @@
                     <div class="header_flex">
                         <div class="col-lg-6 col-md-6 col-sm-6">
                             <div class="header__logo">
-                                <a href="#">
+                                <a href="/">
                                     <img src="img/header/logo.png" alt="PINCET студия депиляции">
                                 </a>
                             </div>
@@ -35,7 +35,8 @@
                                 </div>
                                 <div class="header__burger-menu">
                                     <div class="header__burger-close">
-                                        <span>X</span>
+                                        <span>
+                                            &#215;</span>
                                     </div>
                                     <div class="header__burger-menu--wraper">
                                         <div class="header__burger-logo">
@@ -84,7 +85,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="col-lg-12 col-md-12 col-sm-6">
                             <div class="header__contact">
                                 <div class="header__contact-phone">
                                     <div class="header__contact-icon">
@@ -134,6 +135,9 @@
             <div class="header_blurRight blur">
                 <img src="img/main/rightBlur1.png" alt="">
             </div>
+            <div class="upBtn">
+                <img src="img/header/up.png" alt="">
+            </div>
         </header>        <div class="main" id="main">
             <div class="container">
                 <div class="row">
@@ -153,7 +157,7 @@
                                 </ul>
                             </div>
                             <div class="main__descr-btn--wraper">
-                                <div class="main__descr-btn">
+                                <div class="main__descr-btn main__descr-btn--popup">
                                     <p>ПОЛУЧИТЬ КАРТУ
                                         КЛИЕНТА БЕСПЛАТНО</p>
                                 </div>
@@ -757,7 +761,7 @@
             <div class="qualification__certificate-descr">
                 <h3>Сертификаты <br> и дипломы <span class="light"><br> наших мастеров</span></h3>
                 <div class="qualification__certificate-link borderDashed">
-                    <a class="linkColorRoze" href="/">СМОТРЕТЬ ВСЕ СЕРТИФИКАТЫ</a>
+                    <a class="linkColorRoze" href="#about.html">СМОТРЕТЬ ВСЕ СЕРТИФИКАТЫ</a>
                 </div>
             </div>
             <div class="qualification__certificate-items">
@@ -1168,6 +1172,14 @@
                     <img src="img/request/ipad.png" alt="ipad">
                 </div>
                 <div class="request__form-inputs">
+                    <div class="request__form-select">
+                        <label for="select">Выберите услугу</label>
+                        <select class="basic" name="select" id="">
+                            <option value="1">Шугаринг 1</option>
+                            <option value="2">Шугаринг 2</option>
+                            <option value="3">Шугаринг 3</option>
+                        </select>
+                    </div>
                     <div class="request__form-name">
                         <label for="name">Как Вас зовут</label>
                         <input type="text" id="name" placeholder="Ваше имя">
@@ -1181,7 +1193,7 @@
                         <img src="img/request/plant.png" alt="растение">
                     </div>
                 </div>
-                <div class="requesst__form-women">
+                <div class="request__form-women">
                     <img src="img/request/women.png" alt="женщина">
                     <div class="request__form-women--name">
                         <p class="purple">ЕКАТЕРИНА</p>
@@ -1417,36 +1429,23 @@
             <img src="img/main/popupCloseIcon.png" alt="закрыть">
         </div>
         <div class="main__popup-content">
-            <h2><span>Получите</span> программу обучения</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea </p>
+            <h2><span>Получите</span> карту клиента бесплатно</h2>
             <div class="main__popup-inputs">
-                <div class="main__popup-select">
-                    <select name="popup-select">
-                        <option value="1">Повышение квалификации</option>
-                        <option value="2">Повышение квалификации</option>
-                        <option value="3">Повышение квалификации</option>
-                    </select>
-                </div>
                 <div class="main__popup-name">
                     <input type="text" placeholder="Ваше имя">
                 </div>
                 <div class="main__popup-tel">
-                    <input type="tel" placeholder="Ваш номер телефона">
+                    <input class="inputTel" type="tel" placeholder="Ваш номер телефона">
                 </div>
                 <div class="main__popup-submit--wraper">
                     <div class="main__popup-submit">
-                        <a>Получить программу</a>
+                        <a>Получить карту клиента</a>
                     </div>
                     <div class="main__popup-submit_img">
                         <img src="img/main/popupSubmitImg.png" alt="цветок">
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="main__popup_img">
-            <img src="img/main/popupImg.png" alt="тетрадь">
         </div>
     </div>
     <div class="main__popup-complete">
@@ -1464,6 +1463,45 @@
             <img src="img/main/popupCompleteImg.png" alt="растение">
         </div>
     </div>
-    <div class="main__popup_background"></div><script type="text/javascript" src="./js/app.js"></script></body>
+    <div class="main__popup_background"></div>
+    
+    <div class="popup__leave">
+        <div class="popup__leave-close">
+            &#215;
+        </div>
+        <div class="popup__leave-uptxt">
+            <p class="mtxt">Получите</p>
+        </div>
+        <div class="popup__leave-title">
+            <h3><span class="light">Депиляция подмышек </span>БЕСПЛАТНО</h3>
+        </div>
+        <div class="popup__leave--flex">
+            <div class="popup__leave-phone">
+                <div class="popup__leave-phone--img">
+                    <img src="img/popup/phone.png" alt="">
+                </div>
+                <div class="popup__leave-phone--line">
+                    <img src="img/popup/arrow.png" alt="">
+                </div>
+            </div>
+            <div class="popup__leave-descr">
+                <p class="mtxt">Условия простые</p>
+                <ul class="mtxt">
+                    <li>Подпишитесь на наш инстаграмм;</li>
+                    <li>При обращении использовать промокод: <p>WEBSITE2020@</p>
+                    </li>
+                </ul>
+                <div class="popup__leave-descr--pincet">
+                    <img src="img/popup/pincet.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="popup__leave-branchL">
+            <img src="img/popup/branchL.png" alt="">
+        </div>
+        <div class="popup__leave-branchR">
+            <img src="img/popup/branchR.png" alt="">
+        </div>
+    </div><script type="text/javascript" src="./js/app.js"></script></body>
 
 </html>
