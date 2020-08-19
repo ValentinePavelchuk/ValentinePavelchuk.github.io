@@ -12,7 +12,7 @@
 <body>
     <div class="catalog-wraper">
         <header class="header" id="header">
-            <div class="container">
+            <div class="container-main">
                 <div class="row">
                     <div class="header_flex">
                         <div class="col-lg-6 col-md-6 col-sm-6">
@@ -41,6 +41,48 @@
                                     <div class="header__burger-menu--wraper">
                                         <div class="header__burger-logo">
                                             <a href="/"><img src="img/header/logo.png" alt="Pincet"></a>
+                                        </div>
+                                        <div>
+                                            <div class="header__map-descr menu-show">
+                                                <p class="header__map-descr_bold">Мы находимся в центре:</p>
+                                                <p class="header__map-descr_normal">г. Брест, ул. Гоголя, д.65</p>
+                                                <div class="header_flex">
+                                                    <p class="header__map-descr_hover header__map--none">СМОТРЕТЬ НА КАРТЕ</p>
+                                                    <a class="header__map-descr_hover header__map-link"
+                                                        href="https://yandex.ua/maps/153/brest/house/ZkoYcA5oSEMPQFtofXx4cn9gZw==/?from=mapframe&ll=23.698168%2C52.093333&sll=23.698168%2C52.093333&sspn=0.361176%2C0.127318&z=16">Смотреть
+                                                        на карте</a>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="header__contact">
+                                                    <div class="header__contact-phone">
+                                                        <div class="header__contact-icon menu-icon">
+                                                            <a href="tel:+375333822499">
+                                                                <img src="img/header/phone.png" alt="+375333822499">
+                                                            </a>
+                                                        </div>
+                                                        <div class="header__contact-tel">
+                                                            <div class="header__contact-tel_wraper menu-hidden">
+                                                                <span></span>
+                                                                <p>Звоните, мы сейчас работаем</p>
+                                                            </div>
+                                                            <a href="tel:+375333822499">+375 33 382 24 99</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="header__contact-days menu-show--flex">
+                                                        <div class="header__contact-icon">
+                                                            <img src="img/header/time.png" alt="время">
+                                                        </div>
+                                                        <p>Пн-Вс <span>9:00-21:00</span></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-2">
+                                                <div class="header__rec menu__rec">
+                                                    <img src="img/header/calendar.png" alt="календарь">
+                                                    <span>Записаться онлайн</span>
+                                                </div>
+                                            </div>
                                         </div>
                                         <a href="/">Главная</a>
                                         <a href="depilation.html">Шугаринг и депиляция воском</a>
@@ -73,7 +115,7 @@
                                     <p class="header__map-descr_bold">Мы находимся в центре:</p>
                                     <p class="header__map-descr_normal">г. Брест, ул. Гоголя, д.65</p>
                                     <div class="header_flex">
-                                        <p class="header__map-descr_hover header__map--none">Смотреть на карте</p>
+                                        <p class="header__map-descr_hover header__map--none">СМОТРЕТЬ НА КАРТЕ</p>
                                         <a class="header__map-descr_hover header__map-link"
                                             href="https://yandex.ua/maps/153/brest/house/ZkoYcA5oSEMPQFtofXx4cn9gZw==/?from=mapframe&ll=23.698168%2C52.093333&sll=23.698168%2C52.093333&sspn=0.361176%2C0.127318&z=16">Смотреть
                                             на карте</a>
@@ -109,7 +151,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-2">
+                        <div class="col-xl-2 col-sm-6">
                             <div class="header__rec">
                                 <img src="img/header/calendar.png" alt="календарь">
                                 <span>Записаться онлайн</span>
@@ -139,7 +181,7 @@
                 <img src="img/header/up.png" alt="">
             </div>
         </header>        <div class="main catalog-main" id="main">
-            <div class="container">
+            <div class="container-main">
                 <div class="row">
                     <div class="col-xl-7 col-lg-12 col-md-12 col-sm-12">
                         <div class="main__descr">
@@ -152,7 +194,7 @@
                                     <br>
                                     <span class="light roze tlism"> С доставкой по Беларуси</span></h1>
                             </div>
-                            <div class="main__descr-list">
+                            <div class="main__descr-list fade__content">
                                 <ul>
                                     <li>отправка заказа в тот же день;</li>
                                     <li>доступные цены;</li>
@@ -160,7 +202,7 @@
                                     <li>оптовые скидки.</li>
                                 </ul>
                             </div>
-                            <div class="main__descr-btn--wraper">
+                            <div class="main__descr-btn--wraper fade__content">
                                 <div class="main__descr-btn">
                                     <p>В КАТАЛОГ</p>
                                 </div>
@@ -171,7 +213,7 @@
                         </div>
                     </div>
                     <div class="col-xl-5 col-lg-12 col-md-12 col-sm-12">
-                        <div class="main__women">
+                        <div class="main__women fade__content">
                             <img src="img/catalog/main/women.png" alt="девушка">
                         </div>
                     </div>
@@ -205,7 +247,7 @@
                     <div class="col-xl-9 col-lg-12 col-md-12 col-sm-12">
                         <div class="cosmetic__catalog">
                             <div class="cosmetic__catalog-accordeon">
-                                <details>
+                                <details open>
                                     <summary class="mtxt"><span><svg xmlns="http://www.w3.org/2000/svg"
                                                 xmlns:xlink="http://www.w3.org/1999/xlink" width="13" height="7"
                                                 viewBox="0 0 13 7">
@@ -231,11 +273,11 @@
                                             <div class="cosmetic__catalog-amount--count">
                                                 <div class="cosmetic__catalog-wraper--btns">
                                                     <button type="button"
-                                                        class="cosmetic__catalog-wraper--btn one">-</button>
+                                                        class="cosmetic__catalog-wraper--btn one  cosmetic-btn--minus">-</button>
                                                     <input type="text" class="cosmetic__catalog-wraper--input"
-                                                        name="quantity" value="1" id="input-quantity">
+                                                        name="quantity" value="1" min="0">
                                                     <button type="button"
-                                                        class="cosmetic__catalog-wraper--btn two">+</button>
+                                                        class="cosmetic__catalog-wraper--btn two  cosmetic-btn--plus">+</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -247,7 +289,8 @@
                                                 30 <span>руб</span>
                                             </div>
                                             <div class="cosmetic__catalog-price--btn mtxt">
-                                                <a href="">В КОРЗИНУ</a>
+                                                <a data-title='Сахарная паста' data-price='30' data-count='1'>В
+                                                    КОРЗИНУ</a>
                                             </div>
                                         </div>
                                     </div>
@@ -269,11 +312,11 @@
                                             <div class="cosmetic__catalog-amount--count">
                                                 <div class="cosmetic__catalog-wraper--btns">
                                                     <button type="button"
-                                                        class="cosmetic__catalog-wraper--btn one">-</button>
+                                                        class="cosmetic__catalog-wraper--btn one  cosmetic-btn--minus">-</button>
                                                     <input type="text" class="cosmetic__catalog-wraper--input"
-                                                        name="quantity" value="1" id="input-quantity">
+                                                        name="quantity" value="1">
                                                     <button type="button"
-                                                        class="cosmetic__catalog-wraper--btn two">+</button>
+                                                        class="cosmetic__catalog-wraper--btn two  cosmetic-btn--plus">+</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -285,7 +328,7 @@
                                                 30 <span>руб</span>
                                             </div>
                                             <div class="cosmetic__catalog-price--btn mtxt">
-                                                <a href="">В КОРЗИНУ</a>
+                                                <a data-title='Сахарная паста' data-price='30' data-count='1'>В КОРЗИНУ</a>
                                             </div>
                                         </div>
                                     </div>
@@ -316,11 +359,11 @@
                                             <div class="cosmetic__catalog-amount--count">
                                                 <div class="cosmetic__catalog-wraper--btns">
                                                     <button type="button"
-                                                        class="cosmetic__catalog-wraper--btn one">-</button>
+                                                        class="cosmetic__catalog-wraper--btn one  cosmetic-btn--minus">-</button>
                                                     <input type="text" class="cosmetic__catalog-wraper--input"
-                                                        name="quantity" value="1" id="input-quantity">
+                                                        name="quantity" value="1">
                                                     <button type="button"
-                                                        class="cosmetic__catalog-wraper--btn two">+</button>
+                                                        class="cosmetic__catalog-wraper--btn two  cosmetic-btn--plus">+</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -332,7 +375,7 @@
                                                 30 <span>руб</span>
                                             </div>
                                             <div class="cosmetic__catalog-price--btn mtxt">
-                                                <a href="">В КОРЗИНУ</a>
+                                                <a data-title='Сахарная паста' data-price='30' data-count='1'>В КОРЗИНУ</a>
                                             </div>
                                         </div>
                                     </div>
@@ -354,11 +397,11 @@
                                             <div class="cosmetic__catalog-amount--count">
                                                 <div class="cosmetic__catalog-wraper--btns">
                                                     <button type="button"
-                                                        class="cosmetic__catalog-wraper--btn one">-</button>
+                                                        class="cosmetic__catalog-wraper--btn one  cosmetic-btn--minus">-</button>
                                                     <input type="text" class="cosmetic__catalog-wraper--input"
-                                                        name="quantity" value="1" id="input-quantity">
+                                                        name="quantity" value="1">
                                                     <button type="button"
-                                                        class="cosmetic__catalog-wraper--btn two">+</button>
+                                                        class="cosmetic__catalog-wraper--btn two  cosmetic-btn--plus">+</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -370,92 +413,7 @@
                                                 30 <span>руб</span>
                                             </div>
                                             <div class="cosmetic__catalog-price--btn mtxt">
-                                                <a href="">В КОРЗИНУ</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </details>
-                                <details>
-                                    <summary class="mtxt"><span><svg xmlns="http://www.w3.org/2000/svg"
-                                                xmlns:xlink="http://www.w3.org/1999/xlink" width="13" height="7"
-                                                viewBox="0 0 13 7">
-                                                <image id="_1" data-name="1" width="13" height="7"
-                                                    xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAHCAYAAADTcMcaAAAAiUlEQVQYlX3QUQpBURDG8RPlgY2wAVbAEtiD7h7YA3vAAihWcLfh2SslpZ9O5pYu11en03zff6ZpEvY4o4/05w2CO+Si9NYFw4amUeRZZTZ6OIVxxbjWMMEt8iO6VdDBLoIHpuHPos7aBpc+J7axDuCJTfxZK7Qq9tf+ywArLepM07UK3DH/ykgvFzMw2crL9skAAAAASUVORK5CYII=" />
-                                            </svg>
-                                        </span> Сахарна паста</summary>
-                                    <div class="cosmetic__catalog-item">
-                                        <div class="cosmetic__catalog-img"><img src="img/catalog/cosmetic/item.png" alt="">
-                                        </div>
-                                        <div class="cosmetic__catalog-descr mtxt">
-                                            <p class="cosmetic__catalog-descr--upt"><span></span>В наличии</p>
-                                            <p class="bold cosmetic__catalog-descr--title">Сахарная паста Bandage</p>
-                                            <p class="cosmetic__catalog-descr--hardness"><span class="bold">Плотность:
-                                                </span>Медиум</p>
-                                            <p class="cosmetic__catalog-descr--weight"><span class="bold">Вес:</span> 600гр
-                                            </p>
-                                        </div>
-                                        <div class="cosmetic__catalog-amount">
-                                            <div class="cosmetic__catalog-amount--title mtxt">
-                                                <p>Выберите количество</p>
-                                            </div>
-                                            <div class="cosmetic__catalog-amount--count">
-                                                <div class="cosmetic__catalog-wraper--btns">
-                                                    <button type="button"
-                                                        class="cosmetic__catalog-wraper--btn one">-</button>
-                                                    <input type="text" class="cosmetic__catalog-wraper--input"
-                                                        name="quantity" value="1" id="input-quantity">
-                                                    <button type="button"
-                                                        class="cosmetic__catalog-wraper--btn two">+</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="cosmetic__catalog-price">
-                                            <div class="cosmetic__catalog-price--title mtxt">
-                                                Стоимость
-                                            </div>
-                                            <div class="cosmetic__catalog-price--main mtxt">
-                                                30 <span>руб</span>
-                                            </div>
-                                            <div class="cosmetic__catalog-price--btn mtxt">
-                                                <a href="">В КОРЗИНУ</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="cosmetic__catalog-item">
-                                        <div class="cosmetic__catalog-img"><img src="img/catalog/cosmetic/item.png" alt="">
-                                        </div>
-                                        <div class="cosmetic__catalog-descr mtxt">
-                                            <p class="cosmetic__catalog-descr--upt"><span></span>В наличии</p>
-                                            <p class="bold cosmetic__catalog-descr--title">Сахарная паста Bandage</p>
-                                            <p class="cosmetic__catalog-descr--hardness"><span class="bold">Плотность:
-                                                </span>Медиум</p>
-                                            <p class="cosmetic__catalog-descr--weight"><span class="bold">Вес:</span> 600гр
-                                            </p>
-                                        </div>
-                                        <div class="cosmetic__catalog-amount">
-                                            <div class="cosmetic__catalog-amount--title mtxt">
-                                                <p>Выберите количество</p>
-                                            </div>
-                                            <div class="cosmetic__catalog-amount--count">
-                                                <div class="cosmetic__catalog-wraper--btns">
-                                                    <button type="button"
-                                                        class="cosmetic__catalog-wraper--btn one">-</button>
-                                                    <input type="text" class="cosmetic__catalog-wraper--input"
-                                                        name="quantity" value="1" id="input-quantity">
-                                                    <button type="button"
-                                                        class="cosmetic__catalog-wraper--btn two">+</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="cosmetic__catalog-price">
-                                            <div class="cosmetic__catalog-price--title mtxt">
-                                                Стоимость
-                                            </div>
-                                            <div class="cosmetic__catalog-price--main mtxt">
-                                                30 <span>руб</span>
-                                            </div>
-                                            <div class="cosmetic__catalog-price--btn mtxt">
-                                                <a href="">В КОРЗИНУ</a>
+                                                <a data-title='Сахарная паста' data-price='30' data-count='1'>В КОРЗИНУ</a>
                                             </div>
                                         </div>
                                     </div>
@@ -486,11 +444,11 @@
                                             <div class="cosmetic__catalog-amount--count">
                                                 <div class="cosmetic__catalog-wraper--btns">
                                                     <button type="button"
-                                                        class="cosmetic__catalog-wraper--btn one">-</button>
+                                                        class="cosmetic__catalog-wraper--btn one  cosmetic-btn--minus">-</button>
                                                     <input type="text" class="cosmetic__catalog-wraper--input"
-                                                        name="quantity" value="1" id="input-quantity">
+                                                        name="quantity" value="1">
                                                     <button type="button"
-                                                        class="cosmetic__catalog-wraper--btn two">+</button>
+                                                        class="cosmetic__catalog-wraper--btn two  cosmetic-btn--plus">+</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -502,7 +460,7 @@
                                                 30 <span>руб</span>
                                             </div>
                                             <div class="cosmetic__catalog-price--btn mtxt">
-                                                <a href="">В КОРЗИНУ</a>
+                                                <a data-title='Сахарная паста' data-price='30' data-count='1'>В КОРЗИНУ</a>
                                             </div>
                                         </div>
                                     </div>
@@ -524,11 +482,11 @@
                                             <div class="cosmetic__catalog-amount--count">
                                                 <div class="cosmetic__catalog-wraper--btns">
                                                     <button type="button"
-                                                        class="cosmetic__catalog-wraper--btn one">-</button>
+                                                        class="cosmetic__catalog-wraper--btn one  cosmetic-btn--minus">-</button>
                                                     <input type="text" class="cosmetic__catalog-wraper--input"
-                                                        name="quantity" value="1" id="input-quantity">
+                                                        name="quantity" value="1">
                                                     <button type="button"
-                                                        class="cosmetic__catalog-wraper--btn two">+</button>
+                                                        class="cosmetic__catalog-wraper--btn two  cosmetic-btn--plus">+</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -540,92 +498,7 @@
                                                 30 <span>руб</span>
                                             </div>
                                             <div class="cosmetic__catalog-price--btn mtxt">
-                                                <a href="">В КОРЗИНУ</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </details>
-                                <details>
-                                    <summary class="mtxt"><span><svg xmlns="http://www.w3.org/2000/svg"
-                                                xmlns:xlink="http://www.w3.org/1999/xlink" width="13" height="7"
-                                                viewBox="0 0 13 7">
-                                                <image id="_1" data-name="1" width="13" height="7"
-                                                    xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAHCAYAAADTcMcaAAAAiUlEQVQYlX3QUQpBURDG8RPlgY2wAVbAEtiD7h7YA3vAAihWcLfh2SslpZ9O5pYu11en03zff6ZpEvY4o4/05w2CO+Si9NYFw4amUeRZZTZ6OIVxxbjWMMEt8iO6VdDBLoIHpuHPos7aBpc+J7axDuCJTfxZK7Qq9tf+ywArLepM07UK3DH/ykgvFzMw2crL9skAAAAASUVORK5CYII=" />
-                                            </svg>
-                                        </span> Сахарна паста</summary>
-                                    <div class="cosmetic__catalog-item">
-                                        <div class="cosmetic__catalog-img"><img src="img/catalog/cosmetic/item.png" alt="">
-                                        </div>
-                                        <div class="cosmetic__catalog-descr mtxt">
-                                            <p class="cosmetic__catalog-descr--upt"><span></span>В наличии</p>
-                                            <p class="bold cosmetic__catalog-descr--title">Сахарная паста Bandage</p>
-                                            <p class="cosmetic__catalog-descr--hardness"><span class="bold">Плотность:
-                                                </span>Медиум</p>
-                                            <p class="cosmetic__catalog-descr--weight"><span class="bold">Вес:</span> 600гр
-                                            </p>
-                                        </div>
-                                        <div class="cosmetic__catalog-amount">
-                                            <div class="cosmetic__catalog-amount--title mtxt">
-                                                <p>Выберите количество</p>
-                                            </div>
-                                            <div class="cosmetic__catalog-amount--count">
-                                                <div class="cosmetic__catalog-wraper--btns">
-                                                    <button type="button"
-                                                        class="cosmetic__catalog-wraper--btn one">-</button>
-                                                    <input type="text" class="cosmetic__catalog-wraper--input"
-                                                        name="quantity" value="1" id="input-quantity">
-                                                    <button type="button"
-                                                        class="cosmetic__catalog-wraper--btn two">+</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="cosmetic__catalog-price">
-                                            <div class="cosmetic__catalog-price--title mtxt">
-                                                Стоимость
-                                            </div>
-                                            <div class="cosmetic__catalog-price--main mtxt">
-                                                30 <span>руб</span>
-                                            </div>
-                                            <div class="cosmetic__catalog-price--btn mtxt">
-                                                <a href="">В КОРЗИНУ</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="cosmetic__catalog-item">
-                                        <div class="cosmetic__catalog-img"><img src="img/catalog/cosmetic/item.png" alt="">
-                                        </div>
-                                        <div class="cosmetic__catalog-descr mtxt">
-                                            <p class="cosmetic__catalog-descr--upt"><span></span>В наличии</p>
-                                            <p class="bold cosmetic__catalog-descr--title">Сахарная паста Bandage</p>
-                                            <p class="cosmetic__catalog-descr--hardness"><span class="bold">Плотность:
-                                                </span>Медиум</p>
-                                            <p class="cosmetic__catalog-descr--weight"><span class="bold">Вес:</span> 600гр
-                                            </p>
-                                        </div>
-                                        <div class="cosmetic__catalog-amount">
-                                            <div class="cosmetic__catalog-amount--title mtxt">
-                                                <p>Выберите количество</p>
-                                            </div>
-                                            <div class="cosmetic__catalog-amount--count">
-                                                <div class="cosmetic__catalog-wraper--btns">
-                                                    <button type="button"
-                                                        class="cosmetic__catalog-wraper--btn one">-</button>
-                                                    <input type="text" class="cosmetic__catalog-wraper--input"
-                                                        name="quantity" value="1" id="input-quantity">
-                                                    <button type="button"
-                                                        class="cosmetic__catalog-wraper--btn two">+</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="cosmetic__catalog-price">
-                                            <div class="cosmetic__catalog-price--title mtxt">
-                                                Стоимость
-                                            </div>
-                                            <div class="cosmetic__catalog-price--main mtxt">
-                                                30 <span>руб</span>
-                                            </div>
-                                            <div class="cosmetic__catalog-price--btn mtxt">
-                                                <a href="">В КОРЗИНУ</a>
+                                                <a data-title='Сахарная паста' data-price='30' data-count='1'>В КОРЗИНУ</a>
                                             </div>
                                         </div>
                                     </div>
@@ -656,11 +529,11 @@
                                             <div class="cosmetic__catalog-amount--count">
                                                 <div class="cosmetic__catalog-wraper--btns">
                                                     <button type="button"
-                                                        class="cosmetic__catalog-wraper--btn one">-</button>
+                                                        class="cosmetic__catalog-wraper--btn one  cosmetic-btn--minus">-</button>
                                                     <input type="text" class="cosmetic__catalog-wraper--input"
-                                                        name="quantity" value="1" id="input-quantity">
+                                                        name="quantity" value="1">
                                                     <button type="button"
-                                                        class="cosmetic__catalog-wraper--btn two">+</button>
+                                                        class="cosmetic__catalog-wraper--btn two  cosmetic-btn--plus">+</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -672,7 +545,7 @@
                                                 30 <span>руб</span>
                                             </div>
                                             <div class="cosmetic__catalog-price--btn mtxt">
-                                                <a href="">В КОРЗИНУ</a>
+                                                <a data-title='Сахарная паста' data-price='30' data-count='1'>В КОРЗИНУ</a>
                                             </div>
                                         </div>
                                     </div>
@@ -694,11 +567,11 @@
                                             <div class="cosmetic__catalog-amount--count">
                                                 <div class="cosmetic__catalog-wraper--btns">
                                                     <button type="button"
-                                                        class="cosmetic__catalog-wraper--btn one">-</button>
+                                                        class="cosmetic__catalog-wraper--btn one  cosmetic-btn--minus">-</button>
                                                     <input type="text" class="cosmetic__catalog-wraper--input"
-                                                        name="quantity" value="1" id="input-quantity">
+                                                        name="quantity" value="1">
                                                     <button type="button"
-                                                        class="cosmetic__catalog-wraper--btn two">+</button>
+                                                        class="cosmetic__catalog-wraper--btn two  cosmetic-btn--plus">+</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -710,7 +583,177 @@
                                                 30 <span>руб</span>
                                             </div>
                                             <div class="cosmetic__catalog-price--btn mtxt">
-                                                <a href="">В КОРЗИНУ</a>
+                                                <a data-title='Сахарная паста' data-price='30' data-count='1'>В КОРЗИНУ</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </details>
+                                <details>
+                                    <summary class="mtxt"><span><svg xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink" width="13" height="7"
+                                                viewBox="0 0 13 7">
+                                                <image id="_1" data-name="1" width="13" height="7"
+                                                    xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAHCAYAAADTcMcaAAAAiUlEQVQYlX3QUQpBURDG8RPlgY2wAVbAEtiD7h7YA3vAAihWcLfh2SslpZ9O5pYu11en03zff6ZpEvY4o4/05w2CO+Si9NYFw4amUeRZZTZ6OIVxxbjWMMEt8iO6VdDBLoIHpuHPos7aBpc+J7axDuCJTfxZK7Qq9tf+ywArLepM07UK3DH/ykgvFzMw2crL9skAAAAASUVORK5CYII=" />
+                                            </svg>
+                                        </span> Сахарна паста</summary>
+                                    <div class="cosmetic__catalog-item">
+                                        <div class="cosmetic__catalog-img"><img src="img/catalog/cosmetic/item.png" alt="">
+                                        </div>
+                                        <div class="cosmetic__catalog-descr mtxt">
+                                            <p class="cosmetic__catalog-descr--upt"><span></span>В наличии</p>
+                                            <p class="bold cosmetic__catalog-descr--title">Сахарная паста Bandage</p>
+                                            <p class="cosmetic__catalog-descr--hardness"><span class="bold">Плотность:
+                                                </span>Медиум</p>
+                                            <p class="cosmetic__catalog-descr--weight"><span class="bold">Вес:</span> 600гр
+                                            </p>
+                                        </div>
+                                        <div class="cosmetic__catalog-amount">
+                                            <div class="cosmetic__catalog-amount--title mtxt">
+                                                <p>Выберите количество</p>
+                                            </div>
+                                            <div class="cosmetic__catalog-amount--count">
+                                                <div class="cosmetic__catalog-wraper--btns">
+                                                    <button type="button"
+                                                        class="cosmetic__catalog-wraper--btn one  cosmetic-btn--minus">-</button>
+                                                    <input type="text" class="cosmetic__catalog-wraper--input"
+                                                        name="quantity" value="1">
+                                                    <button type="button"
+                                                        class="cosmetic__catalog-wraper--btn two  cosmetic-btn--plus">+</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="cosmetic__catalog-price">
+                                            <div class="cosmetic__catalog-price--title mtxt">
+                                                Стоимость
+                                            </div>
+                                            <div class="cosmetic__catalog-price--main mtxt">
+                                                30 <span>руб</span>
+                                            </div>
+                                            <div class="cosmetic__catalog-price--btn mtxt">
+                                                <a data-title='Сахарная паста' data-price='30' data-count='1'>В КОРЗИНУ</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cosmetic__catalog-item">
+                                        <div class="cosmetic__catalog-img"><img src="img/catalog/cosmetic/item.png" alt="">
+                                        </div>
+                                        <div class="cosmetic__catalog-descr mtxt">
+                                            <p class="cosmetic__catalog-descr--upt"><span></span>В наличии</p>
+                                            <p class="bold cosmetic__catalog-descr--title">Сахарная паста Bandage</p>
+                                            <p class="cosmetic__catalog-descr--hardness"><span class="bold">Плотность:
+                                                </span>Медиум</p>
+                                            <p class="cosmetic__catalog-descr--weight"><span class="bold">Вес:</span> 600гр
+                                            </p>
+                                        </div>
+                                        <div class="cosmetic__catalog-amount">
+                                            <div class="cosmetic__catalog-amount--title mtxt">
+                                                <p>Выберите количество</p>
+                                            </div>
+                                            <div class="cosmetic__catalog-amount--count">
+                                                <div class="cosmetic__catalog-wraper--btns">
+                                                    <button type="button"
+                                                        class="cosmetic__catalog-wraper--btn one  cosmetic-btn--minus">-</button>
+                                                    <input type="text" class="cosmetic__catalog-wraper--input"
+                                                        name="quantity" value="1">
+                                                    <button type="button"
+                                                        class="cosmetic__catalog-wraper--btn two  cosmetic-btn--plus">+</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="cosmetic__catalog-price">
+                                            <div class="cosmetic__catalog-price--title mtxt">
+                                                Стоимость
+                                            </div>
+                                            <div class="cosmetic__catalog-price--main mtxt">
+                                                30 <span>руб</span>
+                                            </div>
+                                            <div class="cosmetic__catalog-price--btn mtxt">
+                                                <a data-title='Сахарная паста' data-price='30' data-count='1'>В КОРЗИНУ</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </details>
+                                <details>
+                                    <summary class="mtxt"><span><svg xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink" width="13" height="7"
+                                                viewBox="0 0 13 7">
+                                                <image id="_1" data-name="1" width="13" height="7"
+                                                    xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAHCAYAAADTcMcaAAAAiUlEQVQYlX3QUQpBURDG8RPlgY2wAVbAEtiD7h7YA3vAAihWcLfh2SslpZ9O5pYu11en03zff6ZpEvY4o4/05w2CO+Si9NYFw4amUeRZZTZ6OIVxxbjWMMEt8iO6VdDBLoIHpuHPos7aBpc+J7axDuCJTfxZK7Qq9tf+ywArLepM07UK3DH/ykgvFzMw2crL9skAAAAASUVORK5CYII=" />
+                                            </svg>
+                                        </span> Сахарна паста</summary>
+                                    <div class="cosmetic__catalog-item">
+                                        <div class="cosmetic__catalog-img"><img src="img/catalog/cosmetic/item.png" alt="">
+                                        </div>
+                                        <div class="cosmetic__catalog-descr mtxt">
+                                            <p class="cosmetic__catalog-descr--upt"><span></span>В наличии</p>
+                                            <p class="bold cosmetic__catalog-descr--title">Сахарная паста Bandage</p>
+                                            <p class="cosmetic__catalog-descr--hardness"><span class="bold">Плотность:
+                                                </span>Медиум</p>
+                                            <p class="cosmetic__catalog-descr--weight"><span class="bold">Вес:</span> 600гр
+                                            </p>
+                                        </div>
+                                        <div class="cosmetic__catalog-amount">
+                                            <div class="cosmetic__catalog-amount--title mtxt">
+                                                <p>Выберите количество</p>
+                                            </div>
+                                            <div class="cosmetic__catalog-amount--count">
+                                                <div class="cosmetic__catalog-wraper--btns">
+                                                    <button type="button"
+                                                        class="cosmetic__catalog-wraper--btn one  cosmetic-btn--minus">-</button>
+                                                    <input type="text" class="cosmetic__catalog-wraper--input"
+                                                        name="quantity" value="1">
+                                                    <button type="button"
+                                                        class="cosmetic__catalog-wraper--btn two  cosmetic-btn--plus">+</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="cosmetic__catalog-price">
+                                            <div class="cosmetic__catalog-price--title mtxt">
+                                                Стоимость
+                                            </div>
+                                            <div class="cosmetic__catalog-price--main mtxt">
+                                                30 <span>руб</span>
+                                            </div>
+                                            <div class="cosmetic__catalog-price--btn mtxt">
+                                                <a data-title='Сахарная паста' data-price='30' data-count='1'>В КОРЗИНУ</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cosmetic__catalog-item">
+                                        <div class="cosmetic__catalog-img"><img src="img/catalog/cosmetic/item.png" alt="">
+                                        </div>
+                                        <div class="cosmetic__catalog-descr mtxt">
+                                            <p class="cosmetic__catalog-descr--upt"><span></span>В наличии</p>
+                                            <p class="bold cosmetic__catalog-descr--title">Сахарная паста Bandage</p>
+                                            <p class="cosmetic__catalog-descr--hardness"><span class="bold">Плотность:
+                                                </span>Медиум</p>
+                                            <p class="cosmetic__catalog-descr--weight"><span class="bold">Вес:</span> 600гр
+                                            </p>
+                                        </div>
+                                        <div class="cosmetic__catalog-amount">
+                                            <div class="cosmetic__catalog-amount--title mtxt">
+                                                <p>Выберите количество</p>
+                                            </div>
+                                            <div class="cosmetic__catalog-amount--count">
+                                                <div class="cosmetic__catalog-wraper--btns">
+                                                    <button type="button"
+                                                        class="cosmetic__catalog-wraper--btn one  cosmetic-btn--minus">-</button>
+                                                    <input type="text" class="cosmetic__catalog-wraper--input"
+                                                        name="quantity" value="1">
+                                                    <button type="button"
+                                                        class="cosmetic__catalog-wraper--btn two  cosmetic-btn--plus">+</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="cosmetic__catalog-price">
+                                            <div class="cosmetic__catalog-price--title mtxt">
+                                                Стоимость
+                                            </div>
+                                            <div class="cosmetic__catalog-price--main mtxt">
+                                                30 <span>руб</span>
+                                            </div>
+                                            <div class="cosmetic__catalog-price--btn mtxt">
+                                                <a data-title='Сахарная паста' data-price='30' data-count='1'>В КОРЗИНУ</a>
                                             </div>
                                         </div>
                                     </div>
@@ -723,66 +766,35 @@
                             <div class="cosmetic__cart-title mtxt">
                                 Корзина
                             </div>
-                            <div class="cosmetic__cart-item">
-                                <div class="cosmetic__cart-item--title mtxt">
-                                    Сахарная паста Bondage
-                                </div>
-                                <div class="cosmetic__cart-item--content mtxt">
-                                    <p>2 шт</p>
-                                    <p class="roze">60 руб</p>
-                                </div>
-                            </div>
-                            <div class="cosmetic__cart-item">
-                                <div class="cosmetic__cart-item--title mtxt">
-                                    Сахарная паста Bondage
-                                </div>
-                                <div class="cosmetic__cart-item--content mtxt">
-                                    <p>2 шт</p>
-                                    <p class="roze">60 руб</p>
-                                </div>
-                            </div>
-                            <div class="cosmetic__cart-item">
-                                <div class="cosmetic__cart-item--title mtxt">
-                                    Сахарная паста Bondage
-                                </div>
-                                <div class="cosmetic__cart-item--content mtxt">
-                                    <p>2 шт</p>
-                                    <p class="roze">60 руб</p>
-                                </div>
-                            </div>
-                            <div class="cosmetic__cart-item">
-                                <div class="cosmetic__cart-item--title mtxt">
-                                    Сахарная паста Bondage
-                                </div>
-                                <div class="cosmetic__cart-item--content mtxt">
-                                    <p>2 шт</p>
-                                    <p class="roze">60 руб</p>
-                                </div>
+                            <div class="cosmetic__cart-items">
+    
                             </div>
                             <div class="cosmetic__cart-total mtxt">
                                 <p>Сумма заказа</p>
-                                <p>155 <span>руб</span></p>
+                                <p class="cosmetic__cart-total--sum">0 <span>руб</span></p>
                             </div>
                             <div class="cosmetic__cart-request">
                                 <div class="cosmetic__cart-request--title mtxt">
                                     Оформить заказ
                                 </div>
-                                <form action="">
+                                <form class="form" action="">
+                                    <input type="hidden" name="title" value="оформление заказа косметики">
                                     <div class="cosmetic__cart-request--inputs">
-                                        <input type="text" placeholder="Ваше имя">
-                                        <input class="inputTel" type="tel" required placeholder="Ваш телефон">
-                                        <input class="inputMail" type="email" required placeholder="Ваш e-mail">
+                                        <input required type="text" placeholder="Ваше имя" name="name">
+                                        <input class="inputTel" type="tel" required placeholder="Ваш телефон" name="phone">
+                                        <input class="inputMail" type="email" required placeholder="Ваш e-mail"
+                                            name="email">
                                     </div>
                                     <div class="cosmetic__cart-request--delivery mtxt">
                                         <p>Нужна ли доставка</p>
                                         <div class="cosmetic--flex">
-                                            <input type="radio" name="delivery" id="delivery-yes">
+                                            <input required type="radio" name="delivery" id="delivery-yes" value="Да">
                                             <label for="delivery-yes">Да</label>
-                                            <input type="radio" name="delivery" id="delivery-no">
+                                            <input required type="radio" name="delivery" id="delivery-no" value="Самовывоз">
                                             <label for="delivery-no">Самывовоз</label>
                                         </div>
                                         <div class="cosmetic__cart-request--adress cosmetic__cart-request--inputs">
-                                            <input type="text" placeholder="Адрес доставки">
+                                            <input type="text" name="adress" placeholder="Адрес доставки">
                                         </div>
                                     </div>
                                     <div class="cosmetic__cart-request--submit mtxt">
@@ -810,13 +822,13 @@
                 </div>
             </div>
         </div>
-        <div class="cosmetic__blur blur">
+        <div class="cosmetic__blur blur2">
             <img src="img/catalog/cosmetic/blur.png" alt="">
         </div>
         <div class="cosmetic__leaveLeft blur">
             <img src="img/catalog/cosmetic/leaveLeft.png" alt="">
         </div>
-        <div class="cosmetic__leavesRight blur">
+        <div class="cosmetic__leavesRight blur2">
             <img src="img/catalog/cosmetic/leavesRight.png" alt="">
         </div>
     </div>    <div class="order" id="order">
@@ -844,7 +856,7 @@
                     <div class="order--flex">
                         <div class="col-xl-3 col-lg-5 col-md-5 col-sm-5">
                             <div class="order__item">
-                                <div class="order__img">
+                                <div class="order__img animat">
                                     <img src="img/catalog/order/img1.png" alt="преимущества">
                                     <div class="order__number order__number--1">
                                         <p>01</p>
@@ -858,7 +870,7 @@
                         </div>
                         <div class="col-xl-3 col-lg-5 col-md-5 col-sm-5">
                             <div class="order__item">
-                                <div class="order__img">
+                                <div class="order__img animat">
                                     <img src="img/catalog/order/img2.png" alt="преимущества">
                                     <div class="order__number order__number--2">
                                         <p>02</p>
@@ -873,7 +885,7 @@
                         </div>
                         <div class="col-xl-3 col-lg-5 col-md-5 col-sm-5">
                             <div class="order__item">
-                                <div class="order__img">
+                                <div class="order__img animat">
                                     <img src="img/catalog/order/img3.png" alt="преимущества">
                                     <div class="order__number order__number--3">
                                         <p>03</p>
@@ -889,7 +901,7 @@
                         </div>
                         <div class="col-xl-3 col-lg-5 col-md-5 col-sm-5 order--marginTop">
                             <div class="order__item">
-                                <div class="order__img">
+                                <div class="order__img animat">
                                     <img src="img/catalog/order/img4.png" alt="преимущества">
                                     <div class="order__number order__number--4">
                                         <p>04</p>
@@ -906,7 +918,7 @@
                         </div>
                         <div class="col-xl-3 col-lg-5 col-md-5 col-sm-5 order--marginTop">
                             <div class="order__item">
-                                <div class="order__img">
+                                <div class="order__img animat">
                                     <img src="img/catalog/order/img5.png" alt="преимущества">
                                     <div class="order__number order__number--5">
                                         <p>05</p>
@@ -921,7 +933,7 @@
                         </div>
                         <div class="col-xl-3 col-lg-5 col-md-5 col-sm-5 order--marginTop">
                             <div class="order__item">
-                                <div class="order__img">
+                                <div class="order__img animat">
                                     <img src="img/catalog/order/img2.png" alt="преимущества">
                                     <div class="order__number order__number--6">
                                         <p>06</p>
@@ -936,7 +948,7 @@
                         </div>
                         <div class="col-xl-3 col-lg-5 col-md-5 col-sm-5">
                             <div class="order__item">
-                                <div class="order__img">
+                                <div class="order__img animat">
                                     <img src="img/catalog/order/img3.png" alt="преимущества">
                                     <div class="order__number order__number--7">
                                         <p>07</p>
@@ -951,7 +963,7 @@
                         </div>
                         <div class="col-xl-3 col-lg-5 col-md-5 col-sm-5">
                             <div class="order__item">
-                                <div class="order__img">
+                                <div class="order__img animat">
                                     <img src="img/catalog/order/img6.png" alt="преимущества">
                                     <div class="order__number order__number--8">
                                         <p>08</p>
@@ -968,7 +980,7 @@
                 </div>
             </div>
         </div>
-        <div class="order__blur blur">
+        <div class="order__blur blur2">
             <img src="img/catalog/order/blur.png" alt="">
         </div>
         <div class="order__leaves blur">
@@ -1008,25 +1020,27 @@
                 pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
             </div>
         </div>
-        <div class="materials__leaves ">
+        <div class="materials__leaves blur">
             <img src="img/catalog/material/leaves.png" alt="">
         </div>
     </div>    <div class="footer" id="footer">
         <div class="container">
             <div class="row">
                 <div class="footer--flex">
-                    <div class="col-xl-3 col-lg-6 col-md-12 col-sm-12 footer--order-2">
-                        <div class="footer__insta">
-                            <img src="img/footer/insta.png" alt="@pincet_brest">
-                            <div class="footer__insta-blur">
+                    <div class="col-xl-3 col-lg-6 col-md-12 col-sm-12 footer--order-2 animat">
+                        <div class="footer__insta ">
+                            <a href="/"><img src="img/footer/insta.png" alt="@pincet_brest"></a>
+                            <div class="footer__insta-blur blur">
                                 <img src="img/footer/blur.png" alt="">
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-lg-6 col-md-12 col-sm-12 footer--order-1">
-                        <div class="footer__descr">
+                    <div class="col-xl-27 col-lg-6 col-md-12 col-sm-12 footer--order-1">
+                        <div class="footer__descr animat">
                             <div class="footer__descr-title">
                                 <h2><span class="light">Мы находимся</span> в центре</h2>
+                                <p class="mtxt">
+                                    г. Берст ул, Гоголя 65, 3 этаж, каб. 315</p>
                             </div>
                             <div class="footer__descr-phones">
                                 <div class="footer__descr-phones--icon">
@@ -1080,26 +1094,25 @@
                             </div>
                         </div>
                     </div>
-    
                     <div class="col-xl-5 col-lg-12 col-md-12 col-sm-12 footer__map--flex footer--order-3">
-                        <div class="footer__map">
+                        <div class="footer__map animat">
                             <div class="footer__map-illustration">
                                 <div class="footer__map-illustration--left">
                                     <div class="footer__map-title">Здание Delta</div>
-                                    <a href="img/footer/illustration1.png" data-fancybox="gallery"><img
+                                    <a href="img/footer/illustration1.png" data-fancybox="gallery-footer-1"><img
                                             src="img/footer/illustration1.png" alt="здание"></a>
-                                    <a href="img/footer/illustration2.png" data-fancybox="gallery"><img
+                                    <a href="img/footer/illustration2.png" data-fancybox="gallery-footer-1"><img
                                             src="img/footer/illustration2.png" alt="здание"></a>
-                                    <a href="img/footer/illustration3.png" data-fancybox="gallery"><img
+                                    <a href="img/footer/illustration3.png" data-fancybox="gallery-footer-1"><img
                                             src="img/footer/illustration3.png" alt="здание"></a>
                                 </div>
                                 <div class="footer__map-illustration--right">
                                     <div class="footer__map-title">Наш кабинет</div>
-                                    <a href="img/footer/illustration4.png" data-fancybox="gallery"><img
+                                    <a href="img/footer/illustration4.png" data-fancybox="gallery-footer-2"><img
                                             src="img/footer/illustration4.png" alt="кабинет"></a>
-                                    <a href="img/footer/illustration5.png" data-fancybox="gallery"><img
+                                    <a href="img/footer/illustration5.png" data-fancybox="gallery-footer-2"><img
                                             src="img/footer/illustration5.png" alt="кабинет"></a>
-                                    <a href="img/footer/illustration6.png" data-fancybox="gallery"><img
+                                    <a href="img/footer/illustration6.png" data-fancybox="gallery-footer-2"><img
                                             src="img/footer/illustration6.png" alt="кабинет"></a>
                                 </div>
                             </div>
@@ -1126,28 +1139,68 @@
                 </div>
             </div>
         </div>
-    </div>    <div class="main__popup">
+    </div>    <div class="main__popup card__popup">
         <div class="main__popup-close">
             <img src="img/main/popupCloseIcon.png" alt="закрыть">
         </div>
         <div class="main__popup-content">
             <h2><span>Получите</span> карту клиента бесплатно</h2>
             <div class="main__popup-inputs">
+                <form action="">
+                    <input type="hidden" name="title" value="Получите карту клиента бесплатно">
+                    <div class="main__popup-name">
+                        <input required type="text" placeholder="Ваше имя" name="name">
+                    </div>
+                    <div class="main__popup-tel">
+                        <input required class="inputTel" type="tel" placeholder="Ваш номер телефона" name="phone">
+                    </div>
+                    <div class="main__popup-submit--wraper">
+                        <div class="main__popup-submit">
+                            <button>Получить карту клиента</button>
+                        </div>
+                        <div class="main__popup-submit_img">
+                            <img src="img/main/popupSubmitImg.png" alt="цветок">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="main__popup learn__popup">
+        <div class="main__popup-close">
+            <img src="img/main/popupCloseIcon.png" alt="закрыть">
+        </div>
+        <div class="main__popup-content">
+            <h2><span>Получите</span> программу обучения</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea </p>
+            <div class="main__popup-inputs">
+                <div class="main__popup-select">
+                    <select required name="popup-select">
+                        <option value="1">Повышение квалификации</option>
+                        <option value="2">Повышение квалификации</option>
+                        <option value="3">Повышение квалификации</option>
+                    </select>
+                </div>
                 <div class="main__popup-name">
-                    <input type="text" placeholder="Ваше имя">
+                    <input required type="text" placeholder="Ваше имя">
                 </div>
                 <div class="main__popup-tel">
-                    <input class="inputTel" type="tel" placeholder="Ваш номер телефона">
+                    <input required type="tel" placeholder="Ваш номер телефона">
                 </div>
                 <div class="main__popup-submit--wraper">
                     <div class="main__popup-submit">
-                        <a>Получить карту клиента</a>
+                        <a>Получить программу</a>
                     </div>
                     <div class="main__popup-submit_img">
                         <img src="img/main/popupSubmitImg.png" alt="цветок">
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="main__popup_img">
+            <img src="img/main/popupImg.png" alt="тетрадь">
         </div>
     </div>
     <div class="main__popup-complete">
@@ -1180,7 +1233,7 @@
         <div class="popup__leave--flex">
             <div class="popup__leave-phone">
                 <div class="popup__leave-phone--img">
-                    <img src="img/popup/phone.png" alt="">
+                    <a href="#"><img src="img/popup/phone.png" alt=""></a>
                 </div>
                 <div class="popup__leave-phone--line">
                     <img src="img/popup/arrow.png" alt="">
@@ -1190,11 +1243,11 @@
                 <p class="mtxt">Условия простые</p>
                 <ul class="mtxt">
                     <li>Подпишитесь на наш инстаграмм;</li>
-                    <li>При обращении использовать промокод: <p>WEBSITE2020@</p>
+                    <li>При обращении использовать промокод: <p><a href="#">WEBSITE2020@</a></p>
                     </li>
                 </ul>
                 <div class="popup__leave-descr--pincet">
-                    <img src="img/popup/pincet.png" alt="">
+                    <a href="#"><img src="img/popup/pincet.png" alt=""></a>
                 </div>
             </div>
         </div>
