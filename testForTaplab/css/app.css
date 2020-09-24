@@ -38,6 +38,7 @@ img {
     background-image: url(../img/back.png);
     background-repeat: no-repeat;
     background-size: cover;
+    padding-top: 40px;
     height: 73vh;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -80,10 +81,14 @@ img {
         line-height: 28px; }
     .main__title-p {
       font-size: 12px;
+      font-weight: 500;
       color: #454545;
       line-height: 14px;
       -webkit-text-decoration-line: underline;
-              text-decoration-line: underline; }
+              text-decoration-line: underline;
+      margin-top: 18px; }
+      .main__title-p a {
+        color: #454545; }
   .main__content {
     position: relative; }
     .main__content:after {
@@ -103,7 +108,7 @@ img {
       color: #454545;
       line-height: 16px;
       letter-spacing: 0.442105px;
-      width: 50%; }
+      width: 145px; }
     .main__content-plans {
       padding: 10px 0 15px 0;
       display: -webkit-box;
