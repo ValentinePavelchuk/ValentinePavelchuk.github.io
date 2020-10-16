@@ -14,20 +14,25 @@
 			<div class="container">
 				<div class="header--wrap">
 					<div class="header__logo">
-						<img src="img/header/logo.png" alt="">
+						<a href="#block1"><img src="img/header/logo.png" alt=""></a>
 					</div>
 					<div class="header__phone">
-						<span class="header__phone-ico">
-							<img src="img/svg/phone.svg" alt="">
-						</span>
-						<span class="header__phone-num">
-							<a class="txt28 bold" href="tel:89312553745">8 931 255 37 45</a>
+						<span>
+							<span class="header__phone-ico">
+								<img src="img/svg/phone1.svg" alt="">
+							</span>
+							<span class="header__phone-num">
+								<a class="txt28 bold" href="tel:89312553745">8 931 255 37 45</a>
+							</span>
 						</span>
 						<span class="header__phone-txt">
 							<a class="txt24 bold underline" href="tel:89312553745">Перезвонить Вам?</a>
 						</span>
 					</div>
 				</div>
+			</div>
+			<div class="upBtn">
+				<img src="img/svg/arrowUp.svg" alt="">
 			</div>
 		</header>		<section class="main padTop padBot" id="block1">
 			<div class="container">
@@ -79,13 +84,15 @@
 					</div>
 					<div class="main__request-form">
 						<form action="">
+							<input type="hidden" name="title" value="Форма на главной">
 							<span class="input-wrap">
 								<img src="img/svg/user.svg" alt="">
-								<input class="txt18" type="name" placeholder="Ваше имя">
+								<input name="name" equired class="txt18" type="name" placeholder="Ваше имя">
 							</span>
 							<span class="input-wrap">
 								<img src="img/svg/phone1.svg" alt="">
-								<input class="txt18" type="tel" placeholder="Ваш телефон">
+								<input name="phone" class="inputTel" required class="txt18" type="tel"
+									placeholder="Ваш телефон">
 							</span>
 							<span class="btn-wrap">
 								<img src="img/main/btnImg.png" alt="">
@@ -113,23 +120,21 @@
 								</p>
 							</div>
 							<div class="requests__cards-form">
-								<form action="">
-									<input type="hidden" name="title" value="Форма получения рассчёта">
+								<div class="requests__cards-formWrap">
+									<input type="hidden" name="title" value="Форма с дизайном проекта">
 									<span class="input-file">
-										<input type="file" name="file" id="input-file" class="inputfile"
-											data-multiple-caption="{count} файлов выбрано" multiple />
-										<label for="input-file">
+										<label class="fileForm-btn" for="input-file">
 											<span class="txt20 med">
 												Прикрепить файл
 											</span>
 										</label>
 									</span>
-									<button class="mainBtn txt20 fontAb">ОСТАВИТЬ ЗАЯВКУ</button>
-								</form>
+									<a class="mainBtn txt20 fontAb order">ОСТАВИТЬ ЗАЯВКУ</a>
+								</div>
 							</div>
-							<img src="img/requests/img2.png" alt="">
+							<img class="lazy" data-src="img/requests/img2.png" alt="">
 						</div>
-						<img src="img/requests/img1.png" alt="" class="requests__cards--absolute">
+						<img class="lazy requests__cards--absolute" data-src="img/requests/img1.png" alt="">
 					</div>
 					<div class="requests__cards-item">
 						<div class="requests__cards-content">
@@ -141,21 +146,19 @@
 								</p>
 							</div>
 							<div class="requests__cards-form">
-								<form action="">
-									<input type="hidden" name="title" value="Форма получения рассчёта">
+								<div class="requests__cards-formWrap">
+									<input type="hidden" name="title" value="Форма с фото проекта">
 									<span class="input-file">
-										<input type="file" name="file" id="input-file" class="inputfile"
-											data-multiple-caption="{count} файлов выбрано" multiple />
-										<label for="input-file">
+										<label class="fileForm-btn" for="input-file">
 											<span class="txt20 med">
 												Прикрепить фото
 											</span>
 										</label>
 									</span>
-									<button class="mainBtn txt20 fontAb">ОСТАВИТЬ ЗАЯВКУ</button>
-								</form>
+									<a class="mainBtn txt20 fontAb order">ОСТАВИТЬ ЗАЯВКУ</a>
+								</div>
 							</div>
-							<img src="img/requests/img3.png" alt="">
+							<img class="lazy" data-src="img/requests/img3.png" alt="">
 						</div>
 					</div>
 					<div class="requests__cards-item">
@@ -169,17 +172,18 @@
 							<div class="requests__cards-form">
 								<form action="">
 									<input type="hidden" name="title" value="Форма получения рассчёта">
-									<button class="mainBtn txt20  fontAb">ОСТАВИТЬ ЗАЯВКУ И ВЫЗВАТЬ ДИЗАЙНЕРА</button>
+									<a class="mainBtn txt20  fontAb order requests-lastBtn">ОСТАВИТЬ ЗАЯВКУ И ВЫЗВАТЬ
+										ДИЗАЙНЕРА</a>
 								</form>
 							</div>
-							<img src="img/requests/img4.png" alt="" class="requests__cards--absolute2">
+							<img class="lazy" data-src="img/requests/img4.png" alt="" class="requests__cards--absolute2">
 						</div>
 					</div>
 				</div>
 				<div class="pagin paginColor txt24">
 					<a href="#block1" class="paginColor txt24">01</a>
 					<a href="#block2" class="paginFlex"><span class="paginBlack">
-							02</span> <img src="img/line.png" alt="">
+							02</span> <img class="lazy" data-src="img/line.png" alt="">
 					</a>
 					<a href="#block3" class="paginColor txt24">03</a>
 					<a href="#block4" class="paginColor txt24">04</a>
@@ -200,50 +204,50 @@
 				</h2>
 			</div>
 			<div class="styles__cards">
-				<div class="styles__cards-item">
-					<img src="img/styles/mod/preImg.png" alt="">
+				<div class="styles__cards-item" data-style="#mod">
+					<img class="lazy" data-src="img/styles/mod/preImg.png" alt="">
 					<p class="txt35 fontAb white">Модерн</p>
 				</div>
-				<div class="styles__cards-item">
-					<img src="img/styles/cl/preImg.png" alt="">
+				<div class="styles__cards-item" data-style="#cls">
+					<img class="lazy" data-src="img/styles/cl/preImg.png" alt="">
 					<p class="txt35 fontAb white">Классика</p>
 				</div>
-				<div class="styles__cards-item">
-					<img src="img/styles/et/preImg.png" alt="">
+				<div class="styles__cards-item" data-style="#et">
+					<img class="lazy" data-src="img/styles/et/preImg.png" alt="">
 					<p class="txt35 fontAb white">Этно-стиль</p>
 				</div>
-				<div class="styles__cards-item">
-					<img src="img/styles/hi/preImg.png" alt="">
+				<div class="styles__cards-item" data-style="#hi">
+					<img class="lazy" data-src="img/styles/hi/preImg.png" alt="">
 					<p class="txt35 fontAb white">Хай-тек</p>
 				</div>
-				<div class="styles__cards-item">
+				<div class="styles__cards-item stop">
 					<p class="txt30 fontAb">Выберите подходящий
 						под Ваши задачи стиль,
 						оставьте заявку
 						и мы свяжемся с Вами
 						в течение 15 минут!</p>
 				</div>
-				<div class="styles__cards-item">
-					<img src="img/styles/lo/preImg.png" alt="">
+				<div class="styles__cards-item" data-style="#lof">
+					<img class="lazy" data-src="img/styles/lo/preImg.png" alt="">
 					<p class="txt35 fontAb white">Лофт</p>
 				</div>
-				<div class="styles__cards-item">
-					<img src="img/styles/min/preImg.png" alt="">
+				<div class="styles__cards-item" data-style="#min">
+					<img class="lazy" data-src="img/styles/min/preImg.png" alt="">
 					<p class="txt35 fontAb white">Минимал</p>
 				</div>
-				<div class="styles__cards-item">
-					<img src="img/styles/b/preImg.png" alt="">
+				<div class="styles__cards-item" data-style="#bar">
+					<img class="lazy" data-src="img/styles/b/preImg.png" alt="">
 					<p class="txt35 fontAb white">Барокко</p>
 				</div>
-				<div class="styles__cards-item">
-					<img src="img/styles/pr/preImg.png" alt="">
+				<div class="styles__cards-item" data-style="#pro">
+					<img class="lazy" data-src="img/styles/pr/preImg.png" alt="">
 					<p class="txt35 fontAb white">Прованс</p>
 				</div>
 				<div class="pagin paginColor txt24">
 					<a href="#block1" class="paginColor txt24">01</a>
 					<a href="#block2" class="paginColor txt24">02</a>
 					<a href="#block3" class="paginFlex"><span class="paginBlack">
-							03</span> <img src="img/line.png" alt="">
+							03</span> <img class="lazy" data-src="img/line.png" alt="">
 					</a>
 					<a href="#block4" class="paginColor txt24">04</a>
 					<a href="#block5" class="paginColor txt24">05</a>
@@ -254,7 +258,557 @@
 				</div>
 			</div>
 		</div>
-	</section>	<section class="popular padTopBig padBot" id="block5">
+	</section>	<section id="block4">
+		<div class="test padTop padBotBig" id='test'
+			style="background: url(../img/quiz/back.jpg) center no-repeat; background-size: cover;">
+			<div class="container-supm">
+				<h2 class="h50 fontO test__title">
+					Пройдите короткий тест, узнайте стоимость Вашей идеальной кухни, <br>
+					<span class="colorM2">получите подарки</span> и торт ручной работы весом <span class="colorM2">2кг в
+						подарок!</span>
+				</h2>
+			</div>
+			<div class="container-supm gl test-container">
+				<div class="test-scroll-js"></div>
+				<div class="test-wrap">
+					<form action="" class="test-cont">
+						<input type="hidden" name="title" value='Тест'>
+						<input type="hidden" name="formname" value='test'>
+						<div class="test__quests rel">
+							<div class="test__fl-num fwb bas">
+								<span class="fl-num-js txt100 fontO">01</span>
+							</div>
+							<div class="text tac line-text gl txt20 test__quiz-title">
+								<span class="txt20">Вопрос <span class="num-current txt20">1</span></span> из <span
+									class="num-all txt20">5</span>
+							</div>
+							<div class="progress-bar msm">
+								<div class="progress-bar__line-wrap">
+									<div class="progress-bar__line">
+									</div>
+								</div>
+							</div>
+	
+							<div class="test__blocks">
+	
+								<!-- 1 -->
+								<div class="test-item">
+									<h5 class="txt35 fontO fw7 tac mb test-item__title">
+										Какая именно кухня вам нужна?
+									</h5>
+	
+									<div class="tiem-block">
+	
+										<!-- 1 -->
+										<label for="qw1-1" class="tiem-block__item tiem mb">
+	
+											<input type="radio" class="checkbox-inp" name='qw1' id='qw1-1' value="Прямая">
+											<span class="checkbox-block">
+												<div class="checkbox-block__bg rel"
+													style="background: url(../img/quiz/q1-1.jpg) center no-repeat; background-size: cover;">
+	
+												</div>
+												<span class="checkbox-psevdo">
+													<span class="checkbox-psevdo-active">
+													</span>
+												</span>
+	
+												<span class="txt20">
+													Прямая
+												</span>
+											</span>
+										</label>
+										<!-- 2 -->
+										<label for="qw1-2" class="tiem-block__item tiem mb">
+	
+											<input type="radio" class="checkbox-inp" name='qw1' id='qw1-2'
+												value="Негабаритная">
+											<span class="checkbox-block">
+												<div class="checkbox-block__bg rel"
+													style="background: url(../img/quiz/q1-2.jpg) center no-repeat; background-size: cover;">
+	
+												</div>
+												<span class="checkbox-psevdo">
+													<span class="checkbox-psevdo-active">
+													</span>
+												</span>
+	
+												<span class="txt20">
+													Негабаритная
+												</span>
+											</span>
+										</label>
+										<!-- 3 -->
+										<label for="qw1-3" class="tiem-block__item tiem mb">
+	
+											<input type="radio" class="checkbox-inp" name='qw1' id='qw1-3' value="Угловая">
+											<span class="checkbox-block">
+												<div class="checkbox-block__bg rel"
+													style="background: url(../img/quiz/q1-3.jpg) center no-repeat; background-size: cover;">
+	
+												</div>
+												<span class="checkbox-psevdo">
+													<span class="checkbox-psevdo-active">
+													</span>
+												</span>
+	
+												<span class="txt20">
+													Угловая
+												</span>
+											</span>
+										</label>
+										<!-- 4 -->
+										<label for="qw1-4" class="tiem-block__item tiem mb">
+	
+											<input type="radio" class="checkbox-inp" name='qw1' id='qw1-4'
+												value="С островом">
+											<span class="checkbox-block">
+												<div class="checkbox-block__bg rel"
+													style="background: url(../img/quiz/q1-4.jpg) center no-repeat; background-size: cover;">
+												</div>
+												<span class="checkbox-psevdo">
+													<span class="checkbox-psevdo-active">
+													</span>
+												</span>
+												<span class="txt20">
+													С островом
+												</span>
+											</span>
+										</label>
+									</div>
+	
+								</div>
+								<!-- 2 -->
+								<div class="test-item" style="display: none;">
+									<h5 class="txt35 fontO fw7 tac mb test-item__title">
+										У вас уже есть проект кухни?
+									</h5>
+	
+									<div class="tiem-block t2">
+	
+										<!-- 1 -->
+										<label for="qw2-1" class="tiem-block__item tiem t2">
+	
+											<input type="radio" class="checkbox-inp" name='qw2' id='qw2-1' value="Да">
+											<span class="checkbox-block t2">
+												<span class="checkbox-psevdo t2 mrm">
+													<span class="checkbox-psevdo-active">
+													</span>
+												</span>
+	
+												<span class="text fw5 txt20">
+													Да
+												</span>
+											</span>
+										</label>
+										<!-- 2 -->
+										<label for="qw2-2" class="tiem-block__item tiem t2">
+	
+											<input type="radio" class="checkbox-inp" name='qw2' id='qw2-2'
+												value="Нет, но знаю чего хочу">
+											<span class="checkbox-block t2">
+												<span class="checkbox-psevdo t2 mrm">
+													<span class="checkbox-psevdo-active">
+													</span>
+												</span>
+	
+												<span class="text fw5 txt20">
+													Нет, но знаю чего хочу
+												</span>
+											</span>
+										</label>
+										<!-- 3 -->
+										<label for="qw2-3" class="tiem-block__item tiem t2">
+	
+											<input type="radio" class="checkbox-inp" name='qw2' id='qw2-3'
+												value="Нет, предложите решение">
+											<span class="checkbox-block t2">
+												<span class="checkbox-psevdo t2 mrm">
+													<span class="checkbox-psevdo-active">
+													</span>
+												</span>
+	
+												<span class="text fw5 txt20">
+													Нет, предложите решение
+												</span>
+											</span>
+										</label>
+	
+	
+									</div>
+	
+								</div>
+	
+	
+								<!-- 3 -->
+								<div class="test-item" style="display: none;">
+									<h5 class="txt35 fontO fw7 tac mb test-item__title">
+										В каком стиле кухню вы хотите?
+									</h5>
+	
+									<div class="tiem-block t3">
+	
+										<!-- 1 -->
+										<label for="qw3-1" class="tiem-block__item tiem t2 t3">
+	
+											<input type="radio" class="checkbox-inp" name='qw3' id='qw3-1' value="Классика">
+											<span class="checkbox-block t2">
+												<span class="checkbox-psevdo t2 mrm">
+													<span class="checkbox-psevdo-active">
+													</span>
+												</span>
+	
+												<span class="text fw5 txt20">
+													Классика
+												</span>
+											</span>
+										</label>
+										<!-- 2 -->
+										<label for="qw3-2" class="tiem-block__item tiem t2 t3">
+	
+											<input type="radio" class="checkbox-inp" name='qw3' id='qw3-2' value="Хай-тек">
+											<span class="checkbox-block t2">
+												<span class="checkbox-psevdo t2 mrm">
+													<span class="checkbox-psevdo-active">
+													</span>
+												</span>
+	
+												<span class="text fw5 txt20">
+													Хай-тек
+												</span>
+											</span>
+										</label>
+										<!-- 3 -->
+										<label for="qw3-3" class="tiem-block__item tiem t2 t3">
+	
+											<input type="radio" class="checkbox-inp" name='qw3' id='qw3-3' value="Лофт">
+											<span class="checkbox-block t2">
+												<span class="checkbox-psevdo t2 mrm">
+													<span class="checkbox-psevdo-active">
+													</span>
+												</span>
+	
+												<span class="text fw5 txt20">
+													Лофт
+												</span>
+											</span>
+										</label>
+										<!-- 4 -->
+										<label for="qw3-4" class="tiem-block__item tiem t2 t3">
+	
+											<input type="radio" class="checkbox-inp" name='qw3' id='qw3-4'
+												value="Этно-стиль">
+											<span class="checkbox-block t2">
+												<span class="checkbox-psevdo t2 mrm">
+													<span class="checkbox-psevdo-active">
+													</span>
+												</span>
+	
+												<span class="text fw5 txt20">
+													Этно-стиль
+												</span>
+											</span>
+										</label>
+										<!-- 5 -->
+										<label for="qw3-5" class="tiem-block__item tiem t2 t3">
+	
+											<input type="radio" class="checkbox-inp" name='qw3' id='qw3-5' value="Прованс">
+											<span class="checkbox-block t2">
+												<span class="checkbox-psevdo t2 mrm">
+													<span class="checkbox-psevdo-active">
+													</span>
+												</span>
+	
+												<span class="text fw5 txt20">
+													Прованс
+												</span>
+											</span>
+										</label>
+										<!-- 6 -->
+										<label for="qw3-6" class="tiem-block__item tiem t2 t3">
+	
+											<input type="radio" class="checkbox-inp" name='qw3' id='qw3-6' value="Модерн">
+											<span class="checkbox-block t2">
+												<span class="checkbox-psevdo t2 mrm">
+													<span class="checkbox-psevdo-active">
+													</span>
+												</span>
+	
+												<span class="text fw5 txt20">
+													Модерн
+												</span>
+											</span>
+										</label>
+										<!-- 7 -->
+										<label for="qw3-7" class="tiem-block__item tiem t2 t3">
+	
+											<input type="radio" class="checkbox-inp" name='qw3' id='qw3-7' value="Минимал">
+											<span class="checkbox-block t2">
+												<span class="checkbox-psevdo t2 mrm">
+													<span class="checkbox-psevdo-active">
+													</span>
+												</span>
+	
+												<span class="text fw5 txt20">
+													Минимал
+												</span>
+											</span>
+										</label>
+										<!-- 8 -->
+										<label for="qw3-8" class="tiem-block__item tiem t2 t3">
+	
+											<input type="radio" class="checkbox-inp" name='qw3' id='qw3-8' value="Барокко">
+											<span class="checkbox-block t2">
+												<span class="checkbox-psevdo t2 mrm">
+													<span class="checkbox-psevdo-active">
+													</span>
+												</span>
+	
+												<span class="text fw5 txt20">
+													Барокко
+												</span>
+											</span>
+										</label>
+	
+	
+									</div>
+	
+								</div>
+	
+								<!-- 4 -->
+								<div class="test-item test-item-4" style="display: none;">
+									<h5 class="txt24 fw7 tac mb test-item__title fontO txt35">
+										Какой подарок вы хотите?
+									</h5>
+									<div class="tiem-block">
+										<div class="slider-pagin">
+											<span class="quiz__slider-arrowL-1"><img class="lazy"
+													data-src="img/svg/arrowL.svg" alt=""></span>
+											<span class="quiz__slider-arrowR-1"><img class="lazy"
+													data-src="img/svg/arrowR.svg" alt=""></span>
+										</div>
+										<div class="test-slider" id="test-slider">
+											<!-- 1 -->
+											<label for="qw4-1" class="tiem-block__item test-slider__item tiem mb">
+												<input type="radio" class="checkbox-inp" name='qw4' id='qw4-1'
+													value="Столешница">
+												<span class="checkbox-block">
+													<div class="checkbox-block__img mbs rel">
+														<img class="lazy" data-src="img/quiz/q4-1.png" alt="">
+													</div>
+													<span class="checkbox-psevdo">
+														<span class="checkbox-psevdo-active">
+														</span>
+													</span>
+	
+													<span class="text tac fw5 txt20">
+														Столешница
+													</span>
+												</span>
+											</label>
+											<!-- 2 -->
+											<label for="qw4-2" class="tiem-block__item test-slider__item tiem mb">
+												<input type="radio" class="checkbox-inp" name='qw4' id='qw4-2'
+													value="Раковина из гранита">
+												<span class="checkbox-block">
+													<div class="checkbox-block__img mbs rel">
+														<img class="lazy" data-src="img/quiz/q4-2.png" alt="">
+													</div>
+													<span class="checkbox-psevdo">
+														<span class="checkbox-psevdo-active">
+														</span>
+													</span>
+													<span class="text tac fw5 txt20">
+														Раковина из гранита
+													</span>
+												</span>
+											</label>
+											<!-- 3 -->
+											<label for="qw4-3" class="tiem-block__item test-slider__item tiem mb">
+												<input type="radio" class="checkbox-inp" name='qw4' id='qw4-3'
+													value="Раковина из стали">
+												<span class="checkbox-block">
+													<div class="checkbox-block__img mbs rel">
+														<img class="lazy" data-src="img/quiz/q4-3.png" alt="">
+													</div>
+													<span class="checkbox-psevdo">
+														<span class="checkbox-psevdo-active">
+														</span>
+													</span>
+													<span class="text tac fw5 txt20">
+														Раковина из стали
+													</span>
+												</span>
+											</label>
+											<!-- 4 -->
+											<label for="qw4-4" class="tiem-block__item test-slider__item tiem mb">
+												<input type="radio" class="checkbox-inp" name='qw4' id='qw4-4'
+													value="Набор японских премиум ножей">
+												<span class="checkbox-block">
+													<div class="checkbox-block__img mbs rel">
+														<img class="lazy" data-src="img/quiz/q4-4.png" alt="">
+													</div>
+													<span class="checkbox-psevdo">
+														<span class="checkbox-psevdo-active">
+														</span>
+													</span>
+	
+													<span class="text v fw5 txt20">
+														Набор японских премиум ножей
+													</span>
+												</span>
+											</label>
+											<!-- 5 -->
+											<label for="qw4-5" class="tiem-block__item test-slider__item tiem mb">
+												<input type="radio" class="checkbox-inp" name='qw5' id='qw4-5'
+													value="Водоочиститель">
+												<span class="checkbox-block">
+													<div class="checkbox-block__img mbs rel">
+														<img class="lazy" data-src="img/quiz/q4-5.png" alt="">
+													</div>
+													<span class="checkbox-psevdo">
+														<span class="checkbox-psevdo-active">
+														</span>
+													</span>
+	
+													<span class="text v fw5 txt20">
+														Водоочиститель
+													</span>
+												</span>
+											</label>
+											<!-- 6-->
+											<label for="qw4-6" class="tiem-block__item test-slider__item tiem mb">
+												<input type="radio" class="checkbox-inp" name='qw6' id='qw4-6'
+													value="Вытяжка">
+												<span class="checkbox-block">
+													<div class="checkbox-block__img mbs rel">
+														<img class="lazy" data-src="img/quiz/q4-6.png" alt="">
+													</div>
+													<span class="checkbox-psevdo">
+														<span class="checkbox-psevdo-active">
+														</span>
+													</span>
+	
+													<span class="text v fw5 txt20">
+														Вытяжка
+													</span>
+												</span>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="test-item t-end" style="display: none;">
+									<h5 class="txt35 fontO fw7 tac white-space mbs test-item__title">
+										Оставьте ваши контактные данные <br>
+										для расчета стоимости
+									</h5>
+									<div class="tac mb tsm12 txt13">
+										Нажимая на кнопку, вы соглашаетесь с Политикой конфиденциальности <br>
+										работки персональных данных
+									</div>
+									<div class="t-end-block col-center">
+										<span class="input-wrap">
+											<input name="name" required class="txt18" type="name" placeholder="Ваше имя">
+										</span>
+										<span class="input-wrap">
+											<input name="phone" class="inputTel" required class="txt18" type="tel"
+												placeholder="Ваш телефон">
+										</span>
+										<span class="btn-wrap">
+											<button class="txt20 bold mainBtn fontAb">ОТПРАВИТЬ ЗАЯВКУ </button>
+										</span>
+									</div>
+								</div>
+							</div>
+	
+							<div class="test__btns">
+								<button class="quiz__prev  mainBtn txt22 fontAb" style="display: none;">ПРЕДЫДУЩИЙ
+									ВОПРОС</button>
+								<div class="quiz__next-wrap">
+									<div class="btn-lbs"></div>
+									<button class="btn quiz__next quiz__btn mainBtn" disabled>
+										<span class="text white ttu fwb  txt22 fontAb">СЛЕДУЮЩИЙ ВОПРОС</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="test-right forest rel test__right"
+							style="background: url(../img/quiz/back2.jpg) bottom center no-repeat; background-size: cover;">
+							<div class="test-right__item">
+								<div class="txt24 tac white fw3 mbm">
+									До получения <br>
+									подарка осталось:
+								</div>
+								<div class="fwb white tac t-min h50 fontO">
+									4 вопроса
+								</div>
+							</div>
+							<div class="test-right__item" style="display: none;">
+								<div class="txt24 tac white fw3 mbm">
+									До получения <br>
+									бонуса осталось:
+								</div>
+								<div class="fwb white tac t-min h50 fontO">
+									3 вопроса
+								</div>
+							</div>
+							<div class="test-right__item" style="display: none;">
+								<div class="txt24 tac white fw3 mbm">
+									До получения <br>
+									бонуса осталось:
+								</div>
+								<div class="fwb white tac t-min h50 fontO">
+									2 вопроса
+								</div>
+							</div>
+							<div class="test-right__item" style="display: none;">
+								<div class="txt24 tac white fw3 mbm">
+									До получения <br>
+									бонуса осталось:
+								</div>
+								<div class="fwb white tac t-min h50 fontO">
+									1 вопроса
+								</div>
+							</div>
+							<div class="test-right__item" style="display: none;">
+								<div class="t-min tac white fwb mbm h50 fontO">
+									Поздравляем!
+								</div>
+								<div class="fw3 white tac text-md txt20">
+									Оставьте свои контактные <br>
+									данные, чтобы мы могли <br>
+									закрепить бонус за Вами
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="pagin paginColor txt24">
+					<a href="#block1" class="paginColor txt24">01</a>
+					<a href="#block2" class="paginColor txt24">02</a>
+					<a href="#block3" class="paginColor txt24">03</a>
+					<a href="#block4" class="paginFlex"><span class="paginBlack">
+							04</span> <img class="lazy" data-src="img/line.png" alt="">
+					</a>
+					<a href="#block5" class="paginColor txt24">05</a>
+					<a href="#block6" class="paginColor txt24">06</a>
+					<a href="#block7" class="paginColor txt24">07</a>
+					<a href="#block8" class="paginColor txt24">08</a>
+					<a href="#block9" class="paginColor txt24">09</a>
+				</div>
+			</div>
+		</div>
+	</section>	<script>
+		function a_onClick(el) {
+			let morePop = $(".popupPop");
+			morePop.filter(el.data("pop")).fadeIn();
+			$(".popup-background").fadeIn();
+			$("html").addClass("overflowHidden");
+	
+			return false;
+		}
+	</script>
+	<section class="popular padTopBig padBot" id="block5">
 		<div class="container">
 			<div class="popular__title">
 				<h2 class="h50 fontO">
@@ -269,80 +823,348 @@
 				<a class="txt28 tabBtn" data-id="#tab4" id="tabBtn1">Эконом сегмент</a>
 			</div>
 			<div class="popular__tabs">
-				<div class="popular__tab1" id="tab1">
-					<div class="popular__slider">
+				<div class="popular__tab1 tab" id="tab1">
+					<div class="popular__slider popular__slider-1">
 						<div class="popular__slider-item">
-							<img src="img/popular/n1.jpg" alt="">
+							<img class="lazy" data-src="img/popular/n1.jpg" alt="">
 							<p class="txt30 bold">Кухня New York</p>
 							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
 							<div class="popular__slider-more">
-								<button class="txt28 fontO mainBtn">Подробнее</button>
+								<a class="txt28 fontO mainBtn popBtn" data-pop="#new"
+									onClick="a_onClick($(this))">Подробнее</a>
 							</div>
 						</div>
 						<div class="popular__slider-item">
-							<img src="img/popular/w1.jpg" alt="">
+							<img class="lazy" data-src="img/popular/w1.jpg" alt="">
 							<p class="txt30 bold">Кухня White&Wood</p>
 							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
 							<div class="popular__slider-more">
-								<button class="txt28 fontO mainBtn">Подробнее</button>
+								<a class="txt28 fontO mainBtn popBtn" data-pop="#w"
+									onClick="a_onClick($(this))">Подробнее</a>
 							</div>
 						</div>
 						<div class="popular__slider-item">
-							<img src="img/popular/c1.jpg" alt="">
+							<img class="lazy" data-src="img/popular/c1.jpg" alt="">
 							<p class="txt30 bold">Кухня Cappuchino</p>
 							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
 							<div class="popular__slider-more">
-								<button class="txt28 fontO mainBtn">Подробнее</button>
+								<a class="txt28 fontO mainBtn popBtn" data-pop="#c"
+									onClick="a_onClick($(this))">Подробнее</a>
 							</div>
 						</div>
 						<div class="popular__slider-item">
-							<img src="img/popular/sw1.jpg" alt="">
+							<img class="lazy" data-src="img/popular/sw1.jpg" alt="">
 							<p class="txt30 bold">Кухня в ShowRoom</p>
 							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
 							<div class="popular__slider-more">
-								<button class="txt28 fontO mainBtn">Подробнее</button>
+								<a class="txt28 fontO mainBtn popBtn" data-pop="#sw"
+									onClick="a_onClick($(this))">Подробнее</a>
 							</div>
 						</div>
 						<div class="popular__slider-item">
-							<img src="img/popular/si1.jpg" alt="">
+							<img class="lazy" data-src="img/popular/si1.jpg" alt="">
 							<p class="txt30 bold">Кухня Cinema</p>
 							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
 							<div class="popular__slider-more">
-								<button class="txt28 fontO mainBtn">Подробнее</button>
+								<a class="txt28 fontO mainBtn popBtn" data-pop="#ci"
+									onClick="a_onClick($(this))">Подробнее</a>
 							</div>
 						</div>
 						<div class="popular__slider-item">
-							<img src="img/popular/s1.jpg" alt="">
+							<img class="lazy" data-src="img/popular/s1.jpg" alt="">
 							<p class="txt30 bold">Кухня Stone</p>
 							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
 							<div class="popular__slider-more">
-								<button class="txt28 fontO mainBtn">Подробнее</button>
+								<a class="txt28 fontO mainBtn popBtn" data-pop="#s"
+									onClick="a_onClick($(this))">Подробнее</a>
 							</div>
 						</div>
 						<div class="popular__slider-item">
-							<img src="img/popular/t1.jpeg" alt="">
+							<img class="lazy" data-src="img/popular/t1.jpeg" alt="">
 							<p class="txt30 bold">Кухня Tokyo</p>
 							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
 							<div class="popular__slider-more">
-								<button class="txt28 fontO mainBtn">Подробнее</button>
+								<a class="txt28 fontO mainBtn popBtn" data-pop="#t"
+									onClick="a_onClick($(this))">Подробнее</a>
 							</div>
 						</div>
 						<div class="popular__slider-item">
-							<img src="img/popular/wg1.jpeg" alt="">
+							<img class="lazy" data-src="img/popular/wg1.jpeg" alt="">
 							<p class="txt30 bold">Кухня White gloss</p>
 							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
 							<div class="popular__slider-more">
-								<button class="txt28 fontO mainBtn">Подробнее</button>
+								<a class="txt28 fontO mainBtn popBtn" data-pop="#wg"
+									onClick="a_onClick($(this))">Подробнее</a>
 							</div>
 						</div>
 					</div>
 					<div class="slider-pagin">
-						<span class="popular__slider-arrowL"><img src="img/svg/arrowL.svg" alt=""></span>
-						<p class="slider-pagin-status">
+						<span class="popular__slider-arrowL-1"><img class="lazy" data-src="img/svg/arrowL.svg"
+								alt=""></span>
+						<p class="slider-pagin-status slider-pagin-status-1">
 							<span class="txt36 colorM2">01
 							</span> <span class="txt36"> / 08</span>
 						</p>
-						<span class="popular__slider-arrowR"><img src="img/svg/arrowR.svg" alt=""></span>
+						<span class="popular__slider-arrowR-1"><img class="lazy" data-src="img/svg/arrowR.svg"
+								alt=""></span>
+					</div>
+				</div>
+				<div class="popular__tab2 tab" id="tab2">
+					<div class="popular__slider popular__slider-2">
+						<div class="popular__slider-item">
+							<img class="lazy" data-src="img/popular/n1.jpg" alt="">
+							<p class="txt30 bold">Кухня New York</p>
+							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
+							<div class="popular__slider-more">
+								<a class="txt28 fontO mainBtn popBtn" data-pop="#new"
+									onClick="a_onClick($(this))">Подробнее</a>
+							</div>
+						</div>
+						<div class="popular__slider-item">
+							<img class="lazy" data-src="img/popular/w1.jpg" alt="">
+							<p class="txt30 bold">Кухня White&Wood</p>
+							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
+							<div class="popular__slider-more">
+								<a class="txt28 fontO mainBtn popBtn" data-pop="#w"
+									onClick="a_onClick($(this))">Подробнее</a>
+							</div>
+						</div>
+						<div class="popular__slider-item">
+							<img class="lazy" data-src="img/popular/c1.jpg" alt="">
+							<p class="txt30 bold">Кухня Cappuchino</p>
+							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
+							<div class="popular__slider-more">
+								<a class="txt28 fontO mainBtn popBtn" data-pop="#c"
+									onClick="a_onClick($(this))">Подробнее</a>
+							</div>
+						</div>
+						<div class="popular__slider-item">
+							<img class="lazy" data-src="img/popular/sw1.jpg" alt="">
+							<p class="txt30 bold">Кухня в ShowRoom</p>
+							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
+							<div class="popular__slider-more">
+								<a class="txt28 fontO mainBtn popBtn" data-pop="#sw"
+									onClick="a_onClick($(this))">Подробнее</a>
+							</div>
+						</div>
+						<div class="popular__slider-item">
+							<img class="lazy" data-src="img/popular/si1.jpg" alt="">
+							<p class="txt30 bold">Кухня Cinema</p>
+							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
+							<div class="popular__slider-more">
+								<a class="txt28 fontO mainBtn popBtn" data-pop="#ci"
+									onClick="a_onClick($(this))">Подробнее</a>
+							</div>
+						</div>
+						<div class="popular__slider-item">
+							<img class="lazy" data-src="img/popular/s1.jpg" alt="">
+							<p class="txt30 bold">Кухня Stone</p>
+							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
+							<div class="popular__slider-more">
+								<a class="txt28 fontO mainBtn popBtn" data-pop="#s"
+									onClick="a_onClick($(this))">Подробнее</a>
+							</div>
+						</div>
+						<div class="popular__slider-item">
+							<img class="lazy" data-src="img/popular/t1.jpeg" alt="">
+							<p class="txt30 bold">Кухня Tokyo</p>
+							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
+							<div class="popular__slider-more">
+								<a class="txt28 fontO mainBtn popBtn" data-pop="#t"
+									onClick="a_onClick($(this))">Подробнее</a>
+							</div>
+						</div>
+						<div class="popular__slider-item">
+							<img class="lazy" data-src="img/popular/wg1.jpeg" alt="">
+							<p class="txt30 bold">Кухня White gloss</p>
+							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
+							<div class="popular__slider-more">
+								<a class="txt28 fontO mainBtn popBtn" data-pop="#wg"
+									onClick="a_onClick($(this))">Подробнее</a>
+							</div>
+						</div>
+					</div>
+					<div class="slider-pagin">
+						<span class="popular__slider-arrowL-2"><img class="lazy" data-src="img/svg/arrowL.svg"
+								alt=""></span>
+						<p class="slider-pagin-status slider-pagin-status-2">
+							<span class="txt36 colorM2">01
+							</span> <span class="txt36"> / 08</span>
+						</p>
+						<span class="popular__slider-arrowR-2"><img class="lazy" data-src="img/svg/arrowR.svg"
+								alt=""></span>
+					</div>
+				</div>
+				<div class="popular__tab3 tab" id="tab3">
+					<div class="popular__slider popular__slider-3">
+						<div class="popular__slider-item">
+							<img class="lazy" data-src="img/popular/n1.jpg" alt="">
+							<p class="txt30 bold">Кухня New York</p>
+							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
+							<div class="popular__slider-more">
+								<a class="txt28 fontO mainBtn popBtn" data-pop="#new"
+									onClick="a_onClick($(this))">Подробнее</a>
+							</div>
+						</div>
+						<div class="popular__slider-item">
+							<img class="lazy" data-src="img/popular/w1.jpg" alt="">
+							<p class="txt30 bold">Кухня White&Wood</p>
+							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
+							<div class="popular__slider-more">
+								<a class="txt28 fontO mainBtn popBtn" data-pop="#w"
+									onClick="a_onClick($(this))">Подробнее</a>
+							</div>
+						</div>
+						<div class="popular__slider-item">
+							<img class="lazy" data-src="img/popular/c1.jpg" alt="">
+							<p class="txt30 bold">Кухня Cappuchino</p>
+							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
+							<div class="popular__slider-more">
+								<a class="txt28 fontO mainBtn popBtn" data-pop="#c"
+									onClick="a_onClick($(this))">Подробнее</a>
+							</div>
+						</div>
+						<div class="popular__slider-item">
+							<img class="lazy" data-src="img/popular/sw1.jpg" alt="">
+							<p class="txt30 bold">Кухня в ShowRoom</p>
+							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
+							<div class="popular__slider-more">
+								<a class="txt28 fontO mainBtn popBtn" data-pop="#sw"
+									onClick="a_onClick($(this))">Подробнее</a>
+							</div>
+						</div>
+						<div class="popular__slider-item">
+							<img class="lazy" data-src="img/popular/si1.jpg" alt="">
+							<p class="txt30 bold">Кухня Cinema</p>
+							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
+							<div class="popular__slider-more">
+								<a class="txt28 fontO mainBtn popBtn" data-pop="#ci"
+									onClick="a_onClick($(this))">Подробнее</a>
+							</div>
+						</div>
+						<div class="popular__slider-item">
+							<img class="lazy" data-src="img/popular/s1.jpg" alt="">
+							<p class="txt30 bold">Кухня Stone</p>
+							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
+							<div class="popular__slider-more">
+								<a class="txt28 fontO mainBtn popBtn" data-pop="#s"
+									onClick="a_onClick($(this))">Подробнее</a>
+							</div>
+						</div>
+						<div class="popular__slider-item">
+							<img class="lazy" data-src="img/popular/t1.jpeg" alt="">
+							<p class="txt30 bold">Кухня Tokyo</p>
+							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
+							<div class="popular__slider-more">
+								<a class="txt28 fontO mainBtn popBtn" data-pop="#t"
+									onClick="a_onClick($(this))">Подробнее</a>
+							</div>
+						</div>
+						<div class="popular__slider-item">
+							<img class="lazy" data-src="img/popular/wg1.jpeg" alt="">
+							<p class="txt30 bold">Кухня White gloss</p>
+							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
+							<div class="popular__slider-more">
+								<a class="txt28 fontO mainBtn popBtn" data-pop="#wg"
+									onClick="a_onClick($(this))">Подробнее</a>
+							</div>
+						</div>
+					</div>
+					<div class="slider-pagin">
+						<span class="popular__slider-arrowL-3"><img class="lazy" data-src="img/svg/arrowL.svg"
+								alt=""></span>
+						<p class="slider-pagin-status slider-pagin-status-3">
+							<span class="txt36 colorM2">01
+							</span> <span class="txt36"> / 08</span>
+						</p>
+						<span class="popular__slider-arrowR-3"><img class="lazy" data-src="img/svg/arrowR.svg"
+								alt=""></span>
+					</div>
+				</div>
+				<div class="popular__tab4 tab" id="tab4">
+					<div class="popular__slider popular__slider-4">
+						<div class="popular__slider-item">
+							<img class="lazy" data-src="img/popular/n1.jpg" alt="">
+							<p class="txt30 bold">Кухня New York</p>
+							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
+							<div class="popular__slider-more">
+								<a class="txt28 fontO mainBtn popBtn" data-pop="#new"
+									onClick="a_onClick($(this))">Подробнее</a>
+							</div>
+						</div>
+						<div class="popular__slider-item">
+							<img class="lazy" data-src="img/popular/w1.jpg" alt="">
+							<p class="txt30 bold">Кухня White&Wood</p>
+							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
+							<div class="popular__slider-more">
+								<a class="txt28 fontO mainBtn popBtn" data-pop="#w"
+									onClick="a_onClick($(this))">Подробнее</a>
+							</div>
+						</div>
+						<div class="popular__slider-item">
+							<img class="lazy" data-src="img/popular/c1.jpg" alt="">
+							<p class="txt30 bold">Кухня Cappuchino</p>
+							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
+							<div class="popular__slider-more">
+								<a class="txt28 fontO mainBtn popBtn" data-pop="#c"
+									onClick="a_onClick($(this))">Подробнее</a>
+							</div>
+						</div>
+						<div class="popular__slider-item">
+							<img class="lazy" data-src="img/popular/sw1.jpg" alt="">
+							<p class="txt30 bold">Кухня в ShowRoom</p>
+							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
+							<div class="popular__slider-more">
+								<a class="txt28 fontO mainBtn popBtn" data-pop="#sw"
+									onClick="a_onClick($(this))">Подробнее</a>
+							</div>
+						</div>
+						<div class="popular__slider-item">
+							<img class="lazy" data-src="img/popular/si1.jpg" alt="">
+							<p class="txt30 bold">Кухня Cinema</p>
+							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
+							<div class="popular__slider-more">
+								<a class="txt28 fontO mainBtn popBtn" data-pop="#ci"
+									onClick="a_onClick($(this))">Подробнее</a>
+							</div>
+						</div>
+						<div class="popular__slider-item">
+							<img class="lazy" data-src="img/popular/s1.jpg" alt="">
+							<p class="txt30 bold">Кухня Stone</p>
+							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
+							<div class="popular__slider-more">
+								<a class="txt28 fontO mainBtn popBtn" data-pop="#s"
+									onClick="a_onClick($(this))">Подробнее</a>
+							</div>
+						</div>
+						<div class="popular__slider-item">
+							<img class="lazy" data-src="img/popular/t1.jpeg" alt="">
+							<p class="txt30 bold">Кухня Tokyo</p>
+							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
+							<div class="popular__slider-more">
+								<a class="txt28 fontO mainBtn popBtn" data-pop="#t"
+									onClick="a_onClick($(this))">Подробнее</a>
+							</div>
+						</div>
+						<div class="popular__slider-item">
+							<img class="lazy" data-src="img/popular/wg1.jpeg" alt="">
+							<p class="txt30 bold">Кухня White gloss</p>
+							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
+							<div class="popular__slider-more">
+								<a class="txt28 fontO mainBtn popBtn" data-pop="#wg"
+									onClick="a_onClick($(this))">Подробнее</a>
+							</div>
+						</div>
+					</div>
+					<div class="slider-pagin">
+						<span class="popular__slider-arrowL-4"><img class="lazy" data-src="img/svg/arrowL.svg"
+								alt=""></span>
+						<p class="slider-pagin-status slider-pagin-status-4">
+							<span class="txt36 colorM2">01
+							</span> <span class="txt36"> / 08</span>
+						</p>
+						<span class="popular__slider-arrowR-4"><img class="lazy" data-src="img/svg/arrowR.svg"
+								alt=""></span>
 					</div>
 				</div>
 				<div class="pagin paginColor txt24">
@@ -351,7 +1173,7 @@
 					<a href="#block3" class="paginColor txt24">03</a>
 					<a href="#block4" class="paginColor txt24">04</a>
 					<a href="#block5" class="paginFlex"><span class="paginBlack">
-							05</span> <img src="img/line.png" alt="">
+							05</span> <img class="lazy" data-src="img/line.png" alt="">
 					</a>
 					<a href="#block6" class="paginColor txt24">06</a>
 					<a href="#block7" class="paginColor txt24">07</a>
@@ -399,7 +1221,7 @@
 				</div>
 			</div>
 		</div>
-		<img src="img/about/men.jpg" class="about-men" alt="">
+		<img src="" data-src="img/about/men.jpg" class="about-men lazy" alt="">
 		<div class="pagin paginColor txt24">
 			<a href="#block1" class="paginColor txt24">01</a>
 			<a href="#block2" class="paginColor txt24">02</a>
@@ -418,7 +1240,7 @@
 			<div class="pagin-wrap">
 				<div class="today__title">
 					<h2 class="h50 fontO">
-						Что мы имеем на сегодняшний момент
+						Что мы имеем на <br> сегодняшний момент
 					</h2>
 				</div>
 				<div class="today__cards">
@@ -428,7 +1250,7 @@
 							представлено в нашем
 							шоу-руме для вашего удобства
 						</p>
-						<img src="img/today/img1.png" alt="">
+						<img class="lazy" data-src="img/today/img1.png" alt="">
 					</div>
 					<div class="today__cards-item">
 						<p class="txt24 bold">
@@ -437,7 +1259,7 @@
 							квалификацию на мебельных
 							выставках и форумах
 						</p>
-						<img src="img/today/img22.png" alt="">
+						<img class="lazy" data-src="img/today/img22.png" alt="">
 					</div>
 					<div class="today__cards-item">
 						<p class="txt24 bold">
@@ -447,14 +1269,14 @@
 							и сертифицированными
 							специалистами
 						</p>
-						<img src="img/today/img3.png" alt="">
+						<img class="lazy" data-src="img/today/img3.png" alt="">
 					</div>
 					<div class="today__cards-item">
 						<p class="txt24 bold">
 							170 - столько едениц мебели
 							выпускается ежемесячно
 						</p>
-						<img src="img/today/img4.png" alt="">
+						<img class="lazy" data-src="img/today/img4.png" alt="">
 					</div>
 					<div class="today__cards-item">
 						<p class="txt40 fontAb">
@@ -463,19 +1285,20 @@
 							для вас кухонь, а также <br>
 							бесплатный дизайн-проект!
 						</p>
-						<img src="img/today/cata.png" class="today-cata" alt="">
+						<img class="lazy" data-src="img/today/cata.png" class="today-cata" alt="">
 						<div class="today__cards-form">
 							<form action="">
+								<input type="hidden" name="title" value="Форма на подборку 3 кухонь и дизайн-проект">
 								<span class="input-wrap">
 									<img src="img/svg/user.svg" alt="">
-									<input class="txt18" type="name" placeholder="Ваше имя">
+									<input name="name" required class="txt18" type="name" placeholder="Ваше имя">
 								</span>
 								<span class="input-wrap">
 									<img src="img/svg/phone1.svg" alt="">
-									<input class="txt18" type="tel" placeholder="Ваш телефон">
+									<input name="phone" class="inputTel" required class="txt18" type="tel"
+										placeholder="Ваш телефон">
 								</span>
-								<button class="txt22 fontAb mainBtn">ОСТАВИТЬ ЗАЯВКУ <span><img src="img/main/img4.png"
-											alt=""></span></button>
+								<button class="txt22 fontAb mainBtn">ОСТАВИТЬ ЗАЯВКУ</button>
 							</form>
 						</div>
 					</div>
@@ -488,7 +1311,7 @@
 					<a href="#block5" class="paginColor txt24">05</a>
 					<a href="#block6" class="paginColor txt24">06</a>
 					<a href="#block7" class="paginFlex"><span class="paginBlack">
-							07</span> <img src="img/line.png" alt="">
+							07</span> <img class="lazy" data-src="img/line.png" alt="">
 					</a>
 					<a href="#block8" class="paginColor txt24">08</a>
 					<a href="#block9" class="paginColor txt24">09</a>
@@ -505,7 +1328,7 @@
 				</div>
 				<div class="team__cards">
 					<div class="team__cards-item">
-						<img src="img/team/men1.png" alt="">
+						<img class="lazy" data-src="img/team/men1.png" alt="">
 						<div class="team__cards-descr">
 							<p class="h50 fontO">
 								Алексей
@@ -521,7 +1344,7 @@
 						</div>
 					</div>
 					<div class="team__cards-item">
-						<img src="img/team/men2.png" alt="">
+						<img class="lazy" data-src="img/team/men2.png" alt="">
 						<div class="team__cards-descr">
 							<p class="h50 fontO">
 								Андрей
@@ -538,7 +1361,7 @@
 						</div>
 					</div>
 					<div class="team__cards-item">
-						<img src="img/team/men3.png" alt="">
+						<img class="lazy" data-src="img/team/men3.png" alt="">
 						<div class="team__cards-descr">
 							<p class="h50 fontO">
 								Максим
@@ -719,12 +1542,12 @@
 					<a href="tel:80298210016" class="txt24 bold">
 						8 (029) 821-00-16
 					</a>
-					<p class="txt16 bold underline">
+					<p class="txt16 bold underline order">
 						Перезвонить Вам?
 					</p>
 				</div>
 				<div class="footer__bot-conf">
-					<a class="txt16">
+					<a class="txt16 politic-btn">
 						Политика конфиденциальности
 					</a>
 				</div>
@@ -736,7 +1559,1284 @@
 				</div>
 			</div>
 		</footer>	</div>
-
+	<div class="popupForm" id="popupForm">
+		<div class="popupForm--wrap">
+			<div class="popupForm__content">
+				<p class="txt24 med">
+					Чтобы оставить заявку,
+					пожалуйста заполните
+					поля ниже
+				</p>
+				<form action="">
+					<input type="hidden" name="title" value="Форма заявки">
+					<span class="input-wrap">
+						<input name="name" required class="txt18" type="name" placeholder="Ваше имя">
+					</span>
+					<span class="input-wrap">
+						<input name="phone" class="inputTel" required class="txt18" type="tel" placeholder="Ваш телефон">
+					</span>
+					<span class="btn-wrap">
+						<button class="txt20 bold mainBtn">ОСТАВИТЬ ЗАЯВКУ </button>
+					</span>
+				</form>
+				<span class="popupForm--close close"><svg id="Capa_1" enable-background="new 0 0 413.348 413.348"
+						height="512" viewBox="0 0 413.348 413.348" width="512" xmlns="http://www.w3.org/2000/svg">
+						<path fill="#eeab09"
+							d="m413.348 24.354-24.354-24.354-182.32 182.32-182.32-182.32-24.354 24.354 182.32 182.32-182.32 182.32 24.354 24.354 182.32-182.32 182.32 182.32 24.354-24.354-182.32-182.32z" />
+					</svg></span>
+			</div>
+		</div>
+	</div>
+	<div class="popupForm popupForm-file">
+		<div class="popupForm--wrap">
+			<div class="popupForm__content">
+				<p class="txt24 med">
+					Чтобы оставить заявку,
+					пожалуйста заполните
+					поля ниже
+				</p>
+				<form action="">
+					<input type="hidden" name="title" value="Форма заявки с файлом">
+					<span class="input-file input-wrap">
+						<input type="file" name="userfile[]" id="input-file3" class="inputfile"
+							data-multiple-caption="{count} файлов выбрано" multiple />
+						<label for="input-file3">
+							<span class="txt20 med fileName">
+								Прикрепить файл
+							</span>
+						</label>
+					</span>
+					<span class="input-wrap">
+						<input name="name" required class="txt18" type="name" placeholder="Ваше имя">
+					</span>
+					<span class="input-wrap">
+						<input name="phone" class="inputTel" required class="txt18" type="tel" placeholder="Ваш телефон">
+					</span>
+					<span class="btn-wrap">
+						<button class="txt20 bold mainBtn">ОСТАВИТЬ ЗАЯВКУ </button>
+					</span>
+				</form>
+				<span class="popupForm--close close"><svg id="Capa_1" enable-background="new 0 0 413.348 413.348"
+						height="512" viewBox="0 0 413.348 413.348" width="512" xmlns="http://www.w3.org/2000/svg">
+						<path fill="#eeab09"
+							d="m413.348 24.354-24.354-24.354-182.32 182.32-182.32-182.32-24.354 24.354 182.32 182.32-182.32 182.32 24.354 24.354 182.32-182.32 182.32 182.32 24.354-24.354-182.32-182.32z" />
+					</svg></span>
+			</div>
+		</div>
+	</div>
+	<div class="popup-background"></div>	<div class="popupTy">
+		<div class="popupTy--wrap">
+			<div class="popupTy__content">
+				<p class="txt24 bold">
+					Спасибо!
+				</p>
+				<img src="img/tyImg.png" alt="">
+				<p class="txt18">
+					Наш менеджер уже
+					набирает Ваш номер
+				</p>
+				<span class="popupTy--close close"><svg id="Capa_1" enable-background="new 0 0 413.348 413.348" height="512"
+						viewBox="0 0 413.348 413.348" width="512" xmlns="http://www.w3.org/2000/svg">
+						<path fill="#eeab09"
+							d="m413.348 24.354-24.354-24.354-182.32 182.32-182.32-182.32-24.354 24.354 182.32 182.32-182.32 182.32 24.354 24.354 182.32-182.32 182.32 182.32 24.354-24.354-182.32-182.32z" />
+					</svg></span>
+			</div>
+		</div>
+	</div>	<div class="popupSty" id="mod">
+		<div class="popupSty-wrap">
+			<div class="popupSty__imgs">
+				<div class="popupSty__imgs-big">
+					<a href="img/styles/mod/img2.jpg" data-fancybox="mod"><img class="lazyVis"
+							data-src="img/styles/mod/img2.jpg" alt=""></a>
+				</div>
+				<div class="popupSty__imgs-sm">
+					<a href="img/styles/mod/img3.jpg" data-fancybox="mod"><img class="lazyVis"
+							data-src="img/styles/mod/img3.jpg" alt=""></a>
+					<a href="img/styles/mod/img4.jpg" data-fancybox="mod"><img class="lazyVis"
+							data-src="img/styles/mod/img4.jpg" alt=""></a>
+					<a href="img/styles/mod/img5.jpg" data-fancybox="mod"><img class="lazyVis"
+							data-src="img/styles/mod/img5.jpg" alt=""></a>
+					<a href="img/styles/mod/img1.png" data-fancybox="mod"><img class="lazyVis"
+							data-src="img/styles/mod/img1.png" alt=""></a>
+				</div>
+			</div>
+			<div class="popupSty__descr">
+				<div class="popupSty__descr-content">
+					<p class="popupSty__descr-title txt24 bold">Модерн</p>
+					<p class="popupSty__descr-txt txt18 med">Большинство современных кухонь тяготеет к стилю модерн.
+						И неудивительно – дизайн в этом стиле отвечает динамичности
+						современной жизни. Для модерна характерны отсутствие строгих
+						линий и тяга к асимметрии. При этом функциональность
+						и рациональность ему совсем не чужды.
+						Модерн приемлет пластик, стекло, металл, яркость красок
+						и разнообразие форм. Освещение может быть совершенно разным
+						– для модерна одинаково характерны оригинальные абажуры
+						с плавными формами и асимметричной конструкцией
+						и точечные светильники.
+					</p>
+					<p class="popupSty__descr-txt txt18 med">Оставьте заявку, если вам понравился данный стиль. Наш
+						дизайнер сделает небольшую подборку наших работ схожих
+						с этой и подарит скидку 10%
+					</p>
+				</div>
+				<form action="">
+					<input type="hidden" name="title" value="Форма стиля модерн">
+					<span class="input-wrap">
+						<input name="phone" class="inputTel" required class="txt18" type="tel"
+							placeholder="Введите ваш телефон">
+					</span>
+					<span class="input-wrap">
+						<input name="name" required class="txt18" type="name" placeholder="Введите ваше имя">
+					</span>
+					<span class="btn-wrap">
+						<button class="txt20 bold mainBtn">ОСТАВИТЬ ЗАЯВКУ </button>
+					</span>
+				</form>
+			</div>
+		</div>
+		<div class="close-wrap">
+			<span class="popupSty--close close"><svg id="Capa_1" enable-background="new 0 0 413.348 413.348" height="512"
+					viewBox="0 0 413.348 413.348" width="512" xmlns="http://www.w3.org/2000/svg">
+					<path fill="#eeab09"
+						d="m413.348 24.354-24.354-24.354-182.32 182.32-182.32-182.32-24.354 24.354 182.32 182.32-182.32 182.32 24.354 24.354 182.32-182.32 182.32 182.32 24.354-24.354-182.32-182.32z" />
+				</svg></span>
+		</div>
+	</div>
+	<div class="popupSty" id="cls">
+		<div class="popupSty-wrap">
+			<div class="popupSty__imgs">
+				<div class="popupSty__imgs-big">
+					<a href="img/styles/cl/preImg.png" data-fancybox="cl"><img class="lazyVis"
+							data-src="img/styles/cl/preImg.png" alt=""></a>
+				</div>
+				<div class="popupSty__imgs-sm">
+					<a href="img/styles/cl/img3.jpg" data-fancybox="cl"><img class="lazyVis"
+							data-src="img/styles/cl/img3.jpg" alt=""></a>
+					<a href="img/styles/cl/img4.jpg" data-fancybox="cl"><img class="lazyVis"
+							data-src="img/styles/cl/img4.jpg" alt=""></a>
+					<a href="img/styles/cl/img5.jpg" data-fancybox="cl"><img class="lazyVis"
+							data-src="img/styles/cl/img5.jpg" alt=""></a>
+					<a href="img/styles/cl/img2.jpg" data-fancybox="cl"><img class="lazyVis"
+							data-src="img/styles/cl/img2.jpg" alt=""></a>
+				</div>
+			</div>
+			<div class="popupSty__descr">
+				<div class="popupSty__descr-content">
+					<p class="popupSty__descr-title txt24 bold">Классика</p>
+					<p class="popupSty__descr-txt txt18 med">Классическую кухню выбирают обычно люди, определившиеся
+						в жизни. Для дизайна в стиле классика характерны простые,
+						сдержанные линии, натуральные материалы, отсутствие излишней
+						декоративности. При этом ставка делается на достаточно дорогие
+						материалы – обои должны быть сдержанными, но не дешевыми,
+						кухонный гарнитур часто делается из натурального дерева, на полу
+						предпочтительнее паркет. Для классики важны симметрия,
+						лаконичный неброский рисунок.
+					</p>
+					<p class="popupSty__descr-txt txt18 med">Оставьте заявку, если вам понравился данный стиль. Наш
+						дизайнер сделает небольшую подборку наших работ схожих
+						с этой и подарит скидку 10%
+					</p>
+				</div>
+				<form action="">
+					<input type="hidden" name="title" value="Форма стиля классика">
+					<span class="input-wrap">
+						<input name="phone" class="inputTel" required class="txt18" type="tel"
+							placeholder="Введите ваш телефон">
+					</span>
+					<span class="input-wrap">
+						<input name="name" required class="txt18" type="name" placeholder="Введите ваше имя">
+					</span>
+					<span class="btn-wrap">
+						<button class="txt20 bold mainBtn">ОСТАВИТЬ ЗАЯВКУ </button>
+					</span>
+				</form>
+			</div>
+		</div>
+		<div class="close-wrap">
+			<span class="popupSty--close close"><svg id="Capa_1" enable-background="new 0 0 413.348 413.348" height="512"
+					viewBox="0 0 413.348 413.348" width="512" xmlns="http://www.w3.org/2000/svg">
+					<path fill="#eeab09"
+						d="m413.348 24.354-24.354-24.354-182.32 182.32-182.32-182.32-24.354 24.354 182.32 182.32-182.32 182.32 24.354 24.354 182.32-182.32 182.32 182.32 24.354-24.354-182.32-182.32z" />
+				</svg></span>
+		</div>
+	</div>
+	<div class="popupSty" id="et">
+		<div class="popupSty-wrap">
+			<div class="popupSty__imgs">
+				<div class="popupSty__imgs-big">
+					<a href="img/styles/et/img2.jpg" data-fancybox="et"><img class="lazyVis"
+							data-src="img/styles/et/img2.jpg" alt=""></a>
+				</div>
+				<div class="popupSty__imgs-sm">
+					<a href="img/styles/et/img3.jpg" data-fancybox="et"><img class="lazyVis"
+							data-src="img/styles/et/img3.jpg" alt=""></a>
+					<a href="img/styles/et/img4.jpg" data-fancybox="et"><img class="lazyVis"
+							data-src="img/styles/et/img4.jpg" alt=""></a>
+					<a href="img/styles/et/img5.jpg" data-fancybox="et"><img class="lazyVis"
+							data-src="img/styles/et/img5.jpg" alt=""></a>
+					<a href="img/styles/et/img1.png" data-fancybox="et"><img class="lazyVis"
+							data-src="img/styles/et/img1.png" alt=""></a>
+				</div>
+			</div>
+			<div class="popupSty__descr">
+				<div class="popupSty__descr-content">
+					<p class="popupSty__descr-title txt24 bold">Этно-стиль</p>
+					<p class="popupSty__descr-txt txt18 med">Здесь все зависит от того, что лежит в основе. Если это кантри
+						– то в первую очередь ориентация идет на натуральное дерево,
+						грубые рубленные формы мебели, теплые оттенки цветов. Если
+						это средиземноморский стиль, то акцент делается на сочетании
+						белых и сине-голубых цветов в оформлении интерьера. Если
+						это прованс, то общую атмосферу создают открытые полочки,
+						обилие декоративных элементов. В любом случае учитывается
+						декоративно-прикладное искусство тех народов, в чьем стиле
+						создается кухня. На русской кухне будет уместна хохлома, гжель
+						и старые антикварные утюги с горшками.
+					</p>
+					<p class="popupSty__descr-txt txt18 med">Оставьте заявку, если вам понравился данный стиль. Наш
+						дизайнер сделает небольшую подборку наших работ схожих
+						с этой и подарит скидку 10%
+					</p>
+				</div>
+				<form action="">
+					<input type="hidden" name="title" value="Форма стиля этно">
+					<span class="input-wrap">
+						<input name="phone" class="inputTel" required class="txt18" type="tel"
+							placeholder="Введите ваш телефон">
+					</span>
+					<span class="input-wrap">
+						<input name="name" required class="txt18" type="name" placeholder="Введите ваше имя">
+					</span>
+					<span class="btn-wrap">
+						<button class="txt20 bold mainBtn">ОСТАВИТЬ ЗАЯВКУ </button>
+					</span>
+				</form>
+			</div>
+		</div>
+		<div class="close-wrap">
+			<span class="popupSty--close close"><svg id="Capa_1" enable-background="new 0 0 413.348 413.348" height="512"
+					viewBox="0 0 413.348 413.348" width="512" xmlns="http://www.w3.org/2000/svg">
+					<path fill="#eeab09"
+						d="m413.348 24.354-24.354-24.354-182.32 182.32-182.32-182.32-24.354 24.354 182.32 182.32-182.32 182.32 24.354 24.354 182.32-182.32 182.32 182.32 24.354-24.354-182.32-182.32z" />
+				</svg></span>
+		</div>
+	</div>
+	<div class="popupSty" id="hi">
+		<div class="popupSty-wrap">
+			<div class="popupSty__imgs">
+				<div class="popupSty__imgs-big">
+					<a href="img/styles/hi/img2.jpeg" data-fancybox="hi"><img class="lazyVis"
+							data-src="img/styles/hi/img2.jpeg" alt=""></a>
+				</div>
+				<div class="popupSty__imgs-sm">
+					<a href="img/styles/hi/img3.jpg" data-fancybox="hi"><img class="lazyVis"
+							data-src="img/styles/hi/img3.jpg" alt=""></a>
+					<a href="img/styles/hi/img4.jpg" data-fancybox="hi"><img class="lazyVis"
+							data-src="img/styles/hi/img4.jpg" alt=""></a>
+					<a href="img/styles/hi/img5.jpeg" data-fancybox="hi"><img class="lazyVis"
+							data-src="img/styles/hi/img5.jpeg" alt=""></a>
+					<a href="img/styles/hi/img1.png" data-fancybox="hi"><img class="lazyVis"
+							data-src="img/styles/hi/img1.png" alt=""></a>
+				</div>
+			</div>
+			<div class="popupSty__descr">
+				<div class="popupSty__descr-content">
+					<p class="popupSty__descr-title txt24 bold">Хай-тек</p>
+					<p class="popupSty__descr-txt txt18 med">Хай-тек при этом тяготеет к обилию стекла и металла и
+						всевозможных
+						высокотехнологичных элементов. Для кухонных гарнитуров в стиле
+						хай-тек свойственна эргономика, функциональность, удобство. Упор
+						делается на применении разнообразной фурнитуры и наполнителей
+						для шкафов. Обилие металла в конструкции мебели – тоже признак
+						хай-тека. Само помещение обязательно зонируется. Приветствуются
+						яркие акценты в оформлении – футуристические цвета текстиля,
+						пластиковые обеденные зоны из яркого материала.
+						Также отличается сдержанностью линий, минимальностью деталей
+						и полным отсутствием интереса к декоративным вычурным элементам.
+					</p>
+					<p class="popupSty__descr-txt txt18 med">Оставьте заявку, если вам понравился данный стиль. Наш
+						дизайнер сделает небольшую подборку наших работ схожих
+						с этой и подарит скидку 10%
+					</p>
+				</div>
+				<form action="">
+					<input type="hidden" name="title" value="Форма стиля хай-тек">
+					<span class="input-wrap">
+						<input name="phone" class="inputTel" required class="txt18" type="tel"
+							placeholder="Введите ваш телефон">
+					</span>
+					<span class="input-wrap">
+						<input name="name" required class="txt18" type="name" placeholder="Введите ваше имя">
+					</span>
+					<span class="btn-wrap">
+						<button class="txt20 bold mainBtn">ОСТАВИТЬ ЗАЯВКУ </button>
+					</span>
+				</form>
+			</div>
+		</div>
+		<div class="close-wrap">
+			<span class="popupSty--close close"><svg id="Capa_1" enable-background="new 0 0 413.348 413.348" height="512"
+					viewBox="0 0 413.348 413.348" width="512" xmlns="http://www.w3.org/2000/svg">
+					<path fill="#eeab09"
+						d="m413.348 24.354-24.354-24.354-182.32 182.32-182.32-182.32-24.354 24.354 182.32 182.32-182.32 182.32 24.354 24.354 182.32-182.32 182.32 182.32 24.354-24.354-182.32-182.32z" />
+				</svg></span>
+		</div>
+	</div>
+	<div class="popupSty" id="lof">
+		<div class="popupSty-wrap">
+			<div class="popupSty__imgs">
+				<div class="popupSty__imgs-big">
+					<a href="img/styles/lo/img2.jpg" data-fancybox="lof"><img class="lazyVis"
+							data-src="img/styles/lo/img2.jpg" alt=""></a>
+				</div>
+				<div class="popupSty__imgs-sm">
+					<a href="img/styles/lo/img3.jpg" data-fancybox="lof"><img class="lazyVis"
+							data-src="img/styles/lo/img3.jpg" alt=""></a>
+					<a href="img/styles/lo/img4.jpg" data-fancybox="lof"><img class="lazyVis"
+							data-src="img/styles/lo/img4.jpg" alt=""></a>
+					<a href="img/styles/lo/img5.jpg" data-fancybox="lof"><img class="lazyVis"
+							data-src="img/styles/lo/img5.jpg" alt=""></a>
+					<a href="img/styles/lo/img1.png" data-fancybox="lof"><img class="lazyVis"
+							data-src="img/styles/lo/img1.png" alt=""></a>
+				</div>
+			</div>
+			<div class="popupSty__descr">
+				<div class="popupSty__descr-content">
+					<p class="popupSty__descr-title txt24 bold">Лофт</p>
+					<p class="popupSty__descr-txt txt18 med">Этот стиль основан на сочетании стилей, вернее вещей разных
+						стилевых направлений. Неудивительно,что переводится название
+						стиля, как чердак, ведь именно в это помещение стаскиваются
+						все ненужные вещи. Для дизайна «Loft» характерны сочетание грубой
+						мебели, оштукатуренных стен, кирпичной кладки с современной
+						техникой, антикварными вещицами типа старинных утюгов и ухватов.
+						Именно здесь можно смело выставлять старый буфет рядом
+						с индукционной плитой, приправляя все красной телефонной будкой
+						и шторами с пляшущими человечками на фоне ядерного взрыва.
+						Такой стиль крайне провокационен.
+					</p>
+					<p class="popupSty__descr-txt txt18 med">Оставьте заявку, если вам понравился данный стиль. Наш
+						дизайнер сделает небольшую подборку наших работ схожих
+						с этой и подарит скидку 10%
+					</p>
+				</div>
+				<form action="">
+					<input type="hidden" name="title" value="Форма стиля лофт">
+					<span class="input-wrap">
+						<input name="phone" class="inputTel" required class="txt18" type="tel"
+							placeholder="Введите ваш телефон">
+					</span>
+					<span class="input-wrap">
+						<input name="name" required class="txt18" type="name" placeholder="Введите ваше имя">
+					</span>
+					<span class="btn-wrap">
+						<button class="txt20 bold mainBtn">ОСТАВИТЬ ЗАЯВКУ </button>
+					</span>
+				</form>
+			</div>
+		</div>
+		<div class="close-wrap">
+			<span class="popupSty--close close"><svg id="Capa_1" enable-background="new 0 0 413.348 413.348" height="512"
+					viewBox="0 0 413.348 413.348" width="512" xmlns="http://www.w3.org/2000/svg">
+					<path fill="#eeab09"
+						d="m413.348 24.354-24.354-24.354-182.32 182.32-182.32-182.32-24.354 24.354 182.32 182.32-182.32 182.32 24.354 24.354 182.32-182.32 182.32 182.32 24.354-24.354-182.32-182.32z" />
+				</svg></span>
+		</div>
+	</div>
+	<div class="popupSty" id="min">
+		<div class="popupSty-wrap">
+			<div class="popupSty__imgs">
+				<div class="popupSty__imgs-big">
+					<a href="img/styles/min/img2.jpg" data-fancybox="min"><img class="lazyVis"
+							data-src="img/styles/min/img2.jpg" alt=""></a>
+				</div>
+				<div class="popupSty__imgs-sm">
+					<a href="img/styles/min/img3.jpg" data-fancybox="min"><img class="lazyVis"
+							data-src="img/styles/min/img3.jpg" alt=""></a>
+					<a href="img/styles/min/img4.jpg" data-fancybox="min"><img class="lazyVis"
+							data-src="img/styles/min/img4.jpg" alt=""></a>
+					<a href="img/styles/min/img5.jpg" data-fancybox="min"><img class="lazyVis"
+							data-src="img/styles/min/img5.jpg" alt=""></a>
+					<a href="img/styles/min/img1.png" data-fancybox="min"><img class="lazyVis"
+							data-src="img/styles/min/img1.png" alt=""></a>
+				</div>
+			</div>
+			<div class="popupSty__descr">
+				<div class="popupSty__descr-content">
+					<p class="popupSty__descr-title txt24 bold">Минимал</p>
+					<p class="popupSty__descr-txt txt18 med">Отличается сдержанностью линий, минимальностью деталей
+						и полным отсутствием интереса к декоративным вычурным
+						элементам. Такой дизайн любят выбирать те, кто молод. Для дизайна
+						в стиле минимализм характерны подчеркнуто простые линии,
+						геометрические формы, минимум деталей. Из материалов
+						приветствуется стекло, металл, пластик, МДФ.
+					</p>
+					<p class="popupSty__descr-txt txt18 med">Оставьте заявку, если вам понравился данный стиль. Наш
+						дизайнер сделает небольшую подборку наших работ схожих
+						с этой и подарит скидку 10%
+					</p>
+				</div>
+				<form action="">
+					<input type="hidden" name="title" value="Форма стиля минимал">
+					<span class="input-wrap">
+						<input name="phone" class="inputTel" required class="txt18" type="tel"
+							placeholder="Введите ваш телефон">
+					</span>
+					<span class="input-wrap">
+						<input name="name" required class="txt18" type="name" placeholder="Введите ваше имя">
+					</span>
+					<span class="btn-wrap">
+						<button class="txt20 bold mainBtn">ОСТАВИТЬ ЗАЯВКУ </button>
+					</span>
+				</form>
+			</div>
+		</div>
+		<div class="close-wrap">
+			<span class="popupSty--close close"><svg id="Capa_1" enable-background="new 0 0 413.348 413.348" height="512"
+					viewBox="0 0 413.348 413.348" width="512" xmlns="http://www.w3.org/2000/svg">
+					<path fill="#eeab09"
+						d="m413.348 24.354-24.354-24.354-182.32 182.32-182.32-182.32-24.354 24.354 182.32 182.32-182.32 182.32 24.354 24.354 182.32-182.32 182.32 182.32 24.354-24.354-182.32-182.32z" />
+				</svg></span>
+		</div>
+	</div>
+	<div class="popupSty" id="bar">
+		<div class="popupSty-wrap">
+			<div class="popupSty__imgs">
+				<div class="popupSty__imgs-big">
+					<a href="img/styles/b/img2.jpg" data-fancybox="b"><img class="lazyVis" data-src="img/styles/b/img2.jpg"
+							alt=""></a>
+				</div>
+				<div class="popupSty__imgs-sm">
+					<a href="img/styles/b/img3.jpg" data-fancybox="b"><img class="lazyVis" data-src="img/styles/b/img3.jpg"
+							alt=""></a>
+					<a href="img/styles/b/img4.jpeg" data-fancybox="b"><img class="lazyVis"
+							data-src="img/styles/b/img4.jpeg" alt=""></a>
+					<a href="img/styles/b/img5.jpg" data-fancybox="b"><img class="lazyVis" data-src="img/styles/b/img5.jpg"
+							alt=""></a>
+					<a href="img/styles/b/img1.png" data-fancybox="b"><img class="lazyVis" data-src="img/styles/b/img1.png"
+							alt=""></a>
+				</div>
+			</div>
+			<div class="popupSty__descr">
+				<div class="popupSty__descr-content">
+					<p class="popupSty__descr-title txt24 bold">Барокко</p>
+					<p class="popupSty__descr-txt txt18 med">Характерные черты мебели – это лакировка, большое количество
+						резьбы, позолота и изогнутых линий.
+						Здесь очень просто переборщить, но грамотно сделанная мебель
+						будет выглядеть как роскошь характерная для высшего класса людей.
+					</p>
+					<p class="popupSty__descr-txt txt18 med">Оставьте заявку, если вам понравился данный стиль. Наш
+						дизайнер сделает небольшую подборку наших работ схожих
+						с этой и подарит скидку 10%
+					</p>
+				</div>
+				<form action="">
+					<input type="hidden" name="title" value="Форма стиля бароко">
+					<span class="input-wrap">
+						<input name="phone" class="inputTel" required class="txt18" type="tel"
+							placeholder="Введите ваш телефон">
+					</span>
+					<span class="input-wrap">
+						<input name="name" required class="txt18" type="name" placeholder="Введите ваше имя">
+					</span>
+					<span class="btn-wrap">
+						<button class="txt20 bold mainBtn">ОСТАВИТЬ ЗАЯВКУ </button>
+					</span>
+				</form>
+			</div>
+		</div>
+		<div class="close-wrap">
+			<span class="popupSty--close close"><svg id="Capa_1" enable-background="new 0 0 413.348 413.348" height="512"
+					viewBox="0 0 413.348 413.348" width="512" xmlns="http://www.w3.org/2000/svg">
+					<path fill="#eeab09"
+						d="m413.348 24.354-24.354-24.354-182.32 182.32-182.32-182.32-24.354 24.354 182.32 182.32-182.32 182.32 24.354 24.354 182.32-182.32 182.32 182.32 24.354-24.354-182.32-182.32z" />
+				</svg></span>
+		</div>
+	</div>
+	<div class="popupSty" id="pro">
+		<div class="popupSty-wrap">
+			<div class="popupSty__imgs">
+				<div class="popupSty__imgs-big">
+					<a href="img/styles/pr/img2.jpg" data-fancybox="pr"><img class="lazyVis"
+							data-src="img/styles/pr/img2.jpg" alt=""></a>
+				</div>
+				<div class="popupSty__imgs-sm">
+					<a href="img/styles/pr/img3.jpg" data-fancybox="pr"><img class="lazyVis"
+							data-src="img/styles/pr/img3.jpg" alt=""></a>
+					<a href="img/styles/pr/img4.jpg" data-fancybox="pr"><img class="lazyVis"
+							data-src="img/styles/pr/img4.jpg" alt=""></a>
+					<a href="img/styles/pr/img5.jpg" data-fancybox="pr"><img class="lazyVis"
+							data-src="img/styles/pr/img5.jpg" alt=""></a>
+					<a href="img/styles/pr/img1.png" data-fancybox="pr"><img class="lazyVis"
+							data-src="img/styles/pr/img1.png" alt=""></a>
+				</div>
+			</div>
+			<div class="popupSty__descr">
+				<div class="popupSty__descr-content">
+					<p class="popupSty__descr-title txt24 bold">Прованс</p>
+					<p class="popupSty__descr-txt txt18 med">Стиль самобытный и оригинальный, поэтому легкоузнаваемый.
+						Он вобрал в себя черты, присущие архитектуре одноименной
+						французской провинции. Изначально деревенские дома оформлялись
+						просто и без излишеств, но сейчас в этом и есть их главная
+						особенность. Уютная винтажная атмосфера выглядит естественно,
+						но модно. Современный прованс не терпит вычурности, по максимуму
+						прост и функционален. Для этого стиля характерно использование
+						натуральных и экологичных материалов, и дизайнеры
+						останавливаются на древесине.
+					</p>
+					<p class="popupSty__descr-txt txt18 med">Оставьте заявку, если вам понравился данный стиль. Наш
+						дизайнер сделает небольшую подборку наших работ схожих
+						с этой и подарит скидку 10%
+					</p>
+				</div>
+				<form action="">
+					<input type="hidden" name="title" value="Форма стиля прованс">
+					<span class="input-wrap">
+						<input name="phone" class="inputTel" required class="txt18" type="tel"
+							placeholder="Введите ваш телефон">
+					</span>
+					<span class="input-wrap">
+						<input name="name" required class="txt18" type="name" placeholder="Введите ваше имя">
+					</span>
+					<span class="btn-wrap">
+						<button class="txt20 bold mainBtn">ОСТАВИТЬ ЗАЯВКУ </button>
+					</span>
+				</form>
+			</div>
+		</div>
+		<div class="close-wrap">
+			<span class="popupSty--close close"><svg id="Capa_1" enable-background="new 0 0 413.348 413.348" height="512"
+					viewBox="0 0 413.348 413.348" width="512" xmlns="http://www.w3.org/2000/svg">
+					<path fill="#eeab09"
+						d="m413.348 24.354-24.354-24.354-182.32 182.32-182.32-182.32-24.354 24.354 182.32 182.32-182.32 182.32 24.354 24.354 182.32-182.32 182.32 182.32 24.354-24.354-182.32-182.32z" />
+				</svg></span>
+		</div>
+	</div>	<div class="popupPop" id="new">
+		<div class="popupPop-wrap">
+			<div class="popupPop__imgs">
+				<div class="popupPop__imgs-big">
+					<a href="img/popular/n1.jpg" data-fancybox="n"><img class="lazyVis" data-src="img/popular/n1.jpg"
+							alt=""></a>
+				</div>
+				<div class="popupPop__imgs-sm">
+					<a href="img/popular/n2.jpg" data-fancybox="n"><img class="lazyVis" data-src="img/popular/n2.jpg"
+							alt=""></a>
+					<a href="img/popular/n3.jpg" data-fancybox="n"><img class="lazyVis" data-src="img/popular/n3.jpg"
+							alt=""></a>
+					<a href="img/popular/n4.jpg" data-fancybox="n"><img class="lazyVis" data-src="img/popular/n4.jpg"
+							alt=""></a>
+					<a href="img/popular/n5.jpg" data-fancybox="n"><img class="lazyVis" data-src="img/popular/n5.jpg"
+							alt=""></a>
+					<a href="img/popular/n1.jpg" data-fancybox="n"><img class="lazyVis" data-src="img/popular/n1.jpg"
+							alt=""></a>
+				</div>
+			</div>
+			<div class="popupPop__descr">
+				<div class="popupPop__descr-content">
+					<p class="popupPop__descr-title txt30 bold">Кухня New York</p>
+					<div class="popupPop__descr-ul">
+						<ul>
+							<li class="txt20 med">Фасады из Премиум пластика Fenix</li>
+							<li class="txt20 med">Столешница МДФ+пластик</li>
+							<li class="txt20 med">Фартук Шпон</li>
+							<li class="txt20 med">Фурнитура BLUM</li>
+						</ul>
+					</div>
+					<p class="popupPop__descr-cost txt20">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
+				</div>
+				<form action="">
+					<input type="hidden" name="title" value="Форма кухни нью-йорк">
+					<span class="input-wrap">
+						<input name="phone" class="inputTel" required class="txt18" type="tel"
+							placeholder="Введите ваш телефон">
+					</span>
+					<span class="input-wrap">
+						<input name="name" required class="txt18" type="name" placeholder="Введите ваше имя">
+					</span>
+					<span class="btn-wrap">
+						<button class="txt20 bold mainBtn">ОСТАВИТЬ ЗАЯВКУ </button>
+					</span>
+				</form>
+			</div>
+		</div>
+		<div class="close-wrap">
+			<span class="popupSty--close close"><svg id="Capa_1" enable-background="new 0 0 413.348 413.348" height="512"
+					viewBox="0 0 413.348 413.348" width="512" xmlns="http://www.w3.org/2000/svg">
+					<path fill="#eeab09"
+						d="m413.348 24.354-24.354-24.354-182.32 182.32-182.32-182.32-24.354 24.354 182.32 182.32-182.32 182.32 24.354 24.354 182.32-182.32 182.32 182.32 24.354-24.354-182.32-182.32z" />
+				</svg></span>
+		</div>
+	</div>
+	<div class="popupPop" id="t">
+		<div class="popupPop-wrap">
+			<div class="popupPop__imgs">
+				<div class="popupPop__imgs-big">
+					<a href="img/popular/t1.jpeg" data-fancybox="t"><img class="lazyVis" data-src="img/popular/t1.jpeg"
+							alt=""></a>
+				</div>
+				<div class="popupPop__imgs-sm">
+					<a href="img/popular/t2.jpeg" data-fancybox="t"><img class="lazyVis" data-src="img/popular/t2.jpeg"
+							alt=""></a>
+					<a href="img/popular/t3.jpeg" data-fancybox="t"><img class="lazyVis" data-src="img/popular/t3.jpeg"
+							alt=""></a>
+					<a href="img/popular/t1.jpeg" data-fancybox="t"><img class="lazyVis" data-src="img/popular/t1.jpeg"
+							alt=""></a>
+				</div>
+			</div>
+			<div class="popupPop__descr">
+				<div class="popupPop__descr-content">
+					<p class="popupPop__descr-title txt30 bold">Кухня Tokyo</p>
+					<div class="popupPop__descr-ul">
+						<ul>
+							<li class="txt20 med">Фасады из Премиум акрила REHAU</li>
+							<li class="txt20 med">Столешница и фартук из искусств</li>
+							<li class="txt20 med">Подъемные механизмы AVENTOS</li>
+							<li class="txt20 med">Фурнитура BLUM</li>
+						</ul>
+					</div>
+					<p class="popupPop__descr-cost txt20">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
+				</div>
+				<form action="">
+					<input type="hidden" name="title" value="Форма кухни токио">
+					<span class="input-wrap">
+						<input name="phone" class="inputTel" required class="txt18" type="tel"
+							placeholder="Введите ваш телефон">
+					</span>
+					<span class="input-wrap">
+						<input name="name" required class="txt18" type="name" placeholder="Введите ваше имя">
+					</span>
+					<span class="btn-wrap">
+						<button class="txt20 bold mainBtn">ОСТАВИТЬ ЗАЯВКУ </button>
+					</span>
+				</form>
+			</div>
+		</div>
+		<div class="close-wrap">
+			<span class="popupSty--close close"><svg id="Capa_1" enable-background="new 0 0 413.348 413.348" height="512"
+					viewBox="0 0 413.348 413.348" width="512" xmlns="http://www.w3.org/2000/svg">
+					<path fill="#eeab09"
+						d="m413.348 24.354-24.354-24.354-182.32 182.32-182.32-182.32-24.354 24.354 182.32 182.32-182.32 182.32 24.354 24.354 182.32-182.32 182.32 182.32 24.354-24.354-182.32-182.32z" />
+				</svg></span>
+		</div>
+	</div>
+	<div class="popupPop" id="s">
+		<div class="popupPop-wrap">
+			<div class="popupPop__imgs">
+				<div class="popupPop__imgs-big">
+					<a href="img/popular/s5.jpg" data-fancybox="s"><img class="lazyVis" data-src="img/popular/s5.jpg"
+							alt=""></a>
+				</div>
+				<div class="popupPop__imgs-sm">
+					<a href="img/popular/s2.jpg" data-fancybox="s"><img class="lazyVis" data-src="img/popular/s2.jpg"
+							alt=""></a>
+					<a href="img/popular/s3.jpg" data-fancybox="s"><img class="lazyVis" data-src="img/popular/s3.jpg"
+							alt=""></a>
+					<a href="img/popular/s4.jpg" data-fancybox="s"><img class="lazyVis" data-src="img/popular/s4.jpg"
+							alt=""></a>
+					<a href="img/popular/s1.jpg" data-fancybox="s"><img class="lazyVis" data-src="img/popular/s1.jpg"
+							alt=""></a>
+					<a href="img/popular/s5.jpg" data-fancybox="s"><img class="lazyVis" data-src="img/popular/s5.jpg"
+							alt=""></a>
+				</div>
+			</div>
+			<div class="popupPop__descr">
+				<div class="popupPop__descr-content">
+					<p class="popupPop__descr-title txt30 bold">Кухня Stone</p>
+					<div class="popupPop__descr-ul">
+						<ul>
+							<li class="txt20 med">Фасады "под дерево" из мдф в пластике ARPA</li>
+							<li class="txt20 med">Фасады "бетон" из мдф в пластике Cleaf</li>
+							<li class="txt20 med">Столешница ДСП+Пластик "Союз" с еврозапилом</li>
+							<li class="txt20 med">Фурнитура BLUM и GRASS</li>
+							<li class="txt20 med">Встроенная в столешницу розетка</li>
+							<li class="txt20 med">Подъемные механизмы AVENTOS</li>
+							<li class="txt20 med">Барная стойка из массива дуба</li>
+							<li class="txt20 med">Стеллаж с фасадами из графитового стекла</li>
+						</ul>
+					</div>
+					<p class="popupPop__descr-cost txt20">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
+				</div>
+				<form action="">
+					<input type="hidden" name="title" value="Форма кухни стоун">
+					<span class="input-wrap">
+						<input name="phone" class="inputTel" required class="txt18" type="tel"
+							placeholder="Введите ваш телефон">
+					</span>
+					<span class="input-wrap">
+						<input name="name" required class="txt18" type="name" placeholder="Введите ваше имя">
+					</span>
+					<span class="btn-wrap">
+						<button class="txt20 bold mainBtn">ОСТАВИТЬ ЗАЯВКУ </button>
+					</span>
+				</form>
+			</div>
+		</div>
+		<div class="close-wrap">
+			<span class="popupSty--close close"><svg id="Capa_1" enable-background="new 0 0 413.348 413.348" height="512"
+					viewBox="0 0 413.348 413.348" width="512" xmlns="http://www.w3.org/2000/svg">
+					<path fill="#eeab09"
+						d="m413.348 24.354-24.354-24.354-182.32 182.32-182.32-182.32-24.354 24.354 182.32 182.32-182.32 182.32 24.354 24.354 182.32-182.32 182.32 182.32 24.354-24.354-182.32-182.32z" />
+				</svg></span>
+		</div>
+	</div>
+	<div class="popupPop" id="c">
+		<div class="popupPop-wrap">
+			<div class="popupPop__imgs">
+				<div class="popupPop__imgs-big">
+					<a href="img/popular/c1.jpg" data-fancybox="c"><img class="lazyVis" data-src="img/popular/c1.jpg"
+							alt=""></a>
+				</div>
+				<div class="popupPop__imgs-sm">
+					<a href="img/popular/c2.jpg" data-fancybox="c"><img class="lazyVis" data-src="img/popular/c2.jpg"
+							alt=""></a>
+					<a href="img/popular/c3.jpg" data-fancybox="c"><img class="lazyVis" data-src="img/popular/c3.jpg"
+							alt=""></a>
+					<a href="img/popular/c4.jpg" data-fancybox="c"><img class="lazyVis" data-src="img/popular/c4.jpg"
+							alt=""></a>
+					<a href="img/popular/c5.jpg" data-fancybox="c"><img class="lazyVis" data-src="img/popular/c5.jpg"
+							alt=""></a>
+					<a href="img/popular/c1.jpg" data-fancybox="c"><img class="lazyVis" data-src="img/popular/c1.jpg"
+							alt=""></a>
+				</div>
+			</div>
+			<div class="popupPop__descr">
+				<div class="popupPop__descr-content">
+					<p class="popupPop__descr-title txt30 bold">Кухня Cappuchino</p>
+					<div class="popupPop__descr-ul">
+						<ul>
+							<li class="txt20 med">Фасады МДФ+Пластик Fenix</li>
+							<li class="txt20 med">Столешница и фартук: МДФ+пластик</li>
+							<li class="txt20 med">Фурнитура BLUM</li>
+						</ul>
+					</div>
+					<p class="popupPop__descr-cost txt20">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
+				</div>
+				<form action="">
+					<input type="hidden" name="title" value="Форма кухни капучино">
+					<span class="input-wrap">
+						<input name="phone" class="inputTel" required class="txt18" type="tel"
+							placeholder="Введите ваш телефон">
+					</span>
+					<span class="input-wrap">
+						<input name="name" required class="txt18" type="name" placeholder="Введите ваше имя">
+					</span>
+					<span class="btn-wrap">
+						<button class="txt20 bold mainBtn">ОСТАВИТЬ ЗАЯВКУ </button>
+					</span>
+				</form>
+			</div>
+		</div>
+		<div class="close-wrap">
+			<span class="popupSty--close close"><svg id="Capa_1" enable-background="new 0 0 413.348 413.348" height="512"
+					viewBox="0 0 413.348 413.348" width="512" xmlns="http://www.w3.org/2000/svg">
+					<path fill="#eeab09"
+						d="m413.348 24.354-24.354-24.354-182.32 182.32-182.32-182.32-24.354 24.354 182.32 182.32-182.32 182.32 24.354 24.354 182.32-182.32 182.32 182.32 24.354-24.354-182.32-182.32z" />
+				</svg></span>
+		</div>
+	</div>
+	<div class="popupPop" id="sw">
+		<div class="popupPop-wrap">
+			<div class="popupPop__imgs">
+				<div class="popupPop__imgs-big">
+					<a href="img/popular/sw1.jpg" data-fancybox="sw"><img class="lazyVis" data-src="img/popular/sw1.jpg"
+							alt=""></a>
+				</div>
+				<div class="popupPop__imgs-sm">
+					<a href="img/popular/sw2.jpeg" data-fancybox="sw"><img class="lazyVis" data-src="img/popular/sw2.jpeg"
+							alt=""></a>
+					<a href="img/popular/sw3.jpg" data-fancybox="sw"><img class="lazyVis" data-src="img/popular/sw3.jpg"
+							alt=""></a>
+					<a href="img/popular/sw4.jpg" data-fancybox="sw"><img class="lazyVis" data-src="img/popular/sw4.jpg"
+							alt=""></a>
+					<a href="img/popular/sw5.jpg" data-fancybox="sw"><img class="lazyVis" data-src="img/popular/sw5.jpg"
+							alt=""></a>
+					<a href="img/popular/sw1.jpg" data-fancybox="sw"><img class="lazyVis" data-src="img/popular/sw1.jpg"
+							alt=""></a>
+				</div>
+			</div>
+			<div class="popupPop__descr">
+				<div class="popupPop__descr-content">
+					<p class="popupPop__descr-title txt30 bold">Кухня В шоуруме</p>
+					<div class="popupPop__descr-ul">
+						<ul>
+							<li class="txt20 med">Фасады МДФ+Шпон ореха, МДФ+Пластик Fenix</li>
+							<li class="txt20 med">Столешница из массива дуба</li>
+							<li class="txt20 med">Фурнитура BLUM, Hettich</li>
+							<li class="txt20 med">Подъемные механизмы AVENTOS</li>
+							<li class="txt20 med">Барная стойка: Массив
+								дуба+стабилизированный мох </li>
+						</ul>
+					</div>
+					<p class="popupPop__descr-cost txt20">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
+				</div>
+				<form action="">
+					<input type="hidden" name="title" value="Форма кухни в шоуруме">
+					<span class="input-wrap">
+						<input name="phone" class="inputTel" required class="txt18" type="tel"
+							placeholder="Введите ваш телефон">
+					</span>
+					<span class="input-wrap">
+						<input name="name" required class="txt18" type="name" placeholder="Введите ваше имя">
+					</span>
+					<span class="btn-wrap">
+						<button class="txt20 bold mainBtn">ОСТАВИТЬ ЗАЯВКУ </button>
+					</span>
+				</form>
+			</div>
+		</div>
+		<div class="close-wrap">
+			<span class="popupSty--close close"><svg id="Capa_1" enable-background="new 0 0 413.348 413.348" height="512"
+					viewBox="0 0 413.348 413.348" width="512" xmlns="http://www.w3.org/2000/svg">
+					<path fill="#eeab09"
+						d="m413.348 24.354-24.354-24.354-182.32 182.32-182.32-182.32-24.354 24.354 182.32 182.32-182.32 182.32 24.354 24.354 182.32-182.32 182.32 182.32 24.354-24.354-182.32-182.32z" />
+				</svg></span>
+		</div>
+	</div>
+	<div class="popupPop" id="ci">
+		<div class="popupPop-wrap">
+			<div class="popupPop__imgs">
+				<div class="popupPop__imgs-big">
+					<a href="img/popular/si1.jpg" data-fancybox="ci"><img class="lazyVis" data-src="img/popular/si1.jpg"
+							alt=""></a>
+				</div>
+				<div class="popupPop__imgs-sm">
+					<a href="img/popular/si2.jpg" data-fancybox="ci"><img class="lazyVis" data-src="img/popular/si2.jpg"
+							alt=""></a>
+					<a href="img/popular/si3.jpg" data-fancybox="ci"><img class="lazyVis" data-src="img/popular/si3.jpg"
+							alt=""></a>
+					<a href="img/popular/si4.jpg" data-fancybox="ci"><img class="lazyVis" data-src="img/popular/si4.jpg"
+							alt=""></a>
+					<a href="img/popular/si5.jpg" data-fancybox="ci"><img class="lazyVis" data-src="img/popular/si5.jpg"
+							alt=""></a>
+					<a href="img/popular/si1.jpg" data-fancybox="ci"><img class="lazyVis" data-src="img/popular/si1.jpg"
+							alt=""></a>
+				</div>
+			</div>
+			<div class="popupPop__descr">
+				<div class="popupPop__descr-content">
+					<p class="popupPop__descr-title txt30 bold">Кухня Cinema</p>
+					<div class="popupPop__descr-ul">
+						<ul>
+							<li class="txt20 med">Фасады МДФ+Пластик ARPA,</li>
+							<li class="txt20 med">Столешница МДФ+пластик</li>
+							<li class="txt20 med">Подъемные механизмы AVENTOS</li>
+							<li class="txt20 med">Фурнитура BLUM</li>
+						</ul>
+					</div>
+					<p class="popupPop__descr-cost txt20">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
+				</div>
+				<form action="">
+					<input type="hidden" name="title" value="Форма кухни синема">
+					<span class="input-wrap">
+						<input name="phone" class="inputTel" required class="txt18" type="tel"
+							placeholder="Введите ваш телефон">
+					</span>
+					<span class="input-wrap">
+						<input name="name" required class="txt18" type="name" placeholder="Введите ваше имя">
+					</span>
+					<span class="btn-wrap">
+						<button class="txt20 bold mainBtn">ОСТАВИТЬ ЗАЯВКУ </button>
+					</span>
+				</form>
+			</div>
+		</div>
+		<div class="close-wrap">
+			<span class="popupSty--close close"><svg id="Capa_1" enable-background="new 0 0 413.348 413.348" height="512"
+					viewBox="0 0 413.348 413.348" width="512" xmlns="http://www.w3.org/2000/svg">
+					<path fill="#eeab09"
+						d="m413.348 24.354-24.354-24.354-182.32 182.32-182.32-182.32-24.354 24.354 182.32 182.32-182.32 182.32 24.354 24.354 182.32-182.32 182.32 182.32 24.354-24.354-182.32-182.32z" />
+				</svg></span>
+		</div>
+	</div>
+	<div class="popupPop" id="w">
+		<div class="popupPop-wrap">
+			<div class="popupPop__imgs">
+				<div class="popupPop__imgs-big">
+					<a href="img/popular/w1.jpg" data-fancybox="w"><img class="lazyVis" data-src="img/popular/w1.jpg"
+							alt=""></a>
+				</div>
+				<div class="popupPop__imgs-sm">
+					<a href="img/popular/w2.jpg" data-fancybox="w"><img class="lazyVis" data-src="img/popular/w2.jpg"
+							alt=""></a>
+					<a href="img/popular/w3.jpg" data-fancybox="w"><img class="lazyVis" data-src="img/popular/w3.jpg"
+							alt=""></a>
+					<a href="img/popular/w4.jpg" data-fancybox="w"><img class="lazyVis" data-src="img/popular/w4.jpg"
+							alt=""></a>
+					<a href="img/popular/w1.jpg" data-fancybox="w"><img class="lazyVis" data-src="img/popular/w1.jpg"
+							alt=""></a>
+				</div>
+			</div>
+			<div class="popupPop__descr">
+				<div class="popupPop__descr-content">
+					<p class="popupPop__descr-title txt30 bold">Кухня White&Wood</p>
+					<div class="popupPop__descr-ul">
+						<ul>
+							<li class="txt20 med">Фасады МДФ+Эмаль, Массив дуба,</li>
+							<li class="txt20 med">Столешница Массив дуба</li>
+							<li class="txt20 med">Фурнитура BLUM</li>
+						</ul>
+					</div>
+					<p class="popupPop__descr-cost txt20">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
+				</div>
+				<form action="">
+					<input type="hidden" name="title" value="Форма кухни уайт & вуд">
+					<span class="input-wrap">
+						<input name="phone" class="inputTel" required class="txt18" type="tel"
+							placeholder="Введите ваш телефон">
+					</span>
+					<span class="input-wrap">
+						<input name="name" required class="txt18" type="name" placeholder="Введите ваше имя">
+					</span>
+					<span class="btn-wrap">
+						<button class="txt20 bold mainBtn">ОСТАВИТЬ ЗАЯВКУ </button>
+					</span>
+				</form>
+			</div>
+		</div>
+		<div class="close-wrap">
+			<span class="popupSty--close close"><svg id="Capa_1" enable-background="new 0 0 413.348 413.348" height="512"
+					viewBox="0 0 413.348 413.348" width="512" xmlns="http://www.w3.org/2000/svg">
+					<path fill="#eeab09"
+						d="m413.348 24.354-24.354-24.354-182.32 182.32-182.32-182.32-24.354 24.354 182.32 182.32-182.32 182.32 24.354 24.354 182.32-182.32 182.32 182.32 24.354-24.354-182.32-182.32z" />
+				</svg></span>
+		</div>
+	</div>
+	<div class="popupPop" id="wg">
+		<div class="popupPop-wrap">
+			<div class="popupPop__imgs">
+				<div class="popupPop__imgs-big">
+					<a href="img/popular/wg1.jpeg" data-fancybox="wg"><img class="lazyVis" data-src="img/popular/wg1.jpeg"
+							alt=""></a>
+				</div>
+				<div class="popupPop__imgs-sm">
+					<a href="img/popular/wg2.jpg" data-fancybox="wg"><img class="lazyVis" data-src="img/popular/wg2.jpg"
+							alt=""></a>
+					<a href="img/popular/wg3.jpg" data-fancybox="wg"><img class="lazyVis" data-src="img/popular/wg3.jpg"
+							alt=""></a>
+					<a href="img/popular/wg1.jpeg" data-fancybox="wg"><img class="lazyVis" data-src="img/popular/wg1.jpeg"
+							alt=""></a>
+				</div>
+			</div>
+			<div class="popupPop__descr">
+				<div class="popupPop__descr-content">
+					<p class="popupPop__descr-title txt30 bold">Кухня Wood gloss</p>
+					<div class="popupPop__descr-ul">
+						<ul>
+							<li class="txt20 med">Фасады МДФ+пластик ARPA</li>
+							<li class="txt20 med">Фурнитура Blum,</li>
+							<li class="txt20 med">Столешница ДСП+пластик,</li>
+							<li class="txt20 med">Фартук ДСП+пластик</li>
+						</ul>
+					</div>
+					<p class="popupPop__descr-cost txt20">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
+				</div>
+				<form action="">
+					<input type="hidden" name="title" value="Форма кухни вуд глос">
+					<span class="input-wrap">
+						<input name="phone" class="inputTel" required class="txt18" type="tel"
+							placeholder="Введите ваш телефон">
+					</span>
+					<span class="input-wrap">
+						<input name="name" required class="txt18" type="name" placeholder="Введите ваше имя">
+					</span>
+					<span class="btn-wrap">
+						<button class="txt20 bold mainBtn">ОСТАВИТЬ ЗАЯВКУ </button>
+					</span>
+				</form>
+			</div>
+		</div>
+		<div class="close-wrap">
+			<span class="popupSty--close close"><svg id="Capa_1" enable-background="new 0 0 413.348 413.348" height="512"
+					viewBox="0 0 413.348 413.348" width="512" xmlns="http://www.w3.org/2000/svg">
+					<path fill="#eeab09"
+						d="m413.348 24.354-24.354-24.354-182.32 182.32-182.32-182.32-24.354 24.354 182.32 182.32-182.32 182.32 24.354 24.354 182.32-182.32 182.32 182.32 24.354-24.354-182.32-182.32z" />
+				</svg></span>
+		</div>
+	</div>	<div class="popup-terms politic">
+		<p class="txt35">
+			ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ
+		</p>
+	
+		<p class="txt16">
+			Настоящая Политика конфиденциальности персональных данных (далее – Политика конфиденциальности) действует в
+			отношении всей информации, которую данный сайт, на котором размещен текст этой Политики конфиденциальности,
+			может получить о Пользователе, а также любых программ и продуктов, размещенных на нем.
+		</p>
+		<p class="txt20 bold">
+			1. ОПРЕДЕЛЕНИЕ ТЕРМИНОВ
+		</p>
+		<p class="txt16">
+			1.1. В настоящей Политике конфиденциальности используются следующие термины:
+		</p>
+		<p class="txt16">
+			1.1.1. «Администрация сайта» – уполномоченные сотрудники на управления сайтом, действующие от его имени, которые
+			организуют и (или) осуществляет обработку персональных данных, а также определяет цели обработки персональных
+			данных, состав персональных данных, подлежащих обработке, действия (операции), совершаемые с персональными
+			данными.
+		</p>
+		<p class="txt16">
+			1.1.2. «Персональные данные» — любая информация, относящаяся к прямо или косвенно определенному или
+			определяемому физическому лицу (субъекту персональных данных).
+		</p>
+		<p class="txt16">
+			1.1.3. «Обработка персональных данных» — любое действие (операция) или совокупность действий (операций),
+			совершаемых с использованием средств автоматизации или без использования таких средств с персональными данными,
+			включая сбор, запись, систематизацию, накопление, хранение, уточнение (обновление, изменение), извлечение,
+			использование, передачу (распространение, предоставление, доступ), обезличивание, блокирование, удаление,
+			уничтожение персональных данных.
+		</p>
+		<p class="txt16">
+			1.1.4. «Конфиденциальность персональных данных» — обязательное для соблюдения Администрацией сайта требование не
+			допускать их умышленного распространения без согласия субъекта персональных данных или наличия иного законного
+			основания.
+		</p>
+		<p class="txt16">
+			1.1.5. «Пользователь сайта (далее Пользователь)» – лицо, имеющее доступ к сайту, посредством сети Интернет и
+			использующее данный сайт для своих целей.
+		</p>
+		<p class="txt16">
+			1.1.6. «Cookies» — небольшой фрагмент данных, отправленный веб-сервером и хранимый на компьютере пользователя,
+			который веб-клиент или веб-браузер каждый раз пересылает веб-серверу в HTTP-запросе при попытке открыть страницу
+			соответствующего сайта.
+		</p>
+		<p class="txt16">
+			1.1.7. «IP-адрес» — уникальный сетевой адрес узла в компьютерной сети, построенной по протоколу IP.
+		</p>
+		<p class="txt20 bold">
+			2. ОБЩИЕ ПОЛОЖЕНИЯ
+		</p>
+		<p class="txt16">
+			2.1. Использование Пользователем сайта означает согласие с настоящей Политикой конфиденциальности и условиями
+			обработки персональных данных Пользователя.
+		</p>
+		<p class="txt16">
+			2.2. В случае несогласия с условиями Политики конфиденциальности Пользователь должен прекратить использование
+			сайта.
+		</p>
+		<p class="txt16">
+			2.3. Настоящая Политика конфиденциальности применяется только к данному сайту. Администрация сайта не
+			контролирует и не несет ответственность за сайты третьих лиц, на которые Пользователь может перейти по ссылкам,
+			доступным на данном сайте.
+		</p>
+		<p class="txt16">
+			2.4. Администрация сайта не проверяет достоверность персональных данных, предоставляемых Пользователем сайта.
+		</p>
+		<p class="txt20 bold">
+			3. ПРЕДМЕТ ПОЛИТИКИ КОНФИДЕНЦИАЛЬНОСТИ
+		</p>
+		<p class="txt16">
+			3.1. Настоящая Политика конфиденциальности устанавливает обязательства Администрации сайта по умышленному
+			неразглашению персональных данных, которые Пользователь предоставляет по разнообразным запросам Администрации
+			сайта (например, при регистрации на сайте, оформлении заказа, подписки на уведомления и т.п).
+		</p>
+		<p class="txt16">
+			3.2. Персональные данные, разрешённые к обработке в рамках настоящей Политики конфиденциальности,
+			предоставляются Пользователем путём заполнения специальных форм на Сайте и обычно включают в себя следующую
+			информацию:
+		</p>
+		<p class="txt16">
+			3.2.1. фамилию, имя, отчество Пользователя;
+		</p>
+		<p class="txt16">
+			3.2.2. контактный телефон Пользователя;
+		</p>
+		<p class="txt16">
+			3.2.3. адрес электронной почты (e-mail);
+		</p>
+		<p class="txt16">
+			3.2.4. место жительство Пользователя и другие данные.
+		</p>
+		<p class="txt16">
+			3.3. Администрация сайта также принимает усилия по защите Персональных данных, которые автоматически передаются
+			в процессе посещения страниц сайта:
+		</p>
+		<p class="txt16">
+			IP адрес;
+		</p>
+		<p class="txt16">
+			информация из cookies;
+		</p>
+		<p class="txt16">
+			информация о браузере (или иной программе, которая осуществляет доступ к сайту);
+		</p>
+		<p class="txt16">
+			время доступа;
+		</p>
+		<p class="txt16">
+			посещенные адреса страниц;
+		</p>
+		<p class="txt16">
+			реферер (адрес предыдущей страницы) и т.п.
+		</p>
+		<p class="txt16">
+			3.3.1. Отключение cookies может повлечь невозможность доступа к сайту.
+		</p>
+		<p class="txt16">
+			3.3.2. Сайт осуществляет сбор статистики об IP-адресах своих посетителей. Данная информация используется с целью
+			выявления и решения технических проблем, для контроля корректности проводимых операций.
+		</p>
+		<p class="txt16">
+			3.4. Любая иная персональная информация неоговоренная выше (история заказов, используемые браузеры и
+			операционные системы и т.д.) не подлежит умышленному разглашению, за исключением случаев, предусмотренных в п.п.
+			5.2. и 5.3. настоящей Политики конфиденциальности.
+		</p>
+		<p class="txt20 bold">
+			4. ЦЕЛИ СБОРА ПЕРСОНАЛЬНОЙ ИНФОРМАЦИИ ПОЛЬЗОВАТЕЛЯ
+		</p>
+		<p class="txt16">
+			4.1. Персональные данные Пользователя Администрация сайта может использовать в целях:
+		</p>
+		<p class="txt16">
+			4.1.1. Идентификации Пользователя, зарегистрированного на сайте, для оформления заказа и (или) заключения
+			Договора.
+		</p>
+		<p class="txt16">
+			4.1.2. Предоставления Пользователю доступа к персонализированным ресурсам сайта.
+		</p>
+		<p class="txt16">
+			4.1.3. Установления с Пользователем обратной связи, включая направление уведомлений, запросов, касающихся
+			использования сайта, оказания услуг, обработка запросов и заявок от Пользователя.
+		</p>
+		<p class="txt16">
+			4.1.4. Определения места нахождения Пользователя для обеспечения безопасности, предотвращения мошенничества.
+		</p>
+		<p class="txt16">
+			4.1.5. Подтверждения достоверности и полноты персональных данных, предоставленных Пользователем.
+		</p>
+		<p class="txt16">
+			4.1.6. Создания учетной записи для совершения заказов, если Пользователь дал согласие на создание учетной
+			записи.
+		</p>
+		<p class="txt16">
+			4.1.7. Уведомления Пользователя сайта о состоянии Заказа.
+		</p>
+		<p class="txt16">
+			4.1.8. Обработки и получения платежей.
+		</p>
+		<p class="txt16">
+			4.1.9. Предоставления Пользователю эффективной клиентской и технической поддержки при возникновении проблем,
+			связанных с использованием сайта.
+		</p>
+		<p class="txt16">
+			4.1.10. Предоставления Пользователю с его согласия, обновлений продукции, специальных предложений, информации о
+			ценах, новостной рассылки и иных сведений от имени сайта или от имени партнеров сайта.
+		</p>
+		<p class="txt16">
+			4.1.11. Осуществления рекламной деятельности с согласия Пользователя.
+		</p>
+		<p class="txt16">
+			4.1.12. Предоставления доступа Пользователю на сторонние сайты или сервисы партнеров данного сайта с целью
+			получения их предложений, обновлений или услуг.
+		</p>
+		<p class="txt20 bold">
+			5. СПОСОБЫ И СРОКИ ОБРАБОТКИ ПЕРСОНАЛЬНОЙ ИНФОРМАЦИИ
+		</p>
+		<p class="txt16">
+			5.1. Обработка персональных данных Пользователя осуществляется без ограничения срока, любым законным способом, в
+			том числе в информационных системах персональных данных с использованием средств автоматизации или без
+			использования таких средств.
+		</p>
+		<p class="txt16">
+			5.2. Пользователь соглашается с тем, что Администрация сайта вправе передавать персональные данные третьим
+			лицам, в частности, курьерским службам, организациями почтовой связи, операторам электросвязи, исключительно в
+			целях выполнения заявок Пользователя, оформленных на сайте, в рамках Договора публичной оферты
+		</p>
+		<p class="txt16">
+			5.3. Персональные данные Пользователя могут быть переданы уполномоченным органам государственной власти только
+			по основаниям и в порядке, установленным действующим законодательством.
+		</p>
+		<p class="txt20 bold">
+			6. ОБЯЗАТЕЛЬСТВА СТОРОН
+		</p>
+		<p class="txt16">
+			6.1. Пользователь обязуется:
+		</p>
+		<p class="txt16">
+			6.1.1. Предоставить корректную и правдивую информацию о персональных данных, необходимую для пользования сайтом.
+		</p>
+		<p class="txt16">
+			6.1.2. Обновить или дополнить предоставленную информацию о персональных данных в случае изменения данной
+			информации.
+		</p>
+		<p class="txt16">
+			6.1.3. Принимать меры для защиты доступа к своим конфиденциальным данным, хранящимся на сайте.
+		</p>
+		<p class="txt16">
+			6.2. Администрация сайта обязуется:
+		</p>
+		<p class="txt16">
+			6.2.1. Использовать полученную информацию исключительно для целей, указанных в п. 4 настоящей Политики
+			конфиденциальности.
+		</p>
+		<p class="txt16">
+			6.2.2. Не разглашать персональных данных Пользователя, за исключением п.п. 5.2. и 5.3. настоящей Политики
+			Конфиденциальности.
+		</p>
+		<p class="txt16">
+			6.2.3. Осуществить блокирование персональных данных, относящихся к соответствующему Пользователю, с момента
+			обращения или запроса Пользователя или его законного представителя либо уполномоченного органа по защите прав
+			субъектов персональных данных на период проверки, в случае выявления недостоверных персональных данных или
+			неправомерных действий.
+		</p>
+		<p class="txt20 bold">
+			7. ОТВЕТСТВЕННОСТЬ СТОРОН
+		</p>
+		<p class="txt16">
+			7.1. Администрация сайта несёт ответственность за умышленное разглашение Персональных данных Пользователя в
+			соответствии с действующим законодательством, за исключением случаев, предусмотренных п.п. 5.2., 5.3. и 7.2.
+			настоящей Политики Конфиденциальности
+		</p>
+		<p class="txt16">
+			7.2. В случае утраты или разглашения Персональных данных Администрация сайта не несёт ответственность, если
+			данная конфиденциальная информация:
+		</p>
+		<p class="txt16">
+			7.2.1. Стала публичным достоянием до её утраты или разглашения.
+		</p>
+		<p class="txt16">
+			7.2.2. Была получена от третьей стороны до момента её получения Администрацией сайта.
+		</p>
+		<p class="txt16">
+			7.2.3. Была получена третьими лицами путем несанкционированного доступа к файлам сайта.
+		</p>
+		<p class="txt16">
+			7.2.4. Была разглашена с согласия Пользователя.
+		</p>
+		<p class="txt16">
+			7.3. Пользователь несет ответственность за правомерность, корректность и правдивость предоставленной
+			Персональных данных в соответствии с действующим законодательством.
+		</p>
+		<p class="txt20 bold">
+			8. РАЗРЕШЕНИЕ СПОРОВ
+		</p>
+		<p class="txt16">
+			8.1. До обращения в суд с иском по спорам, возникающим из отношений между Пользователем сайта и Администрацией
+			сайта, обязательным является предъявление претензии (письменного предложения о добровольном урегулировании
+			спора).
+		</p>
+		<p class="txt16">
+			8.2. Получатель претензии в течение 30 календарных дней со дня получения претензии, письменно уведомляет
+			заявителя претензии о результатах рассмотрения претензии.
+		</p>
+		<p class="txt16">
+			8.3. При не достижении соглашения спор будет передан на рассмотрение в судебный орган в соответствии с
+			действующим законодательством.
+		</p>
+		<p class="txt16">
+			8.4. К настоящей Политике конфиденциальности и отношениям между Пользователем и Администрацией сайта применяется
+			действующее законодательство.
+		</p>
+		<p class="txt20 bold">
+			9. ДОПОЛНИТЕЛЬНЫЕ УСЛОВИЯ
+		</p>
+		<p class="txt16">
+			9.1. Администрация сайта вправе вносить изменения в настоящую Политику конфиденциальности без согласия
+			Пользователя.
+		</p>
+		<p class="txt16">
+			9.2. Новая Политика конфиденциальности вступает в силу с момента ее размещения на Сайте, если иное не
+			предусмотрено новой редакцией Политики конфиденциальности.
+		</p>
+		<span class="terms-close close"><img src="img/svg/close.svg" alt=""></span>
+	</div>
 <script type="text/javascript" src="./js/app.js"></script></body>
 
 </html>
