@@ -801,11 +801,180 @@
 		</div>
 	</section>	<script>
 		function a_onClick(el) {
+			let popularPopup = {
+				new: {
+					id: "new",
+					title: "Кухня New York",
+					ul: [
+						"Фасады из Премиум пластика Fenix",
+						"Столешница МДФ+пластик",
+						"Фартук Шпон",
+						"Фурнитура BLUM",
+					],
+					cost: "17000",
+					bigImg: "img/popular/n1.jpg",
+					imgs: [
+						"img/popular/n2.jpg",
+						"img/popular/n3.jpg",
+						"img/popular/n4.jpg",
+						"img/popular/n5.jpg",
+						"img/popular/n1.jpg",
+					],
+				},
+				t: {
+					id: "t",
+					title: "Кухня Tokyo",
+					ul: [
+						"Фасады из Премиум акрила REHAU",
+						"Столешница и фартук из искусств",
+						"Подъемные механизмы AVENTOS",
+						"Фурнитура BLUM",
+					],
+					cost: "17000",
+					bigImg: "img/popular/t1.jpeg",
+					imgs: ["img/popular/t2.jpeg", "img/popular/t3.jpeg", "img/popular/t1.jpeg"],
+				},
+				s: {
+					id: "s",
+					title: "Кухня Stone",
+					ul: [
+						'Фасады "под дерево" из мдф в пластике ARPA',
+						'Фасады "бетон" из мдф в пластике Cleaf',
+						'Столешница ДСП+Пластик "Союз" с еврозапилом',
+						"Фурнитура BLUM и GRASS",
+						"Встроенная в столешницу розетка",
+						"Подъемные механизмы AVENTOS",
+						"Барная стойка из массива дуба",
+						"Стеллаж с фасадами из графитового стекла",
+					],
+					cost: "17000",
+					bigImg: 'img/popular/s5.jpg"',
+					imgs: [
+						"img/popular/s2.jpg",
+						"img/popular/s3.jpg",
+						"img/popular/s4.jpg",
+						"img/popular/s1.jpg",
+						"img/popular/s5.jpg",
+					],
+				},
+				c: {
+					id: "c",
+					title: "Кухня Cappuchino",
+					ul: [
+						"Фасады МДФ+Пластик Fenix",
+						"Столешница и фартук: МДФ+пластик",
+						"Фурнитура BLUM",
+					],
+					cost: "17000",
+					bigImg: "img/popular/c1.jpg",
+					imgs: [
+						"img/popular/c2.jpg",
+						"img/popular/c3.jpg",
+						"img/popular/c4.jpg",
+						"img/popular/c5.jpg",
+						"img/popular/c1.jpg",
+					],
+				},
+				sw: {
+					id: "sw",
+					title: "Кухня В шоуруме",
+					ul: [
+						"Фасады МДФ+Шпон ореха, МДФ+Пластик Fenix",
+						"Столешница из массива дуба",
+						"Фурнитура BLUM, Hettich",
+						"Подъемные механизмы AVENTOS",
+						`Барная стойка: Массив
+			дуба+стабилизированный мох`,
+					],
+					cost: "17000",
+					bigImg: "img/popular/sw1.jpg",
+					imgs: [
+						"img/popular/sw2.jpeg",
+						"img/popular/sw3.jpg",
+						"img/popular/sw4.jpg",
+						"img/popular/sw5.jpg",
+						"img/popular/sw1.jpg",
+					],
+				},
+				ci: {
+					id: "ci",
+					title: "Кухня Cinema",
+					ul: [
+						"Фасады МДФ+Пластик ARPA",
+						"Столешница МДФ+пластик",
+						"Подъемные механизмы AVENTOS",
+						"Фурнитура BLUM",
+					],
+					cost: "17000",
+					bigImg: "img/popular/si1.jpg",
+					imgs: [
+						"img/popular/si2.jpg",
+						"img/popular/si3.jpg",
+						"img/popular/si4.jpg",
+						"img/popular/si5.jpg",
+						"img/popular/si1.jpg",
+					],
+				},
+				w: {
+					id: "w",
+					title: "Кухня White&Wood",
+					ul: [
+						"Фасады МДФ+Эмаль, Массив дуба",
+						"Столешница Массив дуба",
+						"Фурнитура BLUM",
+					],
+					cost: "17000",
+					bigImg: 'img/popular/w1.jpg"',
+					imgs: [
+						"img/popular/w2.jpg",
+						"img/popular/w3.jpg",
+						"img/popular/w4.jpg",
+						"img/popular/w1.jpg",
+					],
+				},
+				wg: {
+					id: "wg",
+					title: "Кухня Wood gloss",
+					ul: [
+						"Фасады МДФ+пластик ARPA",
+						"Фурнитура Blum,",
+						"Столешница ДСП+пластик,",
+						"Фартук ДСП+пластик",
+					],
+					cost: "17000",
+					bigImg: "img/popular/wg1.jpeg",
+					imgs: [
+						"img/popular/wg2.jpg",
+						"img/popular/wg3.jpg",
+						"img/popular/wg1.jpeg",
+					],
+				},
+			};
+			let pop = el.data("obj");
+			console.log(popularPopup)
+			let imgs = popularPopup[pop].imgs;
+			let ul = popularPopup[pop].ul;
+			let id = `${popularPopup[pop].id}`;
+			$(".popupPop").attr("id", id);
+			$(
+				".popupPop__imgs-big"
+			).html(`<a href="${popularPopup[pop].bigImg}" data-fancybox="${pop}"><img 
+			src="${popularPopup[pop].bigImg}" alt=""></a>`);
+			$(".popupPop__imgs-sm").html("");
+			for (var i = 0; i < imgs.length; i++) {
+				$(".popupPop__imgs-sm")
+					.append(`<a href="${imgs[i]}" data-fancybox="${pop}"><img 
+						  src="${imgs[i]}" alt=""></a>`);
+			}
+			$(".popupPop__descr-title").html(`${popularPopup[pop].title}`);
+			$(".popupPop__descr-ul ul").html("");
+			for (var i = 0; i < ul.length; i++) {
+				$(".popupPop__descr-ul ul").append(`<li class="txt20 med">${ul[i]}</li>`);
+			}
 			let morePop = $(".popupPop");
 			morePop.filter(el.data("pop")).fadeIn();
 			$(".popup-background").fadeIn();
 			$("html").addClass("overflowHidden");
-			$(window).trigger("scroll");
 			return false;
 		}
 	</script>
@@ -831,7 +1000,7 @@
 							<p class="txt30 bold">Кухня New York</p>
 							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
 							<div class="popular__slider-more">
-								<a class="txt28 fontO mainBtn popBtn" data-pop="#new"
+								<a class="txt28 fontO mainBtn popBtn" data-pop="#new" data-obj="new"
 									onClick="a_onClick($(this))">Подробнее</a>
 							</div>
 						</div>
@@ -840,7 +1009,7 @@
 							<p class="txt30 bold">Кухня White&Wood</p>
 							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
 							<div class="popular__slider-more">
-								<a class="txt28 fontO mainBtn popBtn" data-pop="#w"
+								<a class="txt28 fontO mainBtn popBtn" data-pop="#w" data-obj="w"
 									onClick="a_onClick($(this))">Подробнее</a>
 							</div>
 						</div>
@@ -849,7 +1018,7 @@
 							<p class="txt30 bold">Кухня Cappuchino</p>
 							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
 							<div class="popular__slider-more">
-								<a class="txt28 fontO mainBtn popBtn" data-pop="#c"
+								<a class="txt28 fontO mainBtn popBtn" data-pop="#c" data-obj="c"
 									onClick="a_onClick($(this))">Подробнее</a>
 							</div>
 						</div>
@@ -858,7 +1027,7 @@
 							<p class="txt30 bold">Кухня в ShowRoom</p>
 							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
 							<div class="popular__slider-more">
-								<a class="txt28 fontO mainBtn popBtn" data-pop="#sw"
+								<a class="txt28 fontO mainBtn popBtn" data-pop="#sw" data-obj="sw"
 									onClick="a_onClick($(this))">Подробнее</a>
 							</div>
 						</div>
@@ -867,7 +1036,7 @@
 							<p class="txt30 bold">Кухня Cinema</p>
 							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
 							<div class="popular__slider-more">
-								<a class="txt28 fontO mainBtn popBtn" data-pop="#ci"
+								<a class="txt28 fontO mainBtn popBtn" data-pop="#ci" data-obj="ci"
 									onClick="a_onClick($(this))">Подробнее</a>
 							</div>
 						</div>
@@ -876,7 +1045,7 @@
 							<p class="txt30 bold">Кухня Stone</p>
 							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
 							<div class="popular__slider-more">
-								<a class="txt28 fontO mainBtn popBtn" data-pop="#s"
+								<a class="txt28 fontO mainBtn popBtn" data-pop="#s" data-obj="s"
 									onClick="a_onClick($(this))">Подробнее</a>
 							</div>
 						</div>
@@ -885,7 +1054,7 @@
 							<p class="txt30 bold">Кухня Tokyo</p>
 							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
 							<div class="popular__slider-more">
-								<a class="txt28 fontO mainBtn popBtn" data-pop="#t"
+								<a class="txt28 fontO mainBtn popBtn" data-pop="#t" data-obj="t"
 									onClick="a_onClick($(this))">Подробнее</a>
 							</div>
 						</div>
@@ -894,7 +1063,7 @@
 							<p class="txt30 bold">Кухня White gloss</p>
 							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
 							<div class="popular__slider-more">
-								<a class="txt28 fontO mainBtn popBtn" data-pop="#wg"
+								<a class="txt28 fontO mainBtn popBtn" data-pop="#wg" data-obj="wg"
 									onClick="a_onClick($(this))">Подробнее</a>
 							</div>
 						</div>
@@ -915,7 +1084,7 @@
 							<p class="txt30 bold">Кухня New York</p>
 							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
 							<div class="popular__slider-more">
-								<a class="txt28 fontO mainBtn popBtn" data-pop="#new"
+								<a class="txt28 fontO mainBtn popBtn" data-pop="#new" data-obj="new"
 									onClick="a_onClick($(this))">Подробнее</a>
 							</div>
 						</div>
@@ -924,7 +1093,7 @@
 							<p class="txt30 bold">Кухня White&Wood</p>
 							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
 							<div class="popular__slider-more">
-								<a class="txt28 fontO mainBtn popBtn" data-pop="#w"
+								<a class="txt28 fontO mainBtn popBtn" data-pop="#w" data-obj="w"
 									onClick="a_onClick($(this))">Подробнее</a>
 							</div>
 						</div>
@@ -933,7 +1102,7 @@
 							<p class="txt30 bold">Кухня Cappuchino</p>
 							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
 							<div class="popular__slider-more">
-								<a class="txt28 fontO mainBtn popBtn" data-pop="#c"
+								<a class="txt28 fontO mainBtn popBtn" data-pop="#c" data-obj="c"
 									onClick="a_onClick($(this))">Подробнее</a>
 							</div>
 						</div>
@@ -942,7 +1111,7 @@
 							<p class="txt30 bold">Кухня в ShowRoom</p>
 							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
 							<div class="popular__slider-more">
-								<a class="txt28 fontO mainBtn popBtn" data-pop="#sw"
+								<a class="txt28 fontO mainBtn popBtn" data-pop="#sw" data-obj="sw"
 									onClick="a_onClick($(this))">Подробнее</a>
 							</div>
 						</div>
@@ -951,7 +1120,7 @@
 							<p class="txt30 bold">Кухня Cinema</p>
 							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
 							<div class="popular__slider-more">
-								<a class="txt28 fontO mainBtn popBtn" data-pop="#ci"
+								<a class="txt28 fontO mainBtn popBtn" data-pop="#ci" data-obj="ci"
 									onClick="a_onClick($(this))">Подробнее</a>
 							</div>
 						</div>
@@ -960,7 +1129,7 @@
 							<p class="txt30 bold">Кухня Stone</p>
 							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
 							<div class="popular__slider-more">
-								<a class="txt28 fontO mainBtn popBtn" data-pop="#s"
+								<a class="txt28 fontO mainBtn popBtn" data-pop="#s" data-obj="s"
 									onClick="a_onClick($(this))">Подробнее</a>
 							</div>
 						</div>
@@ -969,7 +1138,7 @@
 							<p class="txt30 bold">Кухня Tokyo</p>
 							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
 							<div class="popular__slider-more">
-								<a class="txt28 fontO mainBtn popBtn" data-pop="#t"
+								<a class="txt28 fontO mainBtn popBtn" data-pop="#t" data-obj="t"
 									onClick="a_onClick($(this))">Подробнее</a>
 							</div>
 						</div>
@@ -978,7 +1147,7 @@
 							<p class="txt30 bold">Кухня White gloss</p>
 							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
 							<div class="popular__slider-more">
-								<a class="txt28 fontO mainBtn popBtn" data-pop="#wg"
+								<a class="txt28 fontO mainBtn popBtn" data-pop="#wg" data-obj="wg"
 									onClick="a_onClick($(this))">Подробнее</a>
 							</div>
 						</div>
@@ -999,7 +1168,7 @@
 							<p class="txt30 bold">Кухня New York</p>
 							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
 							<div class="popular__slider-more">
-								<a class="txt28 fontO mainBtn popBtn" data-pop="#new"
+								<a class="txt28 fontO mainBtn popBtn" data-pop="#new" data-obj="new"
 									onClick="a_onClick($(this))">Подробнее</a>
 							</div>
 						</div>
@@ -1008,7 +1177,7 @@
 							<p class="txt30 bold">Кухня White&Wood</p>
 							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
 							<div class="popular__slider-more">
-								<a class="txt28 fontO mainBtn popBtn" data-pop="#w"
+								<a class="txt28 fontO mainBtn popBtn" data-pop="#w" data-obj="w"
 									onClick="a_onClick($(this))">Подробнее</a>
 							</div>
 						</div>
@@ -1017,7 +1186,7 @@
 							<p class="txt30 bold">Кухня Cappuchino</p>
 							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
 							<div class="popular__slider-more">
-								<a class="txt28 fontO mainBtn popBtn" data-pop="#c"
+								<a class="txt28 fontO mainBtn popBtn" data-pop="#c" data-obj="c"
 									onClick="a_onClick($(this))">Подробнее</a>
 							</div>
 						</div>
@@ -1026,7 +1195,7 @@
 							<p class="txt30 bold">Кухня в ShowRoom</p>
 							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
 							<div class="popular__slider-more">
-								<a class="txt28 fontO mainBtn popBtn" data-pop="#sw"
+								<a class="txt28 fontO mainBtn popBtn" data-pop="#sw" data-obj="sw"
 									onClick="a_onClick($(this))">Подробнее</a>
 							</div>
 						</div>
@@ -1035,7 +1204,7 @@
 							<p class="txt30 bold">Кухня Cinema</p>
 							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
 							<div class="popular__slider-more">
-								<a class="txt28 fontO mainBtn popBtn" data-pop="#ci"
+								<a class="txt28 fontO mainBtn popBtn" data-pop="#ci" data-obj="ci"
 									onClick="a_onClick($(this))">Подробнее</a>
 							</div>
 						</div>
@@ -1044,7 +1213,7 @@
 							<p class="txt30 bold">Кухня Stone</p>
 							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
 							<div class="popular__slider-more">
-								<a class="txt28 fontO mainBtn popBtn" data-pop="#s"
+								<a class="txt28 fontO mainBtn popBtn" data-pop="#s" data-obj="s"
 									onClick="a_onClick($(this))">Подробнее</a>
 							</div>
 						</div>
@@ -1053,7 +1222,7 @@
 							<p class="txt30 bold">Кухня Tokyo</p>
 							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
 							<div class="popular__slider-more">
-								<a class="txt28 fontO mainBtn popBtn" data-pop="#t"
+								<a class="txt28 fontO mainBtn popBtn" data-pop="#t" data-obj="t"
 									onClick="a_onClick($(this))">Подробнее</a>
 							</div>
 						</div>
@@ -1062,7 +1231,7 @@
 							<p class="txt30 bold">Кухня White gloss</p>
 							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
 							<div class="popular__slider-more">
-								<a class="txt28 fontO mainBtn popBtn" data-pop="#wg"
+								<a class="txt28 fontO mainBtn popBtn" data-pop="#wg" data-obj="wg"
 									onClick="a_onClick($(this))">Подробнее</a>
 							</div>
 						</div>
@@ -1083,7 +1252,7 @@
 							<p class="txt30 bold">Кухня New York</p>
 							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
 							<div class="popular__slider-more">
-								<a class="txt28 fontO mainBtn popBtn" data-pop="#new"
+								<a class="txt28 fontO mainBtn popBtn" data-pop="#new" data-obj="new"
 									onClick="a_onClick($(this))">Подробнее</a>
 							</div>
 						</div>
@@ -1092,7 +1261,7 @@
 							<p class="txt30 bold">Кухня White&Wood</p>
 							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
 							<div class="popular__slider-more">
-								<a class="txt28 fontO mainBtn popBtn" data-pop="#w"
+								<a class="txt28 fontO mainBtn popBtn" data-pop="#w" data-obj="w"
 									onClick="a_onClick($(this))">Подробнее</a>
 							</div>
 						</div>
@@ -1101,7 +1270,7 @@
 							<p class="txt30 bold">Кухня Cappuchino</p>
 							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
 							<div class="popular__slider-more">
-								<a class="txt28 fontO mainBtn popBtn" data-pop="#c"
+								<a class="txt28 fontO mainBtn popBtn" data-pop="#c" data-obj="c"
 									onClick="a_onClick($(this))">Подробнее</a>
 							</div>
 						</div>
@@ -1110,7 +1279,7 @@
 							<p class="txt30 bold">Кухня в ShowRoom</p>
 							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
 							<div class="popular__slider-more">
-								<a class="txt28 fontO mainBtn popBtn" data-pop="#sw"
+								<a class="txt28 fontO mainBtn popBtn" data-pop="#sw" data-obj="sw"
 									onClick="a_onClick($(this))">Подробнее</a>
 							</div>
 						</div>
@@ -1119,7 +1288,7 @@
 							<p class="txt30 bold">Кухня Cinema</p>
 							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
 							<div class="popular__slider-more">
-								<a class="txt28 fontO mainBtn popBtn" data-pop="#ci"
+								<a class="txt28 fontO mainBtn popBtn" data-pop="#ci" data-obj="ci"
 									onClick="a_onClick($(this))">Подробнее</a>
 							</div>
 						</div>
@@ -1128,7 +1297,7 @@
 							<p class="txt30 bold">Кухня Stone</p>
 							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
 							<div class="popular__slider-more">
-								<a class="txt28 fontO mainBtn popBtn" data-pop="#s"
+								<a class="txt28 fontO mainBtn popBtn" data-pop="#s" data-obj="s"
 									onClick="a_onClick($(this))">Подробнее</a>
 							</div>
 						</div>
@@ -1137,7 +1306,7 @@
 							<p class="txt30 bold">Кухня Tokyo</p>
 							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
 							<div class="popular__slider-more">
-								<a class="txt28 fontO mainBtn popBtn" data-pop="#t"
+								<a class="txt28 fontO mainBtn popBtn" data-pop="#t" data-obj="t"
 									onClick="a_onClick($(this))">Подробнее</a>
 							</div>
 						</div>
@@ -1146,7 +1315,7 @@
 							<p class="txt30 bold">Кухня White gloss</p>
 							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
 							<div class="popular__slider-more">
-								<a class="txt28 fontO mainBtn popBtn" data-pop="#wg"
+								<a class="txt28 fontO mainBtn popBtn" data-pop="#wg" data-obj="wg"
 									onClick="a_onClick($(this))">Подробнее</a>
 							</div>
 						</div>
@@ -1685,344 +1854,7 @@
 						d="m413.348 24.354-24.354-24.354-182.32 182.32-182.32-182.32-24.354 24.354 182.32 182.32-182.32 182.32 24.354 24.354 182.32-182.32 182.32 182.32 24.354-24.354-182.32-182.32z" />
 				</svg></span>
 		</div>
-	</div>	<div class="popupPop" id="new">
-		<div class="popupPop-wrap">
-			<div class="popupPop__imgs">
-				<div class="popupPop__imgs-big">
-					<a href="img/popular/n1.jpg" data-fancybox="n"><img class="lazyVis" data-src="img/popular/n1.jpg"
-							alt=""></a>
-				</div>
-				<div class="popupPop__imgs-sm">
-					<a href="img/popular/n2.jpg" data-fancybox="n"><img class="lazyVis" data-src="img/popular/n2.jpg"
-							alt=""></a>
-					<a href="img/popular/n3.jpg" data-fancybox="n"><img class="lazyVis" data-src="img/popular/n3.jpg"
-							alt=""></a>
-					<a href="img/popular/n4.jpg" data-fancybox="n"><img class="lazyVis" data-src="img/popular/n4.jpg"
-							alt=""></a>
-					<a href="img/popular/n5.jpg" data-fancybox="n"><img class="lazyVis" data-src="img/popular/n5.jpg"
-							alt=""></a>
-					<a href="img/popular/n1.jpg" data-fancybox="n"><img class="lazyVis" data-src="img/popular/n1.jpg"
-							alt=""></a>
-				</div>
-			</div>
-			<div class="popupPop__descr">
-				<div class="popupPop__descr-content">
-					<p class="popupPop__descr-title txt30 bold">Кухня New York</p>
-					<div class="popupPop__descr-ul">
-						<ul>
-							<li class="txt20 med">Фасады из Премиум пластика Fenix</li>
-							<li class="txt20 med">Столешница МДФ+пластик</li>
-							<li class="txt20 med">Фартук Шпон</li>
-							<li class="txt20 med">Фурнитура BLUM</li>
-						</ul>
-					</div>
-					<p class="popupPop__descr-cost txt20">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
-				</div>
-				<form action="">
-					<input type="hidden" name="title" value="Форма кухни нью-йорк">
-					<span class="input-wrap">
-						<input name="phone" class="inputTel" required class="txt18" type="tel"
-							placeholder="Введите ваш телефон">
-					</span>
-					<span class="input-wrap">
-						<input name="name" required class="txt18" type="name" placeholder="Введите ваше имя">
-					</span>
-					<span class="btn-wrap">
-						<button class="txt20 fontAb mainBtn">ОСТАВИТЬ ЗАЯВКУ </button>
-					</span>
-				</form>
-			</div>
-		</div>
-		<div class="close-wrap">
-			<span class="popupSty--close close"><svg id="Capa_1" enable-background="new 0 0 413.348 413.348" height="512"
-					viewBox="0 0 413.348 413.348" width="512" xmlns="http://www.w3.org/2000/svg">
-					<path fill="#eeab09"
-						d="m413.348 24.354-24.354-24.354-182.32 182.32-182.32-182.32-24.354 24.354 182.32 182.32-182.32 182.32 24.354 24.354 182.32-182.32 182.32 182.32 24.354-24.354-182.32-182.32z" />
-				</svg></span>
-		</div>
-	</div>
-	<div class="popupPop" id="t">
-		<div class="popupPop-wrap">
-			<div class="popupPop__imgs">
-				<div class="popupPop__imgs-big">
-					<a href="img/popular/t1.jpeg" data-fancybox="t"><img class="lazyVis" data-src="img/popular/t1.jpeg"
-							alt=""></a>
-				</div>
-				<div class="popupPop__imgs-sm">
-					<a href="img/popular/t2.jpeg" data-fancybox="t"><img class="lazyVis" data-src="img/popular/t2.jpeg"
-							alt=""></a>
-					<a href="img/popular/t3.jpeg" data-fancybox="t"><img class="lazyVis" data-src="img/popular/t3.jpeg"
-							alt=""></a>
-					<a href="img/popular/t1.jpeg" data-fancybox="t"><img class="lazyVis" data-src="img/popular/t1.jpeg"
-							alt=""></a>
-				</div>
-			</div>
-			<div class="popupPop__descr">
-				<div class="popupPop__descr-content">
-					<p class="popupPop__descr-title txt30 bold">Кухня Tokyo</p>
-					<div class="popupPop__descr-ul">
-						<ul>
-							<li class="txt20 med">Фасады из Премиум акрила REHAU</li>
-							<li class="txt20 med">Столешница и фартук из искусств</li>
-							<li class="txt20 med">Подъемные механизмы AVENTOS</li>
-							<li class="txt20 med">Фурнитура BLUM</li>
-						</ul>
-					</div>
-					<p class="popupPop__descr-cost txt20">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
-				</div>
-				<form action="">
-					<input type="hidden" name="title" value="Форма кухни токио">
-					<span class="input-wrap">
-						<input name="phone" class="inputTel" required class="txt18" type="tel"
-							placeholder="Введите ваш телефон">
-					</span>
-					<span class="input-wrap">
-						<input name="name" required class="txt18" type="name" placeholder="Введите ваше имя">
-					</span>
-					<span class="btn-wrap">
-						<button class="txt20 fontAb mainBtn">ОСТАВИТЬ ЗАЯВКУ </button>
-					</span>
-				</form>
-			</div>
-		</div>
-		<div class="close-wrap">
-			<span class="popupSty--close close"><svg id="Capa_1" enable-background="new 0 0 413.348 413.348" height="512"
-					viewBox="0 0 413.348 413.348" width="512" xmlns="http://www.w3.org/2000/svg">
-					<path fill="#eeab09"
-						d="m413.348 24.354-24.354-24.354-182.32 182.32-182.32-182.32-24.354 24.354 182.32 182.32-182.32 182.32 24.354 24.354 182.32-182.32 182.32 182.32 24.354-24.354-182.32-182.32z" />
-				</svg></span>
-		</div>
-	</div>
-	<div class="popupPop" id="s">
-		<div class="popupPop-wrap">
-			<div class="popupPop__imgs">
-				<div class="popupPop__imgs-big">
-					<a href="img/popular/s5.jpg" data-fancybox="s"><img class="lazyVis" data-src="img/popular/s5.jpg"
-							alt=""></a>
-				</div>
-				<div class="popupPop__imgs-sm">
-					<a href="img/popular/s2.jpg" data-fancybox="s"><img class="lazyVis" data-src="img/popular/s2.jpg"
-							alt=""></a>
-					<a href="img/popular/s3.jpg" data-fancybox="s"><img class="lazyVis" data-src="img/popular/s3.jpg"
-							alt=""></a>
-					<a href="img/popular/s4.jpg" data-fancybox="s"><img class="lazyVis" data-src="img/popular/s4.jpg"
-							alt=""></a>
-					<a href="img/popular/s1.jpg" data-fancybox="s"><img class="lazyVis" data-src="img/popular/s1.jpg"
-							alt=""></a>
-					<a href="img/popular/s5.jpg" data-fancybox="s"><img class="lazyVis" data-src="img/popular/s5.jpg"
-							alt=""></a>
-				</div>
-			</div>
-			<div class="popupPop__descr">
-				<div class="popupPop__descr-content">
-					<p class="popupPop__descr-title txt30 bold">Кухня Stone</p>
-					<div class="popupPop__descr-ul">
-						<ul>
-							<li class="txt20 med">Фасады "под дерево" из мдф в пластике ARPA</li>
-							<li class="txt20 med">Фасады "бетон" из мдф в пластике Cleaf</li>
-							<li class="txt20 med">Столешница ДСП+Пластик "Союз" с еврозапилом</li>
-							<li class="txt20 med">Фурнитура BLUM и GRASS</li>
-							<li class="txt20 med">Встроенная в столешницу розетка</li>
-							<li class="txt20 med">Подъемные механизмы AVENTOS</li>
-							<li class="txt20 med">Барная стойка из массива дуба</li>
-							<li class="txt20 med">Стеллаж с фасадами из графитового стекла</li>
-						</ul>
-					</div>
-					<p class="popupPop__descr-cost txt20">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
-				</div>
-				<form action="">
-					<input type="hidden" name="title" value="Форма кухни стоун">
-					<span class="input-wrap">
-						<input name="phone" class="inputTel" required class="txt18" type="tel"
-							placeholder="Введите ваш телефон">
-					</span>
-					<span class="input-wrap">
-						<input name="name" required class="txt18" type="name" placeholder="Введите ваше имя">
-					</span>
-					<span class="btn-wrap">
-						<button class="txt20 fontAb mainBtn">ОСТАВИТЬ ЗАЯВКУ </button>
-					</span>
-				</form>
-			</div>
-		</div>
-		<div class="close-wrap">
-			<span class="popupSty--close close"><svg id="Capa_1" enable-background="new 0 0 413.348 413.348" height="512"
-					viewBox="0 0 413.348 413.348" width="512" xmlns="http://www.w3.org/2000/svg">
-					<path fill="#eeab09"
-						d="m413.348 24.354-24.354-24.354-182.32 182.32-182.32-182.32-24.354 24.354 182.32 182.32-182.32 182.32 24.354 24.354 182.32-182.32 182.32 182.32 24.354-24.354-182.32-182.32z" />
-				</svg></span>
-		</div>
-	</div>
-	<div class="popupPop" id="c">
-		<div class="popupPop-wrap">
-			<div class="popupPop__imgs">
-				<div class="popupPop__imgs-big">
-					<a href="img/popular/c1.jpg" data-fancybox="c"><img class="lazyVis" data-src="img/popular/c1.jpg"
-							alt=""></a>
-				</div>
-				<div class="popupPop__imgs-sm">
-					<a href="img/popular/c2.jpg" data-fancybox="c"><img class="lazyVis" data-src="img/popular/c2.jpg"
-							alt=""></a>
-					<a href="img/popular/c3.jpg" data-fancybox="c"><img class="lazyVis" data-src="img/popular/c3.jpg"
-							alt=""></a>
-					<a href="img/popular/c4.jpg" data-fancybox="c"><img class="lazyVis" data-src="img/popular/c4.jpg"
-							alt=""></a>
-					<a href="img/popular/c5.jpg" data-fancybox="c"><img class="lazyVis" data-src="img/popular/c5.jpg"
-							alt=""></a>
-					<a href="img/popular/c1.jpg" data-fancybox="c"><img class="lazyVis" data-src="img/popular/c1.jpg"
-							alt=""></a>
-				</div>
-			</div>
-			<div class="popupPop__descr">
-				<div class="popupPop__descr-content">
-					<p class="popupPop__descr-title txt30 bold">Кухня Cappuchino</p>
-					<div class="popupPop__descr-ul">
-						<ul>
-							<li class="txt20 med">Фасады МДФ+Пластик Fenix</li>
-							<li class="txt20 med">Столешница и фартук: МДФ+пластик</li>
-							<li class="txt20 med">Фурнитура BLUM</li>
-						</ul>
-					</div>
-					<p class="popupPop__descr-cost txt20">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
-				</div>
-				<form action="">
-					<input type="hidden" name="title" value="Форма кухни капучино">
-					<span class="input-wrap">
-						<input name="phone" class="inputTel" required class="txt18" type="tel"
-							placeholder="Введите ваш телефон">
-					</span>
-					<span class="input-wrap">
-						<input name="name" required class="txt18" type="name" placeholder="Введите ваше имя">
-					</span>
-					<span class="btn-wrap">
-						<button class="txt20 fontAb mainBtn">ОСТАВИТЬ ЗАЯВКУ </button>
-					</span>
-				</form>
-			</div>
-		</div>
-		<div class="close-wrap">
-			<span class="popupSty--close close"><svg id="Capa_1" enable-background="new 0 0 413.348 413.348" height="512"
-					viewBox="0 0 413.348 413.348" width="512" xmlns="http://www.w3.org/2000/svg">
-					<path fill="#eeab09"
-						d="m413.348 24.354-24.354-24.354-182.32 182.32-182.32-182.32-24.354 24.354 182.32 182.32-182.32 182.32 24.354 24.354 182.32-182.32 182.32 182.32 24.354-24.354-182.32-182.32z" />
-				</svg></span>
-		</div>
-	</div>
-	<div class="popupPop" id="sw">
-		<div class="popupPop-wrap">
-			<div class="popupPop__imgs">
-				<div class="popupPop__imgs-big">
-					<a href="img/popular/sw1.jpg" data-fancybox="sw"><img class="lazyVis" data-src="img/popular/sw1.jpg"
-							alt=""></a>
-				</div>
-				<div class="popupPop__imgs-sm">
-					<a href="img/popular/sw2.jpeg" data-fancybox="sw"><img class="lazyVis" data-src="img/popular/sw2.jpeg"
-							alt=""></a>
-					<a href="img/popular/sw3.jpg" data-fancybox="sw"><img class="lazyVis" data-src="img/popular/sw3.jpg"
-							alt=""></a>
-					<a href="img/popular/sw4.jpg" data-fancybox="sw"><img class="lazyVis" data-src="img/popular/sw4.jpg"
-							alt=""></a>
-					<a href="img/popular/sw5.jpg" data-fancybox="sw"><img class="lazyVis" data-src="img/popular/sw5.jpg"
-							alt=""></a>
-					<a href="img/popular/sw1.jpg" data-fancybox="sw"><img class="lazyVis" data-src="img/popular/sw1.jpg"
-							alt=""></a>
-				</div>
-			</div>
-			<div class="popupPop__descr">
-				<div class="popupPop__descr-content">
-					<p class="popupPop__descr-title txt30 bold">Кухня В шоуруме</p>
-					<div class="popupPop__descr-ul">
-						<ul>
-							<li class="txt20 med">Фасады МДФ+Шпон ореха, МДФ+Пластик Fenix</li>
-							<li class="txt20 med">Столешница из массива дуба</li>
-							<li class="txt20 med">Фурнитура BLUM, Hettich</li>
-							<li class="txt20 med">Подъемные механизмы AVENTOS</li>
-							<li class="txt20 med">Барная стойка: Массив
-								дуба+стабилизированный мох </li>
-						</ul>
-					</div>
-					<p class="popupPop__descr-cost txt20">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
-				</div>
-				<form action="">
-					<input type="hidden" name="title" value="Форма кухни в шоуруме">
-					<span class="input-wrap">
-						<input name="phone" class="inputTel" required class="txt18" type="tel"
-							placeholder="Введите ваш телефон">
-					</span>
-					<span class="input-wrap">
-						<input name="name" required class="txt18" type="name" placeholder="Введите ваше имя">
-					</span>
-					<span class="btn-wrap">
-						<button class="txt20 fontAb mainBtn">ОСТАВИТЬ ЗАЯВКУ </button>
-					</span>
-				</form>
-			</div>
-		</div>
-		<div class="close-wrap">
-			<span class="popupSty--close close"><svg id="Capa_1" enable-background="new 0 0 413.348 413.348" height="512"
-					viewBox="0 0 413.348 413.348" width="512" xmlns="http://www.w3.org/2000/svg">
-					<path fill="#eeab09"
-						d="m413.348 24.354-24.354-24.354-182.32 182.32-182.32-182.32-24.354 24.354 182.32 182.32-182.32 182.32 24.354 24.354 182.32-182.32 182.32 182.32 24.354-24.354-182.32-182.32z" />
-				</svg></span>
-		</div>
-	</div>
-	<div class="popupPop" id="ci">
-		<div class="popupPop-wrap">
-			<div class="popupPop__imgs">
-				<div class="popupPop__imgs-big">
-					<a href="img/popular/si1.jpg" data-fancybox="ci"><img class="lazyVis" data-src="img/popular/si1.jpg"
-							alt=""></a>
-				</div>
-				<div class="popupPop__imgs-sm">
-					<a href="img/popular/si2.jpg" data-fancybox="ci"><img class="lazyVis" data-src="img/popular/si2.jpg"
-							alt=""></a>
-					<a href="img/popular/si3.jpg" data-fancybox="ci"><img class="lazyVis" data-src="img/popular/si3.jpg"
-							alt=""></a>
-					<a href="img/popular/si4.jpg" data-fancybox="ci"><img class="lazyVis" data-src="img/popular/si4.jpg"
-							alt=""></a>
-					<a href="img/popular/si5.jpg" data-fancybox="ci"><img class="lazyVis" data-src="img/popular/si5.jpg"
-							alt=""></a>
-					<a href="img/popular/si1.jpg" data-fancybox="ci"><img class="lazyVis" data-src="img/popular/si1.jpg"
-							alt=""></a>
-				</div>
-			</div>
-			<div class="popupPop__descr">
-				<div class="popupPop__descr-content">
-					<p class="popupPop__descr-title txt30 bold">Кухня Cinema</p>
-					<div class="popupPop__descr-ul">
-						<ul>
-							<li class="txt20 med">Фасады МДФ+Пластик ARPA,</li>
-							<li class="txt20 med">Столешница МДФ+пластик</li>
-							<li class="txt20 med">Подъемные механизмы AVENTOS</li>
-							<li class="txt20 med">Фурнитура BLUM</li>
-						</ul>
-					</div>
-					<p class="popupPop__descr-cost txt20">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
-				</div>
-				<form action="">
-					<input type="hidden" name="title" value="Форма кухни синема">
-					<span class="input-wrap">
-						<input name="phone" class="inputTel" required class="txt18" type="tel"
-							placeholder="Введите ваш телефон">
-					</span>
-					<span class="input-wrap">
-						<input name="name" required class="txt18" type="name" placeholder="Введите ваше имя">
-					</span>
-					<span class="btn-wrap">
-						<button class="txt20 fontAb mainBtn">ОСТАВИТЬ ЗАЯВКУ </button>
-					</span>
-				</form>
-			</div>
-		</div>
-		<div class="close-wrap">
-			<span class="popupSty--close close"><svg id="Capa_1" enable-background="new 0 0 413.348 413.348" height="512"
-					viewBox="0 0 413.348 413.348" width="512" xmlns="http://www.w3.org/2000/svg">
-					<path fill="#eeab09"
-						d="m413.348 24.354-24.354-24.354-182.32 182.32-182.32-182.32-24.354 24.354 182.32 182.32-182.32 182.32 24.354 24.354 182.32-182.32 182.32 182.32 24.354-24.354-182.32-182.32z" />
-				</svg></span>
-		</div>
-	</div>
-	<div class="popupPop" id="w">
+	</div>	<div class="popupPop" id="w">
 		<div class="popupPop-wrap">
 			<div class="popupPop__imgs">
 				<div class="popupPop__imgs-big">
@@ -2050,7 +1882,8 @@
 							<li class="txt20 med">Фурнитура BLUM</li>
 						</ul>
 					</div>
-					<p class="popupPop__descr-cost txt20">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
+					<p class="popupPop__descr-cost txt20">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span>
+					</p>
 				</div>
 				<form action="">
 					<input type="hidden" name="title" value="Форма кухни уайт & вуд">
@@ -2068,65 +1901,14 @@
 			</div>
 		</div>
 		<div class="close-wrap">
-			<span class="popupSty--close close"><svg id="Capa_1" enable-background="new 0 0 413.348 413.348" height="512"
-					viewBox="0 0 413.348 413.348" width="512" xmlns="http://www.w3.org/2000/svg">
+			<span class="popupSty--close close"><svg id="Capa_1" enable-background="new 0 0 413.348 413.348"
+					height="512" viewBox="0 0 413.348 413.348" width="512" xmlns="http://www.w3.org/2000/svg">
 					<path fill="#eeab09"
 						d="m413.348 24.354-24.354-24.354-182.32 182.32-182.32-182.32-24.354 24.354 182.32 182.32-182.32 182.32 24.354 24.354 182.32-182.32 182.32 182.32 24.354-24.354-182.32-182.32z" />
 				</svg></span>
 		</div>
 	</div>
-	<div class="popupPop" id="wg">
-		<div class="popupPop-wrap">
-			<div class="popupPop__imgs">
-				<div class="popupPop__imgs-big">
-					<a href="img/popular/wg1.jpeg" data-fancybox="wg"><img class="lazyVis" data-src="img/popular/wg1.jpeg"
-							alt=""></a>
-				</div>
-				<div class="popupPop__imgs-sm">
-					<a href="img/popular/wg2.jpg" data-fancybox="wg"><img class="lazyVis" data-src="img/popular/wg2.jpg"
-							alt=""></a>
-					<a href="img/popular/wg3.jpg" data-fancybox="wg"><img class="lazyVis" data-src="img/popular/wg3.jpg"
-							alt=""></a>
-					<a href="img/popular/wg1.jpeg" data-fancybox="wg"><img class="lazyVis" data-src="img/popular/wg1.jpeg"
-							alt=""></a>
-				</div>
-			</div>
-			<div class="popupPop__descr">
-				<div class="popupPop__descr-content">
-					<p class="popupPop__descr-title txt30 bold">Кухня Wood gloss</p>
-					<div class="popupPop__descr-ul">
-						<ul>
-							<li class="txt20 med">Фасады МДФ+пластик ARPA</li>
-							<li class="txt20 med">Фурнитура Blum,</li>
-							<li class="txt20 med">Столешница ДСП+пластик,</li>
-							<li class="txt20 med">Фартук ДСП+пластик</li>
-						</ul>
-					</div>
-					<p class="popupPop__descr-cost txt20">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
-				</div>
-				<form action="">
-					<input type="hidden" name="title" value="Форма кухни вуд глос">
-					<span class="input-wrap">
-						<input name="phone" class="inputTel" required class="txt18" type="tel"
-							placeholder="Введите ваш телефон">
-					</span>
-					<span class="input-wrap">
-						<input name="name" required class="txt18" type="name" placeholder="Введите ваше имя">
-					</span>
-					<span class="btn-wrap">
-						<button class="txt20 fontAb mainBtn">ОСТАВИТЬ ЗАЯВКУ </button>
-					</span>
-				</form>
-			</div>
-		</div>
-		<div class="close-wrap">
-			<span class="popupSty--close close"><svg id="Capa_1" enable-background="new 0 0 413.348 413.348" height="512"
-					viewBox="0 0 413.348 413.348" width="512" xmlns="http://www.w3.org/2000/svg">
-					<path fill="#eeab09"
-						d="m413.348 24.354-24.354-24.354-182.32 182.32-182.32-182.32-24.354 24.354 182.32 182.32-182.32 182.32 24.354 24.354 182.32-182.32 182.32 182.32 24.354-24.354-182.32-182.32z" />
-				</svg></span>
-		</div>
-	</div>	<div class="popup-terms politic">
+	<div class="popup-terms politic">
 		<p class="txt35">
 			ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ
 		</p>
