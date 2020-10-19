@@ -26,7 +26,7 @@
 							</span>
 						</span>
 						<span class="header__phone-txt">
-							<a class="txt24 bold underline" href="tel:89312553745">Перезвонить Вам?</a>
+							<p class="txt24 bold underline order" href="tel:89312553745">Перезвонить Вам?</p>
 						</span>
 					</div>
 				</div>
@@ -78,10 +78,7 @@
 				<div class="main__request">
 					<div class="main__request-title">
 						<p class="txt24 med">
-							Оставьте заявку до <span class="countdown bold" id="countdown">
-								<span class="hours countdown-time">24</span>:<span
-									class="minutes countdown-time">60</span>:<span class="seconds countdown-time">60</span>
-							</span> и
+							Оставьте заявку до <span class="time bold"></span> и
 							получите фирменный торт ручной работы <br>
 							весом до 2кг в подарок + дизайн проект и сборку!
 						</p>
@@ -91,7 +88,7 @@
 							<input type="hidden" name="title" value="Форма на главной">
 							<span class="input-wrap">
 								<img src="img/svg/user.svg" alt="">
-								<input name="name" equired class="txt18" type="name" placeholder="Ваше имя">
+								<input name="name" required class="txt18" type="name" placeholder="Ваше имя">
 							</span>
 							<span class="input-wrap">
 								<img src="img/svg/phone1.svg" alt="">
@@ -208,19 +205,19 @@
 				</h2>
 			</div>
 			<div class="styles__cards">
-				<div class="styles__cards-item" data-style="#mod">
+				<div class="styles__cards-item" data-style="#mod" data-obj="mod">
 					<img class="lazy" data-src="img/styles/mod/preImg.png" alt="">
 					<p class="txt35 fontAb white">Модерн</p>
 				</div>
-				<div class="styles__cards-item" data-style="#cls">
+				<div class="styles__cards-item" data-style="#cls" data-obj="cls">
 					<img class="lazy" data-src="img/styles/cl/preImg.png" alt="">
 					<p class="txt35 fontAb white">Классика</p>
 				</div>
-				<div class="styles__cards-item" data-style="#et">
+				<div class="styles__cards-item" data-style="#et" data-obj="et">
 					<img class="lazy" data-src="img/styles/et/preImg.png" alt="">
 					<p class="txt35 fontAb white">Этно-стиль</p>
 				</div>
-				<div class="styles__cards-item" data-style="#hi">
+				<div class="styles__cards-item" data-style="#hi" data-obj="hi">
 					<img class="lazy" data-src="img/styles/hi/preImg.png" alt="">
 					<p class="txt35 fontAb white">Хай-тек</p>
 				</div>
@@ -231,19 +228,19 @@
 						и мы свяжемся с Вами
 						в течение 15 минут!</p>
 				</div>
-				<div class="styles__cards-item" data-style="#lof">
+				<div class="styles__cards-item" data-style="#lof" data-obj="lof">
 					<img class="lazy" data-src="img/styles/lo/preImg.png" alt="">
 					<p class="txt35 fontAb white">Лофт</p>
 				</div>
-				<div class="styles__cards-item" data-style="#min">
+				<div class="styles__cards-item" data-style="#min" data-obj="min">
 					<img class="lazy" data-src="img/styles/min/preImg.png" alt="">
 					<p class="txt35 fontAb white">Минимал</p>
 				</div>
-				<div class="styles__cards-item" data-style="#bar">
+				<div class="styles__cards-item" data-style="#bar" data-obj="bar">
 					<img class="lazy" data-src="img/styles/b/preImg.png" alt="">
 					<p class="txt35 fontAb white">Барокко</p>
 				</div>
-				<div class="styles__cards-item" data-style="#pro">
+				<div class="styles__cards-item" data-style="#pro" data-obj="pro">
 					<img class="lazy" data-src="img/styles/pr/preImg.png" alt="">
 					<p class="txt35 fontAb white">Прованс</p>
 				</div>
@@ -808,7 +805,7 @@
 			morePop.filter(el.data("pop")).fadeIn();
 			$(".popup-background").fadeIn();
 			$("html").addClass("overflowHidden");
-	
+			$(window).trigger("scroll");
 			return false;
 		}
 	</script>
@@ -830,7 +827,7 @@
 				<div class="popular__tab1 tab" id="tab1">
 					<div class="popular__slider popular__slider-1">
 						<div class="popular__slider-item">
-							<img class="lazy" data-src="img/popular/n1.jpg" alt="">
+							<img src="img/popular/n1.jpg" alt="">
 							<p class="txt30 bold">Кухня New York</p>
 							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
 							<div class="popular__slider-more">
@@ -839,7 +836,7 @@
 							</div>
 						</div>
 						<div class="popular__slider-item">
-							<img class="lazy" data-src="img/popular/w1.jpg" alt="">
+							<img src="img/popular/w1.jpg" alt="">
 							<p class="txt30 bold">Кухня White&Wood</p>
 							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
 							<div class="popular__slider-more">
@@ -848,7 +845,7 @@
 							</div>
 						</div>
 						<div class="popular__slider-item">
-							<img class="lazy" data-src="img/popular/c1.jpg" alt="">
+							<img src="img/popular/c1.jpg" alt="">
 							<p class="txt30 bold">Кухня Cappuchino</p>
 							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
 							<div class="popular__slider-more">
@@ -857,7 +854,7 @@
 							</div>
 						</div>
 						<div class="popular__slider-item">
-							<img class="lazy" data-src="img/popular/sw1.jpg" alt="">
+							<img src="img/popular/sw1.jpg" alt="">
 							<p class="txt30 bold">Кухня в ShowRoom</p>
 							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
 							<div class="popular__slider-more">
@@ -866,7 +863,7 @@
 							</div>
 						</div>
 						<div class="popular__slider-item">
-							<img class="lazy" data-src="img/popular/si1.jpg" alt="">
+							<img src="img/popular/si1.jpg" alt="">
 							<p class="txt30 bold">Кухня Cinema</p>
 							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
 							<div class="popular__slider-more">
@@ -875,7 +872,7 @@
 							</div>
 						</div>
 						<div class="popular__slider-item">
-							<img class="lazy" data-src="img/popular/s1.jpg" alt="">
+							<img src="img/popular/s1.jpg" alt="">
 							<p class="txt30 bold">Кухня Stone</p>
 							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
 							<div class="popular__slider-more">
@@ -884,7 +881,7 @@
 							</div>
 						</div>
 						<div class="popular__slider-item">
-							<img class="lazy" data-src="img/popular/t1.jpeg" alt="">
+							<img src="img/popular/t1.jpeg" alt="">
 							<p class="txt30 bold">Кухня Tokyo</p>
 							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
 							<div class="popular__slider-more">
@@ -893,7 +890,7 @@
 							</div>
 						</div>
 						<div class="popular__slider-item">
-							<img class="lazy" data-src="img/popular/wg1.jpeg" alt="">
+							<img src="img/popular/wg1.jpeg" alt="">
 							<p class="txt30 bold">Кухня White gloss</p>
 							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
 							<div class="popular__slider-more">
@@ -903,20 +900,18 @@
 						</div>
 					</div>
 					<div class="slider-pagin">
-						<span class="popular__slider-arrowL-1"><img class="lazy" data-src="img/svg/arrowL.svg"
-								alt=""></span>
+						<span class="popular__slider-arrowL-1"><img src="img/svg/arrowL.svg" alt=""></span>
 						<p class="slider-pagin-status slider-pagin-status-1">
 							<span class="txt36 colorM2">01
 							</span> <span class="txt36"> / 08</span>
 						</p>
-						<span class="popular__slider-arrowR-1"><img class="lazy" data-src="img/svg/arrowR.svg"
-								alt=""></span>
+						<span class="popular__slider-arrowR-1"><img src="img/svg/arrowR.svg" alt=""></span>
 					</div>
 				</div>
 				<div class="popular__tab2 tab" id="tab2">
 					<div class="popular__slider popular__slider-2">
 						<div class="popular__slider-item">
-							<img class="lazy" data-src="img/popular/n1.jpg" alt="">
+							<img src="img/popular/n1.jpg" alt="">
 							<p class="txt30 bold">Кухня New York</p>
 							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
 							<div class="popular__slider-more">
@@ -925,7 +920,7 @@
 							</div>
 						</div>
 						<div class="popular__slider-item">
-							<img class="lazy" data-src="img/popular/w1.jpg" alt="">
+							<img src="img/popular/w1.jpg" alt="">
 							<p class="txt30 bold">Кухня White&Wood</p>
 							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
 							<div class="popular__slider-more">
@@ -934,7 +929,7 @@
 							</div>
 						</div>
 						<div class="popular__slider-item">
-							<img class="lazy" data-src="img/popular/c1.jpg" alt="">
+							<img src="img/popular/c1.jpg" alt="">
 							<p class="txt30 bold">Кухня Cappuchino</p>
 							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
 							<div class="popular__slider-more">
@@ -943,7 +938,7 @@
 							</div>
 						</div>
 						<div class="popular__slider-item">
-							<img class="lazy" data-src="img/popular/sw1.jpg" alt="">
+							<img src="img/popular/sw1.jpg" alt="">
 							<p class="txt30 bold">Кухня в ShowRoom</p>
 							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
 							<div class="popular__slider-more">
@@ -952,7 +947,7 @@
 							</div>
 						</div>
 						<div class="popular__slider-item">
-							<img class="lazy" data-src="img/popular/si1.jpg" alt="">
+							<img src="img/popular/si1.jpg" alt="">
 							<p class="txt30 bold">Кухня Cinema</p>
 							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
 							<div class="popular__slider-more">
@@ -961,7 +956,7 @@
 							</div>
 						</div>
 						<div class="popular__slider-item">
-							<img class="lazy" data-src="img/popular/s1.jpg" alt="">
+							<img src="img/popular/s1.jpg" alt="">
 							<p class="txt30 bold">Кухня Stone</p>
 							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
 							<div class="popular__slider-more">
@@ -970,7 +965,7 @@
 							</div>
 						</div>
 						<div class="popular__slider-item">
-							<img class="lazy" data-src="img/popular/t1.jpeg" alt="">
+							<img src="img/popular/t1.jpeg" alt="">
 							<p class="txt30 bold">Кухня Tokyo</p>
 							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
 							<div class="popular__slider-more">
@@ -979,7 +974,7 @@
 							</div>
 						</div>
 						<div class="popular__slider-item">
-							<img class="lazy" data-src="img/popular/wg1.jpeg" alt="">
+							<img src="img/popular/wg1.jpeg" alt="">
 							<p class="txt30 bold">Кухня White gloss</p>
 							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
 							<div class="popular__slider-more">
@@ -989,20 +984,18 @@
 						</div>
 					</div>
 					<div class="slider-pagin">
-						<span class="popular__slider-arrowL-2"><img class="lazy" data-src="img/svg/arrowL.svg"
-								alt=""></span>
+						<span class="popular__slider-arrowL-2"><img src="img/svg/arrowL.svg" alt=""></span>
 						<p class="slider-pagin-status slider-pagin-status-2">
 							<span class="txt36 colorM2">01
 							</span> <span class="txt36"> / 08</span>
 						</p>
-						<span class="popular__slider-arrowR-2"><img class="lazy" data-src="img/svg/arrowR.svg"
-								alt=""></span>
+						<span class="popular__slider-arrowR-2"><img src="img/svg/arrowR.svg" alt=""></span>
 					</div>
 				</div>
 				<div class="popular__tab3 tab" id="tab3">
 					<div class="popular__slider popular__slider-3">
 						<div class="popular__slider-item">
-							<img class="lazy" data-src="img/popular/n1.jpg" alt="">
+							<img src="img/popular/n1.jpg" alt="">
 							<p class="txt30 bold">Кухня New York</p>
 							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
 							<div class="popular__slider-more">
@@ -1011,7 +1004,7 @@
 							</div>
 						</div>
 						<div class="popular__slider-item">
-							<img class="lazy" data-src="img/popular/w1.jpg" alt="">
+							<img src="img/popular/w1.jpg" alt="">
 							<p class="txt30 bold">Кухня White&Wood</p>
 							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
 							<div class="popular__slider-more">
@@ -1020,7 +1013,7 @@
 							</div>
 						</div>
 						<div class="popular__slider-item">
-							<img class="lazy" data-src="img/popular/c1.jpg" alt="">
+							<img src="img/popular/c1.jpg" alt="">
 							<p class="txt30 bold">Кухня Cappuchino</p>
 							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
 							<div class="popular__slider-more">
@@ -1029,7 +1022,7 @@
 							</div>
 						</div>
 						<div class="popular__slider-item">
-							<img class="lazy" data-src="img/popular/sw1.jpg" alt="">
+							<img src="img/popular/sw1.jpg" alt="">
 							<p class="txt30 bold">Кухня в ShowRoom</p>
 							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
 							<div class="popular__slider-more">
@@ -1038,7 +1031,7 @@
 							</div>
 						</div>
 						<div class="popular__slider-item">
-							<img class="lazy" data-src="img/popular/si1.jpg" alt="">
+							<img src="img/popular/si1.jpg" alt="">
 							<p class="txt30 bold">Кухня Cinema</p>
 							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
 							<div class="popular__slider-more">
@@ -1047,7 +1040,7 @@
 							</div>
 						</div>
 						<div class="popular__slider-item">
-							<img class="lazy" data-src="img/popular/s1.jpg" alt="">
+							<img src="img/popular/s1.jpg" alt="">
 							<p class="txt30 bold">Кухня Stone</p>
 							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
 							<div class="popular__slider-more">
@@ -1056,7 +1049,7 @@
 							</div>
 						</div>
 						<div class="popular__slider-item">
-							<img class="lazy" data-src="img/popular/t1.jpeg" alt="">
+							<img src="img/popular/t1.jpeg" alt="">
 							<p class="txt30 bold">Кухня Tokyo</p>
 							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
 							<div class="popular__slider-more">
@@ -1065,7 +1058,7 @@
 							</div>
 						</div>
 						<div class="popular__slider-item">
-							<img class="lazy" data-src="img/popular/wg1.jpeg" alt="">
+							<img src="img/popular/wg1.jpeg" alt="">
 							<p class="txt30 bold">Кухня White gloss</p>
 							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
 							<div class="popular__slider-more">
@@ -1075,20 +1068,18 @@
 						</div>
 					</div>
 					<div class="slider-pagin">
-						<span class="popular__slider-arrowL-3"><img class="lazy" data-src="img/svg/arrowL.svg"
-								alt=""></span>
+						<span class="popular__slider-arrowL-3"><img src="img/svg/arrowL.svg" alt=""></span>
 						<p class="slider-pagin-status slider-pagin-status-3">
 							<span class="txt36 colorM2">01
 							</span> <span class="txt36"> / 08</span>
 						</p>
-						<span class="popular__slider-arrowR-3"><img class="lazy" data-src="img/svg/arrowR.svg"
-								alt=""></span>
+						<span class="popular__slider-arrowR-3"><img src="img/svg/arrowR.svg" alt=""></span>
 					</div>
 				</div>
 				<div class="popular__tab4 tab" id="tab4">
 					<div class="popular__slider popular__slider-4">
 						<div class="popular__slider-item">
-							<img class="lazy" data-src="img/popular/n1.jpg" alt="">
+							<img src="img/popular/n1.jpg" alt="">
 							<p class="txt30 bold">Кухня New York</p>
 							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
 							<div class="popular__slider-more">
@@ -1097,7 +1088,7 @@
 							</div>
 						</div>
 						<div class="popular__slider-item">
-							<img class="lazy" data-src="img/popular/w1.jpg" alt="">
+							<img src="img/popular/w1.jpg" alt="">
 							<p class="txt30 bold">Кухня White&Wood</p>
 							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
 							<div class="popular__slider-more">
@@ -1106,7 +1097,7 @@
 							</div>
 						</div>
 						<div class="popular__slider-item">
-							<img class="lazy" data-src="img/popular/c1.jpg" alt="">
+							<img src="img/popular/c1.jpg" alt="">
 							<p class="txt30 bold">Кухня Cappuchino</p>
 							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
 							<div class="popular__slider-more">
@@ -1115,7 +1106,7 @@
 							</div>
 						</div>
 						<div class="popular__slider-item">
-							<img class="lazy" data-src="img/popular/sw1.jpg" alt="">
+							<img src="img/popular/sw1.jpg" alt="">
 							<p class="txt30 bold">Кухня в ShowRoom</p>
 							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
 							<div class="popular__slider-more">
@@ -1124,7 +1115,7 @@
 							</div>
 						</div>
 						<div class="popular__slider-item">
-							<img class="lazy" data-src="img/popular/si1.jpg" alt="">
+							<img src="img/popular/si1.jpg" alt="">
 							<p class="txt30 bold">Кухня Cinema</p>
 							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
 							<div class="popular__slider-more">
@@ -1133,7 +1124,7 @@
 							</div>
 						</div>
 						<div class="popular__slider-item">
-							<img class="lazy" data-src="img/popular/s1.jpg" alt="">
+							<img src="img/popular/s1.jpg" alt="">
 							<p class="txt30 bold">Кухня Stone</p>
 							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
 							<div class="popular__slider-more">
@@ -1142,7 +1133,7 @@
 							</div>
 						</div>
 						<div class="popular__slider-item">
-							<img class="lazy" data-src="img/popular/t1.jpeg" alt="">
+							<img src="img/popular/t1.jpeg" alt="">
 							<p class="txt30 bold">Кухня Tokyo</p>
 							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
 							<div class="popular__slider-more">
@@ -1151,7 +1142,7 @@
 							</div>
 						</div>
 						<div class="popular__slider-item">
-							<img class="lazy" data-src="img/popular/wg1.jpeg" alt="">
+							<img src="img/popular/wg1.jpeg" alt="">
 							<p class="txt30 bold">Кухня White gloss</p>
 							<p class="txt18">Цена за пог.м. от: <span class="txt25 bold">17 000 р.</span></p>
 							<div class="popular__slider-more">
@@ -1161,14 +1152,12 @@
 						</div>
 					</div>
 					<div class="slider-pagin">
-						<span class="popular__slider-arrowL-4"><img class="lazy" data-src="img/svg/arrowL.svg"
-								alt=""></span>
+						<span class="popular__slider-arrowL-4"><img src="img/svg/arrowL.svg" alt=""></span>
 						<p class="slider-pagin-status slider-pagin-status-4">
 							<span class="txt36 colorM2">01
 							</span> <span class="txt36"> / 08</span>
 						</p>
-						<span class="popular__slider-arrowR-4"><img class="lazy" data-src="img/svg/arrowR.svg"
-								alt=""></span>
+						<span class="popular__slider-arrowR-4"><img src="img/svg/arrowR.svg" alt=""></span>
 					</div>
 				</div>
 				<div class="pagin paginColor txt24">
@@ -1177,7 +1166,7 @@
 					<a href="#block3" class="paginColor txt24">03</a>
 					<a href="#block4" class="paginColor txt24">04</a>
 					<a href="#block5" class="paginFlex"><span class="paginBlack">
-							05</span> <img class="lazy" data-src="img/line.png" alt="">
+							05</span> <img src="img/line.png" alt="">
 					</a>
 					<a href="#block6" class="paginColor txt24">06</a>
 					<a href="#block7" class="paginColor txt24">07</a>
@@ -1647,72 +1636,12 @@
 					</svg></span>
 			</div>
 		</div>
-	</div>	<div class="popupSty" id="mod">
+	</div>	<div class="popupSty" id="cls">
 		<div class="popupSty-wrap">
 			<div class="popupSty__imgs">
 				<div class="popupSty__imgs-big">
-					<a href="img/styles/mod/img2.jpg" data-fancybox="mod"><img class="lazyVis"
-							data-src="img/styles/mod/img2.jpg" alt=""></a>
-				</div>
-				<div class="popupSty__imgs-sm">
-					<a href="img/styles/mod/img3.jpg" data-fancybox="mod"><img class="lazyVis"
-							data-src="img/styles/mod/img3.jpg" alt=""></a>
-					<a href="img/styles/mod/img4.jpg" data-fancybox="mod"><img class="lazyVis"
-							data-src="img/styles/mod/img4.jpg" alt=""></a>
-					<a href="img/styles/mod/img5.jpg" data-fancybox="mod"><img class="lazyVis"
-							data-src="img/styles/mod/img5.jpg" alt=""></a>
-					<a href="img/styles/mod/img1.png" data-fancybox="mod"><img class="lazyVis"
-							data-src="img/styles/mod/img1.png" alt=""></a>
-				</div>
-			</div>
-			<div class="popupSty__descr">
-				<div class="popupSty__descr-content">
-					<p class="popupSty__descr-title txt24 bold">Модерн</p>
-					<p class="popupSty__descr-txt txt18 med">Большинство современных кухонь тяготеет к стилю модерн.
-						И неудивительно – дизайн в этом стиле отвечает динамичности
-						современной жизни. Для модерна характерны отсутствие строгих
-						линий и тяга к асимметрии. При этом функциональность
-						и рациональность ему совсем не чужды.
-						Модерн приемлет пластик, стекло, металл, яркость красок
-						и разнообразие форм. Освещение может быть совершенно разным
-						– для модерна одинаково характерны оригинальные абажуры
-						с плавными формами и асимметричной конструкцией
-						и точечные светильники.
-					</p>
-					<p class="popupSty__descr-txt txt18 med">Оставьте заявку, если вам понравился данный стиль. Наш
-						дизайнер сделает небольшую подборку наших работ схожих
-						с этой и подарит скидку 10%
-					</p>
-				</div>
-				<form action="">
-					<input type="hidden" name="title" value="Форма стиля модерн">
-					<span class="input-wrap">
-						<input name="phone" class="inputTel" required class="txt18" type="tel"
-							placeholder="Введите ваш телефон">
-					</span>
-					<span class="input-wrap">
-						<input name="name" required class="txt18" type="name" placeholder="Введите ваше имя">
-					</span>
-					<span class="btn-wrap">
-						<button class="txt20 fontAb mainBtn">ОСТАВИТЬ ЗАЯВКУ </button>
-					</span>
-				</form>
-			</div>
-		</div>
-		<div class="close-wrap">
-			<span class="popupSty--close close"><svg id="Capa_1" enable-background="new 0 0 413.348 413.348" height="512"
-					viewBox="0 0 413.348 413.348" width="512" xmlns="http://www.w3.org/2000/svg">
-					<path fill="#eeab09"
-						d="m413.348 24.354-24.354-24.354-182.32 182.32-182.32-182.32-24.354 24.354 182.32 182.32-182.32 182.32 24.354 24.354 182.32-182.32 182.32 182.32 24.354-24.354-182.32-182.32z" />
-				</svg></span>
-		</div>
-	</div>
-	<div class="popupSty" id="cls">
-		<div class="popupSty-wrap">
-			<div class="popupSty__imgs">
-				<div class="popupSty__imgs-big">
-					<a href="img/styles/cl/preImg.png" data-fancybox="cl"><img class="lazyVis"
-							data-src="img/styles/cl/preImg.png" alt=""></a>
+					<a href="img/styles/cl/img2.jpg" data-fancybox="cl"><img class="lazyVis"
+							data-src="img/styles/cl/img2.jpg" alt=""></a>
 				</div>
 				<div class="popupSty__imgs-sm">
 					<a href="img/styles/cl/img3.jpg" data-fancybox="cl"><img class="lazyVis"
@@ -1721,8 +1650,8 @@
 							data-src="img/styles/cl/img4.jpg" alt=""></a>
 					<a href="img/styles/cl/img5.jpg" data-fancybox="cl"><img class="lazyVis"
 							data-src="img/styles/cl/img5.jpg" alt=""></a>
-					<a href="img/styles/cl/img2.jpg" data-fancybox="cl"><img class="lazyVis"
-							data-src="img/styles/cl/img2.jpg" alt=""></a>
+					<a href="img/styles/cl/img1.png" data-fancybox="cl"><img class="lazyVis"
+							data-src="img/styles/cl/img1.png" alt=""></a>
 				</div>
 			</div>
 			<div class="popupSty__descr">
@@ -2094,6 +2023,57 @@
 				</div>
 				<form action="">
 					<input type="hidden" name="title" value="Форма стиля прованс">
+					<span class="input-wrap">
+						<input name="phone" class="inputTel" required class="txt18" type="tel"
+							placeholder="Введите ваш телефон">
+					</span>
+					<span class="input-wrap">
+						<input name="name" required class="txt18" type="name" placeholder="Введите ваше имя">
+					</span>
+					<span class="btn-wrap">
+						<button class="txt20 fontAb mainBtn">ОСТАВИТЬ ЗАЯВКУ </button>
+					</span>
+				</form>
+			</div>
+		</div>
+		<div class="close-wrap">
+			<span class="popupSty--close close"><svg id="Capa_1" enable-background="new 0 0 413.348 413.348" height="512"
+					viewBox="0 0 413.348 413.348" width="512" xmlns="http://www.w3.org/2000/svg">
+					<path fill="#eeab09"
+						d="m413.348 24.354-24.354-24.354-182.32 182.32-182.32-182.32-24.354 24.354 182.32 182.32-182.32 182.32 24.354 24.354 182.32-182.32 182.32 182.32 24.354-24.354-182.32-182.32z" />
+				</svg></span>
+		</div>
+	</div> --}}
+	
+	<div class="popupSty" id="mod">
+		<div class="popupSty-wrap">
+			<div class="popupSty__imgs">
+				<div class="popupSty__imgs-big">
+				</div>
+				<div class="popupSty__imgs-sm">
+				</div>
+			</div>
+			<div class="popupSty__descr">
+				<div class="popupSty__descr-content">
+					<p class="popupSty__descr-title txt24 bold">Модерн</p>
+					<p class="popupSty__descr-txt txt18 med">Большинство современных кухонь тяготеет к стилю модерн.
+						И неудивительно – дизайн в этом стиле отвечает динамичности
+						современной жизни. Для модерна характерны отсутствие строгих
+						линий и тяга к асимметрии. При этом функциональность
+						и рациональность ему совсем не чужды.
+						Модерн приемлет пластик, стекло, металл, яркость красок
+						и разнообразие форм. Освещение может быть совершенно разным
+						– для модерна одинаково характерны оригинальные абажуры
+						с плавными формами и асимметричной конструкцией
+						и точечные светильники.
+					</p>
+					<p class="popupSty__descr-txt txt18 med">Оставьте заявку, если вам понравился данный стиль. Наш
+						дизайнер сделает небольшую подборку наших работ схожих
+						с этой и подарит скидку 10%
+					</p>
+				</div>
+				<form action="">
+					<input type="hidden" name="title" value="Форма стиля модерн">
 					<span class="input-wrap">
 						<input name="phone" class="inputTel" required class="txt18" type="tel"
 							placeholder="Введите ваш телефон">

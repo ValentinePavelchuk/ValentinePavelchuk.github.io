@@ -328,7 +328,8 @@ body.compensate-for-scrollbar{overflow:hidden}.fancybox-active{height:auto}.fanc
 
 html {
   font-family: "Gilroy";
-  font-size: 10px; }
+  font-size: 10px;
+  margin-right: calc(-1 * (100vw - 100%)); }
 
 body {
   color: #111111;
@@ -471,7 +472,8 @@ img {
   font-weight: 500; }
 
 .container {
-  padding: 0 9.375vw; }
+  padding: 0 9.375vw;
+  padding-left: calc(9.375vw - 20px); }
 
 .fontG {
   font-family: "Gilroy"; }
@@ -833,10 +835,11 @@ img {
       color: #eeab09; }
   .header__phone-txt {
     margin-right: 5.98958vw; }
-  .header__phone-txt a {
+  .header__phone-txt p {
     -webkit-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out; }
-    .header__phone-txt a:hover {
+    transition: all 0.3s ease-out;
+    cursor: pointer; }
+    .header__phone-txt p:hover {
       color: #eeab09; }
 
 .main__title {
@@ -909,7 +912,7 @@ img {
 .main__request-form button {
   padding-right: 4.11458vw; }
 
-.countdown {
+.time {
   color: #e9ad03; }
 
 .requests {
@@ -919,7 +922,10 @@ img {
   background-size: cover;
   position: relative; }
   .requests__title {
-    text-align: center; }
+    text-align: center;
+    /* @include sm_700 {
+      margin-bottom: 40px;
+    } */ }
   .requests__cards {
     position: relative;
     margin: 0 auto;
@@ -1005,7 +1011,10 @@ img {
   background-size: cover;
   position: relative; }
   .styles__title {
-    text-align: center; }
+    text-align: center;
+    /* @include sm_700 {
+      margin-bottom: 40px;
+    } */ }
   .styles__cards {
     position: relative;
     display: -webkit-box;
@@ -1075,7 +1084,11 @@ img {
 .container-supm {
   position: relative; }
   .container-supm .pagin {
-    right: -6.5vw; }
+    right: -7.5vw; }
+  .container-supm h2 {
+    /* @include sm_700 {
+      margin-bottom: 40px;
+    } */ }
 
 .test {
   position: relative; }
@@ -1884,7 +1897,10 @@ img {
     color: #111111; }
 
 .popular__title {
-  text-align: center; }
+  text-align: center;
+  /*  @include sm_700 {
+      margin-bottom: 40px;
+    } */ }
   .popular__title p {
     margin-top: 1.5625vw; }
 
@@ -2525,7 +2541,9 @@ img {
     .popupSty__imgs-big {
       margin-bottom: 1.04167vw; }
     .popupSty__imgs-big img {
-      width: 100%; }
+      width: 100%;
+      -o-object-fit: cover;
+         object-fit: cover; }
       .popupSty__imgs-big img {
         height: 17.44792vw; }
     .popupSty__imgs-sm {
@@ -3498,6 +3516,10 @@ img {
 
 @media (max-width: 992px)
 {
+    html
+{
+        margin-right: 0;
+    }
     input
 {
         font-size: calc((12px + 6 * ((100vw - 320px) / 672) / 2));
@@ -4226,7 +4248,7 @@ img {
     }
     .team__cards
 {
-        margin-top: calc((40px + 10 * ((100vw - 320px) / 672) / 2));
+        margin-top: calc((20px + 30 * ((100vw - 320px) / 672) / 2));
     }
     .team__cards
 {
@@ -4273,7 +4295,7 @@ img {
     }
     .cases__slider-wrap
 {
-        margin-top: calc((30px + 20 * ((100vw - 320px) / 672) / 2));
+        margin-top: calc((20px + 30 * ((100vw - 320px) / 672) / 2));
     }
     .cases__slider-item
 {
@@ -4807,7 +4829,7 @@ img {
     .footer__map
 {
         width: 100%;
-        height: 20rem;
+        height: 25rem;
     }
     .footer__contacts
 {
@@ -4858,6 +4880,8 @@ img {
 {
         height: 100%;
         width: 100%;
+        -o-object-fit: cover;
+           object-fit: cover;
     }
     .popupPop__imgs-sm a
 {
@@ -4966,17 +4990,9 @@ img {
         margin-top: 10px;
         padding-right: 25px;
     }
-    .requests__title
-{
-        margin-bottom: 40px;
-    }
     .requests__cards
 {
         margin-top: 20px;
-    }
-    .styles__title
-{
-        margin-bottom: 40px;
     }
     .styles__cards-item
 {
@@ -4997,17 +5013,9 @@ img {
 {
         right: unset;
     }
-    .container-supm h2
-{
-        margin-bottom: 40px;
-    }
     .test-right
 {
         display: none;
-    }
-    .popular__title
-{
-        margin-bottom: 40px;
     }
     .popular__slider-item img
 {
@@ -5071,6 +5079,7 @@ img {
     .main__features-item
 {
         width: 250px;
+        margin-right: 0;
     }
     .main__request-form form > span
 {
