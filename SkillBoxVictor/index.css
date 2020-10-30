@@ -7,6 +7,13 @@
 .container {
     padding: 0 7.3vw;
 }
+.button:hover {
+	background-color: #3F2AFF;
+	color: #fff;
+}
+.button.to_learn_more:hover {
+	transform: scale(1.1);
+}
 .link, .call_number, .mail, .position {
     font-size: clamp(14px, 1.35vw, 26px);
 }
@@ -16,11 +23,13 @@
 .link {
     color: white;
     text-decoration: none;
-    margin: 0 10px;
+	margin: 0 10px;
+	padding: 0.5rem ;
+	transition: 0.3s;
+	border-radius: 6px;
 }
 .link:hover {
-    background-color: red;
-    transition: 0.3s;
+    background-color: #3F2AFF;
 }
 .subtitle {
     font-size: clamp(18px, 2.8vw, 54px);
@@ -31,7 +40,8 @@
     padding: 0.89vw 3.13vw;
     border-radius: 6px;
     font-size: 0.93vw;
-    font-size: clamp(12px, 0.93vw, 18px);
+	font-size: clamp(12px, 0.93vw, 18px);
+	transition: all 0.3s ease;
 }
 /*/////////////////////////////////////////////////////////*/
 /*Блок Header*/
@@ -227,12 +237,84 @@
         flex-wrap: wrap;
     }
     .services_box .item {
-        width: 40%;
+		width: 47%;
+		text-align: center;
     }
     .portfolio_box {
         flex-wrap: wrap;
     }
-
+	.call_number {
+		font-size: 16px;
+	}
+	.about_me {
+		flex-wrap: wrap;
+	}
+	.about_me > div {
+		width: 100%;
+	}
+	.info_box .name {
+		font-size: clamp(30px, 4.16vw, 80px);
+	}
+	.info_box .position {
+		font-size: clamp(20px, 1.35vw, 26px);
+	}
+	.button {
+		font-size: 20px;
+    padding: 0.3rem 1rem;
+	}
+	.img_box {
+		margin-top: 2rem;
+	}
+	.subtitle {
+		font-size: 25px;
+	}
+	.portfolio_box .item {
+		width: 48%;
+	}
+	.portfolio_box .item > p {
+		font-size: clamp(18px, 1.04vw, 20px);
+	}
+	.portfolio_box .item img {
+		max-width: 100%;
+	}
+	.advertising .box h2 {
+		font-size: clamp(27px, 3.13vw, 80px);
+	}
+	.text {
+		font-size: clamp(18px, 1.04vw, 20px);
+	}
+	.footer .box {
+		flex-wrap: wrap;
+	}
+	.community {
+		width: 100%;
+		text-align: center;
+	}
+	.container {
+		padding: 0 15px;
+	}
+	.portfolio {
+		margin-top: 3rem;
+	}
+	.portfolio_box {
+		justify-content: space-around;
+	}
+	.portfolio_box .item {
+		text-align: center;
+	}
+	.media_box {
+		display: none;
+	}
+	.about_me {
+		margin-top: 3rem;
+	}
+	.nav-button {
+		padding: 0.3rem 0.3rem;
+    font-size: 18px;
+	}
+	.header {
+		padding: 1rem 15px;
+	}
 }
 
 
