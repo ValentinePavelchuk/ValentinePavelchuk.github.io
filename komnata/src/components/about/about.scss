@@ -1,22 +1,29 @@
 .about {
+  padding-top: clamp(32px, 2rem, 180px);
   text-align: center;
 
   &-wrapper {
     @media(min-width: $screen-md) {
       display: flex;
       align-items: center;
+      justify-content: space-between;
     }
   }
 
   &-text {
     @media(min-width: $screen-md) {
-      max-width: 50%;
+      max-width: 475px;
       text-align: left;
     }
   }
 
   &__btn {
+    margin: 0 auto;
     text-decoration: unset;
+
+    @media(min-width: $screen-md) {
+      margin: 0;
+    }
   }
 
   &-cards {

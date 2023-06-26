@@ -19,11 +19,6 @@
 
 :where(h1) {
   font-size: 2em;
-  margin: 0.67em 0;
-}
-
-:where(p + p) {
-  margin-top: 1rem;
 }
 
 :where(a) {
@@ -67,15 +62,10 @@
 
 :where(button, [type=button], [type=reset], [type=submit]) {
   -webkit-appearance: button;
-  padding: 1px 6px;
 }
 
 :where(input) {
   overflow: visible;
-}
-
-:where(input, textarea) {
-  padding: 1px;
 }
 
 :where(fieldset) {
@@ -150,6 +140,7 @@
 
 :where(dl, ol, ul) {
   margin: 0;
+  list-style: none;
 }
 
 :where(ol ol, ol ul, ol dl, ul ol, ul ul, ul dl, dl ol, dl ul, dl dl) {
@@ -194,7 +185,6 @@
   height: fit-content;
   left: 0;
   margin: auto;
-  padding: 1em;
   position: absolute;
   right: 0;
   width: fit-content;

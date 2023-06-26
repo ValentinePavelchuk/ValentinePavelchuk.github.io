@@ -1,0 +1,20 @@
+.link-contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+  text-decoration: unset;
+  transition: color $transition;
+
+  @media(min-width: $screen-md) {
+    justify-content: flex-start;
+  }
+
+  &:hover {
+    color: $color-brand;
+  }
+
+  &:first-of-type {
+    margin-top: 0;
+  }
+}

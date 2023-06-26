@@ -7,6 +7,10 @@
     text-align: center;
   }
 
+  &-content {
+    text-align: center;
+  }
+
   &-cards {
     display: none;
 
@@ -24,6 +28,10 @@
     text-align: center;
     background: $bg-thrid;
     border-radius: 10px;
+
+    @media(min-width: $screen-md) {
+      padding: 46px 36px 66px;
+    }
 
     &__days {
       display: flex;
@@ -49,7 +57,7 @@
         font-weight: 700;
 
         & > span {
-          font-size: 14px;
+          font-size: clamp(14px, 0.8rem, 20px);
           font-weight: 300;
         }
       }
@@ -65,6 +73,10 @@
 
     &__btn {
       margin-top: 32px;
+
+      @media(min-width: $screen-md) {
+        display: none;
+      }
     }
   }
 
@@ -73,9 +85,17 @@
       display: none;
     }
 
+    &__item {
+      max-width: 450px;
+    }
+
     &-btn {
       top: unset;
       bottom: 20px;
     }
+  }
+
+  &-btn {
+    margin: 46px auto 0;
   }
 }

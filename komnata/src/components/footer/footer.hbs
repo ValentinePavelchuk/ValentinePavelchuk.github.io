@@ -1,41 +1,59 @@
 <footer class="footer" id="footer">
-    <div class="footer-btn">
-        {{> button class="btn--trans" text="Забронировать"}}
-    </div>
-    <div class="footer-contacts">
-        <div class="footer-contacts__item">
-            <a class="link footer-contacts__link white-txt" href="/">
-                {{> icon class="icon--brand" iconSrc="./images/icons/location.svg"}}
-                Минск, ул. Богдановича 78
-            </a>
-            <a class="link footer-contacts__link white-txt" href="tel:+375 29 361 55 87">
-                {{> icon class="icon--brand" iconSrc="images/icons/phone.svg"}}
-                +375 29 361 55 87
-            </a>
+    <div class="footer-content">
+        <div class="footer-content-item">
+            {{> logo src="images/icons/logo.svg" class="footer__logo" logoText="Комната"}}
+            <nav class="footer-nav">
+                <ul class="footer-nav__list">
+                    <li class="footer-nav__item">{{> link class="footer-nav__link link--white" href="#" text="Комната №1"}}</li>
+                    <li class="footer-nav__item">{{> link class="footer-nav__link link--white" href="#" text="Комната №2"}}</li>
+                    <li class="footer-nav__item">{{> link class="footer-nav__link link--white" href="#" text="Цены"}}</li>
+                    <li class="footer-nav__item">{{> link class="footer-nav__link link--white" href="#" text="Контакты"}}</li>
+                    <li class="footer-nav__item">
+                        {{> icon class="footer-nav__icon" iconSrc="./images/icons/person.svg"}}
+                        {{> link class="footer-nav__link link--white" href="#" text="Личный кабинет"}}
+                    </li>
+                </ul>
+            </nav>
+            <div class="footer-social">
+                <a class="link footer-social__link" href="/">
+                    {{> icon class="icon--nofilter" iconSrc="./images/icons/telega.svg"}}
+                </a>
+                <a class="link footer-social__link" href="/">
+                    {{> icon class="icon--nofilter" iconSrc="./images/icons/insta.svg"}}
+                </a>
+                <a class="link footer-social__link" href="/">
+                    {{> icon class="icon--nofilter" iconSrc="./images/icons/fb.svg"}}
+                </a>
+            </div>
         </div>
-        <div class="footer-contacts__item">
-            <a class="link footer-contacts__link white-txt" href="/">
-                {{> icon class="icon--brand" iconSrc="./images/icons/location.svg"}}
-                Минск, ул. Богдановича 78
-            </a>
-            <a class="link footer-contacts__link white-txt" href="tel:+375 29 361 55 87">
-                {{> icon class="icon--brand" iconSrc="images/icons/phone.svg"}}
-                +375 29 361 55 87
-            </a>
+        <div class="footer-content-item">
+            <div class="footer-btn">
+                {{> button class="btn--trans footer-btn" text="Забронировать"}}
+            </div>
+            <div class="footer-contacts">
+                <div class="footer-contacts__item">
+                    {{> link-contact class="footer-contacts__link" href="/" src="./images/icons/location.svg" text="Минск, ул. Богдановича 78"}}
+                    {{> link-contact class="footer-contacts__link" href="tel:+375 29 361 55 87" src="./images/icons/phone.svg" text="+375 29 361 55 87"}}
+                </div>
+                <div class="footer-contacts__item">
+                    {{> link-contact class="footer-contacts__link" href="/" src="./images/icons/location.svg" text="Минск, ул. Богдановича 78"}}
+                    {{> link-contact class="footer-contacts__link" href="tel:+375 29 361 55 87" src="./images/icons/phone.svg" text="+375 29 361 55 87"}}
+                </div>
+            </div>
+            <div class="footer-social footer-social--mob">
+                <a class="link footer-social__link" href="/">
+                    {{> icon class="icon--nofilter" iconSrc="./images/icons/telega.svg"}}
+                </a>
+                <a class="link footer-social__link" href="/">
+                    {{> icon class="icon--nofilter" iconSrc="./images/icons/insta.svg"}}
+                </a>
+                <a class="link footer-social__link" href="/">
+                    {{> icon class="icon--nofilter" iconSrc="./images/icons/fb.svg"}}
+                </a>
+            </div>
+            <div class="footer-rights">
+                <p class="white-txt footer-rights__descr">© All Rights Reserve</p>
+            </div>
         </div>
-    </div>
-    <div class="footer-social">
-        <a class="link footer-social__link" href="/">
-            {{> icon class="icon--nofilter" iconSrc="./images/icons/telega.svg"}}
-        </a>
-        <a class="link footer-social__link" href="/">
-            {{> icon class="icon--nofilter" iconSrc="./images/icons/insta.svg"}}
-        </a>
-        <a class="link footer-social__link" href="/">
-            {{> icon class="icon--nofilter" iconSrc="./images/icons/fb.svg"}}
-        </a>
-    </div>
-    <div class="footer-rights">
-        <p class="white-txt">© All Rights Reserve</p>
     </div>
 </footer>

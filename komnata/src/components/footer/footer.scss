@@ -1,15 +1,61 @@
+$flex-basis: 30%;
+
 .footer {
   padding: 32px 40px 62px;
   text-align: center;
   background-color: $bg-extra;
 
+  @media(min-width: $screen-md) {
+    padding: 60px;
+  }
+
+  &-content {
+    @media(min-width: $screen-md) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-item {
+      &:first-of-type {
+        display: none;
+      }
+
+      @media(min-width: $screen-md) {
+        display: flex;
+        align-items: center;
+        margin-top: clamp(45px, 1.5rem, 90px);
+
+        &:first-of-type {
+          display: flex;
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
+  &__logo {
+    flex-basis: $flex-basis;
+    justify-content: flex-start;
+  }
+
   &-contacts {
     margin-top: 24px;
+
+    @media(min-width: $screen-md) {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      order: 2;
+    }
 
     &__item {
       display: flex;
       flex-direction: column;
       margin-top: 16px;
+
+      @media(min-width: $screen-md) {
+        margin-top: 0;
+      }
 
       &:first-of-type {
         margin-top: 0;
@@ -17,15 +63,8 @@
     }
 
     &__link {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-top: 5px;
-      text-decoration: unset;
-      transition: color $transition;
-
-      &:hover {
-        color: $color-brand;
+      @media(min-width: $screen-md) {
+        font-size: clamp(13px, 0.5rem, 16px);
       }
 
       &:first-of-type {
@@ -40,16 +79,76 @@
     align-items: center;
     margin-top: 28px;
 
+    @media(min-width: $screen-md) {
+      margin: 0 0 0 auto;
+    }
+
     &__link {
+      display: flex;
+      align-items: center;
       margin-right: 15px;
 
       &:last-of-type {
         margin-right: 0;
       }
     }
+
+    &--mob {
+      @media(min-width: $screen-md) {
+        display: none;
+      }
+    }
+  }
+
+  &-nav {
+    display: flex;
+
+    &__list {
+      display: flex;
+    }
+
+    &__item {
+      display: flex;
+      margin-left: clamp(12px, 1rem, 40px);
+
+      &:first-of-type {
+        margin-left: 0;
+      }
+    }
+
+    &__link {
+      @media(min-width: $screen-md) {
+        font-size: clamp(13px, 0.5rem, 16px);
+      }
+    }
+
+    &__icon {
+      margin-right: 10px;
+    }
   }
 
   &-rights {
     margin-top: 30px;
+
+    @media(min-width: $screen-md) {
+      flex-basis: $flex-basis;
+      order: 1;
+      text-align: left;
+    }
+
+    &__descr {
+      @media(min-width: $screen-md) {
+        font-size: clamp(14px, 0.8rem, 18px);
+      }
+    }
+  }
+
+  &-btn {
+    margin: 0 auto;
+
+    @media(min-width: $screen-md) {
+      order: 3;
+      margin:0 0 0 auto;
+    }
   }
 }

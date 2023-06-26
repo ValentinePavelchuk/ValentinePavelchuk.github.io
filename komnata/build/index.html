@@ -5,42 +5,51 @@
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
-<script defer src="./main.76cb92768beaa016b6d4.js"></script><link href="./main.css" rel="stylesheet"></head>
+<script defer src="./main.a2e02f2e5582d618f185.js"></script><link href="./main.css" rel="stylesheet"></head>
 <body>
     <header class="header" id="header">
-        <a class="header__logo link--white">
+        <a class="logo link--white header__logo">
             <span class="icon-component">
               <img src="images/icons/logo.svg" class="icon icon--brand" alt="Komanata">
-            </span>        <p class="header__text">Комната</p>
-        </a>
-        <div class="header__burger">
+            </span>    <p class="logo-text">Комната</p>
+        </a>    <div class="header-burger">
             <span class="icon-component">
-              <img src="images/icons/menu.svg" class="icon icon--menu" alt="Меню">
+              <img src="images/icons/menu.svg" class="icon icon--menu header-burger__open" alt="Меню">
+            </span>        <span class="icon-component">
+              <img src="images/icons/close.svg" class="icon icon--menu header-burger__close" alt="Меню">
             </span>    </div>
-        <nav class="header__nav">
-            <ul class="header__nav-list">
-                <li class="header__nav-item"><a class="link header__nav-link link--white" href="#">
+        <nav class="header-nav">
+            <ul class="header-nav-list">
+                <li class="header-nav__item"><a class="link header-nav__link link--white" href="#">
         Комната №1
     </a></li>
-                <li class="header__nav-item"><a class="link header__nav-link link--white" href="#">
+                <li class="header-nav__item"><a class="link header-nav__link link--white" href="#">
         Комната №2
     </a></li>
-                <li class="header__nav-item"><a class="link header__nav-link link--white" href="#">
+                <li class="header-nav__item"><a class="link header-nav__link link--white" href="#">
         Цены
     </a></li>
-                <li class="header__nav-item"><a class="link header__nav-link link--white" href="#">
+                <li class="header-nav__item"><a class="link header-nav__link link--white" href="#">
         Контакты
     </a></li>
-                <li class="header__nav-item"><a class="link header__nav-link link--white" href="tel:+375293615587">
+                <li class="header-nav__item">
+                    <span class="icon-component">
+                      <img src="./images/icons/person.svg" class="icon header-nav__icon" alt="">
+                    </span>                <a class="link header-nav__link link--white" href="#">
+                        Вход
+                    </a>            </li>
+                <li class="header-nav__item"><a class="link header-nav__link link--white" href="tel:+375293615587">
         +375 (29) 361 55 87
     </a></li>
             </ul>
-            <button class="btn header__nav-btn">Забронировать</button>    </nav>
+            <button class="btn btn--trans header-nav__btn">Забронировать</button>    </nav>
     </header>    <section class="main" id="main">
         <div class="container">
-            <h1 class="heading main__title white-txt">Aтмосфера, которую хочется разделить  с близкими</h1>
-            <p class="txt main__descr white-txt">День рождения, Новый год, корпоратив, мальчишник, девичник, помолвка,  а также любое самое приятное событие в вашей жизни, которое вы можете провести у нас в Комнате №1 на Богдановича 78 или Комнате №2 на Козлова 22</p>
-            <button class="btn main__btn">Забронировать</button>    </div>
+            <div class="main-content">
+                <h1 class="heading main__title white-txt">Aтмосфера, которую хочется разделить  с близкими</h1>
+                <p class="txt main__descr white-txt">День рождения, Новый год, корпоратив, мальчишник, девичник, помолвка,  а также любое самое приятное событие в вашей жизни, которое вы можете провести у нас в Комнате №1 на Богдановича 78 или Комнате №2 на Козлова 22</p>
+                <button class="btn main__btn">Забронировать</button>        </div>
+        </div>
     </section>    <section class="about" id="about">
         <div class="container">
             <div class="about-wrapper">
@@ -419,104 +428,175 @@
     </span></div>
                     </div>
                 </div>
-            </div>
+                <button class="btn price-btn">забронировать</button>        </div>
         </div>
     </section>    <section class="contact">
         <div class="contact-wrapper rounded">
             <div class="container">
-            <div class="contact-header">
-                <h2 class="title white-txt">Связаться с нами</h2>
-                <p class="txt white-txt">Оставьте свое сообщение и мы свяжемся с вами в ближашее время для уточнения деталей.</p>
-            </div>
-            <div class="contact-data">
-                <div class="contact-data__item contact-data__item--mob">
-                    <p class="contact-data-header white-txt">Телефон:</p>
-                    <a class="link contact-data-link link--white" href="tel:+375 29 361 55 87">
-                        +375 29 361 55 87
-                    </a>            </div>
-                <div class="contact-data__item contact-data__item--mob">
-                    <p class="contact-data-header white-txt">Адрес:</p>
-                    <a class="link contact-data-link link--white" href="https://yandex.ru/maps/-/CCU9jHxZLC">
-                        Минск, ул. Богдановича 78
-                    </a>            </div>
-            </div>
-            <form action="" class="contact-form rounded">
-                <div class="input-component contact-form__input">
-                    <label for="contact-form-name" class="input-label"></label>
-                    <input type="text" id="contact-form-name" class="input-field" placeholder="Ваше имя" >
-                </div>            <div class="input-component contact-form__input">
-                    <label for="contact-form-name" class="input-label"></label>
-                    <input type="text" id="contact-form-name" class="input-field" placeholder="Номер телефона" >
-                </div>            <div class="area-component ">
-                    <textarea class="textarea" id="contact-textarea" name="contact-textarea" placeholder="Сообщение"></textarea>
-                </div>            <button class="btn contact-form__btn">Отправить</button>            <div class="contact-form__terms">
-                    <label class="checkbox contact-form__checkbox" for="contact-form-terms">
-                        <input type="checkbox" id="contact-form-terms">
-                        <span class="checkmark"></span>
-                    </label>                <p class="contact-form__terms-descr white-txt"><i>Я принимаю условия обработки <a class="link brand-txt" href="/">
+                <div class="contact-content">
+                    <div class="contact-header">
+                        <h2 class="title white-txt">Связаться с нами</h2>
+                        <p class="txt white-txt">Оставьте свое сообщение и мы свяжемся с вами в ближашее время для уточнения деталей.</p>
+                        <div class="contact-data">
+                            <div class="contact-data__item contact-data__item--mob">
+                                <p class="contact-data-header white-txt">Телефон:</p>
+                                <a class="link contact-data-link link--white" href="tel:+375 29 361 55 87">
+                                    +375 29 361 55 87
+                                </a>                        </div>
+                            <div class="contact-data__item contact-data__item--mob">
+                                <p class="contact-data-header white-txt">Адрес:</p>
+                                <a class="link contact-data-link link--white" href="https://yandex.ru/maps/-/CCU9jHxZLC">
+                                    Минск, ул. Богдановича 78
+                                </a>                        </div>
+                            <div class="contact-data__item">
+                                <p class="contact-data-header white-txt">Комната №1</p>
+                                <a class="link  link-contact white-txt" href=/>
+                                    <span class="icon-component">
+                                      <img src="./images/icons/location.svg" class="icon icon--brand" alt="">
+                                    </span>    Минск, ул. Богдановича 78
+                                </a>                            <a class="link  link-contact white-txt" href=tel:+375 29 361 55 87>
+                                    <span class="icon-component">
+                                      <img src="./images/icons/phone.svg" class="icon icon--brand" alt="">
+                                    </span>    +375 29 361 55 87
+                                </a>                        </div>
+                            <div class="contact-data__item">
+                                <p class="contact-data-header white-txt">Комната №2</p>
+                                <a class="link  link-contact white-txt" href=/>
+                                    <span class="icon-component">
+                                      <img src="./images/icons/location.svg" class="icon icon--brand" alt="">
+                                    </span>    Минск, ул. Богдановича 78
+                                </a>                            <a class="link  link-contact white-txt" href=tel:+375 29 361 55 87>
+                                    <span class="icon-component">
+                                      <img src="./images/icons/phone.svg" class="icon icon--brand" alt="">
+                                    </span>    +375 29 361 55 87
+                                </a>                        </div>
+                        </div>
+                    </div>
+                    <form action="" class="contact-form rounded">
+                        <div class="input-component contact-form__input">
+                            <label for="contact-form-name" class="input-label"></label>
+                            <input type="text" id="contact-form-name" class="input-field" placeholder="Ваше имя" >
+                        </div>                    <div class="input-component contact-form__input">
+                            <label for="contact-form-name" class="input-label"></label>
+                            <input type="text" id="contact-form-name" class="input-field" placeholder="Номер телефона" >
+                        </div>                    <div class="area-component ">
+                            <textarea class="textarea" id="contact-textarea" name="contact-textarea" placeholder="Сообщение"></textarea>
+                        </div>                    <button class="btn contact-form__btn">Отправить</button>                    <div class="contact-form__terms">
+                            <label class="checkbox contact-form__checkbox" for="contact-form-terms">
+                                <input type="checkbox" id="contact-form-terms">
+                                <span class="checkmark"></span>
+                            </label>                        <p class="contact-form__terms-descr white-txt"><i>Я принимаю условия обработки <a class="link brand-txt" href="/">
         персональных данных
     </a></i></p>
+                        </div>
+                    </form>
                 </div>
-            </form>
-        </div>
+            </div>
         </div>
     </section>    <section class="social">
         <div class="container">
-            <div class="social-header">
-                <h2 class="title">Мы в Instagram</h2>
-                <p class="txt">Мы активно ведем свой профиль в инстаграмм. В комментариях вы найдете самые правдивые отзывы наших любимых клиентов.
-                    Подписывайтесь на нас, чтобы следить за нашими новосятми и обновлениями. Мы работаем для того, чтобы радовать вас.
-                </p>
-                <a class="link btn btn--inst" href="/">
-                    Подписаться
-                </a>        </div>
-            <div class="social-content"></div>
+            <div class="social-content">
+                <div class="social-images">
+                    <img class="social-images__item" src="/images/social/phone-1.png" alt="">
+                    <img class="social-images__item" src="/images/social/phone-2.png" alt="">
+                </div>
+                <div class="social-header">
+                    <h2 class="title">Мы в Instagram</h2>
+                    <p class="txt">Мы активно ведем свой профиль в инстаграмм. В комментариях вы найдете самые правдивые отзывы наших любимых клиентов.
+                        Подписывайтесь на нас, чтобы следить за нашими новосятми и обновлениями. Мы работаем для того, чтобы радовать вас.
+                    </p>
+                    <a class="link btn btn--inst social-btn" href="/">
+                        Подписаться
+                    </a>            </div>
+            </div>
         </div>
     </section>    <footer class="footer" id="footer">
-        <div class="footer-btn">
-            <button class="btn btn--trans">Забронировать</button>    </div>
-        <div class="footer-contacts">
-            <div class="footer-contacts__item">
-                <a class="link footer-contacts__link white-txt" href="/">
+        <div class="footer-content">
+            <div class="footer-content-item">
+                <a class="logo link--white footer__logo">
                     <span class="icon-component">
-                      <img src="./images/icons/location.svg" class="icon icon--brand" alt="">
-                    </span>                Минск, ул. Богдановича 78
-                </a>
-                <a class="link footer-contacts__link white-txt" href="tel:+375 29 361 55 87">
-                    <span class="icon-component">
-                      <img src="images/icons/phone.svg" class="icon icon--brand" alt="">
-                    </span>                +375 29 361 55 87
-                </a>
+                      <img src="images/icons/logo.svg" class="icon icon--brand" alt="Komanata">
+                    </span>    <p class="logo-text">Комната</p>
+                </a>            <nav class="footer-nav">
+                    <ul class="footer-nav__list">
+                        <li class="footer-nav__item"><a class="link footer-nav__link link--white" href="#">
+        Комната №1
+    </a></li>
+                        <li class="footer-nav__item"><a class="link footer-nav__link link--white" href="#">
+        Комната №2
+    </a></li>
+                        <li class="footer-nav__item"><a class="link footer-nav__link link--white" href="#">
+        Цены
+    </a></li>
+                        <li class="footer-nav__item"><a class="link footer-nav__link link--white" href="#">
+        Контакты
+    </a></li>
+                        <li class="footer-nav__item">
+                            <span class="icon-component">
+                              <img src="./images/icons/person.svg" class="icon footer-nav__icon" alt="">
+                            </span>                        <a class="link footer-nav__link link--white" href="#">
+                                Личный кабинет
+                            </a>                    </li>
+                    </ul>
+                </nav>
+                <div class="footer-social">
+                    <a class="link footer-social__link" href="/">
+                        <span class="icon-component">
+                          <img src="./images/icons/telega.svg" class="icon icon--nofilter" alt="">
+                        </span>                </a>
+                    <a class="link footer-social__link" href="/">
+                        <span class="icon-component">
+                          <img src="./images/icons/insta.svg" class="icon icon--nofilter" alt="">
+                        </span>                </a>
+                    <a class="link footer-social__link" href="/">
+                        <span class="icon-component">
+                          <img src="./images/icons/fb.svg" class="icon icon--nofilter" alt="">
+                        </span>                </a>
+                </div>
             </div>
-            <div class="footer-contacts__item">
-                <a class="link footer-contacts__link white-txt" href="/">
-                    <span class="icon-component">
-                      <img src="./images/icons/location.svg" class="icon icon--brand" alt="">
-                    </span>                Минск, ул. Богдановича 78
-                </a>
-                <a class="link footer-contacts__link white-txt" href="tel:+375 29 361 55 87">
-                    <span class="icon-component">
-                      <img src="images/icons/phone.svg" class="icon icon--brand" alt="">
-                    </span>                +375 29 361 55 87
-                </a>
+            <div class="footer-content-item">
+                <div class="footer-btn">
+                    <button class="btn btn--trans footer-btn">Забронировать</button>            </div>
+                <div class="footer-contacts">
+                    <div class="footer-contacts__item">
+                        <a class="link footer-contacts__link link-contact white-txt" href=/>
+                            <span class="icon-component">
+                              <img src="./images/icons/location.svg" class="icon icon--brand" alt="">
+                            </span>    Минск, ул. Богдановича 78
+                        </a>                    <a class="link footer-contacts__link link-contact white-txt" href=tel:+375 29 361 55 87>
+                            <span class="icon-component">
+                              <img src="./images/icons/phone.svg" class="icon icon--brand" alt="">
+                            </span>    +375 29 361 55 87
+                        </a>                </div>
+                    <div class="footer-contacts__item">
+                        <a class="link footer-contacts__link link-contact white-txt" href=/>
+                            <span class="icon-component">
+                              <img src="./images/icons/location.svg" class="icon icon--brand" alt="">
+                            </span>    Минск, ул. Богдановича 78
+                        </a>                    <a class="link footer-contacts__link link-contact white-txt" href=tel:+375 29 361 55 87>
+                            <span class="icon-component">
+                              <img src="./images/icons/phone.svg" class="icon icon--brand" alt="">
+                            </span>    +375 29 361 55 87
+                        </a>                </div>
+                </div>
+                <div class="footer-social footer-social--mob">
+                    <a class="link footer-social__link" href="/">
+                        <span class="icon-component">
+                          <img src="./images/icons/telega.svg" class="icon icon--nofilter" alt="">
+                        </span>                </a>
+                    <a class="link footer-social__link" href="/">
+                        <span class="icon-component">
+                          <img src="./images/icons/insta.svg" class="icon icon--nofilter" alt="">
+                        </span>                </a>
+                    <a class="link footer-social__link" href="/">
+                        <span class="icon-component">
+                          <img src="./images/icons/fb.svg" class="icon icon--nofilter" alt="">
+                        </span>                </a>
+                </div>
+                <div class="footer-rights">
+                    <p class="white-txt footer-rights__descr">© All Rights Reserve</p>
+                </div>
             </div>
-        </div>
-        <div class="footer-social">
-            <a class="link footer-social__link" href="/">
-                <span class="icon-component">
-                  <img src="./images/icons/telega.svg" class="icon icon--nofilter" alt="">
-                </span>        </a>
-            <a class="link footer-social__link" href="/">
-                <span class="icon-component">
-                  <img src="./images/icons/insta.svg" class="icon icon--nofilter" alt="">
-                </span>        </a>
-            <a class="link footer-social__link" href="/">
-                <span class="icon-component">
-                  <img src="./images/icons/fb.svg" class="icon icon--nofilter" alt="">
-                </span>        </a>
-        </div>
-        <div class="footer-rights">
-            <p class="white-txt">© All Rights Reserve</p>
         </div>
     </footer></body>
 </html>

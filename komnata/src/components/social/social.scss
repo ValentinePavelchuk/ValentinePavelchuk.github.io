@@ -1,4 +1,53 @@
 .social {
   background-color: $bg-secondary;
   text-align: center;
+
+  @media(min-width: $screen-md) {
+    padding-top: clamp(130px, 3rem, 180px);
+  }
+
+  &-content {
+    @media(min-width: $screen-md) {
+      display: flex;
+      gap: 64px;
+    }
+  }
+
+  &-header {
+    @media(min-width: $screen-md) {
+      max-width: 45%;
+      text-align: left;
+    }
+  }
+
+  &-images {
+    display: none;
+
+    @media(min-width: $screen-md) {
+      display: flex;
+      gap: 34px;
+      will-change: contents;
+    }
+
+    &__item {
+      height: calculate-size(380px, 446px);
+      max-height: 446px;
+
+      &:first-of-type {
+        transform: translateY(-15%);
+      }
+
+      &:last-of-type {
+        transform: translateY(-5%);
+      }
+    }
+  }
+
+  &-btn {
+    margin: 0 auto;
+
+    @media(min-width: $screen-md) {
+      margin: 0;
+    }
+  }
 }

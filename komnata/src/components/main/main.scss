@@ -4,6 +4,23 @@
   background: url("images/main-bg.jpeg") no-repeat center;
   background-size: cover;
 
+  @media(min-width: $screen-md) {
+    padding: 260px 0 155px;
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__descr {
+    @media(min-width: $screen-md) {
+      margin-bottom: 0;
+    }
+  }
+
   &__btn {
     margin-top: clamp(16px, 1rem, 48px);
   }

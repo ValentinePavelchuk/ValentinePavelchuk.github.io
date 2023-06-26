@@ -5,10 +5,12 @@ $bg-inst: linear-gradient(90deg, #FFC700 0.3%, #FF8616 16.45%, #EE3C2B 36.24%, #
 $bg-inst-hover: linear-gradient(270deg, #FFC700 0%, #FF8616 16.15%, #EE3C2B 35.94%, #F33E66 55.73%, #FA4AD8 77.6%, #8E1AFF 100%);
 
 .btn {
-  display: inline-flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   padding: 16px 24px;
+  width: fit-content;
+  max-height: 48px;
   background: $bg;
   border-radius: 30px;
   border: unset;
@@ -19,6 +21,7 @@ $bg-inst-hover: linear-gradient(270deg, #FFC700 0%, #FF8616 16.15%, #EE3C2B 35.9
   text-decoration: unset;
   color: $text-color-primary;
   cursor: pointer;
+  user-select: none;
 
   &:hover {
     background: $bg-hover;
