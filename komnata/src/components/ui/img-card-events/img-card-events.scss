@@ -1,5 +1,7 @@
 .img-card-events {
   position: relative;
+  display: flex;
+  overflow: hidden;
 
   @media(min-width: $screen-md) {
     height: 100%;
