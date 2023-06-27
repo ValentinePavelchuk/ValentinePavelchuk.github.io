@@ -6,6 +6,8 @@ $bg-disabled: #E9E9E9;
 
 .input-component {
   display: flex;
+  flex-direction: column;
+  width: 100%;
   margin-bottom: 16px;
 }
 

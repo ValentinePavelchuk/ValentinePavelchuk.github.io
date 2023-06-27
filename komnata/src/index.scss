@@ -98,6 +98,57 @@ img {
   }
 }
 
+.modal {
+  position: relative;
+  max-width: 604px;
+  margin: 0 auto;
+  padding: 54px 50px 64px;
+  background-color: $bg-primary;
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 362px;
+    margin: 0 auto;
+  }
+
+  & .close {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    width: 14px;
+    height: 14px;
+    filter: invert(50%) sepia(15%) saturate(405%) hue-rotate(148deg) brightness(89%) contrast(87%);
+    cursor: pointer;
+
+    &:hover {
+      filter: invert(87%) sepia(29%) saturate(6143%) hue-rotate(357deg) brightness(104%) contrast(109%);
+    }
+  }
+
+  & form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 362px;
+    margin-top: clamp(30px, 2rem, 60px);
+  }
+
+  & button {
+    margin-top: clamp(16px, 1rem, 32px);
+    min-width: 176px;
+  }
+
+  & p {
+    margin-top: clamp(16px, 1rem, 32px);
+    text-align: center;
+  }
+}
+
 @import "components/ui/button/button";
 @import "components/ui/input/input";
 @import "components/ui/textarea/textarea";
@@ -108,6 +159,7 @@ img {
 @import "components/ui/logo/logo";
 @import "components/ui/price-card/price-card";
 @import "components/ui/img-card-events/img-card-events";
+@import "components/ui/registration-modal/registration-modal";
 @import "components/header/header";
 @import "components/main/main";
 @import "components/about/about";
