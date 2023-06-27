@@ -30,16 +30,8 @@ pages.forEach((page, index) => {
 });
 
 // Dynamically scan and retrieve all partial directories
-const partialsDir = path.resolve(__dirname, 'src/components');
 const partialPaths = glob.sync(path.resolve(__dirname, 'src/components', '**'));
-const partialPaths2 = glob.sync(path.resolve(__dirname, 'src/components', '**'), {
-    ignore: [
-        path.resolve(__dirname, 'src/components', '**', '*.scss'),
-        path.resolve(__dirname, 'src/components', '**', '*.hbs')
-    ],
-});
 
-console.log(partialPaths2, "PAAAAAATH")
 const config:webpack.Configuration = {
     context: path.join(__dirname, 'src'),
     entry: path.resolve(__dirname, 'src', 'index.ts'),

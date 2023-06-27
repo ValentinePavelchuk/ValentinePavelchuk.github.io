@@ -10,6 +10,7 @@
 
 html {
   font-size: 5vw;
+  scroll-behavior: smooth;
 
   @media(min-width: $screen-md) {
     font-size: 2vw;
@@ -20,6 +21,7 @@ body {
   font-family: "Open Sans", sans-serif;
   font-size: 1rem;
   overflow-x: hidden;
+  color: $text-color-primary;
 }
 
 a {
@@ -104,6 +106,8 @@ img {
 @import "components/ui/img-card/img-card";
 @import "components/ui/link-contact/link-contact";
 @import "components/ui/logo/logo";
+@import "components/ui/price-card/price-card";
+@import "components/ui/img-card-events/img-card-events";
 @import "components/header/header";
 @import "components/main/main";
 @import "components/about/about";

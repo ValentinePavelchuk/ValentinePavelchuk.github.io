@@ -27,6 +27,15 @@
     padding: 14px 60px;
   }
 
+  &-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
   &-burger {
     display: flex;
     cursor: pointer;
@@ -78,6 +87,15 @@
 
     &__item {
       display: flex;
+      margin-top: 10px;
+
+      &:first-of-type {
+        margin-top: 0;
+      }
+
+      @media(min-width: $screen-lg) {
+        margin-top: 0;
+      }
     }
 
     &__link {

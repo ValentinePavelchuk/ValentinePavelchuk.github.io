@@ -10,6 +10,10 @@ $flex-basis: 30%;
   }
 
   &-content {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+
     @media(min-width: $screen-md) {
       display: flex;
       flex-direction: column;

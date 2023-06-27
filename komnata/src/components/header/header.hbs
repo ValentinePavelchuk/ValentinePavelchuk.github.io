@@ -1,21 +1,23 @@
 <header class="header" id="header">
-    {{> logo src="images/icons/logo.svg" class="header__logo" logoText="Комната"}}
-    <div class="header-burger">
-        {{> icon iconSrc="images/icons/menu.svg" class="icon--menu header-burger__open" iconAlt="Меню"}}
-        {{> icon iconSrc="images/icons/close.svg" class="icon--menu header-burger__close" iconAlt="Меню"}}
+    <div class="header-content">
+        {{> logo src="images/icons/logo.svg" class="header__logo" logoText="Комната"}}
+        <div class="header-burger">
+            {{> icon iconSrc="images/icons/menu.svg" class="icon--menu header-burger__open" iconAlt="Меню"}}
+            {{> icon iconSrc="images/icons/close.svg" class="icon--menu header-burger__close" iconAlt="Меню"}}
+        </div>
+        <nav class="header-nav">
+            <ul class="header-nav-list">
+                <li class="header-nav__item">{{> link class="header-nav__link link--white" href="#" text="Комната №1"}}</li>
+                <li class="header-nav__item">{{> link class="header-nav__link link--white" href="#" text="Комната №2"}}</li>
+                <li class="header-nav__item">{{> link class="header-nav__link link--white" href="#" text="Цены"}}</li>
+                <li class="header-nav__item">{{> link class="header-nav__link link--white" href="#" text="Контакты"}}</li>
+                <li class="header-nav__item">
+                    {{> icon class="header-nav__icon" iconSrc="./images/icons/person.svg"}}
+                    {{> link class="header-nav__link link--white" href="#" text="Вход"}}
+                </li>
+                <li class="header-nav__item">{{> link class="header-nav__link link--white" href="tel:+375293615587" text="+375 (29) 361 55 87"}}</li>
+            </ul>
+            {{> button class="btn--trans header-nav__btn" text="Забронировать"}}
+        </nav>
     </div>
-    <nav class="header-nav">
-        <ul class="header-nav-list">
-            <li class="header-nav__item">{{> link class="header-nav__link link--white" href="#" text="Комната №1"}}</li>
-            <li class="header-nav__item">{{> link class="header-nav__link link--white" href="#" text="Комната №2"}}</li>
-            <li class="header-nav__item">{{> link class="header-nav__link link--white" href="#" text="Цены"}}</li>
-            <li class="header-nav__item">{{> link class="header-nav__link link--white" href="#" text="Контакты"}}</li>
-            <li class="header-nav__item">
-                {{> icon class="header-nav__icon" iconSrc="./images/icons/person.svg"}}
-                {{> link class="header-nav__link link--white" href="#" text="Вход"}}
-            </li>
-            <li class="header-nav__item">{{> link class="header-nav__link link--white" href="tel:+375293615587" text="+375 (29) 361 55 87"}}</li>
-        </ul>
-        {{> button class="btn--trans header-nav__btn" text="Забронировать"}}
-    </nav>
 </header>
