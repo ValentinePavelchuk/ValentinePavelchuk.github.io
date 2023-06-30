@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 5vw;
+  scroll-behavior: smooth;
+
+  @media(min-width: $screen-md) {
+    font-size: 2.5vw;
+  }
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  overflow-x: hidden;
+  color: $text-color-primary;
+}
+
+a, label {
+  cursor: pointer;
+}
+
+section {
+  padding-top: clamp(32px, 2rem, 64px);
+  padding-bottom: clamp(32px, 2rem, 64px);
+  overflow-x: hidden;
+
+  @media(min-width: $screen-md) {
+    padding-top: clamp(64px, 4rem, 130px);
+    padding-bottom: clamp(64px, 4rem, 82px);
+  }
+}
+
+img {
+  display: inline-block;
+  max-width: 100%;
+}
+
+small {
+  display: none;
+  margin-top: 4px;
+  font-size: 14px;
+  text-align: left;
+  color: $error;
+}
+
+.container {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 0 16px;
+
+  @media(min-width: $screen-sm) {
+    padding: 0 32px;
+  }
+
+  @media(min-width: $screen-md) {
+    padding: 0 64px;
+  }
+}
+
+.inline-title {
+  @media(min-width: $screen-md) {
+    display: flex;
+    gap: 10px;
+    text-align: left !important;
+
+    & .title, h2 {
+      min-width: 50%;
+    }
+
+    & .txt, p {
+      margin: 0;
+    }
+  }
+}
+
+.rounded {
+  border-radius: 10px;
+}

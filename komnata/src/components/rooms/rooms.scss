@@ -43,6 +43,7 @@
 
   &-tab-text {
     position: relative;
+    margin: 0;
     font-size: 20px;
     font-weight: 300;
     line-height: 28px;
@@ -72,21 +73,6 @@
   &-header {
     margin-top: 32px;
     text-align: center;
-
-    @media(min-width: $screen-md) {
-      display: flex;
-      gap: 10px;
-      text-align: left;
-
-      &__title {
-        min-width: 50%;
-        flex-shrink: 0;
-      }
-
-      &__descr {
-        margin: 0;
-      }
-    }
   }
 
   &-slider {

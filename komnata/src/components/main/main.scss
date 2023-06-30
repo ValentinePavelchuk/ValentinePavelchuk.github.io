@@ -1,8 +1,6 @@
 .main {
   text-align: center;
   padding: 110px 0 58px;
-  background: url("images/main-bg.jpeg") no-repeat center;
-  background-size: cover;
 
   @media(min-width: $screen-md) {
     padding: 260px 0 155px;

@@ -21,10 +21,18 @@
     margin-bottom: 50px;
     background-color: $text-color-secondary;
     border-radius: 30px;
+
+    & > p {
+      margin: 0;
+    }
   }
 
   &__time {
     text-align: center;
+
+    & > p {
+      margin: 0;
+    }
 
     &:last-of-type {
       margin-top: 30px;
@@ -41,12 +49,13 @@
     }
 
     &-range {
+      margin-top: 5px !important;
       font-size: 18px;
     }
   }
 
   &__descr {
-    margin-top: 50px;
+    margin: 50px 0 0;
   }
 
   &__btn {

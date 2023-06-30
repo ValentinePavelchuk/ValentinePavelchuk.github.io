@@ -26,16 +26,22 @@
     }
 
     &__item {
+      width: 96% !important;
       max-width: 450px;
     }
 
     &-btn {
       top: unset;
-      bottom: 20px;
+      bottom: -120px;
     }
   }
 
   &-btn {
+    display: none;
     margin: 46px auto 0;
+
+    @media(min-width: $screen-md) {
+      display: block;
+    }
   }
 }

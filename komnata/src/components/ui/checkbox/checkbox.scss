@@ -5,6 +5,17 @@
   height: 16px;
   border: 2px solid #fff;
   border-radius: 2px;
+  cursor: pointer;
+
+  &-error {
+    position: absolute;
+    white-space: nowrap;
+    bottom: -20px;
+  }
+
+  &:has(input[type="checkbox"]:checked) {
+    background: #fff;
+  }
 }
 
 .checkbox input[type="checkbox"] {
@@ -18,7 +29,7 @@
   top: 1px;
   width: 4px;
   height: 9px;
-  border: solid #fff;
+  border: solid $color-brand;
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
 }

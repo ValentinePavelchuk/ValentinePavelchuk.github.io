@@ -1,0 +1,25 @@
+<div class="signin-modal modal">
+    <div class="modal-content">
+        <h2>Вход</h2>
+        <form id="form" action="">
+            {{> input
+                    inputClass="input-field--border"
+                    inputId="mail"
+                    label="Email*"
+                    type="text"
+                    placeholder="Email*"
+            }}
+            {{> input
+                    inputClass="input-field--border"
+                    inputId="password"
+                    label="Password*"
+                    type="password"
+                    placeholder="Password*"
+            }}
+            {{> link href="/" text="Забыли пароль"}}
+            {{> button text="Войти"}}
+        </form>
+        <p class="txt">Если вы первый раз на сайте,зарегистрируйтесь {{> link href="/" text="Регистрация"}}</p>
+        {{> font-icon name="close" class="close"}}
+    </div>
+</div>

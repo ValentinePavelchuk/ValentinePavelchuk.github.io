@@ -91,6 +91,11 @@ $flex-basis: 30%;
       display: flex;
       align-items: center;
       margin-right: 15px;
+      transition: transform $transition;
+
+      &:hover {
+        transform: scale(1.2);
+      }
 
       &:last-of-type {
         margin-right: 0;

@@ -44,8 +44,22 @@
       display: none;
     }
 
+    &__open {
+      transition: color $transition;
+
+      &:hover {
+        color: $color-brand;
+      }
+    }
+
     &__close {
       display: none;
+      color: #66797F;
+      transition: color $transition;
+
+      &:hover {
+        color: $text-color-primary;
+      }
     }
 
     &:is(.open) {

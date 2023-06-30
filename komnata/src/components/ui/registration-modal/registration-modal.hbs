@@ -30,9 +30,25 @@
                     type="text"
                     placeholder="Email*"
             }}
+            <div class="modal-wrapper">
+                {{> radio
+                        imgSrc="images/radio-1.jpg"
+                        imgAlt="Богдановича 78"
+                        name="room"
+                        value="room-1"
+                        text="Богдановича 78"
+                }}
+                {{> radio
+                        imgSrc="images/radio-1.jpg"
+                        imgAlt="Богдановича 78"
+                        name="room"
+                        value="room-2"
+                        text="Козлова 22"
+                }}
+            </div>
             {{> button text="Сохранить"}}
         </form>
         <p class="txt">Если вы уже регистрировались, войдите в свой аккаунт {{> link href="/" text="Войти"}}</p>
-        {{> icon iconSrc="images/icons/close.svg" class="close" iconAlt="close"}}
+        {{> font-icon name="close" class="close"}}
     </div>
 </div>

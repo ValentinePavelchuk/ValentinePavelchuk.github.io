@@ -49,12 +49,12 @@
     }
 
     &-header {
-      margin-bottom: 4px;
+      margin:0 0 4px !important;
       font-size: 16px;
       opacity: 0.5;
 
       @media(min-width: $screen-md) {
-        margin-bottom: 8px;
+        margin:0 0 8px !important;
       }
     }
   }

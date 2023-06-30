@@ -20,6 +20,7 @@ $bg-inst-hover: linear-gradient(270deg, #FFC700 0%, #FF8616 16.15%, #EE3C2B 35.9
   text-transform: uppercase;
   text-decoration: unset;
   color: $text-color-primary;
+  transition: all $transition;
   cursor: pointer;
   user-select: none;
 

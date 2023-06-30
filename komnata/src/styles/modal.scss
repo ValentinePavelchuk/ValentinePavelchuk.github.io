@@ -1,0 +1,67 @@
+.modal {
+  position: relative;
+  max-width: 604px;
+  margin: 0 auto;
+  padding: 24px 25px 32px;
+  background-color: $bg-primary;
+
+  @media(min-width: $screen-md) {
+    padding: 54px 50px 64px;
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 365px;
+    margin: 0 auto;
+  }
+
+  &-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 16px;
+  }
+
+  & .close {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 14px;
+    height: 14px;
+    filter: invert(50%) sepia(15%) saturate(405%) hue-rotate(148deg) brightness(89%) contrast(87%);
+    cursor: pointer;
+    transition: filter $transition;
+
+    &:hover {
+      filter: invert(16%) sepia(3%) saturate(26%) hue-rotate(352deg) brightness(91%) contrast(74%);
+    }
+
+    @media(min-width: $screen-md) {
+      right: 30px;
+      top: 30px;
+    }
+  }
+
+  & form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 362px;
+    margin-top: clamp(30px, 2rem, 60px);
+  }
+
+  & button {
+    margin-top: 16px;
+    min-width: 176px;
+  }
+
+  & p {
+    margin-top: clamp(16px, 1rem, 32px);
+    text-align: center;
+  }
+}

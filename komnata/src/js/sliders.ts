@@ -14,17 +14,11 @@ for( let i= 0; i < sliders.length; i++ ) {
         modules: [ Navigation ],
         direction: 'horizontal',
         slidesPerView: 'auto',
-        centeredSlides: true,
         spaceBetween: 16,
         // Navigation arrows
         navigation: {
             nextEl: `.swiper-btn-next-${i}`,
             prevEl: `.swiper-btn-prev-${i}`,
-        },
-        breakpoints: {
-            960: {
-                centeredSlides: false
-            }
         }
     });
 }

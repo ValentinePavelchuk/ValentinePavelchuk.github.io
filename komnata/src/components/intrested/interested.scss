@@ -1,17 +1,6 @@
 .interested {
   &-header {
     text-align: center;
-
-    @media(min-width: $screen-md) {
-      display: flex;
-      justify-content: space-between;
-      gap: 60px;
-      text-align: left;
-    }
-
-    &__title {
-      flex-shrink: 0;
-    }
   }
 
   &-card {

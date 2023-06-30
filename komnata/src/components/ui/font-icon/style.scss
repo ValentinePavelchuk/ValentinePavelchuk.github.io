@@ -1,0 +1,81 @@
+@import "variables";
+
+@font-face {
+  font-family: '#{$icomoon-font-family}';
+  src:
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?uchesy') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?uchesy') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?uchesy##{$icomoon-font-family}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.font-icons {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icomoon-font-family}' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-icons--arrow-right {
+  &::before {
+    content: $font-icons--arrow-right; 
+  }
+}
+
+.font-icons--arrow-left {
+  &::before {
+    content: $font-icons--arrow-left; 
+  }
+}
+
+.font-icons--close {
+  &::before {
+    content: $font-icons--close; 
+  }
+}
+
+.font-icons--location {
+  &::before {
+    content: $font-icons--location; 
+  }
+}
+
+.font-icons--logo {
+  &::before {
+    content: $font-icons--logo; 
+  }
+}
+
+.font-icons--menu {
+  &::before {
+    content: $font-icons--menu; 
+  }
+}
+
+.font-icons--person {
+  &::before {
+    content: $font-icons--person; 
+  }
+}
+
+.font-icons--phone {
+  &::before {
+    content: $font-icons--phone; 
+  }
+}
+
+.font-icon-component {
+  font-size: 24px;
+
+  @extend .icon-component;
+}

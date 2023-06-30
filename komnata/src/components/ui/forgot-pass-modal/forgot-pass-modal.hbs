@@ -1,0 +1,17 @@
+<div class="forgot-pass-modal modal">
+    <div class="modal-content">
+        <h2>Забыл пароль</h2>
+        <p>Введите адрес почтового ящика, чтобы восстановить свой пароль</p>
+        <form id="form" action="">
+            {{> input
+                    inputClass="input-field--border"
+                    inputId="mail"
+                    label="Email*"
+                    type="text"
+                    placeholder="Email*"
+            }}
+            {{> button text="Восстановить пароль"}}
+        </form>
+        {{> font-icon name="close" class="close"}}
+    </div>
+</div>

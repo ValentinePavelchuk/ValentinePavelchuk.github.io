@@ -7,6 +7,11 @@
   height: clamp(154px, 10rem, 270px);
   border-radius: 8px;
 
+  @media(min-width: $screen-md) {
+    width: clamp(144px, 6.6rem, 240px);
+    height: clamp(154px, 7.5rem, 270px);
+  }
+
   &__text {
     margin: 0;
     font-size: clamp(42px,3rem,48px);
@@ -14,6 +19,10 @@
     line-height: 57px;
     color: $color-brand;
     text-transform: uppercase;
+
+    @media(min-width: $screen-md) {
+      font-size: clamp(42px, 1.5rem, 48px);
+    }
 
     &--sm {
       font-size: clamp(16px, 1rem, 16px);

@@ -29,10 +29,6 @@ $bg-disabled: #E9E9E9;
   border-radius: 10px;
   font-family: inherit;
 
-  &--error {
-    border-color: $border-color-err;
-  }
-
   &--border {
     border: 1px solid $border-color;
   }
@@ -51,4 +47,14 @@ $bg-disabled: #E9E9E9;
 .input-field:focus {
   outline: none;
   border-color: $border-color-focus;
+}
+
+.error {
+  & .input-field {
+    border: 1px solid $error;
+  }
+
+  & small {
+    display: flex;
+  }
 }

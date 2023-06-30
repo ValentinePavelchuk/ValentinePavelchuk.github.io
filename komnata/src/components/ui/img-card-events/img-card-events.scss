@@ -16,6 +16,7 @@
     height: 50%;
     background: linear-gradient(180deg, #26160500 0%, #261605 100%);
     z-index: 1;
+    pointer-events: none;
   }
 
   &__img {
@@ -28,6 +29,7 @@
     position: absolute;
     left: 15px;
     bottom: 15px;
+    margin: 0;
     font-size: 18px;
     font-weight: 400;
     z-index: 2;

@@ -1,7 +1,7 @@
 <footer class="footer" id="footer">
     <div class="footer-content">
         <div class="footer-content-item">
-            {{> logo src="images/icons/logo.svg" class="footer__logo" logoText="Комната"}}
+            {{> logo logoIcon="logo" class="footer__logo" logoText="Комната"}}
             <nav class="footer-nav">
                 <ul class="footer-nav__list">
                     <li class="footer-nav__item">{{> link class="footer-nav__link link--white" href="#" text="Комната №1"}}</li>
@@ -9,7 +9,7 @@
                     <li class="footer-nav__item">{{> link class="footer-nav__link link--white" href="#" text="Цены"}}</li>
                     <li class="footer-nav__item">{{> link class="footer-nav__link link--white" href="#" text="Контакты"}}</li>
                     <li class="footer-nav__item">
-                        {{> icon class="footer-nav__icon" iconSrc="./images/icons/person.svg"}}
+                        {{> font-icon class="footer-nav__icon" name="person"}}
                         {{> link class="footer-nav__link link--white" href="#" text="Личный кабинет"}}
                     </li>
                 </ul>
@@ -32,12 +32,12 @@
             </div>
             <div class="footer-contacts">
                 <div class="footer-contacts__item">
-                    {{> link-contact class="footer-contacts__link" href="/" src="./images/icons/location.svg" text="Минск, ул. Богдановича 78"}}
-                    {{> link-contact class="footer-contacts__link" href="tel:+375 29 361 55 87" src="./images/icons/phone.svg" text="+375 29 361 55 87"}}
+                    {{> link-contact class="footer-contacts__link" href="/" iconName="location" text="Минск, ул. Богдановича 78"}}
+                    {{> link-contact class="footer-contacts__link" href="tel:+375 29 361 55 87" iconName="phone" text="+375 29 361 55 87"}}
                 </div>
                 <div class="footer-contacts__item">
-                    {{> link-contact class="footer-contacts__link" href="/" src="./images/icons/location.svg" text="Минск, ул. Богдановича 78"}}
-                    {{> link-contact class="footer-contacts__link" href="tel:+375 29 361 55 87" src="./images/icons/phone.svg" text="+375 29 361 55 87"}}
+                    {{> link-contact class="footer-contacts__link" href="/" iconName="location" text="Минск, ул. Богдановича 78"}}
+                    {{> link-contact class="footer-contacts__link" href="tel:+375 29 361 55 87" iconName="phone" text="+375 29 361 55 87"}}
                 </div>
             </div>
             <div class="footer-social footer-social--mob">
