@@ -5,23 +5,23 @@
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
-<script defer src="./main.a2e02f2e5582d618f185.js"></script><link href="./main.css" rel="stylesheet"></head>
+<script defer src="./main.114bc9f47d1fea70dc17.js"></script><link href="./main.css" rel="stylesheet"></head>
 <body>
     <header class="header" id="header">
         <div class="header-content">
             <a class="logo link--white header__logo">
-                <span class="icon-component">
-                  <img src="images/icons/logo.svg" class="icon icon--brand" alt="Komanata">
+                <span class="font-icon-component icon--brand">
+                    <i class="font-icons font-icons--logo"></i>
                 </span>    <p class="logo-text">Комната</p>
             </a>        <div class="header-burger">
-                <span class="icon-component">
-                  <img src="images/icons/menu.svg" class="icon icon--menu header-burger__open" alt="Меню">
-                </span>            <span class="icon-component">
-                  <img src="images/icons/close.svg" class="icon icon--menu header-burger__close" alt="Меню">
+                <span class="font-icon-component icon--white header-burger__open">
+                    <i class="font-icons font-icons--menu"></i>
+                </span>            <span class="font-icon-component header-burger__close">
+                    <i class="font-icons font-icons--close"></i>
                 </span>        </div>
             <nav class="header-nav">
                 <ul class="header-nav-list">
-                    <li class="header-nav__item"><a class="link header-nav__link link--white" href="#">
+                    <li class="header-nav__item"><a class="link header-nav__link link--white" href="/room-1.html">
         Комната №1
     </a></li>
                     <li class="header-nav__item"><a class="link header-nav__link link--white" href="#">
@@ -34,8 +34,8 @@
         Контакты
     </a></li>
                     <li class="header-nav__item">
-                        <span class="icon-component">
-                          <img src="./images/icons/person.svg" class="icon header-nav__icon" alt="">
+                        <span class="font-icon-component header-nav__icon icon--white">
+                            <i class="font-icons font-icons--person"></i>
                         </span>                    <a class="link header-nav__link link--white" href="#">
                             Вход
                         </a>                </li>
@@ -43,14 +43,14 @@
         +375 (29) 361 55 87
     </a></li>
                 </ul>
-                <button class="btn btn--trans header-nav__btn">Забронировать</button>        </nav>
+                <button class="btn btn--trans header-nav__btn" type=>Забронировать</button>        </nav>
         </div>
-    </header>    <section class="main" id="main">
+    </header>    <section class="main white-txt" id="main" style="background: url(images/main-bg.jpg) no-repeat center">
         <div class="container">
             <div class="main-content">
-                <h1 class="heading main__title white-txt">Aтмосфера, которую хочется разделить с близкими</h1>
-                <p class="txt main__descr white-txt">День рождения, Новый год, корпоратив, мальчишник, девичник, помолвка, а также любое самое приятное событие в вашей жизни, которое вы можете провести у нас в Комнате №1 на Богдановича 78 или Комнате №2 на Козлова 22</p>
-                <button class="btn main__btn">Забронировать</button>        </div>
+                <h1 class="heading main__title">Атмосфера, которую хочется разделить с близкими</h1>
+                <p class="txt main__descr">День рождения, Новый год, корпоратив, мальчишник, девичник, помолвка, а также любое самое приятное событие в вашей жизни, которое вы можете провести у нас в Комнате №1 на Богдановича 78 или Комнате №2 на Козлова 22</p>
+                <button class="btn main__btn" type=>Забронировать</button>        </div>
         </div>
     </section>    <section class="about" id="about">
         <div class="container">
@@ -95,7 +95,7 @@
                 </div>
             </div>
         </div>
-    </section>    <section class="rooms" id="rooms">
+    </section>    <section class="rooms white-txt" id="rooms">
         <div class="container">
             <div class="rooms-tab-control">
                 <div class="rooms-tab-btn active" data-tab="1">
@@ -106,11 +106,11 @@
                 </div>
             </div>
             <div class="rooms-tab-item active" data-tab="1">
-                <div class="rooms-header">
-                    <h2 class="title white-txt rooms-header__title">
+                <div class="rooms-header inline-title">
+                    <h2 class="title rooms-header__title">
                         Комната №1<br> <span class="brand-txt">Богдановича 78:</span>
                     </h2>
-                    <p class="txt white-txt rooms-header__descr">Мы создали интерьер, который точно  понравится маме, папе, бабушке, тете, дяде, детям, всем твоим друзьям, коллегам, начальнику и, главное, тебе.
+                    <p class="txt rooms-header__descr">Мы создали интерьер, который точно  понравится маме, папе, бабушке, тете, дяде, детям, всем твоим друзьям, коллегам, начальнику и, главное, тебе.
                         У нас нет возрастных ограничений. Поэтому смело зови к нам всех на твое лучшее мероприятие.
                     </p>
                 </div>
@@ -123,29 +123,38 @@
                                 <img class="rooms-slider__img rounded" src="images/rooms/slide-1.jpg" alt="slide-1">
                             </div>
                             <div class="swiper-slide rooms-slider__item">
-                                <img class="rooms-slider__img rounded" src="images/rooms/slide-1.jpg" alt="slide-1">
+                                <img class="rooms-slider__img rounded" src="images/rooms/slide-2.jpg" alt="slide-1">
                             </div>
                             <div class="swiper-slide rooms-slider__item">
-                                <img class="rooms-slider__img rounded" src="images/rooms/slide-1.jpg" alt="slide-1">
+                                <img class="rooms-slider__img rounded" src="images/rooms/slide-3.jpg" alt="slide-1">
+                            </div>
+                            <div class="swiper-slide rooms-slider__item">
+                                <img class="rooms-slider__img rounded" src="images/rooms/slide-2.jpg" alt="slide-1">
+                            </div>
+                            <div class="swiper-slide rooms-slider__item">
+                                <img class="rooms-slider__img rounded" src="images/rooms/slide-2.jpg" alt="slide-1">
+                            </div>
+                            <div class="swiper-slide rooms-slider__item">
+                                <img class="rooms-slider__img rounded" src="images/rooms/slide-2.jpg" alt="slide-1">
                             </div>
                         </div>
     
                         <!-- If we need navigation buttons -->
-                        <div class="swiper-btn swiper-btn-prev"><span class="icon-component">
-      <img src="images/icons/arrow-left.svg" class="icon icon--brand" alt="arrow-left">
+                        <div class="swiper-btn swiper-btn-prev"><span class="font-icon-component icon--brand icon--big">
+        <i class="font-icons font-icons--arrow-left"></i>
     </span></div>
-                        <div class="swiper-btn swiper-btn-next"><span class="icon-component">
-      <img src="images/icons/arrow-right.svg" class="icon icon--brand" alt="arrow-right">
+                        <div class="swiper-btn swiper-btn-next"><span class="font-icon-component icon--brand icon--big">
+        <i class="font-icons font-icons--arrow-right"></i>
     </span></div>
                     </div>
                 </div>
             </div>
             <div class="rooms-tab-item" data-tab="2">
                 <div class="rooms-header">
-                    <h2 class="title white-txt rooms-header__title">
+                    <h2 class="title rooms-header__title">
                         Комната №2<br> <span class="brand-txt">Богдановича 78:</span>
                     </h2>
-                    <p class="txt white-txt rooms-header__descr">Мы создали интерьер, который точно  понравится маме, папе, бабушке, тете, дяде, детям, всем твоим друзьям, коллегам, начальнику и, главное, тебе.
+                    <p class="txt rooms-header__descr">Мы создали интерьер, который точно  понравится маме, папе, бабушке, тете, дяде, детям, всем твоим друзьям, коллегам, начальнику и, главное, тебе.
                         У нас нет возрастных ограничений. Поэтому смело зови к нам всех на твое лучшее мероприятие.
                     </p>
                 </div>
@@ -158,19 +167,19 @@
                                 <img class="rooms-slider__img rounded" src="images/rooms/slide-1.jpg" alt="slide-1">
                             </div>
                             <div class="swiper-slide rooms-slider__item">
-                                <img class="rooms-slider__img rounded" src="images/rooms/slide-1.jpg" alt="slide-1">
+                                <img class="rooms-slider__img rounded" src="images/rooms/slide-2.jpg" alt="slide-1">
                             </div>
                             <div class="swiper-slide rooms-slider__item">
-                                <img class="rooms-slider__img rounded" src="images/rooms/slide-1.jpg" alt="slide-1">
+                                <img class="rooms-slider__img rounded" src="images/rooms/slide-3.jpg" alt="slide-1">
                             </div>
                         </div>
     
                         <!-- If we need navigation buttons -->
-                        <div class="swiper-btn swiper-btn-prev"><span class="icon-component">
-      <img src="images/icons/arrow-left.svg" class="icon icon--brand" alt="arrow-left">
+                        <div class="swiper-btn swiper-btn-prev"><span class="font-icon-component icon--brand icon--big">
+        <i class="font-icons font-icons--arrow-left"></i>
     </span></div>
-                        <div class="swiper-btn swiper-btn-next"><span class="icon-component">
-      <img src="images/icons/arrow-right.svg" class="icon icon--brand" alt="arrow-right">
+                        <div class="swiper-btn swiper-btn-next"><span class="font-icon-component icon--brand icon--big">
+        <i class="font-icons font-icons--arrow-right"></i>
     </span></div>
                     </div>
                 </div>
@@ -179,7 +188,7 @@
     </section>    <section class="interested" id="interested">
         <div class="container">
             <div class="interested-content">
-                <div class="interested-header">
+                <div class="interested-header inline-title">
                     <h2 class="title interested-header__title">
                         Что <span class="brand-txt">интересного</span> <br> у нас вы найдете:
                     </h2>
@@ -287,11 +296,11 @@
                         </div>
     
                         <!-- If we need navigation buttons -->
-                        <div class="swiper-btn swiper-btn-prev"><span class="icon-component">
-      <img src="images/icons/arrow-left.svg" class="icon icon--brand" alt="arrow-left">
+                        <div class="swiper-btn swiper-btn-prev"><span class="font-icon-component icon--brand icon--big">
+        <i class="font-icons font-icons--arrow-left"></i>
     </span></div>
-                        <div class="swiper-btn swiper-btn-next"><span class="icon-component">
-      <img src="images/icons/arrow-right.svg" class="icon icon--brand" alt="arrow-right">
+                        <div class="swiper-btn swiper-btn-next"><span class="font-icon-component icon--brand icon--big">
+        <i class="font-icons font-icons--arrow-right"></i>
     </span></div>
                     </div>
                 </div>
@@ -318,7 +327,7 @@
                             <p class="price-card__time-range white-txt">08:00 - 17:00</p>
                         </div>
                         <p class="price-card__descr white-txt"><i>*при бронировании комнаты на 3 часа, 4-ый час <span class="brand-txt">БЕСПЛАТНО</span></i></p>
-                        <button class="btn price-card__btn">забронировать</button></div>                <div class="price-card ">
+                        <button class="btn price-card__btn" type=>забронировать</button></div>                <div class="price-card ">
                         <div class="price-card__days">
                             <p>ПТ-СБ</p>
                         </div>
@@ -331,7 +340,7 @@
                             <p class="price-card__time-range white-txt">08:00 - 17:00</p>
                         </div>
                         <p class="price-card__descr white-txt"><i>*при бронировании комнаты на 5 часа, 6-ый час <span class="brand-txt">БЕСПЛАТНО</span></i></p>
-                        <button class="btn price-card__btn">забронировать</button></div>                <div class="price-card ">
+                        <button class="btn price-card__btn" type=>забронировать</button></div>                <div class="price-card ">
                         <div class="price-card__days">
                             <p>Воскресенье</p>
                         </div>
@@ -344,7 +353,7 @@
                             <p class="price-card__time-range white-txt">08:00 - 17:00</p>
                         </div>
                         <p class="price-card__descr white-txt"><i>*при бронировании комнаты на 4 часа, 5-ый час <span class="brand-txt">БЕСПЛАТНО</span></i></p>
-                        <button class="btn price-card__btn">забронировать</button></div>            </div>
+                        <button class="btn price-card__btn" type=>забронировать</button></div>            </div>
                 <div class="price-slider">
                     <div class="swiper-container">
                         <!-- Additional required wrapper -->
@@ -364,7 +373,7 @@
                                         <p class="price-card__time-range white-txt">08:00 - 17:00</p>
                                     </div>
                                     <p class="price-card__descr white-txt"><i>*при бронировании комнаты на 3 часа, 4-ый час <span class="brand-txt">БЕСПЛАТНО</span></i></p>
-                                    <button class="btn price-card__btn">забронировать</button></div>                        </div>
+                                    <button class="btn price-card__btn" type=>забронировать</button></div>                        </div>
                             <div class="swiper-slide price-slider__item">
                                 <div class="price-card ">
                                     <div class="price-card__days">
@@ -379,7 +388,7 @@
                                         <p class="price-card__time-range white-txt">08:00 - 17:00</p>
                                     </div>
                                     <p class="price-card__descr white-txt"><i>*при бронировании комнаты на 5 часа, 6-ый час <span class="brand-txt">БЕСПЛАТНО</span></i></p>
-                                    <button class="btn price-card__btn">забронировать</button></div>                        </div>
+                                    <button class="btn price-card__btn" type=>забронировать</button></div>                        </div>
                             <div class="swiper-slide price-slider__item">
                                 <div class="price-card ">
                                     <div class="price-card__days">
@@ -394,76 +403,81 @@
                                         <p class="price-card__time-range white-txt">08:00 - 17:00</p>
                                     </div>
                                     <p class="price-card__descr white-txt"><i>*при бронировании комнаты на 4 часа, 5-ый час <span class="brand-txt">БЕСПЛАТНО</span></i></p>
-                                    <button class="btn price-card__btn">забронировать</button></div>                        </div>
+                                    <button class="btn price-card__btn" type=>забронировать</button></div>                        </div>
                         </div>
-                        <div class="price-slider-btn swiper-btn swiper-btn-prev"><span class="icon-component">
-      <img src="images/icons/arrow-left.svg" class="icon icon--brand" alt="arrow-left">
+                        <div class="price-slider-btn swiper-btn swiper-btn-prev"><span class="font-icon-component icon--brand icon--big">
+        <i class="font-icons font-icons--arrow-left"></i>
     </span></div>
-                        <div class="price-slider-btn swiper-btn swiper-btn-next"><span class="icon-component">
-      <img src="images/icons/arrow-right.svg" class="icon icon--brand" alt="arrow-right">
+                        <div class="price-slider-btn swiper-btn swiper-btn-next"><span class="font-icon-component icon--brand icon--big">
+        <i class="font-icons font-icons--arrow-right"></i>
     </span></div>
                     </div>
                 </div>
-                <button class="btn price-btn">забронировать</button>        </div>
+                <button class="btn price-btn" type=>забронировать</button>        </div>
         </div>
-    </section>    <section class="contact">
+    </section>    <section class="contact white-txt">
         <div class="contact-wrapper rounded">
             <div class="container">
                 <div class="contact-content">
                     <div class="contact-header">
-                        <h2 class="title white-txt">Связаться с нами</h2>
-                        <p class="txt white-txt">Оставьте свое сообщение и мы свяжемся с вами в ближашее время для уточнения деталей.</p>
+                        <h2 class="title">Связаться с нами</h2>
+                        <p class="txt">Оставьте свое сообщение и мы свяжемся с вами в ближашее время для уточнения деталей.</p>
                         <div class="contact-data">
                             <div class="contact-data__item contact-data__item--mob">
-                                <p class="contact-data-header white-txt">Телефон:</p>
+                                <p class="contact-data-header">Телефон:</p>
                                 <a class="link contact-data-link link--white" href="tel:+375 29 361 55 87">
                                     +375 29 361 55 87
                                 </a>                        </div>
                             <div class="contact-data__item contact-data__item--mob">
-                                <p class="contact-data-header white-txt">Адрес:</p>
+                                <p class="contact-data-header">Адрес:</p>
                                 <a class="link contact-data-link link--white" href="https://yandex.ru/maps/-/CCU9jHxZLC">
                                     Минск, ул. Богдановича 78
                                 </a>                        </div>
                             <div class="contact-data__item">
-                                <p class="contact-data-header white-txt">Комната №1</p>
-                                <a class="link  link-contact white-txt" href=/>
-                                    <span class="icon-component">
-                                      <img src="./images/icons/location.svg" class="icon icon--brand" alt="">
+                                <p class="contact-data-header ">Комната №1</p>
+                                <a class="link  link-contact link--white" href=/>
+                                    <span class="font-icon-component icon--brand">
+                                        <i class="font-icons font-icons--location"></i>
                                     </span>    Минск, ул. Богдановича 78
-                                </a>                            <a class="link  link-contact white-txt" href=tel:+375 29 361 55 87>
-                                    <span class="icon-component">
-                                      <img src="./images/icons/phone.svg" class="icon icon--brand" alt="">
+                                </a>                            <a class="link  link-contact link--white" href=tel:+375 29 361 55 87>
+                                    <span class="font-icon-component icon--brand">
+                                        <i class="font-icons font-icons--phone"></i>
                                     </span>    +375 29 361 55 87
                                 </a>                        </div>
                             <div class="contact-data__item">
-                                <p class="contact-data-header white-txt">Комната №2</p>
-                                <a class="link  link-contact white-txt" href=/>
-                                    <span class="icon-component">
-                                      <img src="./images/icons/location.svg" class="icon icon--brand" alt="">
+                                <p class="contact-data-header ">Комната №2</p>
+                                <a class="link  link-contact link--white" href=/>
+                                    <span class="font-icon-component icon--brand">
+                                        <i class="font-icons font-icons--location"></i>
                                     </span>    Минск, ул. Богдановича 78
-                                </a>                            <a class="link  link-contact white-txt" href=tel:+375 29 361 55 87>
-                                    <span class="icon-component">
-                                      <img src="./images/icons/phone.svg" class="icon icon--brand" alt="">
+                                </a>                            <a class="link  link-contact link--white" href=tel:+375 29 361 55 87>
+                                    <span class="font-icon-component icon--brand">
+                                        <i class="font-icons font-icons--phone"></i>
                                     </span>    +375 29 361 55 87
                                 </a>                        </div>
                         </div>
                     </div>
-                    <form action="" class="contact-form rounded">
+                    <form class="contact-form rounded" id="form">
                         <div class="input-component contact-form__input">
-                            <label for="contact-form-name" class="input-label"></label>
-                            <input type="text" id="contact-form-name" class="input-field " placeholder="Ваше имя" >
+                            <label for="username" class="input-label"></label>
+                            <input type="text" id="username" class="input-field " placeholder="Ваше имя" >
+                            <small></small>
                         </div>                    <div class="input-component contact-form__input">
-                            <label for="contact-form-name" class="input-label"></label>
-                            <input type="text" id="contact-form-name" class="input-field " placeholder="Номер телефона" >
-                        </div>                    <div class="area-component ">
-                            <textarea class="textarea" id="contact-textarea" name="contact-textarea" placeholder="Сообщение"></textarea>
-                        </div>                    <button class="btn contact-form__btn">Отправить</button>                    <div class="contact-form__terms">
-                            <label class="checkbox contact-form__checkbox" for="contact-form-terms">
-                                <input type="checkbox" id="contact-form-terms">
+                            <label for="phone" class="input-label"></label>
+                            <input type="text" id="phone" class="input-field " placeholder="Номер телефона" >
+                            <small></small>
+                        </div>                    <div class="input-component ">
+                            <label for="contact-textarea" class="input-label"></label>
+                            <textarea id="contact-textarea" class="input-field " placeholder="Сообщение" ></textarea>
+                            <small></small>
+                        </div>                    <button class="btn contact-form__btn" type=submit>Отправить</button>                    <div class="contact-form__terms">
+                            <label class="checkbox contact-form__checkbox" for="terms-checkbox">
+                                <input type="checkbox" id="terms-checkbox">
                                 <span class="checkmark"></span>
-                            </label>                        <p class="contact-form__terms-descr white-txt"><i>Я принимаю условия обработки <a class="link brand-txt" href="/">
+                                <small class="checkbox-error"></small>
+                            </label>                        <label class="contact-form__terms-descr txt white-txt" for="terms-checkbox"><i>Я принимаю условия обработки <a class="link link--brand" href="/">
         персональных данных
-    </a></i></p>
+    </a></i></label>
                         </div>
                     </form>
                 </div>
@@ -490,8 +504,8 @@
         <div class="footer-content">
             <div class="footer-content-item">
                 <a class="logo link--white footer__logo">
-                    <span class="icon-component">
-                      <img src="images/icons/logo.svg" class="icon icon--brand" alt="Komanata">
+                    <span class="font-icon-component icon--brand">
+                        <i class="font-icons font-icons--logo"></i>
                     </span>    <p class="logo-text">Комната</p>
                 </a>            <nav class="footer-nav">
                     <ul class="footer-nav__list">
@@ -508,8 +522,8 @@
         Контакты
     </a></li>
                         <li class="footer-nav__item">
-                            <span class="icon-component">
-                              <img src="./images/icons/person.svg" class="icon footer-nav__icon" alt="">
+                            <span class="font-icon-component footer-nav__icon">
+                                <i class="font-icons font-icons--person"></i>
                             </span>                        <a class="link footer-nav__link link--white" href="#">
                                 Личный кабинет
                             </a>                    </li>
@@ -532,26 +546,26 @@
             </div>
             <div class="footer-content-item">
                 <div class="footer-btn">
-                    <button class="btn btn--trans footer-btn">Забронировать</button>            </div>
+                    <button class="btn btn--trans footer-btn" type=>Забронировать</button>            </div>
                 <div class="footer-contacts">
                     <div class="footer-contacts__item">
-                        <a class="link footer-contacts__link link-contact white-txt" href=/>
-                            <span class="icon-component">
-                              <img src="./images/icons/location.svg" class="icon icon--brand" alt="">
+                        <a class="link footer-contacts__link link-contact link--white" href=/>
+                            <span class="font-icon-component icon--brand">
+                                <i class="font-icons font-icons--location"></i>
                             </span>    Минск, ул. Богдановича 78
-                        </a>                    <a class="link footer-contacts__link link-contact white-txt" href=tel:+375 29 361 55 87>
-                            <span class="icon-component">
-                              <img src="./images/icons/phone.svg" class="icon icon--brand" alt="">
+                        </a>                    <a class="link footer-contacts__link link-contact link--white" href=tel:+375 29 361 55 87>
+                            <span class="font-icon-component icon--brand">
+                                <i class="font-icons font-icons--phone"></i>
                             </span>    +375 29 361 55 87
                         </a>                </div>
                     <div class="footer-contacts__item">
-                        <a class="link footer-contacts__link link-contact white-txt" href=/>
-                            <span class="icon-component">
-                              <img src="./images/icons/location.svg" class="icon icon--brand" alt="">
+                        <a class="link footer-contacts__link link-contact link--white" href=/>
+                            <span class="font-icon-component icon--brand">
+                                <i class="font-icons font-icons--location"></i>
                             </span>    Минск, ул. Богдановича 78
-                        </a>                    <a class="link footer-contacts__link link-contact white-txt" href=tel:+375 29 361 55 87>
-                            <span class="icon-component">
-                              <img src="./images/icons/phone.svg" class="icon icon--brand" alt="">
+                        </a>                    <a class="link footer-contacts__link link-contact link--white" href=tel:+375 29 361 55 87>
+                            <span class="font-icon-component icon--brand">
+                                <i class="font-icons font-icons--phone"></i>
                             </span>    +375 29 361 55 87
                         </a>                </div>
                 </div>
@@ -574,28 +588,5 @@
                 </div>
             </div>
         </div>
-    </footer>    <div class="registration-modal modal">
-        <div class="modal-content">
-            <h2>Регистрация</h2>
-            <form action="">
-                <div class="input-component ">
-                    <label for="name" class="input-label">Имя*</label>
-                    <input type="text" id="name" class="input-field input-field--border" placeholder="Имя*" >
-                </div>            <div class="input-component ">
-                    <label for="lastName" class="input-label">Фамилия*</label>
-                    <input type="text" id="lastName" class="input-field input-field--border" placeholder="Фамилия*" >
-                </div>            <div class="input-component ">
-                    <label for="phone" class="input-label">Телефон*</label>
-                    <input type="text" id="phone" class="input-field input-field--border" placeholder="Телефон*" >
-                </div>            <div class="input-component ">
-                    <label for="mail" class="input-label">Email*</label>
-                    <input type="text" id="mail" class="input-field input-field--border" placeholder="Email*" >
-                </div>            <button class="btn ">Сохранить</button>        </form>
-            <p class="txt">Если вы уже регистрировались, войдите в свой аккаунт <a class="link " href="/">
-        Войти
-    </a></p>
-            <span class="icon-component">
-              <img src="images/icons/close.svg" class="icon close" alt="close">
-            </span>    </div>
-    </div></body>
+    </footer></body>
 </html>
