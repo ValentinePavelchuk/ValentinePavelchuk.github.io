@@ -1,12 +1,16 @@
 .modal {
-  position: relative;
-  max-width: 604px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: clamp(300px, 18.75rem, 604px);
   margin: 0 auto;
-  padding: 24px 25px 32px;
+  padding: 30px 16px 32px;
   background-color: $bg-primary;
+  z-index: 1001;
 
   @media(min-width: $screen-md) {
-    padding: 54px 50px 64px;
+    padding: 56px 32px 64px;
   }
 
   &-content {
@@ -25,12 +29,11 @@
     margin-bottom: 16px;
   }
 
-  & .close {
+  & .close-modal {
     position: absolute;
-    right: 15px;
-    top: 15px;
-    width: 14px;
-    height: 14px;
+    right: 16px;
+    top: 16px;
+    font-size: clamp(12px, 0.8rem, 24px);
     filter: invert(50%) sepia(15%) saturate(405%) hue-rotate(148deg) brightness(89%) contrast(87%);
     cursor: pointer;
     transition: filter $transition;
@@ -40,8 +43,8 @@
     }
 
     @media(min-width: $screen-md) {
-      right: 30px;
-      top: 30px;
+      right: 32px;
+      top: 32px;
     }
   }
 
@@ -52,7 +55,7 @@
     align-items: center;
     width: 100%;
     max-width: 362px;
-    margin-top: clamp(30px, 2rem, 60px);
+    margin-top: clamp(16px, 2rem, 32px);
   }
 
   & button {
@@ -64,4 +67,14 @@
     margin-top: clamp(16px, 1rem, 32px);
     text-align: center;
   }
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(#000, 50%);
+  backdrop-filter: blur(3px);
+  z-index: 1000;
 }

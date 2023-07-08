@@ -1,54 +1,57 @@
-<div class="booking-modal modal">
-    <div class="modal-content">
-        <h2>Забронировать</h2>
-        <form id="form" action="">
-            <div class="modal-wrapper">
-                {{> radio
-                        imgSrc="images/radio-1.jpg"
-                        imgAlt="Богдановича 78"
-                        name="room"
-                        value="room-1"
-                        text="Богдановича 78"
+<div class="overlay hidden">
+    <div class="booking-modal modal">
+        <div class="modal-content">
+            <h2>Забронировать</h2>
+            <form id="form" action="">
+                <div class="modal-wrapper">
+                    {{> radio
+                            imgSrc="images/radio-1.jpg"
+                            imgAlt="Богдановича 78"
+                            name="room"
+                            value="room-1"
+                            text="Богдановича 78"
+                            checked="checked"
+                    }}
+                    {{> radio
+                            imgSrc="images/radio-1.jpg"
+                            imgAlt="Богдановича 78"
+                            name="room"
+                            value="room-2"
+                            text="Козлова 22"
+                    }}
+                </div>
+                {{> input
+                        inputClass="input-field--border"
+                        inputId="username"
+                        label="Имя*"
+                        type="text"
+                        placeholder="Имя*"
                 }}
-                {{> radio
-                        imgSrc="images/radio-1.jpg"
-                        imgAlt="Богдановича 78"
-                        name="room"
-                        value="room-2"
-                        text="Козлова 22"
+                {{> input
+                        inputClass="input-field--border"
+                        inputId="lastname"
+                        label="Фамилия*"
+                        type="text"
+                        placeholder="Фамилия*"
                 }}
-            </div>
-            {{> input
-                    inputClass="input-field--border"
-                    inputId="name"
-                    label="Имя*"
-                    type="text"
-                    placeholder="Имя*"
-            }}
-            {{> input
-                    inputClass="input-field--border"
-                    inputId="lastName"
-                    label="Фамилия*"
-                    type="text"
-                    placeholder="Фамилия*"
-            }}
-            {{> input
-                    inputClass="input-field--border"
-                    inputId="phone"
-                    label="Телефон*"
-                    type="text"
-                    placeholder="Телефон*"
-            }}
-            {{> input
-                    inputClass="input-field--border"
-                    inputId="mail"
-                    label="Email*"
-                    type="text"
-                    placeholder="Email*"
-            }}
-            {{> textarea inputClass="input-field--border" id="booking-textarea" name="contact-textarea" label="Сообщение" placeholder="Сообщение"}}
-            {{> button text="Отправить"}}
-        </form>
-        {{> font-icon name="close" class="close"}}
+                {{> input
+                        inputClass="input-field--border"
+                        inputId="phone"
+                        label="Телефон*"
+                        type="text"
+                        placeholder="Телефон*"
+                }}
+                {{> input
+                        inputClass="input-field--border"
+                        inputId="email"
+                        label="Email*"
+                        type="text"
+                        placeholder="Email*"
+                }}
+                {{> textarea inputClass="input-field--border" id="booking-textarea" name="contact-textarea" label="Сообщение" placeholder="Сообщение"}}
+                {{> button text="Отправить" type="submit"}}
+            </form>
+            {{> font-icon name="close" class="close close-modal"}}
+        </div>
     </div>
 </div>

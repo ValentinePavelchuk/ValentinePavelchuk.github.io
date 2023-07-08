@@ -4,94 +4,126 @@ interface FormElement extends HTMLInputElement {
     parentElement: HTMLElement;
 }
 
-const usernameEl = document.querySelector('#username') as FormElement;
-const emailEl = document.querySelector('#email') as FormElement;
-const passwordEl = document.querySelector('#password') as FormElement;
-const phoneEl = document.querySelector('#phone') as FormElement;
+const usernameEls = document.querySelectorAll('input[name="username"]') as NodeListOf<FormElement>;
+const lastnameEls = document.querySelectorAll('input[name="lastname"]') as NodeListOf<FormElement>;
+const emailEls = document.querySelectorAll('input[name="email"]') as NodeListOf<FormElement>;
+const passwordEls = document.querySelectorAll('input[name="password"]') as NodeListOf<FormElement>;
+const phoneEls = document.querySelectorAll('input[name="phone"]') as NodeListOf<FormElement>;
+const radioButtons = document.querySelectorAll('input[type="radio"][name="room"]') as NodeListOf<FormElement>;
 const termsCheckboxEl = document.querySelector('#terms-checkbox') as  FormElement;
-const confirmPasswordEl = document.querySelector('#confirm-password') as FormElement;
 
-const form = document.querySelector('#form') as HTMLFormElement;
+const forms = document.querySelectorAll('form') as NodeListOf<HTMLFormElement>;
 
 const maskOptions = {
     mask: '+{375}(29)000-00-00'
 };
-const mask = IMask(phoneEl, maskOptions);
-const checkUsername = (): boolean => {
-    if (!isRequiredField(usernameEl)) {
-        return true;
-    }
+phoneEls.forEach(phoneEl => {
+    IMask(phoneEl, maskOptions);
+});
 
+
+const checkElements = (elements: NodeListOf<FormElement>, validationFunction: (element: FormElement) => boolean): boolean => {
+    let isValid = true;
+
+    elements.forEach(element => {
+        if (!isExistingField(element)) {
+            return;
+        }
+
+        isValid = validationFunction(element) && isValid;
+    });
+
+    return isValid;
+};
+
+const checkUsername = (): boolean => {
     const min = 3;
     const max = 40;
-    const username = usernameEl.value.trim();
-    if (!isRequired(username)) {
-        showError(usernameEl, 'Username cannot be blank.');
-        return false;
-    } else if (!isBetween(username.length, min, max)) {
-        showError(usernameEl, `Username must be between ${min} and ${max} characters.`);
-        return false;
-    } else {
-        showSuccess(usernameEl);
-        return true;
-    }
+    return checkElements(usernameEls, (usernameEl) => {
+            const username = usernameEl.value.trim();
+            if (!isNotEmpty(username)) {
+                showError(usernameEl, 'Имя не может быть пустым');
+                return false;
+            } else if (!isBetween(username.length, min, max)) {
+                showError(usernameEl, `Имя должно быть от ${min} до ${max} символов.`);
+                return false;
+            } else {
+                showSuccess(usernameEl);
+                return true;
+            }
+    });
+};
+
+const checkLastname = (): boolean => {
+    const min = 3;
+    const max = 40;
+    return checkElements(lastnameEls, (lastnameEl) => {
+        const username = lastnameEl.value.trim();
+        if (!isNotEmpty(username)) {
+            showError(lastnameEl, 'Фамилия не может быть пустой');
+            return false;
+        } else if (!isBetween(username.length, min, max)) {
+            showError(lastnameEl, `Фамилия должна быть от ${min} до ${max} символов.`);
+            return false;
+        } else {
+            showSuccess(lastnameEl);
+            return true;
+        }
+    });
 };
 
 const checkEmail = (): boolean => {
-    if (!isRequiredField(emailEl)) {
-        return true;
-    }
-
-    const email = emailEl.value.trim();
-    if (!isRequired(email)) {
-        showError(emailEl, 'Email cannot be blank.');
-        return false;
-    } else if (!isEmailValid(email)) {
-        showError(emailEl, 'Email is not valid.');
-        return false;
-    } else {
-        showSuccess(emailEl);
-        return true;
-    }
+    return checkElements(emailEls, (emailEl) => {
+        const email = emailEl.value.trim();
+        if (!isNotEmpty(email)) {
+            showError(emailEl, 'Email не может быть пустым');
+            return false;
+        } else if (!isEmailValid(email)) {
+            showError(emailEl, 'Email не валидный');
+            return false;
+        } else {
+            showSuccess(emailEl);
+            return true;
+        }
+    });
 };
 
 const checkPassword = (): boolean => {
-    if (!isRequiredField(passwordEl)) {
-        return true;
-    }
-
-    const password = passwordEl.value.trim();
-    if (!isRequired(password)) {
-        showError(passwordEl, 'Password cannot be blank.');
-        return false;
-    } else if (!isPasswordSecure(password)) {
-        showError(passwordEl, 'Password must have at least 8 characters, including at least 1 lowercase character, 1 uppercase character, 1 number, and 1 special character (!@#$%^&*).');
-        return false;
-    } else {
-        showSuccess(passwordEl);
-        return true;
-    }
+    return checkElements(passwordEls, (passwordEl) => {
+        const password = passwordEl.value.trim();
+        if (!isNotEmpty(password)) {
+            showError(passwordEl, 'Пароль не может быть пустым');
+            return false;
+        } else if (!isPasswordSecure(password)) {
+            showError(passwordEl, 'Пароль должен быть не меньше 8 символов, минимум 1 большая буква, 1 маленькая и 1 спец символ (!@#$%^&*).');
+            return false;
+        } else {
+            showSuccess(passwordEl);
+            return true;
+        }
+    });
 };
 
 const checkPhone = (): boolean => {
-    if (!isRequiredField(phoneEl)) {
-        return true;
-    }
-
-    const phone = phoneEl.value.trim();
-    if (!isRequired(phone)) {
-        showError(phoneEl, 'Phone number cannot be blank.');
-        return false;
-    } else if (!isPhoneValid(phone)) {
-        showError(phoneEl, 'Phone number is not valid.');
-        return false;
-    } else {
-        showSuccess(phoneEl);
-        return true;
-    }
+    return checkElements(phoneEls, (phoneEl) => {
+        const phone = phoneEl.value.trim();
+        if (!isNotEmpty(phone)) {
+            showError(phoneEl, 'Телефон не может быть пустым');
+            return false;
+        } else if (!isPhoneValid(phone)) {
+            showError(phoneEl, 'Номер телефона не валидный');
+            return false;
+        } else {
+            showSuccess(phoneEl);
+        }
+    });
 };
 
 const checkTermsCheckbox = (): boolean => {
+    if (!isExistingField(termsCheckboxEl)) {
+        return true;
+    }
+
     if (!termsCheckboxEl.checked) {
         showError(termsCheckboxEl, 'You must accept the terms and conditions.');
         return false;
@@ -100,25 +132,13 @@ const checkTermsCheckbox = (): boolean => {
         return true;
     }
 };
-const checkConfirmPassword = (): boolean => {
-    if (!isRequiredField(confirmPasswordEl)) {
-        return true;
-    }
-
-    const confirmPassword = confirmPasswordEl.value.trim();
-    const password = passwordEl.value.trim();
-    if (!isRequired(confirmPassword)) {
-        showError(confirmPasswordEl, 'Please enter the password again.');
-        return false;
-    } else if (password !== confirmPassword) {
-        showError(confirmPasswordEl, 'The password does not match.');
-        return false;
-    } else {
-        showSuccess(confirmPasswordEl);
-        return true;
-    }
-};
-
+const checkRadioButtons = (): boolean => {
+    return checkElements(radioButtons, (item) => {
+        if ((item as HTMLInputElement).checked) {
+            return  true;
+        }
+    });
+}
 const isEmailValid = (email: string): boolean => {
     const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(email);
@@ -134,9 +154,9 @@ const isPhoneValid = (phone: string): boolean => {
     return re.test(phone);
 };
 
-const isRequired = (value: string): boolean => value.trim() !== '';
+const isNotEmpty = (value: string): boolean => value.trim() !== '';
 
-const isRequiredField = (field: FormElement | null): boolean => {
+const isExistingField = (field: FormElement | null): boolean => {
     return field !== null;
 };
 
@@ -158,23 +178,34 @@ const showSuccess = (input: FormElement): void => {
     error.textContent = '';
 };
 
-form.addEventListener('submit', (e: Event) => {
-    e.preventDefault();
+forms.forEach(form => {
+    form.addEventListener('submit', (e: Event) => {
+        e.preventDefault();
 
-    const isUsernameValid = checkUsername();
-    const isEmailValid = checkEmail();
-    const isPasswordValid = checkPassword();
-    const isConfirmPasswordValid = checkConfirmPassword();
-    const isPhoneValid = checkPhone();
-    const isTermsAccepted = checkTermsCheckbox();
+        const isUsernameValid = checkUsername();
+        const isLastnameValid = checkLastname();
+        const isEmailValid = checkEmail();
+        const isPasswordValid = checkPassword();
+        const isPhoneValid = checkPhone();
+        const isTermsAccepted = checkTermsCheckbox();
+        const isRadioButtonChecked = checkRadioButtons();
 
-    const isFormValid = isUsernameValid && isEmailValid && isPasswordValid && isConfirmPasswordValid && isPhoneValid && isTermsAccepted;
+        const isFormValid = (
+            isUsernameValid &&
+            isLastnameValid &&
+            isEmailValid &&
+            isPasswordValid  &&
+            isPhoneValid &&
+            isTermsAccepted &&
+            isRadioButtonChecked
+        );
 
-    if (isFormValid) {
-        console.log("FORM valid")
-        // Form submission logic goes here
-    }
-});
+        if (isFormValid) {
+            console.log("FORM valid")
+            // Form submission logic goes here
+        }
+    });
+})
 
 const debounce = <F extends (...args: any[]) => void>(fn: F, delay = 500): ((...args: Parameters<F>) => void) => {
     let timeoutId: ReturnType<typeof setTimeout>;
@@ -188,26 +219,31 @@ const debounce = <F extends (...args: any[]) => void>(fn: F, delay = 500): ((...
     };
 };
 
-form.addEventListener('input', debounce((e: Event) => {
-    const target = e.target as FormElement;
-    switch (target.id) {
-        case 'username':
-            checkUsername();
-            break;
-        case 'email':
-            checkEmail();
-            break;
-        case 'phone':
-            checkPhone();
-            break;
-        case 'password':
-            checkPassword();
-            break;
-        case 'terms-checkbox':
-            checkTermsCheckbox();
-            break;
-        case 'confirm-password':
-            checkConfirmPassword();
-            break;
-    }
-}));
+forms.forEach(form => {
+    form.addEventListener('input', debounce((e: Event) => {
+        const target = e.target as FormElement;
+        switch (target.name) {
+            case 'username':
+                checkUsername();
+                break;
+            case 'email':
+                checkEmail();
+                break;
+            case 'phone':
+                checkPhone();
+                break;
+            case 'password':
+                checkPassword();
+                break;
+            case 'terms-checkbox':
+                checkTermsCheckbox();
+                break;
+            case 'lastname':
+                checkLastname();
+                break;
+            case 'room':
+                checkRadioButtons();
+                break;
+        }
+    }));
+})
