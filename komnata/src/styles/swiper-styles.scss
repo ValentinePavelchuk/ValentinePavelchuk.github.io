@@ -7,7 +7,12 @@
   position: relative;
 }
 
-.swiper-slide-prev {
+.swiper-slide {
+  display: flex !important;
+  width: fit-content !important;
+}
+
+.swiper-slide:has(~ .swiper-slide-prev) {
   position: relative;
 
   &::before {
@@ -23,9 +28,20 @@
   }
 }
 
-.swiper-slide {
-  display: flex !important;
-  width: fit-content !important;
+.swiper-slide-prev {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(#000, 0.5);
+    border-radius: 10px;
+    z-index: 1;
+  }
 }
 
 .swiper-button-disabled {

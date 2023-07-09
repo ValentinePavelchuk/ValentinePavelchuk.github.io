@@ -10,7 +10,11 @@
   &-error {
     position: absolute;
     white-space: nowrap;
-    bottom: -20px;
+    bottom: -40px;
+
+    @media(min-width: $screen-md) {
+      bottom: -55px;
+    }
   }
 
   &:has(input[type="checkbox"]:checked) {

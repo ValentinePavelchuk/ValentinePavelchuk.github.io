@@ -1,0 +1,30 @@
+<div class="burger-nav-overlay hidden">
+    <nav class="burger-nav">
+            <div class="burger-nav-wrapper">
+                <div class="burger-nav__signin">
+                    {{> font-icon class="burger-nav__icon icon--white" name="person"}}
+                    {{> link class="burger-nav__link link--white" href="#" text="Вход"}}
+                </div>
+                <div class="burger-nav__close">
+                    {{> font-icon name="close" class="burger-nav__icon  icon--white"}}
+                </div>
+            </div>
+            <ul class="burger-nav-list">
+                <li class="burger-nav__item">{{> link class="burger-nav__link link--white" href="/room-1.html" text="Комната №1"}}</li>
+                <li class="burger-nav__item">{{> link class="burger-nav__link link--white" href="#" text="Комната №2"}}</li>
+                <li class="burger-nav__item">{{> link class="burger-nav__link link--white" href="#" text="Цены"}}</li>
+                <li class="burger-nav__item">{{> link class="burger-nav__link link--white" href="#" text="Контакты"}}</li>
+            </ul>
+            {{> button class="btn--trans burger-nav__btn open-modal" text="Забронировать" modalName="booking-modal"}}
+            <div class="burger-nav-contacts">
+                <div class="burger-contacts__item">
+                    {{> link-contact class="footer-contacts__link" href="/" iconName="location" text="Минск, ул. Богдановича 78"}}
+                    {{> link-contact class="footer-contacts__link" href="tel:+375 29 361 55 87" iconName="phone" text="+375 29 361 55 87"}}
+                </div>
+                <div class="burger-contacts__item">
+                    {{> link-contact class="footer-contacts__link" href="/" iconName="location" text="Минск, ул. Богдановича 78"}}
+                    {{> link-contact class="footer-contacts__link" href="tel:+375 29 361 55 87" iconName="phone" text="+375 29 361 55 87"}}
+                </div>
+            </div>
+    </nav>
+</div>

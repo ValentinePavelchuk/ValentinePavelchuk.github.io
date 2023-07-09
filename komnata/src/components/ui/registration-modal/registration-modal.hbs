@@ -1,54 +1,40 @@
-<div class="registration-modal modal">
-    <div class="modal-content">
-        <h2>Регистрация</h2>
-        <form action="">
-            {{> input
-                    inputClass="input-field--border"
-                    inputId="name"
-                    label="Имя*"
-                    type="text"
-                    placeholder="Имя*"
-            }}
-            {{> input
-                    inputClass="input-field--border"
-                    inputId="lastName"
-                    label="Фамилия*"
-                    type="text"
-                    placeholder="Фамилия*"
-            }}
-            {{> input
-                    inputClass="input-field--border"
-                    inputId="phone"
-                    label="Телефон*"
-                    type="text"
-                    placeholder="Телефон*"
-            }}
-            {{> input
-                    inputClass="input-field--border"
-                    inputId="mail"
-                    label="Email*"
-                    type="text"
-                    placeholder="Email*"
-            }}
-            <div class="modal-wrapper">
-                {{> radio
-                        imgSrc="images/radio-1.jpg"
-                        imgAlt="Богдановича 78"
-                        name="room"
-                        value="room-1"
-                        text="Богдановича 78"
+<div class="overlay hidden">
+    <div class="registration-modal modal">
+        <div class="modal-content">
+            <h2>Регистрация</h2>
+            <form action="">
+                {{> input
+                        inputClass="input-field--border"
+                        inputId="name"
+                        label="Имя*"
+                        type="text"
+                        placeholder="Имя*"
                 }}
-                {{> radio
-                        imgSrc="images/radio-1.jpg"
-                        imgAlt="Богдановича 78"
-                        name="room"
-                        value="room-2"
-                        text="Козлова 22"
+                {{> input
+                        inputClass="input-field--border"
+                        inputId="lastName"
+                        label="Фамилия*"
+                        type="text"
+                        placeholder="Фамилия*"
                 }}
-            </div>
-            {{> button text="Сохранить"}}
-        </form>
-        <p class="txt">Если вы уже регистрировались, войдите в свой аккаунт {{> link href="/" text="Войти"}}</p>
-        {{> font-icon name="close" class="close-modal"}}
+                {{> input
+                        inputClass="input-field--border"
+                        inputId="phone"
+                        label="Телефон*"
+                        type="text"
+                        placeholder="Телефон*"
+                }}
+                {{> input
+                        inputClass="input-field--border"
+                        inputId="mail"
+                        label="Email*"
+                        type="text"
+                        placeholder="Email*"
+                }}
+                {{> button text="Сохранить"}}
+            </form>
+            <p class="txt">Если вы уже регистрировались, войдите в свой аккаунт {{> link class="open-modal" modalName="signin-modal" text="Войти"}}</p>
+            {{> font-icon name="close" class="close-modal"}}
+        </div>
     </div>
 </div>

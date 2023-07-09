@@ -27,7 +27,7 @@ $flex-basis: 30%;
       @media(min-width: $screen-md) {
         display: flex;
         align-items: center;
-        margin-top: clamp(45px, 1.5rem, 90px);
+        margin-top: clamp(45px, 1.5rem, 60px);
 
         &:first-of-type {
           display: flex;

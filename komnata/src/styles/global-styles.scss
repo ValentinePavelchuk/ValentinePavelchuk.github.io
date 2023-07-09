@@ -50,6 +50,10 @@ textarea {
   resize: none;
 }
 
+i {
+  transition: color $transition;
+}
+
 .container {
   max-width: 1220px;
   margin: 0 auto;
@@ -85,7 +89,8 @@ textarea {
 }
 
 .hidden {
-  display: none;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .noscroll {

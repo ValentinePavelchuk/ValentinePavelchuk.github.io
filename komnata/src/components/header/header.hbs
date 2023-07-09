@@ -12,12 +12,15 @@
                 <li class="header-nav__item">{{> link class="header-nav__link link--white" href="#" text="Цены"}}</li>
                 <li class="header-nav__item">{{> link class="header-nav__link link--white" href="#" text="Контакты"}}</li>
                 <li class="header-nav__item">
-                    {{> font-icon class="header-nav__icon icon--white" name="person"}}
-                    {{> link class="header-nav__link link--white" href="#" text="Вход"}}
+                    <a href="" class="header-nav__link link--white open-modal" data-modalname="signin-modal">
+                        {{> font-icon class="header-nav__icon icon--white" name="person"}}
+                        Вход
+                    </a>
                 </li>
                 <li class="header-nav__item">{{> link class="header-nav__link link--white" href="tel:+375293615587" text="+375 (29) 361 55 87"}}</li>
             </ul>
             {{> button class="btn--trans header-nav__btn open-modal" text="Забронировать" modalName="booking-modal"}}
         </nav>
     </div>
+    {{> burger}}
 </header>

@@ -4,25 +4,20 @@ interface FormElement extends HTMLInputElement {
     parentElement: HTMLElement;
 }
 
-const usernameEls = document.querySelectorAll('input[name="username"]') as NodeListOf<FormElement>;
-const lastnameEls = document.querySelectorAll('input[name="lastname"]') as NodeListOf<FormElement>;
-const emailEls = document.querySelectorAll('input[name="email"]') as NodeListOf<FormElement>;
-const passwordEls = document.querySelectorAll('input[name="password"]') as NodeListOf<FormElement>;
 const phoneEls = document.querySelectorAll('input[name="phone"]') as NodeListOf<FormElement>;
-const radioButtons = document.querySelectorAll('input[type="radio"][name="room"]') as NodeListOf<FormElement>;
 const termsCheckboxEl = document.querySelector('#terms-checkbox') as  FormElement;
 
 const forms = document.querySelectorAll('form') as NodeListOf<HTMLFormElement>;
 
 const maskOptions = {
-    mask: '+{375}(29)000-00-00'
+    mask: '+{375}(00)000-00-00'
 };
 phoneEls.forEach(phoneEl => {
     IMask(phoneEl, maskOptions);
 });
 
 
-const checkElements = (elements: NodeListOf<FormElement>, validationFunction: (element: FormElement) => boolean): boolean => {
+const checkElements = (form: HTMLFormElement, elements: NodeListOf<FormElement>, validationFunction: (element: FormElement) => boolean): boolean => {
     let isValid = true;
 
     elements.forEach(element => {
@@ -36,10 +31,11 @@ const checkElements = (elements: NodeListOf<FormElement>, validationFunction: (e
     return isValid;
 };
 
-const checkUsername = (): boolean => {
+const checkUsername = (form: HTMLFormElement): boolean => {
     const min = 3;
     const max = 40;
-    return checkElements(usernameEls, (usernameEl) => {
+    const usernameEls = form.querySelectorAll('input[name="username"]') as NodeListOf<FormElement>;
+    return checkElements(form, usernameEls, (usernameEl) => {
             const username = usernameEl.value.trim();
             if (!isNotEmpty(username)) {
                 showError(usernameEl, 'Имя не может быть пустым');
@@ -54,10 +50,11 @@ const checkUsername = (): boolean => {
     });
 };
 
-const checkLastname = (): boolean => {
+const checkLastname = (form: HTMLFormElement): boolean => {
     const min = 3;
     const max = 40;
-    return checkElements(lastnameEls, (lastnameEl) => {
+    const lastnameEls = form.querySelectorAll('input[name="lastname"]') as NodeListOf<FormElement>;
+    return checkElements(form, lastnameEls, (lastnameEl) => {
         const username = lastnameEl.value.trim();
         if (!isNotEmpty(username)) {
             showError(lastnameEl, 'Фамилия не может быть пустой');
@@ -72,8 +69,9 @@ const checkLastname = (): boolean => {
     });
 };
 
-const checkEmail = (): boolean => {
-    return checkElements(emailEls, (emailEl) => {
+const checkEmail = (form: HTMLFormElement): boolean => {
+    const emailEls = form.querySelectorAll('input[name="email"]') as NodeListOf<FormElement>;
+    return checkElements(form ,emailEls, (emailEl) => {
         const email = emailEl.value.trim();
         if (!isNotEmpty(email)) {
             showError(emailEl, 'Email не может быть пустым');
@@ -88,8 +86,9 @@ const checkEmail = (): boolean => {
     });
 };
 
-const checkPassword = (): boolean => {
-    return checkElements(passwordEls, (passwordEl) => {
+const checkPassword = (form: HTMLFormElement): boolean => {
+    const passwordEls = form.querySelectorAll('input[name="password"]') as NodeListOf<FormElement>;
+    return checkElements(form, passwordEls, (passwordEl) => {
         const password = passwordEl.value.trim();
         if (!isNotEmpty(password)) {
             showError(passwordEl, 'Пароль не может быть пустым');
@@ -104,8 +103,9 @@ const checkPassword = (): boolean => {
     });
 };
 
-const checkPhone = (): boolean => {
-    return checkElements(phoneEls, (phoneEl) => {
+const checkPhone = (form: HTMLFormElement): boolean => {
+    const phoneEls = form.querySelectorAll('input[name="phone"]') as NodeListOf<FormElement>;
+    return checkElements(form ,phoneEls, (phoneEl) => {
         const phone = phoneEl.value.trim();
         if (!isNotEmpty(phone)) {
             showError(phoneEl, 'Телефон не может быть пустым');
@@ -115,30 +115,42 @@ const checkPhone = (): boolean => {
             return false;
         } else {
             showSuccess(phoneEl);
+            return true;
         }
     });
 };
 
-const checkTermsCheckbox = (): boolean => {
-    if (!isExistingField(termsCheckboxEl)) {
-        return true;
-    }
-
-    if (!termsCheckboxEl.checked) {
-        showError(termsCheckboxEl, 'You must accept the terms and conditions.');
-        return false;
-    } else {
-        showSuccess(termsCheckboxEl);
-        return true;
-    }
-};
-const checkRadioButtons = (): boolean => {
-    return checkElements(radioButtons, (item) => {
-        if ((item as HTMLInputElement).checked) {
-            return  true;
+const checkTermsCheckbox = (form: HTMLFormElement): boolean => {
+    const termsCheckboxEls = form.querySelectorAll('input[type="checkbox"][name="terms-checkbox"]') as NodeListOf<FormElement>;
+    return checkElements(form, termsCheckboxEls, (termsCheckboxEl) => {
+        if (!termsCheckboxEl.checked) {
+            showError(termsCheckboxEl, 'Вы должны принять условия обработки <br/> персональных данных');
+            return false;
+        } else {
+            showSuccess(termsCheckboxEl);
+            return true;
         }
     });
-}
+
+};
+const checkRadioButtons = (form: HTMLFormElement): boolean => {
+    const radioButtons = form.querySelectorAll('input[type="radio"][name="room"]') as NodeListOf<FormElement>;
+    return checkElements(form ,radioButtons, (radioButton) => {
+        let isChecked = false;
+        radioButtons.forEach(item => {
+            if ((item as HTMLInputElement).checked) {
+                isChecked = true;
+            }
+        });
+
+        if (!isChecked) {
+            showError(radioButtons[0], 'Пожалуйста выберите комнату');
+        } else {
+            showSuccess(radioButtons[0])
+        }
+        return isChecked;
+    });
+};
 const isEmailValid = (email: string): boolean => {
     const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(email);
@@ -150,7 +162,7 @@ const isPasswordSecure = (password: string): boolean => {
 };
 
 const isPhoneValid = (phone: string): boolean => {
-    const re = /^\+375\(29\)\d{3}-\d{2}-\d{2}$/;
+    const re = /^\+375\((29|25|44|33)\)\d{3}-\d{2}-\d{2}$/;
     return re.test(phone);
 };
 
@@ -167,7 +179,7 @@ const showError = (input: FormElement, message: string): void => {
     formField.classList.remove('success');
     formField.classList.add('error');
     const error = formField.querySelector('small') as HTMLElement;
-    error.textContent = message;
+    error.innerHTML = message;
 };
 
 const showSuccess = (input: FormElement): void => {
@@ -178,17 +190,29 @@ const showSuccess = (input: FormElement): void => {
     error.textContent = '';
 };
 
+function getData(form: any) {
+    var formData = new FormData(form);
+
+    // iterate through entries...
+    for (var pair of formData.entries()) {
+        console.log(pair[0] + ": " + pair[1]);
+    }
+
+    // ...or output as an object
+    console.log(Object.fromEntries(formData));
+}
+
 forms.forEach(form => {
     form.addEventListener('submit', (e: Event) => {
         e.preventDefault();
 
-        const isUsernameValid = checkUsername();
-        const isLastnameValid = checkLastname();
-        const isEmailValid = checkEmail();
-        const isPasswordValid = checkPassword();
-        const isPhoneValid = checkPhone();
-        const isTermsAccepted = checkTermsCheckbox();
-        const isRadioButtonChecked = checkRadioButtons();
+        const isUsernameValid = checkUsername(form);
+        const isLastnameValid = checkLastname(form);
+        const isEmailValid = checkEmail(form);
+        const isPasswordValid = checkPassword(form);
+        const isPhoneValid = checkPhone(form);
+        const isTermsAccepted = checkTermsCheckbox(form);
+        const isRadioButtonChecked = checkRadioButtons(form);
 
         const isFormValid = (
             isUsernameValid &&
@@ -199,10 +223,18 @@ forms.forEach(form => {
             isTermsAccepted &&
             isRadioButtonChecked
         );
+        console.log(isUsernameValid, "username")
+        console.log(isLastnameValid, "lastname")
+        console.log(isPasswordValid, "pass")
+        console.log(isEmailValid, "email")
+        console.log(isPhoneValid, "phone")
+        console.log(isTermsAccepted, "terms")
+        console.log(isRadioButtonChecked, "radio")
 
         if (isFormValid) {
+            console.log(form, "parent")
+            //form.innerHTML = '<h3>Ваше сообщение отправлено, ждите ответа в ближайшее время</h3>'
             console.log("FORM valid")
-            // Form submission logic goes here
         }
     });
 })
@@ -224,25 +256,25 @@ forms.forEach(form => {
         const target = e.target as FormElement;
         switch (target.name) {
             case 'username':
-                checkUsername();
+                checkUsername(form);
                 break;
             case 'email':
-                checkEmail();
+                checkEmail(form);
                 break;
             case 'phone':
-                checkPhone();
+                checkPhone(form);
                 break;
             case 'password':
-                checkPassword();
+                checkPassword(form);
                 break;
             case 'terms-checkbox':
-                checkTermsCheckbox();
+                checkTermsCheckbox(form);
                 break;
             case 'lastname':
-                checkLastname();
+                checkLastname(form);
                 break;
             case 'room':
-                checkRadioButtons();
+                checkRadioButtons(form);
                 break;
         }
     }));

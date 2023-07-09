@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
-<script defer src="./main.114bc9f47d1fea70dc17.js"></script><link href="./main.css" rel="stylesheet"></head>
+<script defer src="./main.66005c926e14eda71026.js"></script><link href="./main.css" rel="stylesheet"></head>
 <body>
 <header class="header" id="header">
     <div class="header-content">
         <a class="logo link--white header__logo">
             <span class="font-icon-component icon--brand">
                 <i class="font-icons font-icons--logo"></i>
-            </span>    <p class="logo-text">Комната</p>
+            </span>    <span class="logo-text">Комната</span>
         </a>        <div class="header-burger">
             <span class="font-icon-component icon--white header-burger__open">
                 <i class="font-icons font-icons--menu"></i>
@@ -21,36 +21,88 @@
             </span>        </div>
         <nav class="header-nav">
             <ul class="header-nav-list">
-                <li class="header-nav__item"><a class="link header-nav__link link--white" href="/room-1.html">
+                <li class="header-nav__item"><a class="link header-nav__link link--white" href="/room-1.html" data-modalname="">
     Комната №1
 </a></li>
-                <li class="header-nav__item"><a class="link header-nav__link link--white" href="#">
+                <li class="header-nav__item"><a class="link header-nav__link link--white" href="#" data-modalname="">
     Комната №2
 </a></li>
-                <li class="header-nav__item"><a class="link header-nav__link link--white" href="#">
+                <li class="header-nav__item"><a class="link header-nav__link link--white" href="#" data-modalname="">
     Цены
 </a></li>
-                <li class="header-nav__item"><a class="link header-nav__link link--white" href="#">
+                <li class="header-nav__item"><a class="link header-nav__link link--white" href="#" data-modalname="">
     Контакты
 </a></li>
                 <li class="header-nav__item">
-                    <span class="font-icon-component header-nav__icon icon--white">
-                        <i class="font-icons font-icons--person"></i>
-                    </span>                    <a class="link header-nav__link link--white" href="#">
-                        Вход
-                    </a>                </li>
-                <li class="header-nav__item"><a class="link header-nav__link link--white" href="tel:+375293615587">
+                    <a href="" class="header-nav__link link--white open-modal" data-modalname="signin-modal">
+                        <span class="font-icon-component header-nav__icon icon--white">
+                            <i class="font-icons font-icons--person"></i>
+                        </span>                        Вход
+                    </a>
+                </li>
+                <li class="header-nav__item"><a class="link header-nav__link link--white" href="tel:+375293615587" data-modalname="">
     +375 (29) 361 55 87
 </a></li>
             </ul>
-            <button class="btn btn--trans header-nav__btn" type=>Забронировать</button>        </nav>
+            <button class="btn btn--trans header-nav__btn open-modal" type="" data-modalname="booking-modal">Забронировать</button>        </nav>
     </div>
-</header><section class="main white-txt" id="main" style="background: url(images/room-1-bg.jpg) no-repeat center">
+    <div class="burger-nav-overlay hidden">
+        <nav class="burger-nav">
+                <div class="burger-nav-wrapper">
+                    <div class="burger-nav__signin">
+                        <span class="font-icon-component burger-nav__icon icon--white">
+                            <i class="font-icons font-icons--person"></i>
+                        </span>                    <a class="link burger-nav__link link--white" href="#" data-modalname="">
+                            Вход
+                        </a>                </div>
+                    <div class="burger-nav__close">
+                        <span class="font-icon-component burger-nav__icon  icon--white">
+                            <i class="font-icons font-icons--close"></i>
+                        </span>                </div>
+                </div>
+                <ul class="burger-nav-list">
+                    <li class="burger-nav__item"><a class="link burger-nav__link link--white" href="/room-1.html" data-modalname="">
+        Комната №1
+    </a></li>
+                    <li class="burger-nav__item"><a class="link burger-nav__link link--white" href="#" data-modalname="">
+        Комната №2
+    </a></li>
+                    <li class="burger-nav__item"><a class="link burger-nav__link link--white" href="#" data-modalname="">
+        Цены
+    </a></li>
+                    <li class="burger-nav__item"><a class="link burger-nav__link link--white" href="#" data-modalname="">
+        Контакты
+    </a></li>
+                </ul>
+                <button class="btn btn--trans burger-nav__btn open-modal" type="" data-modalname="booking-modal">Забронировать</button>            <div class="burger-nav-contacts">
+                    <div class="burger-contacts__item">
+                        <a class="link footer-contacts__link link-contact link--white" href=/>
+                            <span class="font-icon-component icon--brand">
+                                <i class="font-icons font-icons--location"></i>
+                            </span>    Минск, ул. Богдановича 78
+                        </a>                    <a class="link footer-contacts__link link-contact link--white" href=tel:+375 29 361 55 87>
+                            <span class="font-icon-component icon--brand">
+                                <i class="font-icons font-icons--phone"></i>
+                            </span>    +375 29 361 55 87
+                        </a>                </div>
+                    <div class="burger-contacts__item">
+                        <a class="link footer-contacts__link link-contact link--white" href=/>
+                            <span class="font-icon-component icon--brand">
+                                <i class="font-icons font-icons--location"></i>
+                            </span>    Минск, ул. Богдановича 78
+                        </a>                    <a class="link footer-contacts__link link-contact link--white" href=tel:+375 29 361 55 87>
+                            <span class="font-icon-component icon--brand">
+                                <i class="font-icons font-icons--phone"></i>
+                            </span>    +375 29 361 55 87
+                        </a>                </div>
+                </div>
+        </nav>
+    </div></header><section class="main white-txt" id="main" style="background: url(images/room-1-bg.jpg) no-repeat center/cover">
     <div class="container">
         <div class="main-content">
             <h1 class="heading main__title">Комната №1</h1>
             <p class="txt main__descr"></p>
-            <button class="btn main__btn" type=>Забронировать</button>        </div>
+            <button class="btn main__btn open-modal" type="" data-modalname="booking-modal">Забронировать</button>        </div>
     </div>
 </section><section class="about" id="about">
     <div class="container">
@@ -65,11 +117,11 @@
                     с друзьями, родственниками, коллегами, и просто единомышленниками. Мы дружая команда, которая создала пространство для отдыха и проведения мероприятий. Назвали мы наше пространство “Комната”.
                 </p>
                 <p class="txt about__descr">
-                    Почитать отзывы наших любимых клиентов вы можете по <a class="link " href="/">
+                    Почитать отзывы наших любимых клиентов вы можете по <a class="link " href="/" data-modalname="">
     ссылке
 </a>
                 </p>
-                <button class="btn about__btn" type=>Забронировать</button>            </div>
+                <button class="btn about__btn open-modal" type="" data-modalname="booking-modal">Забронировать</button>            </div>
             <div class="about-cards">
                 <div class="about-cards-wrapper">
                     <div class="img-card about-cards__item" style="background: url(images/img-cards/card-1.jpg)">
@@ -122,12 +174,12 @@
                     <div class="contact-data">
                         <div class="contact-data__item contact-data__item--mob">
                             <p class="contact-data-header">Телефон:</p>
-                            <a class="link contact-data-link link--white" href="tel:+375 29 361 55 87">
+                            <a class="link contact-data-link link--white" href="tel:+375 29 361 55 87" data-modalname="">
                                 +375 29 361 55 87
                             </a>                        </div>
                         <div class="contact-data__item contact-data__item--mob">
                             <p class="contact-data-header">Адрес:</p>
-                            <a class="link contact-data-link link--white" href="https://yandex.ru/maps/-/CCU9jHxZLC">
+                            <a class="link contact-data-link link--white" href="https://yandex.ru/maps/-/CCU9jHxZLC" data-modalname="">
                                 Минск, ул. Богдановича 78
                             </a>                        </div>
                         <div class="contact-data__item">
@@ -157,24 +209,26 @@
                 <form class="contact-form rounded" id="form">
                     <div class="input-component contact-form__input">
                         <label for="username" class="input-label"></label>
-                        <input type="text" id="username" class="input-field " placeholder="Ваше имя" >
+                        <input type="text" id="username" name="username" class="input-field " placeholder="Ваше имя" >
                         <small></small>
                     </div>                    <div class="input-component contact-form__input">
                         <label for="phone" class="input-label"></label>
-                        <input type="text" id="phone" class="input-field " placeholder="Номер телефона" >
+                        <input type="text" id="phone" name="phone" class="input-field " placeholder="Номер телефона" >
                         <small></small>
                     </div>                    <div class="input-component ">
                         <label for="contact-textarea" class="input-label"></label>
                         <textarea id="contact-textarea" class="input-field " placeholder="Сообщение" ></textarea>
                         <small></small>
-                    </div>                    <button class="btn contact-form__btn" type=submit>Отправить</button>                    <div class="contact-form__terms">
+                    </div>                    <button class="btn contact-form__btn" type="submit" data-modalname="">Отправить</button>                    <div class="contact-form__terms">
                         <label class="checkbox contact-form__checkbox" for="terms-checkbox">
-                            <input type="checkbox" id="terms-checkbox">
+                            <input type="checkbox" id="terms-checkbox" name="terms-checkbox">
                             <span class="checkmark"></span>
                             <small class="checkbox-error"></small>
-                        </label>                        <label class="contact-form__terms-descr txt white-txt" for="terms-checkbox"><i>Я принимаю условия обработки <a class="link link--brand" href="/">
+                        </label>                        <label class="contact-form__terms-descr txt white-txt" for="terms-checkbox">
+                            <i>Я принимаю условия обработки <a class="link link--brand" href="/" data-modalname="">
     персональных данных
-</a></i></label>
+</a></i>
+                        </label>
                     </div>
                 </form>
             </div>
@@ -192,7 +246,7 @@
                 <p class="txt">Мы активно ведем свой профиль в инстаграмм. В комментариях вы найдете самые правдивые отзывы наших любимых клиентов.
                     Подписывайтесь на нас, чтобы следить за нашими новосятми и обновлениями. Мы работаем для того, чтобы радовать вас.
                 </p>
-                <a class="link btn btn--inst social-btn" href="/">
+                <a class="link btn btn--inst social-btn" href="/" data-modalname="">
                     Подписаться
                 </a>            </div>
         </div>
@@ -203,25 +257,25 @@
             <a class="logo link--white footer__logo">
                 <span class="font-icon-component icon--brand">
                     <i class="font-icons font-icons--logo"></i>
-                </span>    <p class="logo-text">Комната</p>
+                </span>    <span class="logo-text">Комната</span>
             </a>            <nav class="footer-nav">
                 <ul class="footer-nav__list">
-                    <li class="footer-nav__item"><a class="link footer-nav__link link--white" href="#">
+                    <li class="footer-nav__item"><a class="link footer-nav__link link--white" href="#" data-modalname="">
     Комната №1
 </a></li>
-                    <li class="footer-nav__item"><a class="link footer-nav__link link--white" href="#">
+                    <li class="footer-nav__item"><a class="link footer-nav__link link--white" href="#" data-modalname="">
     Комната №2
 </a></li>
-                    <li class="footer-nav__item"><a class="link footer-nav__link link--white" href="#">
+                    <li class="footer-nav__item"><a class="link footer-nav__link link--white" href="#" data-modalname="">
     Цены
 </a></li>
-                    <li class="footer-nav__item"><a class="link footer-nav__link link--white" href="#">
+                    <li class="footer-nav__item"><a class="link footer-nav__link link--white" href="#" data-modalname="">
     Контакты
 </a></li>
                     <li class="footer-nav__item">
                         <span class="font-icon-component footer-nav__icon">
                             <i class="font-icons font-icons--person"></i>
-                        </span>                        <a class="link footer-nav__link link--white" href="#">
+                        </span>                        <a class="link footer-nav__link link--white" href="#" data-modalname="">
                             Личный кабинет
                         </a>                    </li>
                 </ul>
@@ -243,7 +297,7 @@
         </div>
         <div class="footer-content-item">
             <div class="footer-btn">
-                <button class="btn btn--trans footer-btn" type=>Забронировать</button>            </div>
+                <button class="btn btn--trans footer-btn open-modal" type="" data-modalname="booking-modal">Забронировать</button>            </div>
             <div class="footer-contacts">
                 <div class="footer-contacts__item">
                     <a class="link footer-contacts__link link-contact link--white" href=/>

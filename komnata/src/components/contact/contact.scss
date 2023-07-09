@@ -67,8 +67,8 @@
 
     @media(min-width: $screen-md) {
       width: 75%;
-      max-height: 425px;
-      padding: 58px 70px;
+      max-height: 485px;
+      padding: clamp(48px, 2rem, 58px) clamp(60px, 2.5rem, 70px);
       margin: 0;
     }
 

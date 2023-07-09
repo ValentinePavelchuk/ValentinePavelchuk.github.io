@@ -1,13 +1,7 @@
 const tabButtons = document.querySelectorAll('.rooms-tab-btn');
 const tabContent = document.querySelectorAll('.rooms-tab-item');
 
-tabButtons.forEach((button) => {
-    button.addEventListener('click', () => {
-        const tabNumber = button.getAttribute('data-tab');
-        switchTab(tabNumber);
-    });
-});
-function switchTab(tabNumber:string) {
+const switchTab = (tabNumber:string) => {
     tabContent.forEach((tab) => {
         tab.classList.remove('active');
     });
@@ -23,3 +17,10 @@ function switchTab(tabNumber:string) {
     const selectedTabButton = document.querySelector(`.rooms-tab-btn[data-tab="${tabNumber}"]`);
     selectedTabButton.classList.add('active');
 }
+
+tabButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+        const tabNumber = button.getAttribute('data-tab');
+        switchTab(tabNumber);
+    });
+});

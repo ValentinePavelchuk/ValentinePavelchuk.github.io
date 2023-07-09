@@ -8,6 +8,7 @@
   padding: 30px 16px 32px;
   background-color: $bg-primary;
   z-index: 1001;
+  transition: opacity $transition;
 
   @media(min-width: $screen-md) {
     padding: 56px 32px 64px;
@@ -67,6 +68,10 @@
     margin-top: clamp(16px, 1rem, 32px);
     text-align: center;
   }
+
+  & .no-margin {
+    margin: 0 !important;
+  }
 }
 
 .overlay {
@@ -77,4 +82,11 @@
   background: rgba(#000, 50%);
   backdrop-filter: blur(3px);
   z-index: 1000;
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity $transition;
+}
+
+.fade-in {
+  opacity: 1;
 }

@@ -5,24 +5,30 @@ type HTMLElementEvent<T extends HTMLElement> = Event & {
 const overlayClassName = 'overlay';
 const hiddenClassName = 'hidden';
 const modalClassName = 'modal';
+const closeClassName = 'close-modal';
+const openClassName = 'open-modal';
+const noScrollClassName = 'noscroll';
 const overLays = document.querySelectorAll(`.${overlayClassName}`);
-const openModalBtns = document.querySelectorAll('.open-modal');
-const closeModalBtns = document.querySelectorAll('.close-modal');
+const openModalBtns = document.querySelectorAll(`.${openClassName}`);
+const closeModalBtns = document.querySelectorAll(`.${closeClassName}`);
 
 const closeModal = (event: HTMLElementEvent<HTMLElement>) => {
-    document.body.classList.remove('noscroll');
-    if(event.target.classList.contains(overlayClassName)) {
-        event.target.classList.add(hiddenClassName)
-    }
-    else {
-        const parentOverlay = event.target.closest(`.${overlayClassName}`);
+    const target = event.target;
+    if(target.matches(`.${overlayClassName}`) || target.closest(`.${closeClassName}`)) {
+        document.body.classList.remove(noScrollClassName);
+        const parentOverlay = target.closest(`.${overlayClassName}`);
         parentOverlay.classList.add(hiddenClassName);
     }
-}
+};
 
 const openModal = (event: HTMLElementEvent<HTMLElement>) => {
-    document.body.classList.add('noscroll');
-    const modal = document.querySelector(`.${event.target.dataset.modalname}`);
+    event.preventDefault();
+    overLays.forEach((item) => {
+        item.classList.add(hiddenClassName);
+    })
+    const currentTarget = event.currentTarget as HTMLElement;
+    document.body.classList.add(noScrollClassName);
+    const modal = document.querySelector(`.${currentTarget.dataset.modalname}`);
     const modalParentOverlay = modal.closest(`.${overlayClassName}`);
     modalParentOverlay.classList.remove(hiddenClassName);
 }
@@ -32,11 +38,7 @@ openModalBtns.forEach(item => {
         openModal(e)
     })
 })
-closeModalBtns.forEach(item => {
-    item.addEventListener('click', (e: HTMLElementEvent<HTMLElement>) => {
-        closeModal(e)
-    })
-})
+
 overLays.forEach(item => {
     item.addEventListener('click', (e: HTMLElementEvent<HTMLElement>) => {
         closeModal(e)

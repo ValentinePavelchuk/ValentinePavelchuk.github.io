@@ -52,7 +52,8 @@
 
 :where(button, input, optgroup, select, textarea) {
   line-height: inherit;
-  border: 1px solid currentColor;
+  border: unset;
+  background: transparent;
 }
 
 :where(button) {
