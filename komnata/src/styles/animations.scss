@@ -1,0 +1,12 @@
+.animation-element {
+  opacity: 0;
+}
+
+.animation-element.in-view {
+  animation: fade-in-up 1s cubic-bezier(0.535, 1.650, 0.315, 0.995) 0.3s both;
+}
+
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translate3d(0, 40px, 0); }
+  to { opacity: 1; transform: none; }
+}

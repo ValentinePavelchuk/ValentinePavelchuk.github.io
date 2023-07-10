@@ -4,11 +4,13 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: clamp(300px, 18.75rem, 604px);
+  max-height: 85vh;
   margin: 0 auto;
   padding: 30px 16px 32px;
   background-color: $bg-primary;
-  z-index: 1001;
   transition: opacity $transition;
+  overflow-y: auto;
+  z-index: 1001;
 
   @media(min-width: $screen-md) {
     padding: 56px 32px 64px;

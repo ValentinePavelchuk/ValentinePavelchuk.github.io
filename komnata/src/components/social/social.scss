@@ -32,13 +32,19 @@
     &__item {
       height: calculate-size(380px, 446px);
       max-height: 446px;
+    }
 
+    &-wrapper {
       &:first-of-type {
-        transform: translateY(-15%);
+        & .social-images__item {
+          transform: translateY(-15%);
+        }
       }
 
       &:last-of-type {
-        transform: translateY(-5%);
+        & .social-images__item {
+          transform: translateY(-5%);
+        }
       }
     }
   }

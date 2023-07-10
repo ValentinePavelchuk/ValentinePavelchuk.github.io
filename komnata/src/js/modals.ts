@@ -1,7 +1,3 @@
-type HTMLElementEvent<T extends HTMLElement> = Event & {
-    target: T;
-}
-
 const overlayClassName = 'overlay';
 const hiddenClassName = 'hidden';
 const modalClassName = 'modal';
@@ -12,35 +8,40 @@ const overLays = document.querySelectorAll(`.${overlayClassName}`);
 const openModalBtns = document.querySelectorAll(`.${openClassName}`);
 const closeModalBtns = document.querySelectorAll(`.${closeClassName}`);
 
-const closeModal = (event: HTMLElementEvent<HTMLElement>) => {
-    const target = event.target;
-    if(target.matches(`.${overlayClassName}`) || target.closest(`.${closeClassName}`)) {
-        document.body.classList.remove(noScrollClassName);
-        const parentOverlay = target.closest(`.${overlayClassName}`);
-        parentOverlay.classList.add(hiddenClassName);
-    }
+const closeModal = () => {
+    document.body.classList.remove(noScrollClassName);
+    overLays.forEach((overlay) => {
+        overlay.classList.add(hiddenClassName);
+    });
 };
 
-const openModal = (event: HTMLElementEvent<HTMLElement>) => {
+const openModal = (event: Event) => {
     event.preventDefault();
-    overLays.forEach((item) => {
-        item.classList.add(hiddenClassName);
-    })
-    const currentTarget = event.currentTarget as HTMLElement;
+    closeModal();
     document.body.classList.add(noScrollClassName);
+    const currentTarget = event.currentTarget as HTMLElement;
     const modal = document.querySelector(`.${currentTarget.dataset.modalname}`);
     const modalParentOverlay = modal.closest(`.${overlayClassName}`);
     modalParentOverlay.classList.remove(hiddenClassName);
 }
 
 openModalBtns.forEach(item => {
-    item.addEventListener('click', (e: HTMLElementEvent<HTMLButtonElement>) => {
+    item.addEventListener('click', (e: Event) => {
         openModal(e)
     })
 })
 
 overLays.forEach(item => {
-    item.addEventListener('click', (e: HTMLElementEvent<HTMLElement>) => {
-        closeModal(e)
+    item.addEventListener('click', (e: Event) => {
+        const target = e.target as HTMLElement;
+        if(target.matches(`.${overlayClassName}`) || target.closest(`.${closeClassName}`)) {
+            closeModal()
+        }
     })
+})
+
+window.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+        closeModal()
+    }
 })

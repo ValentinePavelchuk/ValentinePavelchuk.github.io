@@ -94,7 +94,7 @@ const checkPassword = (form: HTMLFormElement): boolean => {
             showError(passwordEl, 'Пароль не может быть пустым');
             return false;
         } else if (!isPasswordSecure(password)) {
-            showError(passwordEl, 'Пароль должен быть не меньше 8 символов, минимум 1 большая буква, 1 маленькая и 1 спец символ (!@#$%^&*).');
+            showError(passwordEl, 'Пароль должен содержать не меньше 1 заглавной буквы и 8 символов');
             return false;
         } else {
             showSuccess(passwordEl);
@@ -157,12 +157,12 @@ const isEmailValid = (email: string): boolean => {
 };
 
 const isPasswordSecure = (password: string): boolean => {
-    const re = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])(?=.{8,})/;
+    const re = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{8,})/;
     return re.test(password);
 };
 
 const isPhoneValid = (phone: string): boolean => {
-    const re = /^\+375\((29|25|44|33)\)\d{3}-\d{2}-\d{2}$/;
+    const re = /^\+375\((29|25|44|33|17)\)\d{3}-\d{2}-\d{2}$/;
     return re.test(phone);
 };
 

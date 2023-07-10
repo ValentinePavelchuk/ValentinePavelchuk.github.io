@@ -5,6 +5,7 @@
 html {
   font-size: 5vw;
   scroll-behavior: smooth;
+  scroll-padding-top: 70px;
 
   @media(min-width: $screen-md) {
     font-size: 2.5vw;

@@ -1,5 +1,6 @@
 .burger-nav {
   position: absolute;
+  top: 0;
   bottom: 0;
   right: -100%;
   display: flex;
@@ -9,7 +10,7 @@
   gap: 16px;
   width: 100%;
   max-width: 320px;
-  height: 100vh;
+  min-height: 100%;
   padding: 16px;
   background-color: $text-color-primary;
   transition: right $transition;
@@ -43,6 +44,7 @@
 
   &__item {
     display: flex;
+    justify-content: center;
   }
 
   &__signin,

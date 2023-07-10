@@ -6,4 +6,4 @@ import './js/validation';
 import './js/breadcrumbs';
 import './js/admin-nav-links';
 import './js/modals';
-
+import './js/animations'

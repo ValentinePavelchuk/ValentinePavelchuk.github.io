@@ -2,8 +2,8 @@
     <div class="container">
         <div class="price-content">
             <div class="price-header">
-                <h2 class="title price-header__title">Стоимость аренды</h2>
-                <p class="txt price-header__descr">Вместимость комнаты от 2 до 35 человек</p>
+                <h2 class="title price-header__title animation-element">Стоимость аренды</h2>
+                <p class="txt price-header__descr animation-element">Вместимость комнаты от 2 до 35 человек</p>
             </div>
             <div class="price-cards">
                 {{> price-card
@@ -16,6 +16,7 @@
                     hour-2="1h"
                     descr="*при бронировании комнаты на 3 часа, 4-ый час"
                     strongText="БЕСПЛАТНО"
+                    class="animation-element"
                 }}
                 {{> price-card
                     days="ПТ-СБ"
@@ -27,6 +28,7 @@
                     hour-2="1h"
                     descr="*при бронировании комнаты на 5 часа, 6-ый час"
                     strongText="БЕСПЛАТНО"
+                    class="animation-element"
                 }}
                 {{> price-card
                     days="Воскресенье"
@@ -38,6 +40,7 @@
                     hour-2="1h"
                     descr="*при бронировании комнаты на 4 часа, 5-ый час"
                     strongText="БЕСПЛАТНО"
+                    class="animation-element"
                 }}
             </div>
             <div class="price-slider">
@@ -89,7 +92,7 @@
                     <div class="price-slider-btn swiper-btn swiper-btn-next">{{> font-icon class="icon--brand icon--big" name="arrow-right"}}</div>
                 </div>
             </div>
-            {{> button class="price-btn open-modal" text="забронировать" modalName="booking-modal"}}
+            {{> button class="price-btn open-modal animation-element" text="забронировать" modalName="booking-modal"}}
         </div>
     </div>
 </section>
