@@ -3,6 +3,9 @@
 }
 
 html {
+  min-height: 100%;
+  height: auto;
+  width: 100%;
   font-size: 5vw;
   scroll-behavior: smooth;
   scroll-padding-top: 70px;
@@ -15,8 +18,10 @@ html {
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 1rem;
+  overflow: auto;
   overflow-x: hidden;
   color: $text-color-primary;
+  min-height: 100%;
 }
 
 a, label {
@@ -53,6 +58,11 @@ textarea {
 
 i {
   transition: color $transition;
+}
+
+.content-wrapper {
+  min-height: 100%;
+  width: 100%;
 }
 
 .container {

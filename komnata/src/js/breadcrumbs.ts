@@ -8,7 +8,7 @@ const generateBreadcrumbs = (): void => {
     });
 
     if(document.querySelector('.breadcrumbs')) {
-        document.querySelector('.breadcrumbs')!.innerHTML = `<a class="breadcrumbs__item" href="/">Главная /</a> ${breadcrumbs.join(' / ')}`;
+        document.querySelector('.breadcrumbs').innerHTML = `<a class="breadcrumbs__item" href="/">Главная /</a> ${breadcrumbs.join(' / ')}`;
     }};
 
-window.onload = generateBreadcrumbs;
+generateBreadcrumbs();

@@ -3,7 +3,9 @@ const burgerMenu = document.querySelector('.burger-nav');
 const burgerClose = document.querySelector('.burger-nav__close');
 const burgerOverlay = document.querySelector('.burger-nav-overlay')
 const toggleBurgerMenu = () => {
-    burgerOverlay.classList.toggle('hidden')
+    document.body.classList.toggle('noscroll');
+    document.documentElement.classList.toggle('noscroll');
+    burgerOverlay.classList.toggle('hidden');
     burgerMenu.classList.toggle('burger-nav--open');
 }
 

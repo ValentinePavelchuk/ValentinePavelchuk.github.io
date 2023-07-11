@@ -1,29 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="keywords" content="keyword1, keyword2, keyword3">
+    <meta name="description" content="Your website description goes here">
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
 </head>
 <body>
-    {{> header}}
-    {{> main
-        title="Атмосфера, которую хочется разделить с близкими"
-        descr="День рождения, Новый год, корпоратив, мальчишник, девичник, помолвка, а также любое самое приятное событие в вашей жизни, которое вы можете провести у нас в Комнате №1 на Богдановича 78 или Комнате №2 на Козлова 22"
-        bgSrc="images/main-bg.jpg"
-    }}
-    {{> about}}
-    {{> rooms}}
-    {{> interested}}
-    {{> price}}
-    {{> contact}}
-    {{> social}}
-    {{> footer}}
+    <div class="content-wrapper">
+        {{> header}}
+        {{> main
+                title="Атмосфера, которую хочется разделить с близкими"
+                descr="День рождения, Новый год, корпоратив, мальчишник, девичник, помолвка, а также любое самое приятное событие в вашей жизни, которое вы можете провести у нас в Комнате №1 на Богдановича 78 или Комнате №2 на Козлова 22"
+                bgSrc="images/main-bg.jpg"
+        }}
+        {{> about}}
+        {{> rooms}}
+        {{> interested}}
+        {{> price}}
+        {{> contact}}
+        {{> social}}
+        {{> footer}}
 
-    {{> booking-modal}}
-    {{> registration-modal}}
-    {{> signin-modal}}
-    {{> forgot-pass-modal}}
+        {{> booking-modal}}
+        {{> registration-modal}}
+        {{> signin-modal}}
+        {{> forgot-pass-modal}}
+    </div>
 </body>
 </html>
