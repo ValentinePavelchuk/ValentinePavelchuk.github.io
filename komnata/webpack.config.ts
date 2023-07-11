@@ -44,9 +44,8 @@ const config:webpack.Configuration = {
     optimization: {
         usedExports: true,
         minimizer: [
-            new HtmlMinimizerPlugin(),
             new CssMinimizerPlugin(),
-            //new TerserPlugin(),
+            new TerserPlugin(),
             new ImageMinimizerPlugin({
                 minimizer: {
                     implementation: ImageMinimizerPlugin.imageminMinify,
