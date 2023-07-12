@@ -1,5 +1,5 @@
 :root {
-  color-scheme: only light;
+  color-scheme: light only;
 }
 
 * {
@@ -36,6 +36,7 @@ a, label {
 section {
   padding-top: clamp(32px, 2rem, 64px);
   padding-bottom: clamp(32px, 2rem, 64px);
+  background: #fff;
   overflow-x: hidden;
 
   @media(min-width: $screen-md) {
