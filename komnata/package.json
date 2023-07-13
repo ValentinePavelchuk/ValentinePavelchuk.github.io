@@ -53,6 +53,7 @@
   },
   "dependencies": {
     "imask": "^7.0.1",
-    "swiper": "^9.4.1"
+    "swiper": "^9.4.1",
+    "glightbox": "^3.2.0"
   }
 }

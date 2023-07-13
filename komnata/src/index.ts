@@ -7,3 +7,4 @@ import './js/admin-nav-links';
 import './js/modals';
 import './js/animations';
 import './js/breadcrumbs';
+import './js/lightbox'

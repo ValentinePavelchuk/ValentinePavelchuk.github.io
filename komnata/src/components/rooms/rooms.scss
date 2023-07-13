@@ -88,4 +88,8 @@
       max-width: clamp(280px, 17.5rem, 390px);
     }
   }
+
+  & .glightbox {
+    display: flex;
+  }
 }

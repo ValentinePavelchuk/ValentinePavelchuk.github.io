@@ -10,6 +10,7 @@
 .swiper-slide {
   display: flex !important;
   width: fit-content !important;
+  height: auto !important;
 }
 
 .swiper-slide:has(~ .swiper-slide-prev) {

@@ -1,3 +1,6 @@
+// modules styles
+@import 'glightbox/dist/css/glightbox.min.css';
+
 // Utility styles
 @import "styles/new-reset";
 @import "styles/breakpoints";
@@ -7,6 +10,7 @@
 @import "styles/modal";
 @import "styles/swiper-styles";
 @import "styles/animations";
+@import "styles/lightbox";
 
 // Global styles
 @import "styles/global-styles";
