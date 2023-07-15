@@ -1,11 +1,20 @@
-const animationElements = document.querySelectorAll<HTMLElement>('.animation-element');
+const animationElements = document.querySelectorAll<HTMLElement>('.anim-elem');
 
 const handleIntersection = (entries: IntersectionObserverEntry[], observer: IntersectionObserver) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
-            const element = entry.target as HTMLElement;
-            element.classList.add('fade-in-up', 'in-view');
-            observer.unobserve(element);
+            const section = entry.target as HTMLElement;
+            const animationElements = section.querySelectorAll<HTMLElement>('.anim-elem');
+
+            animationElements.forEach((element, index) => {
+                const animationClasses = element.classList.value?.split(' ') || [];
+                const delay = index * 150; // Adjust the delay time in milliseconds
+                setTimeout(() => {
+                    element.classList.add(...animationClasses, 'in-view');
+                }, delay);
+
+                observer.unobserve(element);
+            });
         }
     });
 };
@@ -15,6 +24,8 @@ const observer = new IntersectionObserver(handleIntersection, {
     threshold: 0.3,
 });
 
-animationElements.forEach((element) => {
-    observer.observe(element);
+const sections = document.querySelectorAll<HTMLElement>('section');
+
+sections.forEach((section) => {
+    observer.observe(section);
 });
