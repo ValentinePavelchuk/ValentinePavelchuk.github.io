@@ -86,6 +86,10 @@
   transition: opacity $transition;
   overflow-y: auto;
   z-index: 1000;
+
+  @media(min-width: $screen-md) {
+    align-items: center;
+  }
 }
 
 .fade-in {
