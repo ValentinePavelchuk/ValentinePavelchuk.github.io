@@ -5,6 +5,7 @@ import './js/burger';
 import './js/validation';
 import './js/admin-nav-links';
 import './js/modals';
-import './js/animations';
+import './js/fade-in';
+import './js/parallax-animation';
 import './js/breadcrumbs';
-import './js/lightbox'
+import './js/lightbox';

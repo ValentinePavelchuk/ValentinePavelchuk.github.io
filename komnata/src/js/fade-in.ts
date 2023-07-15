@@ -1,5 +1,3 @@
-const animationElements = document.querySelectorAll<HTMLElement>('.anim-elem');
-
 const handleIntersection = (entries: IntersectionObserverEntry[], observer: IntersectionObserver) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
